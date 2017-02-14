@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modulegroupdoc
+rxversion="6.2">
+	<testsuiteentryhierarchy>
+		<flatlistofchildren>
+			<testmodule
+			name="ClearAppData"
+			id="63cc49c0-43aa-48b7-8a9f-fd60aea2404f"
+			ref="d75ab6fa-6314-46ab-8f27-4adcb17bbeb7"
+			type="Recording"/>
+			<modulegroups
+			name="Spar"
+			id="829039fa-429a-4299-b777-4f6960a1788c"/>
+			<modulegroupdef
+			name="ClearAppData"
+			id="cccb901b-c929-4f44-9a45-ecda775976a2"/>
+		</flatlistofchildren>
+		<childhierarchy>
+			<modulegroups
+			name="Spar"
+			id="829039fa-429a-4299-b777-4f6960a1788c">
+				<modulegroupdef
+				name="ClearAppData"
+				id="cccb901b-c929-4f44-9a45-ecda775976a2">
+					<testmodule
+					name="ClearAppData"
+					id="63cc49c0-43aa-48b7-8a9f-fd60aea2404f"/>
+				</modulegroupdef>
+			</modulegroups>
+		</childhierarchy>
+	</testsuiteentryhierarchy>
+</modulegroupdoc>
