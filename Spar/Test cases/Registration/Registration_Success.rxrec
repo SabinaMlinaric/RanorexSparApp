@@ -31,7 +31,7 @@ mode="Mobile">
 		enabled="True"
 		optional="False"
 		duration="3500ms"
-		application="plus.spar.si"
+		application="plus.spar.si.staging"
 		devicename="Sony"
 		resetInitialState="False">
 			<comment/>

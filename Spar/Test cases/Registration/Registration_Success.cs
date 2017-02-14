@@ -79,8 +79,8 @@ namespace Spar.Test_cases.Registration
 
             Init();
 
-            Report.Log(ReportLevel.Info, "Application", "Run mobile app 'plus.spar.si' on device 'Sony'.", new RecordItemIndex(0));
-            Host.Local.RunMobileApp("Sony", "plus.spar.si", false);
+            Report.Log(ReportLevel.Info, "Application", "Run mobile app 'plus.spar.si.staging' on device 'Sony'.", new RecordItemIndex(0));
+            Host.Local.RunMobileApp("Sony", "plus.spar.si.staging", false);
             Delay.Milliseconds(3500);
             
             Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Start with scanning your SPAR plus card!') on item 'PlusSparSi.ScanCardActivity.StartScanningTitle'.", repo.PlusSparSi.ScanCardActivity.StartScanningTitleInfo, new RecordItemIndex(1));

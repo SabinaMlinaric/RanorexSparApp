@@ -24,42 +24,55 @@ namespace Spar.Test_cases.Utility
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The ClearAppData recording.
+    ///The RunApp recording.
     /// </summary>
-    [TestModule("d75ab6fa-6314-46ab-8f27-4adcb17bbeb7", ModuleType.Recording, 1)]
-    public partial class ClearAppData : ITestModule
+    [TestModule("47c4d39f-0d71-4abc-bcb7-f146aaa7813a", ModuleType.Recording, 1)]
+    public partial class RunApp : ITestModule
     {
         /// <summary>
         /// Holds an instance of the Spar.SparRepository repository.
         /// </summary>
         public static Spar.SparRepository repo = Spar.SparRepository.Instance;
 
-        static ClearAppData instance = new ClearAppData();
+        static RunApp instance = new RunApp();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public ClearAppData()
+        public RunApp()
         {
+            DeviceName = "";
             PackageName = "";
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static ClearAppData Instance
+        public static RunApp Instance
         {
             get { return instance; }
         }
 
 #region Variables
 
+        string _DeviceName;
+
+        /// <summary>
+        /// Gets or sets the value of variable DeviceName.
+        /// </summary>
+        [TestVariable("7ba94856-ce36-433b-aa83-673fcd1b06d7")]
+        public string DeviceName
+        {
+            get { return _DeviceName; }
+            set { _DeviceName = value; }
+        }
+
         string _PackageName;
 
         /// <summary>
         /// Gets or sets the value of variable PackageName.
         /// </summary>
-        [TestVariable("82361544-8731-4a7d-b1cb-7420ac2fac02")]
+        [TestVariable("4de25083-df64-42d6-97dd-017c0a227675")]
         public string PackageName
         {
             get { return _PackageName; }
@@ -92,11 +105,9 @@ namespace Spar.Test_cases.Utility
 
             Init();
 
-            Close_Application_PlusSparSi(repo.PlusSparSi.SelfInfo);
-            Delay.Milliseconds(0);
-            
-            ClearData();
-            Delay.Milliseconds(0);
+            Report.Log(ReportLevel.Info, "Application", "Run mobile app from variable $PackageName on device from variable $DeviceName.", new RecordItemIndex(0));
+            Host.Local.RunMobileApp(DeviceName, PackageName, true);
+            Delay.Milliseconds(3500);
             
         }
 

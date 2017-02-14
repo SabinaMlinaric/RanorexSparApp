@@ -20,51 +20,38 @@ using Ranorex.Core;
 using Ranorex.Core.Testing;
 using Ranorex.Core.Repository;
 
-namespace Spar.Test_cases.Utility
+namespace Spar.Test_cases.Registration
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The ClearAppData recording.
+    ///The Registration_SerialNumber recording.
     /// </summary>
-    [TestModule("d75ab6fa-6314-46ab-8f27-4adcb17bbeb7", ModuleType.Recording, 1)]
-    public partial class ClearAppData : ITestModule
+    [TestModule("3d206d67-6724-4893-b585-825819c2556a", ModuleType.Recording, 1)]
+    public partial class Registration_SerialNumber : ITestModule
     {
         /// <summary>
         /// Holds an instance of the Spar.SparRepository repository.
         /// </summary>
         public static Spar.SparRepository repo = Spar.SparRepository.Instance;
 
-        static ClearAppData instance = new ClearAppData();
+        static Registration_SerialNumber instance = new Registration_SerialNumber();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public ClearAppData()
+        public Registration_SerialNumber()
         {
-            PackageName = "";
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static ClearAppData Instance
+        public static Registration_SerialNumber Instance
         {
             get { return instance; }
         }
 
 #region Variables
-
-        string _PackageName;
-
-        /// <summary>
-        /// Gets or sets the value of variable PackageName.
-        /// </summary>
-        [TestVariable("82361544-8731-4a7d-b1cb-7420ac2fac02")]
-        public string PackageName
-        {
-            get { return _PackageName; }
-            set { _PackageName = value; }
-        }
 
 #endregion
 
@@ -92,11 +79,13 @@ namespace Spar.Test_cases.Utility
 
             Init();
 
-            Close_Application_PlusSparSi(repo.PlusSparSi.SelfInfo);
-            Delay.Milliseconds(0);
+            Report.Log(ReportLevel.Info, "Application", "Run mobile app 'plus.spar.si.staging' on device 'Sony'.", new RecordItemIndex(0));
+            Host.Local.RunMobileApp("Sony", "plus.spar.si.staging", true);
+            Delay.Milliseconds(3500);
             
-            ClearData();
-            Delay.Milliseconds(0);
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSiStaging.Linear' at Center", repo.PlusSparSiStaging.LinearInfo, new RecordItemIndex(1));
+            repo.PlusSparSiStaging.Linear.Touch();
+            Delay.Milliseconds(500);
             
         }
 

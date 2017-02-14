@@ -4,6 +4,6 @@
   <SerializedValue name="ModuleBrowserState">
     <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
   </SerializedValue>
-  <ProjectBrowserState value="[Solution Spar[Spar_Android[]]]&#xD;&#xA;Solution Spar\Spar_Android\Spar.rxtst&#xD;&#xA;Solution Spar" />
+  <ProjectBrowserState value="[Solution Spar[Spar_Android[Test cases[Utility[]]SparRepository.rxrep[]]]]&#xD;&#xA;Solution Spar\Spar_Android\Test cases\Utility\ClearAppData.rxrec&#xD;&#xA;Solution Spar\Spar_Android\Reports" />
   <StartupProject value="{7BF7678C-3E9F-47C9-88E0-5AA7677DA802}" />
 </Properties>

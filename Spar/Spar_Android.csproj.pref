@@ -1,10 +1,14 @@
 ﻿<Properties>
   <Array name="active">
-    <Element value="Spar.rxtst" />
+    <Element value="Test cases\Utility\ClearAppData.rxrec" />
   </Array>
   <Array name="bookmarks" />
   <Array name="files">
     <Element value="Spar.rxtst" />
+    <Element value="Spar.rxtmg" />
+    <Element value="Test cases\Utility\ClearAppData.rxrec" />
+    <Element value="SparRepository.rxrep" />
+    <Element value="Test cases\Utility\ClearAppData.UserCode.cs" />
   </Array>
   <Properties name="projectSavedData">
     <Array name="recentusercodeselections">

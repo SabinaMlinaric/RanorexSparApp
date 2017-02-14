@@ -25,24 +25,42 @@ mode="Global">
 	<codegen
 	classname="ClearAppData"
 	namespace="Spar.Test_cases.Utility"/>
-	<variables/>
+	<variables>
+		<var
+		name="PackageName"
+		id="82361544-8731-4a7d-b1cb-7420ac2fac02">
+		</var>
+	</variables>
 	<recorditems>
-		<closeapprecorditem
+		<userrecorditem
 		enabled="True"
-		optional="True"
-		searchpropertyid="382d9661-5442-469f-a8a0-6b868dc0f1ab"
-		method="KillProcess"
-		graceperiod="0ms">
+		optional="False"
+		namespace="Spar.Test_cases.Utility"
+		classname="ClearAppData"
+		methodname="Close_Application_PlusSparSi"
+		isexternaltestmethod="False"
+		varname="">
 			<comment/>
 			<bindings/>
-			<info
-			sourcename="RepositoryEditor"
-			id="f885d0cd-d406-48ca-a29d-75d836c2cf92">
-				<path>
-					/mobileapp[@title='plus.spar.si']
-				</path>
-			</info>
-		</closeapprecorditem>
+			<arguments
+			id="ca463fa2-2d0f-45f3-91d7-a4f66e4de379">
+				<argument
+				argname="mobileappInfo"
+				id="6b39d4b6-251e-43fa-8a03-b6544fca7b35">
+					<argvaluetype>
+						Ranorex.Core.Repository.RepoItemInfo, Ranorex.Core, Culture=neutral
+					</argvaluetype>
+					<argvalue/>
+					<info
+					sourcename="ItemRecorderEditor"
+					id="f885d0cd-d406-48ca-a29d-75d836c2cf92">
+						<path>
+							/mobileapp[@title='plus.spar.si']
+						</path>
+					</info>
+				</argument>
+			</arguments>
+		</userrecorditem>
 		<userrecorditem
 		enabled="True"
 		optional="False"

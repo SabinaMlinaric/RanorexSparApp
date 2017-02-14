@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+rxversion="6.2"
+id="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
+embeddedrepository="False"
+mode="Global">
+	<name>
+		RunApp
+	</name>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="RunApp"
+	namespace="Spar.Test_cases.Utility"/>
+	<variables>
+		<var
+		name="DeviceName"
+		id="7ba94856-ce36-433b-aa83-673fcd1b06d7">
+		</var>
+		<var
+		name="PackageName"
+		id="4de25083-df64-42d6-97dd-017c0a227675">
+		</var>
+	</variables>
+	<recorditems>
+		<runmobileapprecorditem
+		enabled="True"
+		optional="False"
+		duration="3500ms"
+		application=""
+		devicename="DeviceName"
+		resetInitialState="True">
+			<comment/>
+			<bindings>
+				<binding
+				target="DeviceDisplayName"
+				variable="DeviceName"/>
+				<binding
+				target="AppArgs"
+				variable="PackageName"/>
+			</bindings>
+		</runmobileapprecorditem>
+	</recorditems>
+	<repository
+	name="SparRepository"
+	id="c55abb3d-7d0d-4435-8640-bb30710f5f27"
+	rxversion="6.2"
+	relativepath="..\..\SparRepository.rxrep">
+		<codegen
+		classname="SparRepository"
+		namespace="Spar"/>
+		<rootfolder
+		name="_rootdummy_"
+		id="c12fa4a9-bf96-41a7-9866-79edafaddcf2"/>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		RunApp.UserCode.cs
+	</usercodefile>
+	<references/>
+</recordtable>

@@ -28,6 +28,7 @@ namespace Spar
     {
         static SparRepository instance = new SparRepository();
         SparRepositoryFolders.PlusSparSiAppFolder _plussparsi;
+        SparRepositoryFolders.PlusSparSiStagingAppFolder _plussparsistaging;
 
         /// <summary>
         /// Gets the singleton class instance representing the SparRepository element repository.
@@ -45,6 +46,7 @@ namespace Spar
             : base("SparRepository", "/", null, 0, false, "c12fa4a9-bf96-41a7-9866-79edafaddcf2", ".\\RepositoryImages\\SparRepositoryc12fa4a9.rximgres")
         {
             _plussparsi = new SparRepositoryFolders.PlusSparSiAppFolder(this);
+            _plussparsistaging = new SparRepositoryFolders.PlusSparSiStagingAppFolder(this);
         }
 
 #region Variables
@@ -70,6 +72,15 @@ namespace Spar
         public virtual SparRepositoryFolders.PlusSparSiAppFolder PlusSparSi
         {
             get { return _plussparsi; }
+        }
+
+        /// <summary>
+        /// The PlusSparSiStaging folder.
+        /// </summary>
+        [RepositoryFolder("417e06dd-542b-4dc3-bf01-4477577d9429")]
+        public virtual SparRepositoryFolders.PlusSparSiStagingAppFolder PlusSparSiStaging
+        {
+            get { return _plussparsistaging; }
         }
     }
 
@@ -373,6 +384,72 @@ namespace Spar
                 get
                 {
                     return _rstringregisterwelcomeinfotitleInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The PlusSparSiStagingAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("417e06dd-542b-4dc3-bf01-4477577d9429")]
+        public partial class PlusSparSiStagingAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _linearInfo;
+
+            /// <summary>
+            /// Creates a new PlusSparSiStaging  folder.
+            /// </summary>
+            public PlusSparSiStagingAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("PlusSparSiStaging", "/mobileapp[@title='plus.spar.si.staging']", parentFolder, 30000, null, false, "417e06dd-542b-4dc3-bf01-4477577d9429", "")
+            {
+                _linearInfo = new RepoItemInfo(this, "Linear", "form[@title='MainActivity']/androidelement[@rid='content']/container/container[1]/container[1]/androidelement/container[@containertype='Frame']/container/androidelement/container[@containertype='Frame']/androidelement/androidelement[1]/container[2]/container[@containertype='Linear']/container[1]", 30000, null, "1dda8a8e-dae8-46e4-87e7-4b04f4fbb064");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("417e06dd-542b-4dc3-bf01-4477577d9429")]
+            public virtual Ranorex.MobileApp Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.MobileApp>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("417e06dd-542b-4dc3-bf01-4477577d9429")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Linear item.
+            /// </summary>
+            [RepositoryItem("1dda8a8e-dae8-46e4-87e7-4b04f4fbb064")]
+            public virtual Ranorex.Container Linear
+            {
+                get
+                {
+                    return _linearInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Linear item info.
+            /// </summary>
+            [RepositoryItemInfo("1dda8a8e-dae8-46e4-87e7-4b04f4fbb064")]
+            public virtual RepoItemInfo LinearInfo
+            {
+                get
+                {
+                    return _linearInfo;
                 }
             }
         }

@@ -109,6 +109,35 @@ KYCmGCuGKscEQEmwAVAuVkBInqCCUQNGjgGEMFQpdoBLIS5xDABU0ICsGAtugCqlBmBgAAAcoXfL
 E78sAQAAAABJRU5ErkJggg==
 			</icon>
 		</appfolder>
+		<appfolder
+		name="PlusSparSiStaging"
+		id="417e06dd-542b-4dc3-bf01-4477577d9429"
+		searchtimeout="30000ms"
+		capname="mobileapp"
+		refpath="/mobileapp[@title='plus.spar.si.staging']"
+		addcaps="unknown,mobileapp,androidapp"
+		isrooted="True"
+		usecache="False">
+			<item
+			name="Linear"
+			id="1dda8a8e-dae8-46e4-87e7-4b04f4fbb064"
+			searchtimeout="30000ms"
+			capname="container"
+			refpath="/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']/androidelement[@rid='content']/container[@containertype='Frame']/container[1]/container[1]/androidelement/container[@containertype='Frame']/container[@containertype='Frame']/androidelement/container[@containertype='Frame']/androidelement/androidelement[1]/container[2]/container[@containertype='Linear']/container[1]"
+			addcaps="container,androidelement,mobileuielement"
+			refimgid="9229fa83-a76a-481e-b881-5cff5d4a58af">
+				/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']/androidelement[@rid='content']/container/container[1]/container[1]/androidelement/container[@containertype='Frame']/container/androidelement/container[@containertype='Frame']/androidelement/androidelement[1]/container[2]/container[@containertype='Linear']/container[1]
+			</item>
+			<basepath>
+				/mobileapp[@title='plus.spar.si.staging']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0
+U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABNSURBVDhPY6A6CA0NWQ/E//Hg9VClmAAo
+KYCmGCuGKscEQEmwAVAuVkBInqCCUQNGjgGEMFQpdoBLIS5xDABU0ICsGAtugCqlBmBgAAAcoXfL
+E78sAQAAAABJRU5ErkJggg==
+			</icon>
+		</appfolder>
 		<basepath/>
 	</rootfolder>
 	<variables/>

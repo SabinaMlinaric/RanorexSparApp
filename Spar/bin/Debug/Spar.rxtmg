@@ -22,7 +22,18 @@ rxversion="6.2">
 			id="9ef465ac-8667-4359-9366-2079a41c0193"/>
 			<modulegroupdef
 			name="ClearAppData"
-			id="cccb901b-c929-4f44-9a45-ecda775976a2"/>
+			id="cccb901b-c929-4f44-9a45-ecda775976a2">
+				<groupvariables>
+					<groupvariable
+					name="NewGroupVariable"
+					id="942a217a-1218-4802-bdd1-2e0d903cf702"/>
+				</groupvariables>
+				<constantvalues>
+					<constantvalue
+					value="PackageName"
+					id="63683d69-cca9-4093-b23e-18a466a63917"/>
+				</constantvalues>
+			</modulegroupdef>
 		</flatlistofchildren>
 		<childhierarchy>
 			<modulegroups

@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <RanorexTargetsPath>$(MSBuildExtensionsPath)\Ranorex$(RanorexVersion)\Ranorex.MSBuild.Targets</RanorexTargetsPath>
     <projectdefaultrepository>591f6c44-d7a2-44b1-bef9-825c23af42c7</projectdefaultrepository>
+    <StartAction>Project</StartAction>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -79,6 +80,18 @@
       <RepositoryCode>true</RepositoryCode>
       <id>e65f0250-748c-4242-b30c-0c5c6e3cabaa</id>
     </Compile>
+    <Compile Include="Test cases\Registration\Registration_SerialNumber.cs">
+      <BoundTo>76d8dbfb-72a0-4295-9a59-d6cefb78f269</BoundTo>
+      <DependentUpon>Registration_SerialNumber.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>c43b2aa2-2f02-458a-a0f4-d0f11ebc1ff7</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Registration_SerialNumber.UserCode.cs">
+      <BoundTo>76d8dbfb-72a0-4295-9a59-d6cefb78f269</BoundTo>
+      <DependentUpon>Registration_SerialNumber.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>5e802631-72dd-4a9b-89ef-41743b98a365</id>
+    </Compile>
     <Compile Include="Test cases\Registration\Registration_Success.cs">
       <DependentUpon>Registration_Success.rxrec</DependentUpon>
       <RecorderCode>true</RecorderCode>
@@ -103,6 +116,18 @@
       <UserCode>true</UserCode>
       <id>fe7ab763-a576-4c54-bfd4-1233160aa014</id>
     </Compile>
+    <Compile Include="Test cases\Utility\RunApp.cs">
+      <BoundTo>872d3426-0d4b-4c12-aadc-9000bf2e0c92</BoundTo>
+      <DependentUpon>RunApp.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>54a6191d-3842-4728-aff9-461332f0c60f</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\RunApp.UserCode.cs">
+      <BoundTo>872d3426-0d4b-4c12-aadc-9000bf2e0c92</BoundTo>
+      <DependentUpon>RunApp.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>a9abb124-7ea1-48ad-ada0-53b6f404bb6e</id>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
@@ -119,6 +144,11 @@
       <repoid>c55abb3d-7d0d-4435-8640-bb30710f5f27</repoid>
       <reporootid>c12fa4a9-bf96-41a7-9866-79edafaddcf2</reporootid>
     </None>
+    <None Include="Test cases\Registration\Registration_SerialNumber.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>76d8dbfb-72a0-4295-9a59-d6cefb78f269</id>
+      <recordtableid>3d206d67-6724-4893-b585-825819c2556a</recordtableid>
+    </None>
     <None Include="Test cases\Registration\Registration_Success.rxrec">
       <id>23f7bc8b-2969-45d0-a625-330ef8ad57d3</id>
       <recordtableid>d307bcfa-2cb9-429d-b071-6405139ec901</recordtableid>
@@ -128,6 +158,11 @@
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
       <id>fa2fa269-3a6a-481b-b132-dcd2931ceb94</id>
       <recordtableid>d75ab6fa-6314-46ab-8f27-4adcb17bbeb7</recordtableid>
+    </None>
+    <None Include="Test cases\Utility\RunApp.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>872d3426-0d4b-4c12-aadc-9000bf2e0c92</id>
+      <recordtableid>47c4d39f-0d71-4abc-bcb7-f146aaa7813a</recordtableid>
     </None>
   </ItemGroup>
   <ItemGroup>

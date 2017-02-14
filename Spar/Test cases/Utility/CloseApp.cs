@@ -24,47 +24,34 @@ namespace Spar.Test_cases.Utility
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The ClearAppData recording.
+    ///The CloseApp recording.
     /// </summary>
-    [TestModule("d75ab6fa-6314-46ab-8f27-4adcb17bbeb7", ModuleType.Recording, 1)]
-    public partial class ClearAppData : ITestModule
+    [TestModule("48279561-74c0-4635-992f-46d68ad27859", ModuleType.Recording, 1)]
+    public partial class CloseApp : ITestModule
     {
         /// <summary>
         /// Holds an instance of the Spar.SparRepository repository.
         /// </summary>
         public static Spar.SparRepository repo = Spar.SparRepository.Instance;
 
-        static ClearAppData instance = new ClearAppData();
+        static CloseApp instance = new CloseApp();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public ClearAppData()
+        public CloseApp()
         {
-            PackageName = "";
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static ClearAppData Instance
+        public static CloseApp Instance
         {
             get { return instance; }
         }
 
 #region Variables
-
-        string _PackageName;
-
-        /// <summary>
-        /// Gets or sets the value of variable PackageName.
-        /// </summary>
-        [TestVariable("82361544-8731-4a7d-b1cb-7420ac2fac02")]
-        public string PackageName
-        {
-            get { return _PackageName; }
-            set { _PackageName = value; }
-        }
 
 #endregion
 
@@ -92,10 +79,8 @@ namespace Spar.Test_cases.Utility
 
             Init();
 
-            Close_Application_PlusSparSi(repo.PlusSparSi.SelfInfo);
-            Delay.Milliseconds(0);
-            
-            ClearData();
+            Report.Log(ReportLevel.Info, "Application", "Killing application containing item 'PlusSparSi'.", repo.PlusSparSi.SelfInfo, new RecordItemIndex(0));
+            Host.Local.KillApplication(repo.PlusSparSi.Self);
             Delay.Milliseconds(0);
             
         }
