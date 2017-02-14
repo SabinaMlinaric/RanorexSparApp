@@ -37,6 +37,31 @@ mode="Mobile">
 			<comment/>
 			<bindings/>
 		</runmobileapprecorditem>
+		<touchrecorditem
+		enabled="True"
+		optional="False"
+		duration="500ms"
+		screenshotname=""
+		searchpropertyid="40ebcc47-0181-4346-99c1-a71ec3d6fcc8"
+		touchtype="Touch"
+		elementlocation="Center"
+		fingerid="0"
+		touchduration="100ms"
+		longtouchduration="1000ms"
+		moveduration="100ms"
+		isremote="False"
+		sx="0"
+		sy="0">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="83b6c29f-59b7-436c-9da7-1d8811331049">
+				<path>
+					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']/text[@rid='btn_scan']
+				</path>
+			</info>
+		</touchrecorditem>
 	</recorditems>
 	<repository
 	name="SparRepository"

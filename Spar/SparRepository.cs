@@ -140,6 +140,7 @@ namespace Spar
             RepoItemInfo _btnscanInfo;
             RepoItemInfo _btnnocardInfo;
             RepoItemInfo _btnmanualinsertcardnumberInfo;
+            RepoItemInfo _termsInfo;
 
             /// <summary>
             /// Creates a new ScanCardActivity  folder.
@@ -147,10 +148,11 @@ namespace Spar
             public ScanCardActivityFolder(RepoGenBaseFolder parentFolder) :
                     base("ScanCardActivity", "form[@title='ScanCardActivity']", parentFolder, 30000, null, false, "34dbf98f-9c14-4923-add2-96dcad5eac90", "")
             {
-                _rstringscancardinfotitleInfo = new RepoItemInfo(this, "RStringScancardInfoTitle", ".//container[@rid='fragment_placeholder']/?/?/container[@rid='content_placeholder']/androidelement[@rid='spar_scrollview_default_id']/?/?/text[@resourceid='R.string.scancard_info_title']", 30000, null, "98bbe845-d99b-4151-8a22-9689ba200472");
-                _btnscanInfo = new RepoItemInfo(this, "BtnScan", ".//container[@rid='fragment_placeholder']/?/?/container[@rid='content_placeholder']/androidelement[@rid='spar_scrollview_default_id']/?/?/text[@resourceid='R.string.scancard_scan']", 30000, null, "83b6c29f-59b7-436c-9da7-1d8811331049");
-                _btnnocardInfo = new RepoItemInfo(this, "BtnNoCard", ".//container[@rid='fragment_placeholder']/?/?/container[@rid='content_placeholder']/androidelement[@rid='spar_scrollview_default_id']/?/?/text[@resourceid='R.string.scancard_no_card']", 30000, null, "255de8dd-ff61-4d9f-b4cf-4d5b4ffca6c8");
-                _btnmanualinsertcardnumberInfo = new RepoItemInfo(this, "BtnManualInsertCardNumber", ".//container[@rid='fragment_placeholder']/?/?/container[@rid='content_placeholder']/androidelement[@rid='spar_scrollview_default_id']/?/?/text[@resourceid='R.string.scancard_enter_card_number']", 30000, null, "9197c359-ff23-472b-b9fb-50a4e980793a");
+                _rstringscancardinfotitleInfo = new RepoItemInfo(this, "RStringScancardInfoTitle", ".//text[@resourceid='R.string.scancard_info_title']", 30000, null, "98bbe845-d99b-4151-8a22-9689ba200472");
+                _btnscanInfo = new RepoItemInfo(this, "BtnScan", ".//text[@rid='btn_scan']", 30000, null, "83b6c29f-59b7-436c-9da7-1d8811331049");
+                _btnnocardInfo = new RepoItemInfo(this, "BtnNoCard", ".//text[@rid='btn_no_card']", 30000, null, "255de8dd-ff61-4d9f-b4cf-4d5b4ffca6c8");
+                _btnmanualinsertcardnumberInfo = new RepoItemInfo(this, "BtnManualInsertCardNumber", ".//text[@rid='btn_manual_insert_card_number']", 30000, null, "9197c359-ff23-472b-b9fb-50a4e980793a");
+                _termsInfo = new RepoItemInfo(this, "Terms", ".//text[@rid='tv_footer_terms']", 30000, null, "653dbf57-0a57-4e00-8088-265dfefa91e3");
             }
 
             /// <summary>
@@ -270,6 +272,30 @@ namespace Spar
                 get
                 {
                     return _btnmanualinsertcardnumberInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Terms item.
+            /// </summary>
+            [RepositoryItem("653dbf57-0a57-4e00-8088-265dfefa91e3")]
+            public virtual Ranorex.Text Terms
+            {
+                get
+                {
+                    return _termsInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Terms item info.
+            /// </summary>
+            [RepositoryItemInfo("653dbf57-0a57-4e00-8088-265dfefa91e3")]
+            public virtual RepoItemInfo TermsInfo
+            {
+                get
+                {
+                    return _termsInfo;
                 }
             }
         }

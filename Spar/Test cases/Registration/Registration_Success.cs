@@ -83,6 +83,10 @@ namespace Spar.Test_cases.Registration
             Host.Local.RunMobileApp("Sony", "plus.spar.si", false);
             Delay.Milliseconds(3500);
             
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.ScanCardActivity.BtnScan' at Center", repo.PlusSparSi.ScanCardActivity.BtnScanInfo, new RecordItemIndex(1));
+            repo.PlusSparSi.ScanCardActivity.BtnScan.Touch();
+            Delay.Milliseconds(500);
+            
         }
 
 #region Image Feature Data

@@ -34,20 +34,18 @@ rxversion="6.2">
 				id="98bbe845-d99b-4151-8a22-9689ba200472"
 				searchtimeout="30000ms"
 				capname="text"
-				refpath="/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']/androidelement[@rid='content']/container[@containertype='Frame']/container[@rid='fragment_placeholder']/androidelement/container[@rid='content_placeholder']/androidelement[@rid='spar_scrollview_default_id']/container[@containertype='Linear']/text[@resourceid='R.string.scancard_info_title']"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="64387677-afca-4211-8795-6a1af010e433">
-					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']//container[@rid='fragment_placeholder']/?/?/container[@rid='content_placeholder']/androidelement[@rid='spar_scrollview_default_id']/?/?/text[@resourceid='R.string.scancard_info_title']
+					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']/text[@resourceid='R.string.scancard_info_title']
 				</item>
 				<item
 				name="BtnScan"
 				id="83b6c29f-59b7-436c-9da7-1d8811331049"
 				searchtimeout="30000ms"
 				capname="text"
-				refpath="/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']/androidelement[@rid='content']/container[@containertype='Frame']/container[@rid='fragment_placeholder']/androidelement/container[@rid='content_placeholder']/androidelement[@rid='spar_scrollview_default_id']/container[@containertype='Linear']/text[@resourceid='R.string.scancard_scan']"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="40b9c84c-33bf-422c-ae6e-c0ccd0a93437">
-					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']//container[@rid='fragment_placeholder']/?/?/container[@rid='content_placeholder']/androidelement[@rid='spar_scrollview_default_id']/?/?/text[@resourceid='R.string.scancard_scan']
+					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']/text[@rid='btn_scan']
 				</item>
 				<item
 				name="BtnNoCard"

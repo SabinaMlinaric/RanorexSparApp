@@ -27,6 +27,22 @@ mode="Global">
 	namespace="Spar.Test_cases.Utility"/>
 	<variables/>
 	<recorditems>
+		<closeapprecorditem
+		enabled="True"
+		optional="True"
+		searchpropertyid="382d9661-5442-469f-a8a0-6b868dc0f1ab"
+		method="KillProcess"
+		graceperiod="0ms">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="f885d0cd-d406-48ca-a29d-75d836c2cf92">
+				<path>
+					/mobileapp[@title='plus.spar.si']
+				</path>
+			</info>
+		</closeapprecorditem>
 		<userrecorditem
 		enabled="True"
 		optional="False"

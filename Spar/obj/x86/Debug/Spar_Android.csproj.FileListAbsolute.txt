@@ -14,3 +14,11 @@ C:\Users\sabinam\Google Drive\SparRanorex\Spar\bin\Debug\Spar_Android.exe.config
 C:\Users\sabinam\Google Drive\SparRanorex\Spar\bin\Debug\Spar_Android.exe
 C:\Users\sabinam\Google Drive\SparRanorex\Spar\bin\Debug\Spar_Android.pdb
 C:\Users\sabinam\Google Drive\SparRanorex\Spar\obj\x86\Debug\Spar_Android.pdb
+C:\Users\domen\Google Drive\SparApp\Spar\bin\Debug\Spar.rxtmg
+C:\Users\domen\Google Drive\SparApp\Spar\bin\Debug\Spar.rxtst
+C:\Users\domen\Google Drive\SparApp\Spar\bin\Debug\Spar_Android.exe.config
+C:\Users\domen\Google Drive\SparApp\Spar\bin\Debug\Spar_Android.exe
+C:\Users\domen\Google Drive\SparApp\Spar\bin\Debug\Spar_Android.pdb
+C:\Users\domen\Google Drive\SparApp\Spar\obj\x86\Debug\Spar_Android.csprojResolveAssemblyReference.cache
+C:\Users\domen\Google Drive\SparApp\Spar\obj\x86\Debug\Spar_Android.exe
+C:\Users\domen\Google Drive\SparApp\Spar\obj\x86\Debug\Spar_Android.pdb
