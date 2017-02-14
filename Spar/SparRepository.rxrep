@@ -36,7 +36,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="64387677-afca-4211-8795-6a1af010e433">
-					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']/text[@resourceid='R.string.scancard_info_title']
+					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']//text[@resourceid='R.string.scancard_info_title']
 				</item>
 				<item
 				name="BtnScan"
@@ -45,27 +45,34 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="40b9c84c-33bf-422c-ae6e-c0ccd0a93437">
-					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']/text[@rid='btn_scan']
+					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']//text[@rid='btn_scan']
 				</item>
 				<item
 				name="BtnNoCard"
 				id="255de8dd-ff61-4d9f-b4cf-4d5b4ffca6c8"
 				searchtimeout="30000ms"
 				capname="text"
-				refpath="/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']/androidelement[@rid='content']/container[@containertype='Frame']/container[@rid='fragment_placeholder']/androidelement/container[@rid='content_placeholder']/androidelement[@rid='spar_scrollview_default_id']/container[@containertype='Linear']/text[@resourceid='R.string.scancard_no_card']"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="0291ee1a-13ab-44ea-ba2d-a84e5c538e0a">
-					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']//container[@rid='fragment_placeholder']/?/?/container[@rid='content_placeholder']/androidelement[@rid='spar_scrollview_default_id']/?/?/text[@resourceid='R.string.scancard_no_card']
+					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']//text[@rid='btn_no_card']
 				</item>
 				<item
 				name="BtnManualInsertCardNumber"
 				id="9197c359-ff23-472b-b9fb-50a4e980793a"
 				searchtimeout="30000ms"
 				capname="text"
-				refpath="/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']/androidelement[@rid='content']/container[@containertype='Frame']/container[@rid='fragment_placeholder']/androidelement/container[@rid='content_placeholder']/androidelement[@rid='spar_scrollview_default_id']/container[@containertype='Linear']/text[@resourceid='R.string.scancard_enter_card_number']"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="32d73317-b8c8-4fd4-8649-310f03fa53e8">
-					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']//container[@rid='fragment_placeholder']/?/?/container[@rid='content_placeholder']/androidelement[@rid='spar_scrollview_default_id']/?/?/text[@resourceid='R.string.scancard_enter_card_number']
+					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']//text[@rid='btn_manual_insert_card_number']
+				</item>
+				<item
+				name="Terms"
+				id="653dbf57-0a57-4e00-8088-265dfefa91e3"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="7361423d-3295-4f38-bc16-35a3e26ac31e">
+					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']//text[@rid='tv_footer_terms']
 				</item>
 				<basepath>
 					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']
