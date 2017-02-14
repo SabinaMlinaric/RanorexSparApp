@@ -1,6 +1,11 @@
 ﻿<Properties>
+  <Array name="active">
+    <Element value="Spar.rxtst" />
+  </Array>
   <Array name="bookmarks" />
-  <Array name="files" />
+  <Array name="files">
+    <Element value="Spar.rxtst" />
+  </Array>
   <Properties name="projectSavedData">
     <Array name="recentusercodeselections">
       <Element value="Spar.Registration_Success.Test()" />
