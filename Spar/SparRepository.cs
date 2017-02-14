@@ -28,7 +28,6 @@ namespace Spar
     {
         static SparRepository instance = new SparRepository();
         SparRepositoryFolders.PlusSparSiAppFolder _plussparsi;
-        SparRepositoryFolders.PlusSparSiStagingAppFolder _plussparsistaging;
 
         /// <summary>
         /// Gets the singleton class instance representing the SparRepository element repository.
@@ -46,10 +45,21 @@ namespace Spar
             : base("SparRepository", "/", null, 0, false, "c12fa4a9-bf96-41a7-9866-79edafaddcf2", ".\\RepositoryImages\\SparRepositoryc12fa4a9.rximgres")
         {
             _plussparsi = new SparRepositoryFolders.PlusSparSiAppFolder(this);
-            _plussparsistaging = new SparRepositoryFolders.PlusSparSiStagingAppFolder(this);
         }
 
 #region Variables
+
+        string _PackageName = "plus.spar.si";
+
+        /// <summary>
+        /// Gets or sets the value of variable PackageName.
+        /// </summary>
+        [TestVariable("34011a8a-5d5e-4397-86a8-f0ab4048e5d0")]
+        public string PackageName
+        {
+            get { return _PackageName; }
+            set { _PackageName = value; }
+        }
 
 #endregion
 
@@ -73,15 +83,6 @@ namespace Spar
         {
             get { return _plussparsi; }
         }
-
-        /// <summary>
-        /// The PlusSparSiStaging folder.
-        /// </summary>
-        [RepositoryFolder("417e06dd-542b-4dc3-bf01-4477577d9429")]
-        public virtual SparRepositoryFolders.PlusSparSiStagingAppFolder PlusSparSiStaging
-        {
-            get { return _plussparsistaging; }
-        }
     }
 
     /// <summary>
@@ -98,15 +99,17 @@ namespace Spar
         {
             SparRepositoryFolders.ScanCardActivityFolder _scancardactivity;
             SparRepositoryFolders.RegisterWelcomeActivityFolder _registerwelcomeactivity;
+            SparRepositoryFolders.RegisterStep1PersonalDataActivityFolder _registerstep1personaldataactivity;
 
             /// <summary>
             /// Creates a new PlusSparSi  folder.
             /// </summary>
             public PlusSparSiAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("PlusSparSi", "/mobileapp[@title='plus.spar.si']", parentFolder, 30000, null, false, "f885d0cd-d406-48ca-a29d-75d836c2cf92", "")
+                    base("PlusSparSi", "/mobileapp[@title=$PackageName]", parentFolder, 30000, null, false, "f885d0cd-d406-48ca-a29d-75d836c2cf92", "")
             {
                 _scancardactivity = new SparRepositoryFolders.ScanCardActivityFolder(this);
                 _registerwelcomeactivity = new SparRepositoryFolders.RegisterWelcomeActivityFolder(this);
+                _registerstep1personaldataactivity = new SparRepositoryFolders.RegisterStep1PersonalDataActivityFolder(this);
             }
 
             /// <summary>
@@ -149,6 +152,15 @@ namespace Spar
             public virtual SparRepositoryFolders.RegisterWelcomeActivityFolder RegisterWelcomeActivity
             {
                 get { return _registerwelcomeactivity; }
+            }
+
+            /// <summary>
+            /// The RegisterStep1PersonalDataActivity folder.
+            /// </summary>
+            [RepositoryFolder("5eacb6a6-7012-4813-8cbb-3c4fb7f3625c")]
+            public virtual SparRepositoryFolders.RegisterStep1PersonalDataActivityFolder RegisterStep1PersonalDataActivity
+            {
+                get { return _registerstep1personaldataactivity; }
             }
         }
 
@@ -328,7 +340,12 @@ namespace Spar
         [RepositoryFolder("56ec5b6a-6b8f-40de-8f5e-eb64a41ab44c")]
         public partial class RegisterWelcomeActivityFolder : RepoGenBaseFolder
         {
-            RepoItemInfo _rstringregisterwelcomeinfotitleInfo;
+            RepoItemInfo _registerwelcomeinfotitleInfo;
+            RepoItemInfo _registerwelcomeexclusiveInfo;
+            RepoItemInfo _registerwelcomecollectingcreInfo;
+            RepoItemInfo _registerwelcomecardaccessInfo;
+            RepoItemInfo _btnjoinInfo;
+            RepoItemInfo _btnskipInfo;
 
             /// <summary>
             /// Creates a new RegisterWelcomeActivity  folder.
@@ -336,7 +353,12 @@ namespace Spar
             public RegisterWelcomeActivityFolder(RepoGenBaseFolder parentFolder) :
                     base("RegisterWelcomeActivity", "form[@title='RegisterWelcomeActivity']", parentFolder, 30000, null, false, "56ec5b6a-6b8f-40de-8f5e-eb64a41ab44c", "")
             {
-                _rstringregisterwelcomeinfotitleInfo = new RepoItemInfo(this, "RStringRegisterWelcomeInfoTitle", ".//text[@resourceid='R.string.register_welcome_info_title']", 30000, null, "ccf96f7e-be42-417e-a9d3-d4fed0d57bd4");
+                _registerwelcomeinfotitleInfo = new RepoItemInfo(this, "RegisterWelcomeInfoTitle", ".//text[@resourceid='R.string.register_welcome_info_title']", 30000, null, "ccf96f7e-be42-417e-a9d3-d4fed0d57bd4");
+                _registerwelcomeexclusiveInfo = new RepoItemInfo(this, "RegisterWelcomeExclusive", ".//container[1]/text[@resourceid='R.string.register_welcome_exclusive']", 30000, null, "4917a2ec-8ef3-4c6e-ab8b-b44b109a5259");
+                _registerwelcomecollectingcreInfo = new RepoItemInfo(this, "RegisterWelcomeCollectingCre", ".//container[2]/text[@resourceid='R.string.register_welcome_collecting_credit']", 30000, null, "5d9adda4-730f-4802-b5d8-4544b3c1056b");
+                _registerwelcomecardaccessInfo = new RepoItemInfo(this, "RegisterWelcomeCardAccess", ".//container[3]/text[@resourceid='R.string.register_welcome_card_access']", 30000, null, "e8353065-e159-4ffd-ad3e-cf97b1c4a7fc");
+                _btnjoinInfo = new RepoItemInfo(this, "BtnJoin", ".//text[@rid='btn_join']", 30000, null, "5caae247-565b-40a6-b4c3-c709d62634fe");
+                _btnskipInfo = new RepoItemInfo(this, "BtnSkip", ".//text[@rid='btn_skip']", 30000, null, "f4686bcf-7100-4d8d-9551-6a8db3a0f7d2");
             }
 
             /// <summary>
@@ -364,63 +386,195 @@ namespace Spar
             }
 
             /// <summary>
-            /// The RStringRegisterWelcomeInfoTitle item.
+            /// The RegisterWelcomeInfoTitle item.
             /// </summary>
             [RepositoryItem("ccf96f7e-be42-417e-a9d3-d4fed0d57bd4")]
-            public virtual Ranorex.Text RStringRegisterWelcomeInfoTitle
+            public virtual Ranorex.Text RegisterWelcomeInfoTitle
             {
                 get
                 {
-                    return _rstringregisterwelcomeinfotitleInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _registerwelcomeinfotitleInfo.CreateAdapter<Ranorex.Text>(true);
                 }
             }
 
             /// <summary>
-            /// The RStringRegisterWelcomeInfoTitle item info.
+            /// The RegisterWelcomeInfoTitle item info.
             /// </summary>
             [RepositoryItemInfo("ccf96f7e-be42-417e-a9d3-d4fed0d57bd4")]
-            public virtual RepoItemInfo RStringRegisterWelcomeInfoTitleInfo
+            public virtual RepoItemInfo RegisterWelcomeInfoTitleInfo
             {
                 get
                 {
-                    return _rstringregisterwelcomeinfotitleInfo;
+                    return _registerwelcomeinfotitleInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RegisterWelcomeExclusive item.
+            /// </summary>
+            [RepositoryItem("4917a2ec-8ef3-4c6e-ab8b-b44b109a5259")]
+            public virtual Ranorex.Text RegisterWelcomeExclusive
+            {
+                get
+                {
+                    return _registerwelcomeexclusiveInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RegisterWelcomeExclusive item info.
+            /// </summary>
+            [RepositoryItemInfo("4917a2ec-8ef3-4c6e-ab8b-b44b109a5259")]
+            public virtual RepoItemInfo RegisterWelcomeExclusiveInfo
+            {
+                get
+                {
+                    return _registerwelcomeexclusiveInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RegisterWelcomeCollectingCre item.
+            /// </summary>
+            [RepositoryItem("5d9adda4-730f-4802-b5d8-4544b3c1056b")]
+            public virtual Ranorex.Text RegisterWelcomeCollectingCre
+            {
+                get
+                {
+                    return _registerwelcomecollectingcreInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RegisterWelcomeCollectingCre item info.
+            /// </summary>
+            [RepositoryItemInfo("5d9adda4-730f-4802-b5d8-4544b3c1056b")]
+            public virtual RepoItemInfo RegisterWelcomeCollectingCreInfo
+            {
+                get
+                {
+                    return _registerwelcomecollectingcreInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RegisterWelcomeCardAccess item.
+            /// </summary>
+            [RepositoryItem("e8353065-e159-4ffd-ad3e-cf97b1c4a7fc")]
+            public virtual Ranorex.Text RegisterWelcomeCardAccess
+            {
+                get
+                {
+                    return _registerwelcomecardaccessInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RegisterWelcomeCardAccess item info.
+            /// </summary>
+            [RepositoryItemInfo("e8353065-e159-4ffd-ad3e-cf97b1c4a7fc")]
+            public virtual RepoItemInfo RegisterWelcomeCardAccessInfo
+            {
+                get
+                {
+                    return _registerwelcomecardaccessInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnJoin item.
+            /// </summary>
+            [RepositoryItem("5caae247-565b-40a6-b4c3-c709d62634fe")]
+            public virtual Ranorex.Text BtnJoin
+            {
+                get
+                {
+                    return _btnjoinInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnJoin item info.
+            /// </summary>
+            [RepositoryItemInfo("5caae247-565b-40a6-b4c3-c709d62634fe")]
+            public virtual RepoItemInfo BtnJoinInfo
+            {
+                get
+                {
+                    return _btnjoinInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnSkip item.
+            /// </summary>
+            [RepositoryItem("f4686bcf-7100-4d8d-9551-6a8db3a0f7d2")]
+            public virtual Ranorex.Text BtnSkip
+            {
+                get
+                {
+                    return _btnskipInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnSkip item info.
+            /// </summary>
+            [RepositoryItemInfo("f4686bcf-7100-4d8d-9551-6a8db3a0f7d2")]
+            public virtual RepoItemInfo BtnSkipInfo
+            {
+                get
+                {
+                    return _btnskipInfo;
                 }
             }
         }
 
         /// <summary>
-        /// The PlusSparSiStagingAppFolder folder.
+        /// The RegisterStep1PersonalDataActivityFolder folder.
         /// </summary>
-        [RepositoryFolder("417e06dd-542b-4dc3-bf01-4477577d9429")]
-        public partial class PlusSparSiStagingAppFolder : RepoGenBaseFolder
+        [RepositoryFolder("5eacb6a6-7012-4813-8cbb-3c4fb7f3625c")]
+        public partial class RegisterStep1PersonalDataActivityFolder : RepoGenBaseFolder
         {
-            RepoItemInfo _linearInfo;
+            RepoItemInfo _registerpersonalinfotitleInfo;
+            RepoItemInfo _etnameInfo;
+            RepoItemInfo _etsurnameInfo;
+            RepoItemInfo _etdatebirthInfo;
+            RepoItemInfo _etgenderInfo;
+            RepoItemInfo _btnnextInfo;
+            RepoItemInfo _btnskipInfo;
 
             /// <summary>
-            /// Creates a new PlusSparSiStaging  folder.
+            /// Creates a new RegisterStep1PersonalDataActivity  folder.
             /// </summary>
-            public PlusSparSiStagingAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("PlusSparSiStaging", "/mobileapp[@title='plus.spar.si.staging']", parentFolder, 30000, null, false, "417e06dd-542b-4dc3-bf01-4477577d9429", "")
+            public RegisterStep1PersonalDataActivityFolder(RepoGenBaseFolder parentFolder) :
+                    base("RegisterStep1PersonalDataActivity", "form[@title~'^RegisterStep1PersonalData']", parentFolder, 30000, null, false, "5eacb6a6-7012-4813-8cbb-3c4fb7f3625c", "")
             {
-                _linearInfo = new RepoItemInfo(this, "Linear", "form[@title='MainActivity']/androidelement[@rid='content']/container/container[1]/container[1]/androidelement/container[@containertype='Frame']/container/androidelement/container[@containertype='Frame']/androidelement/androidelement[1]/container[2]/container[@containertype='Linear']/container[1]", 30000, null, "1dda8a8e-dae8-46e4-87e7-4b04f4fbb064");
+                _registerpersonalinfotitleInfo = new RepoItemInfo(this, "RegisterPersonalInfoTitle", ".//text[@resourceid='R.string.register_personal_info_title']", 30000, null, "d80a8e96-dd8f-4152-addc-368098ee47a6");
+                _etnameInfo = new RepoItemInfo(this, "EtName", ".//text[@rid='et_name']", 30000, null, "3dd0d887-0311-4138-92a4-11ebd7eda214");
+                _etsurnameInfo = new RepoItemInfo(this, "EtSurname", ".//text[@rid='et_surname']", 30000, null, "01d66e75-b102-4736-b944-56bb068142e1");
+                _etdatebirthInfo = new RepoItemInfo(this, "EtDateBirth", ".//text[@rid='et_date_birth']", 30000, null, "117ddf31-b790-479f-a752-77c4ab4867ce");
+                _etgenderInfo = new RepoItemInfo(this, "EtGender", ".//text[@rid='et_gender']", 30000, null, "68d14a1e-ded3-40e6-83b1-bbda76c9da82");
+                _btnnextInfo = new RepoItemInfo(this, "BtnNext", ".//text[@rid='btn_next']", 30000, null, "7b133682-4665-4f25-989e-1bf1b36453f6");
+                _btnskipInfo = new RepoItemInfo(this, "BtnSkip", ".//text[@rid='btn_skip']", 30000, null, "a846c0ca-ad31-4dd6-a433-68af9d2a5513");
             }
 
             /// <summary>
             /// The Self item.
             /// </summary>
-            [RepositoryItem("417e06dd-542b-4dc3-bf01-4477577d9429")]
-            public virtual Ranorex.MobileApp Self
+            [RepositoryItem("5eacb6a6-7012-4813-8cbb-3c4fb7f3625c")]
+            public virtual Ranorex.Form Self
             {
                 get
                 {
-                    return _selfInfo.CreateAdapter<Ranorex.MobileApp>(true);
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
                 }
             }
 
             /// <summary>
             /// The Self item info.
             /// </summary>
-            [RepositoryItemInfo("417e06dd-542b-4dc3-bf01-4477577d9429")]
+            [RepositoryItemInfo("5eacb6a6-7012-4813-8cbb-3c4fb7f3625c")]
             public virtual RepoItemInfo SelfInfo
             {
                 get
@@ -430,26 +584,170 @@ namespace Spar
             }
 
             /// <summary>
-            /// The Linear item.
+            /// The RegisterPersonalInfoTitle item.
             /// </summary>
-            [RepositoryItem("1dda8a8e-dae8-46e4-87e7-4b04f4fbb064")]
-            public virtual Ranorex.Container Linear
+            [RepositoryItem("d80a8e96-dd8f-4152-addc-368098ee47a6")]
+            public virtual Ranorex.Text RegisterPersonalInfoTitle
             {
                 get
                 {
-                    return _linearInfo.CreateAdapter<Ranorex.Container>(true);
+                    return _registerpersonalinfotitleInfo.CreateAdapter<Ranorex.Text>(true);
                 }
             }
 
             /// <summary>
-            /// The Linear item info.
+            /// The RegisterPersonalInfoTitle item info.
             /// </summary>
-            [RepositoryItemInfo("1dda8a8e-dae8-46e4-87e7-4b04f4fbb064")]
-            public virtual RepoItemInfo LinearInfo
+            [RepositoryItemInfo("d80a8e96-dd8f-4152-addc-368098ee47a6")]
+            public virtual RepoItemInfo RegisterPersonalInfoTitleInfo
             {
                 get
                 {
-                    return _linearInfo;
+                    return _registerpersonalinfotitleInfo;
+                }
+            }
+
+            /// <summary>
+            /// The EtName item.
+            /// </summary>
+            [RepositoryItem("3dd0d887-0311-4138-92a4-11ebd7eda214")]
+            public virtual Ranorex.Text EtName
+            {
+                get
+                {
+                    return _etnameInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The EtName item info.
+            /// </summary>
+            [RepositoryItemInfo("3dd0d887-0311-4138-92a4-11ebd7eda214")]
+            public virtual RepoItemInfo EtNameInfo
+            {
+                get
+                {
+                    return _etnameInfo;
+                }
+            }
+
+            /// <summary>
+            /// The EtSurname item.
+            /// </summary>
+            [RepositoryItem("01d66e75-b102-4736-b944-56bb068142e1")]
+            public virtual Ranorex.Text EtSurname
+            {
+                get
+                {
+                    return _etsurnameInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The EtSurname item info.
+            /// </summary>
+            [RepositoryItemInfo("01d66e75-b102-4736-b944-56bb068142e1")]
+            public virtual RepoItemInfo EtSurnameInfo
+            {
+                get
+                {
+                    return _etsurnameInfo;
+                }
+            }
+
+            /// <summary>
+            /// The EtDateBirth item.
+            /// </summary>
+            [RepositoryItem("117ddf31-b790-479f-a752-77c4ab4867ce")]
+            public virtual Ranorex.Text EtDateBirth
+            {
+                get
+                {
+                    return _etdatebirthInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The EtDateBirth item info.
+            /// </summary>
+            [RepositoryItemInfo("117ddf31-b790-479f-a752-77c4ab4867ce")]
+            public virtual RepoItemInfo EtDateBirthInfo
+            {
+                get
+                {
+                    return _etdatebirthInfo;
+                }
+            }
+
+            /// <summary>
+            /// The EtGender item.
+            /// </summary>
+            [RepositoryItem("68d14a1e-ded3-40e6-83b1-bbda76c9da82")]
+            public virtual Ranorex.Text EtGender
+            {
+                get
+                {
+                    return _etgenderInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The EtGender item info.
+            /// </summary>
+            [RepositoryItemInfo("68d14a1e-ded3-40e6-83b1-bbda76c9da82")]
+            public virtual RepoItemInfo EtGenderInfo
+            {
+                get
+                {
+                    return _etgenderInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnNext item.
+            /// </summary>
+            [RepositoryItem("7b133682-4665-4f25-989e-1bf1b36453f6")]
+            public virtual Ranorex.Text BtnNext
+            {
+                get
+                {
+                    return _btnnextInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnNext item info.
+            /// </summary>
+            [RepositoryItemInfo("7b133682-4665-4f25-989e-1bf1b36453f6")]
+            public virtual RepoItemInfo BtnNextInfo
+            {
+                get
+                {
+                    return _btnnextInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnSkip item.
+            /// </summary>
+            [RepositoryItem("a846c0ca-ad31-4dd6-a433-68af9d2a5513")]
+            public virtual Ranorex.Text BtnSkip
+            {
+                get
+                {
+                    return _btnskipInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnSkip item info.
+            /// </summary>
+            [RepositoryItemInfo("a846c0ca-ad31-4dd6-a433-68af9d2a5513")]
+            public virtual RepoItemInfo BtnSkipInfo
+            {
+                get
+                {
+                    return _btnskipInfo;
                 }
             }
         }

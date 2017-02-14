@@ -22,7 +22,7 @@ using Ranorex.Core.Testing;
 
 namespace Spar.Test_cases.Registration
 {
-    public partial class Registration_SerialNumber
+    public partial class NoCard
     {
         /// <summary>
         /// This method gets called right after the recording has been started.

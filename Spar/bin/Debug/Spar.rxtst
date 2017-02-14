@@ -16,7 +16,7 @@ rxversion="6.2">
 					value="spar.plus.si.staging"/>
 					<param
 					name="DeviceName"
-					value="Sony"/>
+					value="HUAWEI P7-L10"/>
 				</parameters>
 			</testcase>
 			<folder
@@ -40,21 +40,6 @@ rxversion="6.2">
 			ReportTime="RelativeToTestSuiteStartTime"
 			TracingScreenshotMode="Foreground"
 			TracingScreenshotQuality="40"/>
-			<setup
-			name="setup"
-			id="7d008b14-7d30-49ca-88df-527a8050174b"/>
-			<modulegroup
-			name="ClearAppData"
-			id="8e8ba6dd-eae0-4de9-bf5e-fa08f0bce440"
-			ref="cccb901b-c929-4f44-9a45-ecda775976a2">
-				<databinding>
-					<var
-					variablename="PackageName"
-					variableid="942a217a-1218-4802-bdd1-2e0d903cf702"
-					dataname="PackageName"
-					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
-				</databinding>
-			</modulegroup>
 			<folder
 			name="Login"
 			id="d0659688-496d-40c2-b993-32f2cf860570"/>
@@ -64,6 +49,11 @@ rxversion="6.2">
 			<testcase
 			name="Registration_SerialNumber"
 			id="dfc8a0db-6d76-4332-93e4-c4a7e1b1100c"/>
+			<testmodule
+			name="NoCard"
+			id="e33a145f-baee-4b9e-a89b-dcbfc98de790"
+			ref="3b5eaeef-79af-4751-be86-63848da88ff6"
+			type="Recording"/>
 			<folder
 			name="ShoppingList"
 			id="f9db67e4-b2d1-43ae-883c-0a91c6c19b73"/>
@@ -84,13 +74,9 @@ rxversion="6.2">
 						<testcase
 						name="Registration_NoCard"
 						id="d254f475-2cfd-490a-8865-14306964695e">
-							<setup
-							name="setup"
-							id="7d008b14-7d30-49ca-88df-527a8050174b">
-								<modulegroup
-								name="ClearAppData"
-								id="8e8ba6dd-eae0-4de9-bf5e-fa08f0bce440"/>
-							</setup>
+							<testmodule
+							name="NoCard"
+							id="e33a145f-baee-4b9e-a89b-dcbfc98de790"/>
 						</testcase>
 						<testcase
 						name="Registration_SerialNumber"

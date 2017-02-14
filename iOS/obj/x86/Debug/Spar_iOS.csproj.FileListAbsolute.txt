@@ -25,3 +25,12 @@ C:\Users\domen\Google Drive\SparApp\iOS\bin\Debug\Ranorex.Libs.WinForms.dll
 C:\Users\domen\Google Drive\SparApp\iOS\obj\x86\Debug\Spar_iOS.csprojResolveAssemblyReference.cache
 C:\Users\domen\Google Drive\SparApp\iOS\obj\x86\Debug\Spar_iOS.dll
 C:\Users\domen\Google Drive\SparApp\iOS\obj\x86\Debug\Spar_iOS.pdb
+C:\Users\sabinam\Google Drive\SparApp\iOS\bin\Debug\iOS.rxtmg
+C:\Users\sabinam\Google Drive\SparApp\iOS\bin\Debug\Spar_iOS.dll
+C:\Users\sabinam\Google Drive\SparApp\iOS\bin\Debug\Spar_iOS.pdb
+C:\Users\sabinam\Google Drive\SparApp\iOS\bin\Debug\Ranorex.Core.WinApi.dll
+C:\Users\sabinam\Google Drive\SparApp\iOS\bin\Debug\Ranorex.Core.Injector.dll
+C:\Users\sabinam\Google Drive\SparApp\iOS\bin\Debug\Ranorex.Libs.WinForms.dll
+C:\Users\sabinam\Google Drive\SparApp\iOS\obj\x86\Debug\Spar_iOS.csprojResolveAssemblyReference.cache
+C:\Users\sabinam\Google Drive\SparApp\iOS\obj\x86\Debug\Spar_iOS.dll
+C:\Users\sabinam\Google Drive\SparApp\iOS\obj\x86\Debug\Spar_iOS.pdb

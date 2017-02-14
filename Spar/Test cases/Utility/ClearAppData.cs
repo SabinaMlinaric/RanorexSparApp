@@ -54,16 +54,14 @@ namespace Spar.Test_cases.Utility
 
 #region Variables
 
-        string _PackageName;
-
         /// <summary>
         /// Gets or sets the value of variable PackageName.
         /// </summary>
         [TestVariable("82361544-8731-4a7d-b1cb-7420ac2fac02")]
         public string PackageName
         {
-            get { return _PackageName; }
-            set { _PackageName = value; }
+            get { return repo.PackageName; }
+            set { repo.PackageName = value; }
         }
 
 #endregion
@@ -92,8 +90,8 @@ namespace Spar.Test_cases.Utility
 
             Init();
 
-            Report.Log(ReportLevel.Info, "Application", "Killing application containing item 'PlusSparSiStaging'.", repo.PlusSparSiStaging.SelfInfo, new RecordItemIndex(0));
-            Host.Local.KillApplication(repo.PlusSparSiStaging.Self);
+            Report.Log(ReportLevel.Info, "Application", "Killing application containing item 'PlusSparSi'.", repo.PlusSparSi.SelfInfo, new RecordItemIndex(0));
+            Host.Local.KillApplication(repo.PlusSparSi.Self);
             Delay.Milliseconds(0);
             
             ClearData();

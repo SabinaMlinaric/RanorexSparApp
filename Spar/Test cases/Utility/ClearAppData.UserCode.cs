@@ -58,6 +58,7 @@ namespace Spar.Test_cases.Utility
 			adbCreateDirProcess.Start();
 			
 			adbCreateDirProcess.WaitForExit();
+			adbCreateDirProcess.Kill();
         }
 
     }

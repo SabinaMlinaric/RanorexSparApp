@@ -17,7 +17,6 @@ rxversion="6.2">
 		id="f885d0cd-d406-48ca-a29d-75d836c2cf92"
 		searchtimeout="30000ms"
 		capname="mobileapp"
-		refpath="/mobileapp[@title='plus.spar.si']"
 		addcaps="unknown,mobileapp,androidapp"
 		isrooted="True"
 		usecache="False">
@@ -36,7 +35,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="64387677-afca-4211-8795-6a1af010e433">
-					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']//text[@resourceid='R.string.scancard_info_title']
+					/mobileapp[@title=$PackageName]/form[@title='ScanCardActivity']//text[@resourceid='R.string.scancard_info_title']
 				</item>
 				<item
 				name="BtnScan"
@@ -45,7 +44,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="40b9c84c-33bf-422c-ae6e-c0ccd0a93437">
-					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']//text[@rid='btn_scan']
+					/mobileapp[@title=$PackageName]/form[@title='ScanCardActivity']//text[@rid='btn_scan']
 				</item>
 				<item
 				name="BtnNoCard"
@@ -54,7 +53,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="0291ee1a-13ab-44ea-ba2d-a84e5c538e0a">
-					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']//text[@rid='btn_no_card']
+					/mobileapp[@title=$PackageName]/form[@title='ScanCardActivity']//text[@rid='btn_no_card']
 				</item>
 				<item
 				name="BtnManualInsertCardNumber"
@@ -63,7 +62,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="32d73317-b8c8-4fd4-8649-310f03fa53e8">
-					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']//text[@rid='btn_manual_insert_card_number']
+					/mobileapp[@title=$PackageName]/form[@title='ScanCardActivity']//text[@rid='btn_manual_insert_card_number']
 				</item>
 				<item
 				name="Terms"
@@ -72,10 +71,10 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="7361423d-3295-4f38-bc16-35a3e26ac31e">
-					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']//text[@rid='tv_footer_terms']
+					/mobileapp[@title=$PackageName]/form[@title='ScanCardActivity']//text[@rid='tv_footer_terms']
 				</item>
 				<basepath>
-					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']
+					/mobileapp[@title=$PackageName]/form[@title='ScanCardActivity']
 				</basepath>
 			</folder>
 			<folder
@@ -87,49 +86,140 @@ rxversion="6.2">
 			isrooted="True"
 			usecache="False">
 				<item
-				name="RStringRegisterWelcomeInfoTitle"
+				name="RegisterWelcomeInfoTitle"
 				id="ccf96f7e-be42-417e-a9d3-d4fed0d57bd4"
 				searchtimeout="30000ms"
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="93228567-c371-45e2-94fc-4e01710a77bf">
-					/mobileapp[@title='plus.spar.si']/form[@title='RegisterWelcomeActivity']//text[@resourceid='R.string.register_welcome_info_title']
+					/mobileapp[@title=$PackageName]/form[@title='RegisterWelcomeActivity']//text[@resourceid='R.string.register_welcome_info_title']
+				</item>
+				<item
+				name="RegisterWelcomeExclusive"
+				id="4917a2ec-8ef3-4c6e-ab8b-b44b109a5259"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="96381afe-5b41-4b96-8686-6a7cef394936">
+					/mobileapp[@title=$PackageName]/form[@title='RegisterWelcomeActivity']//container[1]/text[@resourceid='R.string.register_welcome_exclusive']
+				</item>
+				<item
+				name="RegisterWelcomeCollectingCre"
+				id="5d9adda4-730f-4802-b5d8-4544b3c1056b"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="bff48b0c-a95b-46c1-9f54-3d7436de9682">
+					/mobileapp[@title=$PackageName]/form[@title='RegisterWelcomeActivity']//container[2]/text[@resourceid='R.string.register_welcome_collecting_credit']
+				</item>
+				<item
+				name="RegisterWelcomeCardAccess"
+				id="e8353065-e159-4ffd-ad3e-cf97b1c4a7fc"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="046b69df-5d44-4949-8379-4c34fb191a0b">
+					/mobileapp[@title=$PackageName]/form[@title='RegisterWelcomeActivity']//container[3]/text[@resourceid='R.string.register_welcome_card_access']
+				</item>
+				<item
+				name="BtnJoin"
+				id="5caae247-565b-40a6-b4c3-c709d62634fe"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="261f88aa-fe0d-4331-886c-2da7339ff7f7">
+					/mobileapp[@title=$PackageName]/form[@title='RegisterWelcomeActivity']//text[@rid='btn_join']
+				</item>
+				<item
+				name="BtnSkip"
+				id="f4686bcf-7100-4d8d-9551-6a8db3a0f7d2"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="78468c46-ac1d-458d-81c3-4479e9683c5c">
+					/mobileapp[@title=$PackageName]/form[@title='RegisterWelcomeActivity']//text[@rid='btn_skip']
 				</item>
 				<basepath>
-					/mobileapp[@title='plus.spar.si']/form[@title='RegisterWelcomeActivity']
+					/mobileapp[@title=$PackageName]/form[@title='RegisterWelcomeActivity']
+				</basepath>
+			</folder>
+			<folder
+			name="RegisterStep1PersonalDataActivity"
+			id="5eacb6a6-7012-4813-8cbb-3c4fb7f3625c"
+			searchtimeout="30000ms"
+			capname="form"
+			refimgid="30d87f8b-b752-4795-b86e-d2c51f053440"
+			isrooted="True"
+			usecache="False">
+				<item
+				name="RegisterPersonalInfoTitle"
+				id="d80a8e96-dd8f-4152-addc-368098ee47a6"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="ce5cf439-01cd-4fb3-be63-73c96f1c3dfd">
+					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@resourceid='R.string.register_personal_info_title']
+				</item>
+				<item
+				name="EtName"
+				id="3dd0d887-0311-4138-92a4-11ebd7eda214"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="b72fca3f-347b-46f8-839b-2cb06f5e1e52">
+					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_name']
+				</item>
+				<item
+				name="EtSurname"
+				id="01d66e75-b102-4736-b944-56bb068142e1"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="fa5c5f61-3b8a-4e01-be50-0aaba230756d">
+					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_surname']
+				</item>
+				<item
+				name="EtDateBirth"
+				id="117ddf31-b790-479f-a752-77c4ab4867ce"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="6eb09e9b-3b39-4a43-8cee-00849b14c9d0">
+					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_date_birth']
+				</item>
+				<item
+				name="EtGender"
+				id="68d14a1e-ded3-40e6-83b1-bbda76c9da82"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="14f192ba-5856-4461-8dc3-d4fe509e48c0">
+					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_gender']
+				</item>
+				<item
+				name="BtnNext"
+				id="7b133682-4665-4f25-989e-1bf1b36453f6"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="110f5d13-db5e-4a39-9329-f4b9997f9122">
+					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='btn_next']
+				</item>
+				<item
+				name="BtnSkip"
+				id="a846c0ca-ad31-4dd6-a433-68af9d2a5513"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="1b30ca37-7a82-4c02-9a30-c4f227e37ff4">
+					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='btn_skip']
+				</item>
+				<basepath>
+					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']
 				</basepath>
 			</folder>
 			<basepath>
-				/mobileapp[@title='plus.spar.si']
-			</basepath>
-			<icon>
-				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0
-U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABNSURBVDhPY6A6CA0NWQ/E//Hg9VClmAAo
-KYCmGCuGKscEQEmwAVAuVkBInqCCUQNGjgGEMFQpdoBLIS5xDABU0ICsGAtugCqlBmBgAAAcoXfL
-E78sAQAAAABJRU5ErkJggg==
-			</icon>
-		</appfolder>
-		<appfolder
-		name="PlusSparSiStaging"
-		id="417e06dd-542b-4dc3-bf01-4477577d9429"
-		searchtimeout="30000ms"
-		capname="mobileapp"
-		refpath="/mobileapp[@title='plus.spar.si.staging']"
-		addcaps="unknown,mobileapp,androidapp"
-		isrooted="True"
-		usecache="False">
-			<item
-			name="Linear"
-			id="1dda8a8e-dae8-46e4-87e7-4b04f4fbb064"
-			searchtimeout="30000ms"
-			capname="container"
-			refpath="/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']/androidelement[@rid='content']/container[@containertype='Frame']/container[1]/container[1]/androidelement/container[@containertype='Frame']/container[@containertype='Frame']/androidelement/container[@containertype='Frame']/androidelement/androidelement[1]/container[2]/container[@containertype='Linear']/container[1]"
-			addcaps="container,androidelement,mobileuielement"
-			refimgid="9229fa83-a76a-481e-b881-5cff5d4a58af">
-				/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']/androidelement[@rid='content']/container/container[1]/container[1]/androidelement/container[@containertype='Frame']/container/androidelement/container[@containertype='Frame']/androidelement/androidelement[1]/container[2]/container[@containertype='Linear']/container[1]
-			</item>
-			<basepath>
-				/mobileapp[@title='plus.spar.si.staging']
+				/mobileapp[@title=$PackageName]
 			</basepath>
 			<icon>
 				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0
@@ -140,5 +230,11 @@ E78sAQAAAABJRU5ErkJggg==
 		</appfolder>
 		<basepath/>
 	</rootfolder>
-	<variables/>
+	<variables>
+		<var
+		name="PackageName"
+		id="34011a8a-5d5e-4397-86a8-f0ab4048e5d0">
+			plus.spar.si
+		</var>
+	</variables>
 </repository>

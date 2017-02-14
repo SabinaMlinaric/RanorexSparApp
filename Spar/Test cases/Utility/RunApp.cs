@@ -67,16 +67,14 @@ namespace Spar.Test_cases.Utility
             set { _DeviceName = value; }
         }
 
-        string _PackageName;
-
         /// <summary>
         /// Gets or sets the value of variable PackageName.
         /// </summary>
         [TestVariable("4de25083-df64-42d6-97dd-017c0a227675")]
         public string PackageName
         {
-            get { return _PackageName; }
-            set { _PackageName = value; }
+            get { return repo.PackageName; }
+            set { repo.PackageName = value; }
         }
 
 #endregion
