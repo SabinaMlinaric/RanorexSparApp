@@ -1,22 +1,19 @@
 ﻿<Properties>
   <Array name="active">
-    <Element value="Test cases\Registration\NoCard.rxrec" />
+    <Element value="Test cases\Registration\Registration_Success.rxrec" />
   </Array>
   <Array name="bookmarks" />
   <Array name="files">
     <Element value="Spar.rxtst" />
     <Element value="Test cases\Utility\ClearAppData.UserCode.cs" />
-    <Element value="Test cases\Utility\ClearAppData.rxrec" />
-    <Element value="Spar.rxtmg" />
-    <Element value="SparRepository.rxrep" />
-    <Element value="Test cases\Utility\RunApp.rxrec" />
-    <Element value="Test cases\Registration\NoCard.rxrec" />
+    <Element value="Test cases\Registration\Registration_Success.rxrec" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">
       <runOnBuild value="False" />
     </Properties>
     <Array name="recentusercodeselections">
+      <Element value="Spar.Test_cases.Utility.ClearAppData.Close_Application_PlusSparSi(RepoItemInfo mobileappInfo)" />
       <Element value="Spar.Registration_Success.Test()" />
     </Array>
   </Properties>

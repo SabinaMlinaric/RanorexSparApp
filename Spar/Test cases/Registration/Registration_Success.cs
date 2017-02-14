@@ -24,29 +24,29 @@ namespace Spar.Test_cases.Registration
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The NoCard recording.
+    ///The Registration_Success recording.
     /// </summary>
     [TestModule("3b5eaeef-79af-4751-be86-63848da88ff6", ModuleType.Recording, 1)]
-    public partial class NoCard : ITestModule
+    public partial class Registration_Success : ITestModule
     {
         /// <summary>
         /// Holds an instance of the Spar.SparRepository repository.
         /// </summary>
         public static Spar.SparRepository repo = Spar.SparRepository.Instance;
 
-        static NoCard instance = new NoCard();
+        static Registration_Success instance = new Registration_Success();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public NoCard()
+        public Registration_Success()
         {
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static NoCard Instance
+        public static Registration_Success Instance
         {
             get { return instance; }
         }

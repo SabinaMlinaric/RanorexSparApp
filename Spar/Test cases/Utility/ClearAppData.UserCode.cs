@@ -33,17 +33,11 @@ namespace Spar.Test_cases.Utility
         {
             // Your recording specific initialization code goes here.
         }
-
-        public void Close_Application_PlusSparSi(RepoItemInfo mobileappInfo)
-        {
-            Report.Log(ReportLevel.Info, "Application", "(Optional Action)\r\nKilling application containing item 'mobileappInfo'.", mobileappInfo);
-            Host.Local.KillApplication(mobileappInfo.FindAdapter<MobileApp>());
-        }
                 
         public void ClearData()
-        {
-            string pathToAdb      = "C:\\Program Files (x86)\\Ranorex 6.2\\Bin\\RxEnv\\Android\\tools\\adb.exe";                  //your path to adb.exe goes here
-			string appPackageName = PackageName;   //the packagename of your app
+        {            
+            string pathToAdb      = "C:\\Program Files (x86)\\Ranorex 6.2\\Bin\\RxEnv\\Android\\tools\\adb.exe";         //your path to adb.exe goes here
+			string appPackageName = PackageName;  																		 //the packagename of your app
 			
 			Process adbClearProcess = new Process();
 			adbClearProcess.StartInfo.FileName  = pathToAdb;
@@ -58,8 +52,6 @@ namespace Spar.Test_cases.Utility
 			adbCreateDirProcess.Start();
 			
 			adbCreateDirProcess.WaitForExit();
-			adbCreateDirProcess.Kill();
         }
-
     }
 }

@@ -5,7 +5,7 @@ id="3b5eaeef-79af-4751-be86-63848da88ff6"
 embeddedrepository="False"
 mode="Mobile">
 	<name>
-		NoCard
+		Registration_Success
 	</name>
 	<repeatcount>
 		1
@@ -23,7 +23,7 @@ mode="Mobile">
 		True
 	</useDefaultItemLogging>
 	<codegen
-	classname="NoCard"
+	classname="Registration_Success"
 	namespace="Spar.Test_cases.Registration"/>
 	<variables/>
 	<recorditems>
@@ -315,7 +315,7 @@ mode="Mobile">
 	</repository>
 	<usercodefile
 	lang="CSharp">
-		NoCard.UserCode.cs
+		Registration_Success.UserCode.cs
 	</usercodefile>
 	<references/>
 </recordtable>

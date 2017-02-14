@@ -543,6 +543,11 @@ namespace Spar
             RepoItemInfo _etgenderInfo;
             RepoItemInfo _btnnextInfo;
             RepoItemInfo _btnskipInfo;
+            RepoItemInfo _etstreetInfo;
+            RepoItemInfo _ethousenumberInfo;
+            RepoItemInfo _etcountryInfo;
+            RepoItemInfo _etpostalInfo;
+            RepoItemInfo _etcityInfo;
 
             /// <summary>
             /// Creates a new RegisterStep1PersonalDataActivity  folder.
@@ -557,6 +562,11 @@ namespace Spar
                 _etgenderInfo = new RepoItemInfo(this, "EtGender", ".//text[@rid='et_gender']", 30000, null, "68d14a1e-ded3-40e6-83b1-bbda76c9da82");
                 _btnnextInfo = new RepoItemInfo(this, "BtnNext", ".//text[@rid='btn_next']", 30000, null, "7b133682-4665-4f25-989e-1bf1b36453f6");
                 _btnskipInfo = new RepoItemInfo(this, "BtnSkip", ".//text[@rid='btn_skip']", 30000, null, "a846c0ca-ad31-4dd6-a433-68af9d2a5513");
+                _etstreetInfo = new RepoItemInfo(this, "EtStreet", ".//text[@rid='et_street']", 30000, null, "2702edb2-9d0e-487f-8673-5c4a55c11971");
+                _ethousenumberInfo = new RepoItemInfo(this, "EtHouseNumber", ".//text[@rid='et_house_number']", 30000, null, "8a32bf22-f047-4166-a798-67aff6f5ac55");
+                _etcountryInfo = new RepoItemInfo(this, "EtCountry", ".//text[@rid='et_country']", 30000, null, "d8f78a37-b6c4-4909-82c3-ec9ab16d07d8");
+                _etpostalInfo = new RepoItemInfo(this, "EtPostal", ".//text[@rid='et_postal']", 30000, null, "4900b57e-195c-4152-988c-d62c4ced214b");
+                _etcityInfo = new RepoItemInfo(this, "EtCity", ".//text[@rid='et_city']", 30000, null, "29badc27-fd47-436e-aa01-7d05dca45367");
             }
 
             /// <summary>
@@ -748,6 +758,126 @@ namespace Spar
                 get
                 {
                     return _btnskipInfo;
+                }
+            }
+
+            /// <summary>
+            /// The EtStreet item.
+            /// </summary>
+            [RepositoryItem("2702edb2-9d0e-487f-8673-5c4a55c11971")]
+            public virtual Ranorex.Text EtStreet
+            {
+                get
+                {
+                    return _etstreetInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The EtStreet item info.
+            /// </summary>
+            [RepositoryItemInfo("2702edb2-9d0e-487f-8673-5c4a55c11971")]
+            public virtual RepoItemInfo EtStreetInfo
+            {
+                get
+                {
+                    return _etstreetInfo;
+                }
+            }
+
+            /// <summary>
+            /// The EtHouseNumber item.
+            /// </summary>
+            [RepositoryItem("8a32bf22-f047-4166-a798-67aff6f5ac55")]
+            public virtual Ranorex.Text EtHouseNumber
+            {
+                get
+                {
+                    return _ethousenumberInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The EtHouseNumber item info.
+            /// </summary>
+            [RepositoryItemInfo("8a32bf22-f047-4166-a798-67aff6f5ac55")]
+            public virtual RepoItemInfo EtHouseNumberInfo
+            {
+                get
+                {
+                    return _ethousenumberInfo;
+                }
+            }
+
+            /// <summary>
+            /// The EtCountry item.
+            /// </summary>
+            [RepositoryItem("d8f78a37-b6c4-4909-82c3-ec9ab16d07d8")]
+            public virtual Ranorex.Text EtCountry
+            {
+                get
+                {
+                    return _etcountryInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The EtCountry item info.
+            /// </summary>
+            [RepositoryItemInfo("d8f78a37-b6c4-4909-82c3-ec9ab16d07d8")]
+            public virtual RepoItemInfo EtCountryInfo
+            {
+                get
+                {
+                    return _etcountryInfo;
+                }
+            }
+
+            /// <summary>
+            /// The EtPostal item.
+            /// </summary>
+            [RepositoryItem("4900b57e-195c-4152-988c-d62c4ced214b")]
+            public virtual Ranorex.Text EtPostal
+            {
+                get
+                {
+                    return _etpostalInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The EtPostal item info.
+            /// </summary>
+            [RepositoryItemInfo("4900b57e-195c-4152-988c-d62c4ced214b")]
+            public virtual RepoItemInfo EtPostalInfo
+            {
+                get
+                {
+                    return _etpostalInfo;
+                }
+            }
+
+            /// <summary>
+            /// The EtCity item.
+            /// </summary>
+            [RepositoryItem("29badc27-fd47-436e-aa01-7d05dca45367")]
+            public virtual Ranorex.Text EtCity
+            {
+                get
+                {
+                    return _etcityInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The EtCity item info.
+            /// </summary>
+            [RepositoryItemInfo("29badc27-fd47-436e-aa01-7d05dca45367")]
+            public virtual RepoItemInfo EtCityInfo
+            {
+                get
+                {
+                    return _etcityInfo;
                 }
             }
         }

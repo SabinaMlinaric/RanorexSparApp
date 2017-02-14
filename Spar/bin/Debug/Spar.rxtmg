@@ -39,14 +39,6 @@ rxversion="6.2">
 			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
 			type="Recording"/>
 			<modulegroupdef
-			name="CloseApp"
-			id="ab85e910-6a96-48a9-8f56-0f9f8c4f501d"/>
-			<testmodule
-			name="CloseApp"
-			id="c8b15c4c-2c88-4117-9a1d-b8a040c341bd"
-			ref="48279561-74c0-4635-992f-46d68ad27859"
-			type="Recording"/>
-			<modulegroupdef
 			name="ClearAppData"
 			id="cccb901b-c929-4f44-9a45-ecda775976a2">
 				<groupvariables>
@@ -78,13 +70,6 @@ rxversion="6.2">
 					<testmodule
 					name="RunApp"
 					id="8a60ed77-bd99-43a5-b8d8-fd16521d813e"/>
-				</modulegroupdef>
-				<modulegroupdef
-				name="CloseApp"
-				id="ab85e910-6a96-48a9-8f56-0f9f8c4f501d">
-					<testmodule
-					name="CloseApp"
-					id="c8b15c4c-2c88-4117-9a1d-b8a040c341bd"/>
 				</modulegroupdef>
 			</modulegroups>
 		</childhierarchy>

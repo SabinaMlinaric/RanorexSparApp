@@ -214,6 +214,51 @@ rxversion="6.2">
 				refimgid="1b30ca37-7a82-4c02-9a30-c4f227e37ff4">
 					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='btn_skip']
 				</item>
+				<item
+				name="EtStreet"
+				id="2702edb2-9d0e-487f-8673-5c4a55c11971"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="12e501b3-3b53-4440-9ef3-365f8be9c167">
+					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_street']
+				</item>
+				<item
+				name="EtHouseNumber"
+				id="8a32bf22-f047-4166-a798-67aff6f5ac55"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="69afb091-7552-4183-93cd-54a3d696f100">
+					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_house_number']
+				</item>
+				<item
+				name="EtCountry"
+				id="d8f78a37-b6c4-4909-82c3-ec9ab16d07d8"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="1a4cc3a8-2d99-4e7d-888a-aefcff1ad5ea">
+					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_country']
+				</item>
+				<item
+				name="EtPostal"
+				id="4900b57e-195c-4152-988c-d62c4ced214b"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="6fbdc155-0924-479c-9572-df59099d58e9">
+					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_postal']
+				</item>
+				<item
+				name="EtCity"
+				id="29badc27-fd47-436e-aa01-7d05dca45367"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="f1fc2195-7633-47e2-adaa-c8ddc1c22ce2">
+					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_city']
+				</item>
 				<basepath>
 					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']
 				</basepath>
