@@ -86,6 +86,7 @@ namespace Spar
         public partial class PlusSparSiAppFolder : RepoGenBaseFolder
         {
             SparRepositoryFolders.ScanCardActivityFolder _scancardactivity;
+            SparRepositoryFolders.RegisterWelcomeActivityFolder _registerwelcomeactivity;
 
             /// <summary>
             /// Creates a new PlusSparSi  folder.
@@ -94,6 +95,7 @@ namespace Spar
                     base("PlusSparSi", "/mobileapp[@title='plus.spar.si']", parentFolder, 30000, null, false, "f885d0cd-d406-48ca-a29d-75d836c2cf92", "")
             {
                 _scancardactivity = new SparRepositoryFolders.ScanCardActivityFolder(this);
+                _registerwelcomeactivity = new SparRepositoryFolders.RegisterWelcomeActivityFolder(this);
             }
 
             /// <summary>
@@ -128,6 +130,15 @@ namespace Spar
             {
                 get { return _scancardactivity; }
             }
+
+            /// <summary>
+            /// The RegisterWelcomeActivity folder.
+            /// </summary>
+            [RepositoryFolder("56ec5b6a-6b8f-40de-8f5e-eb64a41ab44c")]
+            public virtual SparRepositoryFolders.RegisterWelcomeActivityFolder RegisterWelcomeActivity
+            {
+                get { return _registerwelcomeactivity; }
+            }
         }
 
         /// <summary>
@@ -136,7 +147,7 @@ namespace Spar
         [RepositoryFolder("34dbf98f-9c14-4923-add2-96dcad5eac90")]
         public partial class ScanCardActivityFolder : RepoGenBaseFolder
         {
-            RepoItemInfo _rstringscancardinfotitleInfo;
+            RepoItemInfo _startscanningtitleInfo;
             RepoItemInfo _btnscanInfo;
             RepoItemInfo _btnnocardInfo;
             RepoItemInfo _btnmanualinsertcardnumberInfo;
@@ -148,7 +159,7 @@ namespace Spar
             public ScanCardActivityFolder(RepoGenBaseFolder parentFolder) :
                     base("ScanCardActivity", "form[@title='ScanCardActivity']", parentFolder, 30000, null, false, "34dbf98f-9c14-4923-add2-96dcad5eac90", "")
             {
-                _rstringscancardinfotitleInfo = new RepoItemInfo(this, "RStringScancardInfoTitle", ".//text[@resourceid='R.string.scancard_info_title']", 30000, null, "98bbe845-d99b-4151-8a22-9689ba200472");
+                _startscanningtitleInfo = new RepoItemInfo(this, "StartScanningTitle", ".//text[@resourceid='R.string.scancard_info_title']", 30000, null, "98bbe845-d99b-4151-8a22-9689ba200472");
                 _btnscanInfo = new RepoItemInfo(this, "BtnScan", ".//text[@rid='btn_scan']", 30000, null, "83b6c29f-59b7-436c-9da7-1d8811331049");
                 _btnnocardInfo = new RepoItemInfo(this, "BtnNoCard", ".//text[@rid='btn_no_card']", 30000, null, "255de8dd-ff61-4d9f-b4cf-4d5b4ffca6c8");
                 _btnmanualinsertcardnumberInfo = new RepoItemInfo(this, "BtnManualInsertCardNumber", ".//text[@rid='btn_manual_insert_card_number']", 30000, null, "9197c359-ff23-472b-b9fb-50a4e980793a");
@@ -180,26 +191,26 @@ namespace Spar
             }
 
             /// <summary>
-            /// The RStringScancardInfoTitle item.
+            /// The StartScanningTitle item.
             /// </summary>
             [RepositoryItem("98bbe845-d99b-4151-8a22-9689ba200472")]
-            public virtual Ranorex.Text RStringScancardInfoTitle
+            public virtual Ranorex.Text StartScanningTitle
             {
                 get
                 {
-                    return _rstringscancardinfotitleInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _startscanningtitleInfo.CreateAdapter<Ranorex.Text>(true);
                 }
             }
 
             /// <summary>
-            /// The RStringScancardInfoTitle item info.
+            /// The StartScanningTitle item info.
             /// </summary>
             [RepositoryItemInfo("98bbe845-d99b-4151-8a22-9689ba200472")]
-            public virtual RepoItemInfo RStringScancardInfoTitleInfo
+            public virtual RepoItemInfo StartScanningTitleInfo
             {
                 get
                 {
-                    return _rstringscancardinfotitleInfo;
+                    return _startscanningtitleInfo;
                 }
             }
 
@@ -296,6 +307,72 @@ namespace Spar
                 get
                 {
                     return _termsInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The RegisterWelcomeActivityFolder folder.
+        /// </summary>
+        [RepositoryFolder("56ec5b6a-6b8f-40de-8f5e-eb64a41ab44c")]
+        public partial class RegisterWelcomeActivityFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _rstringregisterwelcomeinfotitleInfo;
+
+            /// <summary>
+            /// Creates a new RegisterWelcomeActivity  folder.
+            /// </summary>
+            public RegisterWelcomeActivityFolder(RepoGenBaseFolder parentFolder) :
+                    base("RegisterWelcomeActivity", "form[@title='RegisterWelcomeActivity']", parentFolder, 30000, null, false, "56ec5b6a-6b8f-40de-8f5e-eb64a41ab44c", "")
+            {
+                _rstringregisterwelcomeinfotitleInfo = new RepoItemInfo(this, "RStringRegisterWelcomeInfoTitle", ".//text[@resourceid='R.string.register_welcome_info_title']", 30000, null, "ccf96f7e-be42-417e-a9d3-d4fed0d57bd4");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("56ec5b6a-6b8f-40de-8f5e-eb64a41ab44c")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("56ec5b6a-6b8f-40de-8f5e-eb64a41ab44c")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RStringRegisterWelcomeInfoTitle item.
+            /// </summary>
+            [RepositoryItem("ccf96f7e-be42-417e-a9d3-d4fed0d57bd4")]
+            public virtual Ranorex.Text RStringRegisterWelcomeInfoTitle
+            {
+                get
+                {
+                    return _rstringregisterwelcomeinfotitleInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RStringRegisterWelcomeInfoTitle item info.
+            /// </summary>
+            [RepositoryItemInfo("ccf96f7e-be42-417e-a9d3-d4fed0d57bd4")]
+            public virtual RepoItemInfo RStringRegisterWelcomeInfoTitleInfo
+            {
+                get
+                {
+                    return _rstringregisterwelcomeinfotitleInfo;
                 }
             }
         }

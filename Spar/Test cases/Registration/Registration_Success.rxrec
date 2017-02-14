@@ -37,6 +37,27 @@ mode="Mobile">
 			<comment/>
 			<bindings/>
 		</runmobileapprecorditem>
+		<validationitem
+		enabled="True"
+		optional="False"
+		searchpropertyid="fccd4687-814e-4106-857b-f45724c36363"
+		action="AttributeEqual">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="ItemRecorderEditor"
+			id="98bbe845-d99b-4151-8a22-9689ba200472">
+				<path>
+					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']//text[@resourceid='R.string.scancard_info_title']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				Start with scanning your SPAR plus card!
+			</matchvalue>
+		</validationitem>
 		<touchrecorditem
 		enabled="True"
 		optional="False"

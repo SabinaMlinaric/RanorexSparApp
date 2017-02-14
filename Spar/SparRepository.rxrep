@@ -30,7 +30,7 @@ rxversion="6.2">
 			isrooted="True"
 			usecache="False">
 				<item
-				name="RStringScancardInfoTitle"
+				name="StartScanningTitle"
 				id="98bbe845-d99b-4151-8a22-9689ba200472"
 				searchtimeout="30000ms"
 				capname="text"
@@ -76,6 +76,27 @@ rxversion="6.2">
 				</item>
 				<basepath>
 					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']
+				</basepath>
+			</folder>
+			<folder
+			name="RegisterWelcomeActivity"
+			id="56ec5b6a-6b8f-40de-8f5e-eb64a41ab44c"
+			searchtimeout="30000ms"
+			capname="form"
+			refimgid="62477313-9b13-43d7-adb2-2ae249211136"
+			isrooted="True"
+			usecache="False">
+				<item
+				name="RStringRegisterWelcomeInfoTitle"
+				id="ccf96f7e-be42-417e-a9d3-d4fed0d57bd4"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="93228567-c371-45e2-94fc-4e01710a77bf">
+					/mobileapp[@title='plus.spar.si']/form[@title='RegisterWelcomeActivity']//text[@resourceid='R.string.register_welcome_info_title']
+				</item>
+				<basepath>
+					/mobileapp[@title='plus.spar.si']/form[@title='RegisterWelcomeActivity']
 				</basepath>
 			</folder>
 			<basepath>

@@ -83,7 +83,11 @@ namespace Spar.Test_cases.Registration
             Host.Local.RunMobileApp("Sony", "plus.spar.si", false);
             Delay.Milliseconds(3500);
             
-            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.ScanCardActivity.BtnScan' at Center", repo.PlusSparSi.ScanCardActivity.BtnScanInfo, new RecordItemIndex(1));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Start with scanning your SPAR plus card!') on item 'PlusSparSi.ScanCardActivity.StartScanningTitle'.", repo.PlusSparSi.ScanCardActivity.StartScanningTitleInfo, new RecordItemIndex(1));
+            Validate.Attribute(repo.PlusSparSi.ScanCardActivity.StartScanningTitleInfo, "Text", "Start with scanning your SPAR plus card!");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.ScanCardActivity.BtnScan' at Center", repo.PlusSparSi.ScanCardActivity.BtnScanInfo, new RecordItemIndex(2));
             repo.PlusSparSi.ScanCardActivity.BtnScan.Touch();
             Delay.Milliseconds(500);
             

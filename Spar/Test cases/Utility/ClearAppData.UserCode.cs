@@ -36,7 +36,7 @@ namespace Spar.Test_cases.Utility
 
         public void ClearData()
         {
-            string pathToAdb      = "adb.exe";                  //your path to adb.exe goes here
+            string pathToAdb      = "C:\\ADB\\adb.exe";                  //your path to adb.exe goes here
 			string appPackageName = "plus.spar.si";   //the packagename of your app
 			
 			Process adbClearProcess = new Process();

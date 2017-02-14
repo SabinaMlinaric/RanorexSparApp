@@ -3,6 +3,12 @@
 rxversion="6.2">
 	<testsuiteentryhierarchy>
 		<flatlistofchildren>
+			<modulegroupdef
+			name="RunApp"
+			id="02f95312-802b-4416-8fbd-23a17455a112"/>
+			<modulegroupdef
+			name="Logout"
+			id="4fe08d07-edd8-4236-9262-930f93ac8de3"/>
 			<testmodule
 			name="ClearAppData"
 			id="63cc49c0-43aa-48b7-8a9f-fd60aea2404f"
@@ -11,6 +17,9 @@ rxversion="6.2">
 			<modulegroups
 			name="Spar"
 			id="829039fa-429a-4299-b777-4f6960a1788c"/>
+			<modulegroupdef
+			name="Login"
+			id="9ef465ac-8667-4359-9366-2079a41c0193"/>
 			<modulegroupdef
 			name="ClearAppData"
 			id="cccb901b-c929-4f44-9a45-ecda775976a2"/>
@@ -26,6 +35,15 @@ rxversion="6.2">
 					name="ClearAppData"
 					id="63cc49c0-43aa-48b7-8a9f-fd60aea2404f"/>
 				</modulegroupdef>
+				<modulegroupdef
+				name="RunApp"
+				id="02f95312-802b-4416-8fbd-23a17455a112"/>
+				<modulegroupdef
+				name="Login"
+				id="9ef465ac-8667-4359-9366-2079a41c0193"/>
+				<modulegroupdef
+				name="Logout"
+				id="4fe08d07-edd8-4236-9262-930f93ac8de3"/>
 			</modulegroups>
 		</childhierarchy>
 	</testsuiteentryhierarchy>
