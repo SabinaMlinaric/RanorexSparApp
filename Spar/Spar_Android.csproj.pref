@@ -1,16 +1,16 @@
 ﻿<Properties>
   <Array name="active">
-    <Element value="Spar.rxtst" />
+    <Element value="Test cases\Registration\NoCard.rxrec" />
   </Array>
   <Array name="bookmarks" />
   <Array name="files">
+    <Element value="Spar.rxtst" />
     <Element value="Test cases\Utility\ClearAppData.UserCode.cs" />
     <Element value="Test cases\Utility\ClearAppData.rxrec" />
     <Element value="Spar.rxtmg" />
     <Element value="SparRepository.rxrep" />
     <Element value="Test cases\Utility\RunApp.rxrec" />
-    <Element value="Test cases\Registration\Registration_SerialNumber.rxrec" />
-    <Element value="Spar.rxtst" />
+    <Element value="Test cases\Registration\NoCard.rxrec" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

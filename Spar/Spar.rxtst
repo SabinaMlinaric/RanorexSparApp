@@ -6,6 +6,9 @@ rxversion="6.2">
 			<folder
 			name="MySpar"
 			id="0b09c187-fef2-4ae9-85f2-1812e73b5891"/>
+			<setup
+			name="setup"
+			id="0bb8463a-bfef-467c-959b-f7a43b5847d9"/>
 			<testcase
 			name="Spar"
 			id="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"
@@ -19,6 +22,23 @@ rxversion="6.2">
 					value="HUAWEI P7-L10"/>
 				</parameters>
 			</testcase>
+			<modulegroup
+			name="RunApp"
+			id="443e65be-0b32-4fa0-85e7-794446583f64"
+			ref="02f95312-802b-4416-8fbd-23a17455a112">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="8726b095-9eb2-4da6-b561-7e77705b4be0"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="632c5530-4ec5-4e4a-b12d-5d79da6dffd1"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</modulegroup>
 			<folder
 			name="Boarding"
 			id="5979a9fe-3310-4274-9a43-6e191e81eb64"/>
@@ -53,7 +73,15 @@ rxversion="6.2">
 			name="NoCard"
 			id="e33a145f-baee-4b9e-a89b-dcbfc98de790"
 			ref="3b5eaeef-79af-4751-be86-63848da88ff6"
-			type="Recording"/>
+			type="Recording">
+				<databinding>
+					<var
+					variablename="PackageName"
+					variableid="34011a8a-5d5e-4397-86a8-f0ab4048e5d0"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
 			<folder
 			name="ShoppingList"
 			id="f9db67e4-b2d1-43ae-883c-0a91c6c19b73"/>
@@ -74,6 +102,13 @@ rxversion="6.2">
 						<testcase
 						name="Registration_NoCard"
 						id="d254f475-2cfd-490a-8865-14306964695e">
+							<setup
+							name="setup"
+							id="0bb8463a-bfef-467c-959b-f7a43b5847d9">
+								<modulegroup
+								name="RunApp"
+								id="443e65be-0b32-4fa0-85e7-794446583f64"/>
+							</setup>
 							<testmodule
 							name="NoCard"
 							id="e33a145f-baee-4b9e-a89b-dcbfc98de790"/>
