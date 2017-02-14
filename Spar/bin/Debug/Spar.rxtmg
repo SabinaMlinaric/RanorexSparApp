@@ -5,10 +5,26 @@ rxversion="6.2">
 		<flatlistofchildren>
 			<modulegroupdef
 			name="RunApp"
-			id="02f95312-802b-4416-8fbd-23a17455a112"/>
-			<modulegroupdef
-			name="Logout"
-			id="4fe08d07-edd8-4236-9262-930f93ac8de3"/>
+			id="02f95312-802b-4416-8fbd-23a17455a112">
+				<groupvariables>
+					<groupvariable
+					name="PackageName"
+					id="632c5530-4ec5-4e4a-b12d-5d79da6dffd1">
+						<modulevariable
+						name="PackageName"
+						variableref="4de25083-df64-42d6-97dd-017c0a227675"
+						moduleref="8a60ed77-bd99-43a5-b8d8-fd16521d813e"/>
+					</groupvariable>
+					<groupvariable
+					name="DeviceName"
+					id="8726b095-9eb2-4da6-b561-7e77705b4be0">
+						<modulevariable
+						name="DeviceName"
+						variableref="7ba94856-ce36-433b-aa83-673fcd1b06d7"
+						moduleref="8a60ed77-bd99-43a5-b8d8-fd16521d813e"/>
+					</groupvariable>
+				</groupvariables>
+			</modulegroupdef>
 			<testmodule
 			name="ClearAppData"
 			id="63cc49c0-43aa-48b7-8a9f-fd60aea2404f"
@@ -17,22 +33,32 @@ rxversion="6.2">
 			<modulegroups
 			name="Spar"
 			id="829039fa-429a-4299-b777-4f6960a1788c"/>
+			<testmodule
+			name="RunApp"
+			id="8a60ed77-bd99-43a5-b8d8-fd16521d813e"
+			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
+			type="Recording"/>
 			<modulegroupdef
-			name="Login"
-			id="9ef465ac-8667-4359-9366-2079a41c0193"/>
+			name="CloseApp"
+			id="ab85e910-6a96-48a9-8f56-0f9f8c4f501d"/>
+			<testmodule
+			name="CloseApp"
+			id="c8b15c4c-2c88-4117-9a1d-b8a040c341bd"
+			ref="48279561-74c0-4635-992f-46d68ad27859"
+			type="Recording"/>
 			<modulegroupdef
 			name="ClearAppData"
 			id="cccb901b-c929-4f44-9a45-ecda775976a2">
 				<groupvariables>
 					<groupvariable
-					name="NewGroupVariable"
-					id="942a217a-1218-4802-bdd1-2e0d903cf702"/>
+					name="PackageName"
+					id="942a217a-1218-4802-bdd1-2e0d903cf702">
+						<modulevariable
+						name="PackageName"
+						variableref="82361544-8731-4a7d-b1cb-7420ac2fac02"
+						moduleref="63cc49c0-43aa-48b7-8a9f-fd60aea2404f"/>
+					</groupvariable>
 				</groupvariables>
-				<constantvalues>
-					<constantvalue
-					value="PackageName"
-					id="63683d69-cca9-4093-b23e-18a466a63917"/>
-				</constantvalues>
 			</modulegroupdef>
 		</flatlistofchildren>
 		<childhierarchy>
@@ -48,13 +74,18 @@ rxversion="6.2">
 				</modulegroupdef>
 				<modulegroupdef
 				name="RunApp"
-				id="02f95312-802b-4416-8fbd-23a17455a112"/>
+				id="02f95312-802b-4416-8fbd-23a17455a112">
+					<testmodule
+					name="RunApp"
+					id="8a60ed77-bd99-43a5-b8d8-fd16521d813e"/>
+				</modulegroupdef>
 				<modulegroupdef
-				name="Login"
-				id="9ef465ac-8667-4359-9366-2079a41c0193"/>
-				<modulegroupdef
-				name="Logout"
-				id="4fe08d07-edd8-4236-9262-930f93ac8de3"/>
+				name="CloseApp"
+				id="ab85e910-6a96-48a9-8f56-0f9f8c4f501d">
+					<testmodule
+					name="CloseApp"
+					id="c8b15c4c-2c88-4117-9a1d-b8a040c341bd"/>
+				</modulegroupdef>
 			</modulegroups>
 		</childhierarchy>
 	</testsuiteentryhierarchy>

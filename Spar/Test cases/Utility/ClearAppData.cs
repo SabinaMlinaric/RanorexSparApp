@@ -92,7 +92,8 @@ namespace Spar.Test_cases.Utility
 
             Init();
 
-            Close_Application_PlusSparSi(repo.PlusSparSi.SelfInfo);
+            Report.Log(ReportLevel.Info, "Application", "Killing application containing item 'PlusSparSiStaging'.", repo.PlusSparSiStaging.SelfInfo, new RecordItemIndex(0));
+            Host.Local.KillApplication(repo.PlusSparSiStaging.Self);
             Delay.Milliseconds(0);
             
             ClearData();
