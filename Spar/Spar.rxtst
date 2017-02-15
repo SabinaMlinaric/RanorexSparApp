@@ -4,6 +4,9 @@ rxversion="6.2">
 	<testsuiteentryhierarchy>
 		<flatlistofchildren>
 			<folder
+			name="iOS"
+			id="06420a85-320d-4359-bae9-37915062ad13"/>
+			<folder
 			name="MySpar"
 			id="0b09c187-fef2-4ae9-85f2-1812e73b5891"/>
 			<setup
@@ -22,6 +25,9 @@ rxversion="6.2">
 					value="HUAWEI P7-L10"/>
 				</parameters>
 			</testcase>
+			<folder
+			name="iOS_ShoppingList"
+			id="345ec70a-b3dc-470e-bfad-d175d9c1e6bc"/>
 			<modulegroup
 			name="RunApp"
 			id="443e65be-0b32-4fa0-85e7-794446583f64"
@@ -39,6 +45,9 @@ rxversion="6.2">
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</modulegroup>
+			<folder
+			name="iOS_Registration"
+			id="4a5763ad-04e1-4b55-a029-3b1942eb99b0"/>
 			<folder
 			name="Boarding"
 			id="5979a9fe-3310-4274-9a43-6e191e81eb64"/>
@@ -60,6 +69,18 @@ rxversion="6.2">
 			ReportTime="RelativeToTestSuiteStartTime"
 			TracingScreenshotMode="Foreground"
 			TracingScreenshotQuality="40"/>
+			<folder
+			name="iOS_Login"
+			id="7828d82a-8ccf-4f22-a421-2127d4f081cf"/>
+			<folder
+			name="iOS__Boarding"
+			id="890b6152-814a-4e79-8ef0-41205a412edd"/>
+			<testcase
+			name="iOS_Registration_Success"
+			id="923fc005-b79c-498f-bba3-ed5ee691dac0"/>
+			<folder
+			name="iOS_Landing"
+			id="96cf3529-b6d9-438b-898c-5e69ab8c4e22"/>
 			<testmodule
 			name="ClearAppData"
 			id="aee1e5c7-93da-4159-b70e-7bf8e535220a"
@@ -98,6 +119,9 @@ rxversion="6.2">
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</testmodule>
+			<folder
+			name="iOS_MySpar"
+			id="ef67d831-fed7-4946-a6c7-ee63893c08d1"/>
 			<folder
 			name="ShoppingList"
 			id="f9db67e4-b2d1-43ae-883c-0a91c6c19b73"/>
@@ -151,6 +175,32 @@ rxversion="6.2">
 						<folder
 						name="ShoppingList"
 						id="f9db67e4-b2d1-43ae-883c-0a91c6c19b73"/>
+					</folder>
+					<folder
+					name="iOS"
+					id="06420a85-320d-4359-bae9-37915062ad13">
+						<folder
+						name="iOS__Boarding"
+						id="890b6152-814a-4e79-8ef0-41205a412edd"/>
+						<folder
+						name="iOS_Registration"
+						id="4a5763ad-04e1-4b55-a029-3b1942eb99b0">
+							<testcase
+							name="iOS_Registration_Success"
+							id="923fc005-b79c-498f-bba3-ed5ee691dac0"/>
+						</folder>
+						<folder
+						name="iOS_Login"
+						id="7828d82a-8ccf-4f22-a421-2127d4f081cf"/>
+						<folder
+						name="iOS_Landing"
+						id="96cf3529-b6d9-438b-898c-5e69ab8c4e22"/>
+						<folder
+						name="iOS_MySpar"
+						id="ef67d831-fed7-4946-a6c7-ee63893c08d1"/>
+						<folder
+						name="iOS_ShoppingList"
+						id="345ec70a-b3dc-470e-bfad-d175d9c1e6bc"/>
 					</folder>
 				</testcase>
 			</testsuite>
