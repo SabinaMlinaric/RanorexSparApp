@@ -25,7 +25,52 @@ mode="Mobile">
 	<codegen
 	classname="Registration_Success"
 	namespace="Spar.Test_cases.Registration"/>
-	<variables/>
+	<variables>
+		<var
+		name="Name"
+		id="ba843f94-a98f-40c9-b273-2deef2a1f056">
+		</var>
+		<var
+		name="Surname"
+		id="212de63e-4181-448a-b359-07c10def87b4">
+		</var>
+		<var
+		name="DateOfBirth"
+		id="9d01736c-c8c9-4490-a510-6160f378bbdb">
+		</var>
+		<var
+		name="Country"
+		id="f78c676b-e99f-4d90-a462-fe331b5b7949">
+		</var>
+		<var
+		name="Address"
+		id="a8aac716-de1a-454a-bb1c-d89868ae7bb5">
+		</var>
+		<var
+		name="PostalNumber"
+		id="1b5cd7d8-a8b1-4442-a67b-1edec64b1d5c">
+		</var>
+		<var
+		name="City"
+		id="7f104a17-a1f2-4fc4-a4d5-662e21c23529">
+		</var>
+		<var
+		name="PhoneNumber"
+		id="832dd344-3eb2-4a0a-b812-ce3e0c3bdb08">
+		</var>
+		<var
+		name="Email"
+		id="0ed279af-b285-427f-9acb-737d265e44a3">
+		</var>
+		<var
+		name="Password"
+		id="1a83f61b-162e-434a-a301-703224e1610f">
+		</var>
+		<var
+		name="Gender"
+		id="599c5c46-e674-4ec7-8e7a-97ff7fd23c59">
+		</var>
+	</variables>
 	<recorditems>
 		<validationitem
 		enabled="True"
@@ -209,7 +254,11 @@ mode="Mobile">
 		searchpropertyid="3e355d1a-a924-4cdc-9661-98a49d41689b"
 		attrname="Text">
 			<comment/>
-			<bindings/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="Name"/>
+			</bindings>
 			<info
 			sourcename="ItemRecorderEditor"
 			id="3dd0d887-0311-4138-92a4-11ebd7eda214">
@@ -227,7 +276,11 @@ mode="Mobile">
 		searchpropertyid="3e355d1a-a924-4cdc-9661-98a49d41689b"
 		attrname="Text">
 			<comment/>
-			<bindings/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="Surname"/>
+			</bindings>
 			<info
 			sourcename="ItemRecorderEditor"
 			id="01d66e75-b102-4736-b944-56bb068142e1">
@@ -245,7 +298,11 @@ mode="Mobile">
 		searchpropertyid="9c207235-f8bd-41a4-9274-3ee73c7f2726"
 		attrname="Text">
 			<comment/>
-			<bindings/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="DateOfBirth"/>
+			</bindings>
 			<info
 			sourcename="ItemRecorderEditor"
 			id="117ddf31-b790-479f-a752-77c4ab4867ce">
@@ -263,7 +320,11 @@ mode="Mobile">
 		searchpropertyid="07c10d2b-7887-4b73-b936-e16bad4efffd"
 		attrname="Text">
 			<comment/>
-			<bindings/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="Gender"/>
+			</bindings>
 			<info
 			sourcename="ItemRecorderEditor"
 			id="68d14a1e-ded3-40e6-83b1-bbda76c9da82">
@@ -273,6 +334,119 @@ mode="Mobile">
 			</info>
 			<AttributeValue>
 				Male
+			</AttributeValue>
+		</setvaluerecorditem>
+		<touchrecorditem
+		enabled="True"
+		optional="False"
+		duration="500ms"
+		screenshotname=""
+		searchpropertyid="2e9301d5-f7f3-4330-872b-b295dda9abf8"
+		touchtype="Touch"
+		elementlocation="Center"
+		fingerid="0"
+		touchduration="100ms"
+		longtouchduration="1000ms"
+		moveduration="100ms"
+		isremote="False"
+		sx="0"
+		sy="0">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="7b133682-4665-4f25-989e-1bf1b36453f6">
+				<path>
+					/mobileapp[@title='plus.spar.si']/form[@title~'^RegisterStep1PersonalData']//text[@rid='bnt_next']
+				</path>
+			</info>
+		</touchrecorditem>
+		<setvaluerecorditem
+		enabled="True"
+		optional="False"
+		searchpropertyid="4a3aff68-0fa6-4448-a19c-5d3200d62eae"
+		attrname="Text">
+			<comment/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="Country"/>
+			</bindings>
+			<info
+			sourcename="RepositoryEditor"
+			id="d8f78a37-b6c4-4909-82c3-ec9ab16d07d8">
+				<path>
+					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_country']
+				</path>
+			</info>
+			<AttributeValue>
+				yourValue
+			</AttributeValue>
+		</setvaluerecorditem>
+		<setvaluerecorditem
+		enabled="True"
+		optional="False"
+		searchpropertyid="a5e763b2-48a4-434f-80bf-639729c7face"
+		attrname="Text">
+			<comment/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="Address"/>
+			</bindings>
+			<info
+			sourcename="RepositoryEditor"
+			id="2702edb2-9d0e-487f-8673-5c4a55c11971">
+				<path>
+					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_street']
+				</path>
+			</info>
+			<AttributeValue>
+				yourValue
+			</AttributeValue>
+		</setvaluerecorditem>
+		<setvaluerecorditem
+		enabled="True"
+		optional="False"
+		searchpropertyid="f81f7ca7-aa3e-406e-8f6f-41edbdc7f487"
+		attrname="Text">
+			<comment/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="PhoneNumber"/>
+			</bindings>
+			<info
+			sourcename="RepositoryEditor"
+			id="4900b57e-195c-4152-988c-d62c4ced214b">
+				<path>
+					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_postal']
+				</path>
+			</info>
+			<AttributeValue>
+				yourValue
+			</AttributeValue>
+		</setvaluerecorditem>
+		<setvaluerecorditem
+		enabled="True"
+		optional="False"
+		searchpropertyid="35ebb130-0b13-4f08-8ad7-b59d99150068"
+		attrname="Text">
+			<comment/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="City"/>
+			</bindings>
+			<info
+			sourcename="RepositoryEditor"
+			id="29badc27-fd47-436e-aa01-7d05dca45367">
+				<path>
+					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_city']
+				</path>
+			</info>
+			<AttributeValue>
+				yourValue
 			</AttributeValue>
 		</setvaluerecorditem>
 		<touchrecorditem

@@ -39,19 +39,20 @@ namespace Spar.Test_cases.Utility
             string pathToAdb      = "C:\\Program Files (x86)\\Ranorex 6.2\\Bin\\RxEnv\\Android\\tools\\adb.exe";         //your path to adb.exe goes here
 			string appPackageName = PackageName;  																		 //the packagename of your app
 			
-			Process adbClearProcess = new Process();
-			adbClearProcess.StartInfo.FileName  = pathToAdb;
-			adbClearProcess.StartInfo.Arguments = string.Format("shell rm -r /data/data/{0}/", appPackageName);
-			adbClearProcess.Start();
-			
-			adbClearProcess.WaitForExit();
-			
 			Process adbCreateDirProcess = new Process();
 			adbCreateDirProcess.StartInfo.FileName  = pathToAdb;
-			adbCreateDirProcess.StartInfo.Arguments = string.Format("shell mkdir /data/data/ranorex.android.services/", appPackageName);
+			adbCreateDirProcess.StartInfo.Arguments = string.Format("adb shell pm clear {0}", appPackageName);
 			adbCreateDirProcess.Start();
 			
 			adbCreateDirProcess.WaitForExit();
+			
+			Process adbCreateDirProcess2 = new Process();
+			adbCreateDirProcess2.StartInfo.FileName  = pathToAdb;
+			adbCreateDirProcess2.StartInfo.Arguments = string.Format("adb shell am start -n {0}", appPackageName);
+			adbCreateDirProcess2.Start();
+			
+			adbCreateDirProcess2.WaitForExit();
+			
         }
     }
 }

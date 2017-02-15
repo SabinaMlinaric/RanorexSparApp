@@ -28,6 +28,7 @@ namespace Spar
     {
         static SparRepository instance = new SparRepository();
         SparRepositoryFolders.PlusSparSiAppFolder _plussparsi;
+        SparRepositoryFolders.ComInovaintSparAppFolder _cominovaintspar;
 
         /// <summary>
         /// Gets the singleton class instance representing the SparRepository element repository.
@@ -45,6 +46,7 @@ namespace Spar
             : base("SparRepository", "/", null, 0, false, "c12fa4a9-bf96-41a7-9866-79edafaddcf2", ".\\RepositoryImages\\SparRepositoryc12fa4a9.rximgres")
         {
             _plussparsi = new SparRepositoryFolders.PlusSparSiAppFolder(this);
+            _cominovaintspar = new SparRepositoryFolders.ComInovaintSparAppFolder(this);
         }
 
 #region Variables
@@ -82,6 +84,15 @@ namespace Spar
         public virtual SparRepositoryFolders.PlusSparSiAppFolder PlusSparSi
         {
             get { return _plussparsi; }
+        }
+
+        /// <summary>
+        /// The ComInovaintSpar folder.
+        /// </summary>
+        [RepositoryFolder("b7801e19-292e-4eb3-a090-c59cc302bf9a")]
+        public virtual SparRepositoryFolders.ComInovaintSparAppFolder ComInovaintSpar
+        {
+            get { return _cominovaintspar; }
         }
     }
 
@@ -878,6 +889,1826 @@ namespace Spar
                 get
                 {
                     return _etcityInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The ComInovaintSparAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("b7801e19-292e-4eb3-a090-c59cc302bf9a")]
+        public partial class ComInovaintSparAppFolder : RepoGenBaseFolder
+        {
+            SparRepositoryFolders.RegistrationFolder _registration;
+            RepoItemInfo _prebrskajInfo;
+
+            /// <summary>
+            /// Creates a new ComInovaintSpar  folder.
+            /// </summary>
+            public ComInovaintSparAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("ComInovaintSpar", "/mobileapp[@title='com.inovaint.spar']", parentFolder, 30000, null, false, "b7801e19-292e-4eb3-a090-c59cc302bf9a", "")
+            {
+                _registration = new SparRepositoryFolders.RegistrationFolder(this);
+                _prebrskajInfo = new RepoItemInfo(this, "Prebrskaj", ".//button[@accessibilitylabel='Prebrskaj']", 30000, null, "01f0a008-c3b3-49c2-86fd-01ac5b1482a3");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("b7801e19-292e-4eb3-a090-c59cc302bf9a")]
+            public virtual Ranorex.MobileApp Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.MobileApp>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("b7801e19-292e-4eb3-a090-c59cc302bf9a")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Prebrskaj item.
+            /// </summary>
+            [RepositoryItem("01f0a008-c3b3-49c2-86fd-01ac5b1482a3")]
+            public virtual Ranorex.Button Prebrskaj
+            {
+                get
+                {
+                    return _prebrskajInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Prebrskaj item info.
+            /// </summary>
+            [RepositoryItemInfo("01f0a008-c3b3-49c2-86fd-01ac5b1482a3")]
+            public virtual RepoItemInfo PrebrskajInfo
+            {
+                get
+                {
+                    return _prebrskajInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Registration folder.
+            /// </summary>
+            [RepositoryFolder("401a318b-7b68-42f9-b1d5-7f62df36fc32")]
+            public virtual SparRepositoryFolders.RegistrationFolder Registration
+            {
+                get { return _registration; }
+            }
+        }
+
+        /// <summary>
+        /// The RegistrationFolder folder.
+        /// </summary>
+        [RepositoryFolder("401a318b-7b68-42f9-b1d5-7f62df36fc32")]
+        public partial class RegistrationFolder : RepoGenBaseFolder
+        {
+            SparRepositoryFolders.CommonElementsFolder _commonelements;
+            SparRepositoryFolders.LandingScreenFolder _landingscreen;
+            SparRepositoryFolders.Registration_NoCard_JoinFolder _registration_nocard_join;
+            SparRepositoryFolders.Registration_NoCard_PersonalDataFolder _registration_nocard_personaldata;
+            SparRepositoryFolders.Registration_NoCard_AddressFolder _registration_nocard_address;
+            SparRepositoryFolders.Registration_NoCard_DataFolder _registration_nocard_data;
+            SparRepositoryFolders.Registration_NoCard_AdditionalDataFolder _registration_nocard_additionaldata;
+            SparRepositoryFolders.Registration_PermissionsFolder _registration_permissions;
+
+            /// <summary>
+            /// Creates a new Registration  folder.
+            /// </summary>
+            public RegistrationFolder(RepoGenBaseFolder parentFolder) :
+                    base("Registration", "form/?/?/container[@containertype='ViewControllerWrapper']", parentFolder, 30000, null, false, "401a318b-7b68-42f9-b1d5-7f62df36fc32", "")
+            {
+                _commonelements = new SparRepositoryFolders.CommonElementsFolder(this);
+                _landingscreen = new SparRepositoryFolders.LandingScreenFolder(this);
+                _registration_nocard_join = new SparRepositoryFolders.Registration_NoCard_JoinFolder(this);
+                _registration_nocard_personaldata = new SparRepositoryFolders.Registration_NoCard_PersonalDataFolder(this);
+                _registration_nocard_address = new SparRepositoryFolders.Registration_NoCard_AddressFolder(this);
+                _registration_nocard_data = new SparRepositoryFolders.Registration_NoCard_DataFolder(this);
+                _registration_nocard_additionaldata = new SparRepositoryFolders.Registration_NoCard_AdditionalDataFolder(this);
+                _registration_permissions = new SparRepositoryFolders.Registration_PermissionsFolder(this);
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("401a318b-7b68-42f9-b1d5-7f62df36fc32")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("401a318b-7b68-42f9-b1d5-7f62df36fc32")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The CommonElements folder.
+            /// </summary>
+            [RepositoryFolder("6872d9fc-6450-4e79-b89c-ed9fa56f9aff")]
+            public virtual SparRepositoryFolders.CommonElementsFolder CommonElements
+            {
+                get { return _commonelements; }
+            }
+
+            /// <summary>
+            /// The LandingScreen folder.
+            /// </summary>
+            [RepositoryFolder("259c6791-a261-4329-994b-ea58ddf64ee4")]
+            public virtual SparRepositoryFolders.LandingScreenFolder LandingScreen
+            {
+                get { return _landingscreen; }
+            }
+
+            /// <summary>
+            /// The Registration_NoCard_Join folder.
+            /// </summary>
+            [RepositoryFolder("29806f87-fdaa-4f7d-b53b-ab9b652fe878")]
+            public virtual SparRepositoryFolders.Registration_NoCard_JoinFolder Registration_NoCard_Join
+            {
+                get { return _registration_nocard_join; }
+            }
+
+            /// <summary>
+            /// The Registration_NoCard_PersonalData folder.
+            /// </summary>
+            [RepositoryFolder("c90b324a-309c-4e34-8278-7e705faf2cf7")]
+            public virtual SparRepositoryFolders.Registration_NoCard_PersonalDataFolder Registration_NoCard_PersonalData
+            {
+                get { return _registration_nocard_personaldata; }
+            }
+
+            /// <summary>
+            /// The Registration_NoCard_Address folder.
+            /// </summary>
+            [RepositoryFolder("1726398d-5cd4-4bd2-8b9e-280a46e65495")]
+            public virtual SparRepositoryFolders.Registration_NoCard_AddressFolder Registration_NoCard_Address
+            {
+                get { return _registration_nocard_address; }
+            }
+
+            /// <summary>
+            /// The Registration_NoCard_Data folder.
+            /// </summary>
+            [RepositoryFolder("3d685dd3-627c-4400-9452-e7f2e356badc")]
+            public virtual SparRepositoryFolders.Registration_NoCard_DataFolder Registration_NoCard_Data
+            {
+                get { return _registration_nocard_data; }
+            }
+
+            /// <summary>
+            /// The Registration_NoCard_AdditionalData folder.
+            /// </summary>
+            [RepositoryFolder("3e6a1a47-0e7d-44dc-a578-3b19e09b3596")]
+            public virtual SparRepositoryFolders.Registration_NoCard_AdditionalDataFolder Registration_NoCard_AdditionalData
+            {
+                get { return _registration_nocard_additionaldata; }
+            }
+
+            /// <summary>
+            /// The Registration_Permissions folder.
+            /// </summary>
+            [RepositoryFolder("4e69e45c-d7ec-4540-9932-afaec95684d4")]
+            public virtual SparRepositoryFolders.Registration_PermissionsFolder Registration_Permissions
+            {
+                get { return _registration_permissions; }
+            }
+        }
+
+        /// <summary>
+        /// The CommonElementsFolder folder.
+        /// </summary>
+        [RepositoryFolder("6872d9fc-6450-4e79-b89c-ed9fa56f9aff")]
+        public partial class CommonElementsFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _naprejInfo;
+            RepoItemInfo _preskočiInfo;
+
+            /// <summary>
+            /// Creates a new CommonElements  folder.
+            /// </summary>
+            public CommonElementsFolder(RepoGenBaseFolder parentFolder) :
+                    base("CommonElements", "", parentFolder, 0, null, false, "6872d9fc-6450-4e79-b89c-ed9fa56f9aff", "")
+            {
+                _naprejInfo = new RepoItemInfo(this, "Naprej", ".//button[@accessibilitylabel='Naprej']", 30000, null, "03ca16ac-bc51-4324-b481-8eb68831c611");
+                _preskočiInfo = new RepoItemInfo(this, "Preskoči", ".//button[@accessibilitylabel='Preskoči']", 30000, null, "172616bc-5c6f-4b7f-aab5-c124681def55");
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("6872d9fc-6450-4e79-b89c-ed9fa56f9aff")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Naprej item.
+            /// </summary>
+            [RepositoryItem("03ca16ac-bc51-4324-b481-8eb68831c611")]
+            public virtual Ranorex.Button Naprej
+            {
+                get
+                {
+                    return _naprejInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Naprej item info.
+            /// </summary>
+            [RepositoryItemInfo("03ca16ac-bc51-4324-b481-8eb68831c611")]
+            public virtual RepoItemInfo NaprejInfo
+            {
+                get
+                {
+                    return _naprejInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Preskoči item.
+            /// </summary>
+            [RepositoryItem("172616bc-5c6f-4b7f-aab5-c124681def55")]
+            public virtual Ranorex.Button Preskoči
+            {
+                get
+                {
+                    return _preskočiInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Preskoči item info.
+            /// </summary>
+            [RepositoryItemInfo("172616bc-5c6f-4b7f-aab5-c124681def55")]
+            public virtual RepoItemInfo PreskočiInfo
+            {
+                get
+                {
+                    return _preskočiInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The LandingScreenFolder folder.
+        /// </summary>
+        [RepositoryFolder("259c6791-a261-4329-994b-ea58ddf64ee4")]
+        public partial class LandingScreenFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _pričnitetakodaskeniratesvojosparpInfo;
+            RepoItemInfo _skenirajInfo;
+            RepoItemInfo _nimamsparpluskarticeInfo;
+            RepoItemInfo _stepriskeniranjunaletelinatežaveInfo;
+            RepoItemInfo _vpišiteserijskoštevilkokarticeInfo;
+            RepoItemInfo _pogojiuporabeInfo;
+
+            /// <summary>
+            /// Creates a new LandingScreen  folder.
+            /// </summary>
+            public LandingScreenFolder(RepoGenBaseFolder parentFolder) :
+                    base("LandingScreen", "", parentFolder, 0, null, false, "259c6791-a261-4329-994b-ea58ddf64ee4", "")
+            {
+                _pričnitetakodaskeniratesvojosparpInfo = new RepoItemInfo(this, "PričniteTakoDaSkenirateSvojoSPARP", ".//text[@localizationkey='#scancard.infoTitle']", 30000, null, "f00aca11-5741-4705-a189-849ca7c0882c");
+                _skenirajInfo = new RepoItemInfo(this, "Skeniraj", ".//button[@accessibilitylabel='Skeniraj']", 30000, null, "8195a671-1f77-412e-b7f4-3f5e150eb28d");
+                _nimamsparpluskarticeInfo = new RepoItemInfo(this, "NimamSPARPlusKartice", ".//button[@accessibilitylabel='Nimam SPAR plus kartice']", 30000, null, "c578c615-f275-4ea0-9eea-cf6f93139abb");
+                _stepriskeniranjunaletelinatežaveInfo = new RepoItemInfo(this, "StePriSkeniranjuNaleteliNaTežave", ".//text[@localizationkey='#scancard.problemsWithScan']", 30000, null, "4c60459c-d714-414b-8f68-c2ad2bb8b9fa");
+                _vpišiteserijskoštevilkokarticeInfo = new RepoItemInfo(this, "VpišiteSerijskoŠtevilkoKartice", ".//button[@accessibilitylabel='Vpišite serijsko številko kartice']", 30000, null, "a3ad497f-8d14-451c-92d5-13eea4041a31");
+                _pogojiuporabeInfo = new RepoItemInfo(this, "PogojiUporabe", ".//button[@accessibilitylabel='Z uporabo aplikacije, se strinjate s pogoji in načinom uporabe.']", 30000, null, "e1e753c3-86c6-4578-8a23-2248e5f592f1");
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("259c6791-a261-4329-994b-ea58ddf64ee4")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PričniteTakoDaSkenirateSvojoSPARP item.
+            /// </summary>
+            [RepositoryItem("f00aca11-5741-4705-a189-849ca7c0882c")]
+            public virtual Ranorex.Text PričniteTakoDaSkenirateSvojoSPARP
+            {
+                get
+                {
+                    return _pričnitetakodaskeniratesvojosparpInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PričniteTakoDaSkenirateSvojoSPARP item info.
+            /// </summary>
+            [RepositoryItemInfo("f00aca11-5741-4705-a189-849ca7c0882c")]
+            public virtual RepoItemInfo PričniteTakoDaSkenirateSvojoSPARPInfo
+            {
+                get
+                {
+                    return _pričnitetakodaskeniratesvojosparpInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Skeniraj item.
+            /// </summary>
+            [RepositoryItem("8195a671-1f77-412e-b7f4-3f5e150eb28d")]
+            public virtual Ranorex.Button Skeniraj
+            {
+                get
+                {
+                    return _skenirajInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Skeniraj item info.
+            /// </summary>
+            [RepositoryItemInfo("8195a671-1f77-412e-b7f4-3f5e150eb28d")]
+            public virtual RepoItemInfo SkenirajInfo
+            {
+                get
+                {
+                    return _skenirajInfo;
+                }
+            }
+
+            /// <summary>
+            /// The NimamSPARPlusKartice item.
+            /// </summary>
+            [RepositoryItem("c578c615-f275-4ea0-9eea-cf6f93139abb")]
+            public virtual Ranorex.Button NimamSPARPlusKartice
+            {
+                get
+                {
+                    return _nimamsparpluskarticeInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The NimamSPARPlusKartice item info.
+            /// </summary>
+            [RepositoryItemInfo("c578c615-f275-4ea0-9eea-cf6f93139abb")]
+            public virtual RepoItemInfo NimamSPARPlusKarticeInfo
+            {
+                get
+                {
+                    return _nimamsparpluskarticeInfo;
+                }
+            }
+
+            /// <summary>
+            /// The StePriSkeniranjuNaleteliNaTežave item.
+            /// </summary>
+            [RepositoryItem("4c60459c-d714-414b-8f68-c2ad2bb8b9fa")]
+            public virtual Ranorex.Text StePriSkeniranjuNaleteliNaTežave
+            {
+                get
+                {
+                    return _stepriskeniranjunaletelinatežaveInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The StePriSkeniranjuNaleteliNaTežave item info.
+            /// </summary>
+            [RepositoryItemInfo("4c60459c-d714-414b-8f68-c2ad2bb8b9fa")]
+            public virtual RepoItemInfo StePriSkeniranjuNaleteliNaTežaveInfo
+            {
+                get
+                {
+                    return _stepriskeniranjunaletelinatežaveInfo;
+                }
+            }
+
+            /// <summary>
+            /// The VpišiteSerijskoŠtevilkoKartice item.
+            /// </summary>
+            [RepositoryItem("a3ad497f-8d14-451c-92d5-13eea4041a31")]
+            public virtual Ranorex.Button VpišiteSerijskoŠtevilkoKartice
+            {
+                get
+                {
+                    return _vpišiteserijskoštevilkokarticeInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The VpišiteSerijskoŠtevilkoKartice item info.
+            /// </summary>
+            [RepositoryItemInfo("a3ad497f-8d14-451c-92d5-13eea4041a31")]
+            public virtual RepoItemInfo VpišiteSerijskoŠtevilkoKarticeInfo
+            {
+                get
+                {
+                    return _vpišiteserijskoštevilkokarticeInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PogojiUporabe item.
+            /// </summary>
+            [RepositoryItem("e1e753c3-86c6-4578-8a23-2248e5f592f1")]
+            public virtual Ranorex.Button PogojiUporabe
+            {
+                get
+                {
+                    return _pogojiuporabeInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PogojiUporabe item info.
+            /// </summary>
+            [RepositoryItemInfo("e1e753c3-86c6-4578-8a23-2248e5f592f1")]
+            public virtual RepoItemInfo PogojiUporabeInfo
+            {
+                get
+                {
+                    return _pogojiuporabeInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The Registration_NoCard_JoinFolder folder.
+        /// </summary>
+        [RepositoryFolder("29806f87-fdaa-4f7d-b53b-ab9b652fe878")]
+        public partial class Registration_NoCard_JoinFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _postaničlansparplusInfo;
+            RepoItemInfo _ekskluzivnikuponiinugodnostiInfo;
+            RepoItemInfo _zbiranjedobropisanakarticiInfo;
+            RepoItemInfo _dostopdosparpluskarticekarnatelefInfo;
+            RepoItemInfo _pridružiteseInfo;
+
+            /// <summary>
+            /// Creates a new Registration_NoCard_Join  folder.
+            /// </summary>
+            public Registration_NoCard_JoinFolder(RepoGenBaseFolder parentFolder) :
+                    base("Registration_NoCard_Join", "", parentFolder, 0, null, false, "29806f87-fdaa-4f7d-b53b-ab9b652fe878", "")
+            {
+                _postaničlansparplusInfo = new RepoItemInfo(this, "PostaniČlanSPARPlus", ".//text[@localizationkey='#register.welcome.infoTitle']", 30000, null, "1ce221bc-7ec6-4ae5-b94b-0d6f6b01e94e");
+                _ekskluzivnikuponiinugodnostiInfo = new RepoItemInfo(this, "EkskluzivniKuponiInUgodnosti", ".//text[@localizationkey='#register.welcome.exclusive']", 30000, null, "e7595093-abb7-4b01-ae21-56674ef48216");
+                _zbiranjedobropisanakarticiInfo = new RepoItemInfo(this, "ZbiranjeDobropisaNaKartici", ".//text[@localizationkey='#register.welcome.collectingCredit']", 30000, null, "ee7c8ee8-35ec-49e1-87bb-098b01223c8c");
+                _dostopdosparpluskarticekarnatelefInfo = new RepoItemInfo(this, "DostopDoSPARPlusKarticeKarNaTelef", ".//text[@localizationkey='#register.welcome.cardAccess']", 30000, null, "e0d70e1f-76e1-4005-be0f-6c6376ce5746");
+                _pridružiteseInfo = new RepoItemInfo(this, "PridružiteSe", ".//button[@accessibilitylabel='Pridružite se']", 30000, null, "dc15f500-1e7e-4935-905a-894b47c8044c");
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("29806f87-fdaa-4f7d-b53b-ab9b652fe878")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PostaniČlanSPARPlus item.
+            /// </summary>
+            [RepositoryItem("1ce221bc-7ec6-4ae5-b94b-0d6f6b01e94e")]
+            public virtual Ranorex.Text PostaniČlanSPARPlus
+            {
+                get
+                {
+                    return _postaničlansparplusInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PostaniČlanSPARPlus item info.
+            /// </summary>
+            [RepositoryItemInfo("1ce221bc-7ec6-4ae5-b94b-0d6f6b01e94e")]
+            public virtual RepoItemInfo PostaniČlanSPARPlusInfo
+            {
+                get
+                {
+                    return _postaničlansparplusInfo;
+                }
+            }
+
+            /// <summary>
+            /// The EkskluzivniKuponiInUgodnosti item.
+            /// </summary>
+            [RepositoryItem("e7595093-abb7-4b01-ae21-56674ef48216")]
+            public virtual Ranorex.Text EkskluzivniKuponiInUgodnosti
+            {
+                get
+                {
+                    return _ekskluzivnikuponiinugodnostiInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The EkskluzivniKuponiInUgodnosti item info.
+            /// </summary>
+            [RepositoryItemInfo("e7595093-abb7-4b01-ae21-56674ef48216")]
+            public virtual RepoItemInfo EkskluzivniKuponiInUgodnostiInfo
+            {
+                get
+                {
+                    return _ekskluzivnikuponiinugodnostiInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ZbiranjeDobropisaNaKartici item.
+            /// </summary>
+            [RepositoryItem("ee7c8ee8-35ec-49e1-87bb-098b01223c8c")]
+            public virtual Ranorex.Text ZbiranjeDobropisaNaKartici
+            {
+                get
+                {
+                    return _zbiranjedobropisanakarticiInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ZbiranjeDobropisaNaKartici item info.
+            /// </summary>
+            [RepositoryItemInfo("ee7c8ee8-35ec-49e1-87bb-098b01223c8c")]
+            public virtual RepoItemInfo ZbiranjeDobropisaNaKarticiInfo
+            {
+                get
+                {
+                    return _zbiranjedobropisanakarticiInfo;
+                }
+            }
+
+            /// <summary>
+            /// The DostopDoSPARPlusKarticeKarNaTelef item.
+            /// </summary>
+            [RepositoryItem("e0d70e1f-76e1-4005-be0f-6c6376ce5746")]
+            public virtual Ranorex.Text DostopDoSPARPlusKarticeKarNaTelef
+            {
+                get
+                {
+                    return _dostopdosparpluskarticekarnatelefInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The DostopDoSPARPlusKarticeKarNaTelef item info.
+            /// </summary>
+            [RepositoryItemInfo("e0d70e1f-76e1-4005-be0f-6c6376ce5746")]
+            public virtual RepoItemInfo DostopDoSPARPlusKarticeKarNaTelefInfo
+            {
+                get
+                {
+                    return _dostopdosparpluskarticekarnatelefInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PridružiteSe item.
+            /// </summary>
+            [RepositoryItem("dc15f500-1e7e-4935-905a-894b47c8044c")]
+            public virtual Ranorex.Button PridružiteSe
+            {
+                get
+                {
+                    return _pridružiteseInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PridružiteSe item info.
+            /// </summary>
+            [RepositoryItemInfo("dc15f500-1e7e-4935-905a-894b47c8044c")]
+            public virtual RepoItemInfo PridružiteSeInfo
+            {
+                get
+                {
+                    return _pridružiteseInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The Registration_NoCard_PersonalDataFolder folder.
+        /// </summary>
+        [RepositoryFolder("c90b324a-309c-4e34-8278-7e705faf2cf7")]
+        public partial class Registration_NoCard_PersonalDataFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _vpišitevašeosebnepodatkeInfo;
+            RepoItemInfo _imeInfo;
+            RepoItemInfo _priimekInfo;
+            RepoItemInfo _datumrojstvaInfo;
+            RepoItemInfo _spolInfo;
+            RepoItemInfo _moškiInfo;
+            RepoItemInfo _ženskiInfo;
+
+            /// <summary>
+            /// Creates a new Registration_NoCard_PersonalData  folder.
+            /// </summary>
+            public Registration_NoCard_PersonalDataFolder(RepoGenBaseFolder parentFolder) :
+                    base("Registration_NoCard_PersonalData", "", parentFolder, 0, null, false, "c90b324a-309c-4e34-8278-7e705faf2cf7", "")
+            {
+                _vpišitevašeosebnepodatkeInfo = new RepoItemInfo(this, "VpišiteVašeOsebnePodatke", ".//text[@localizationkey='#register.personal.infoTitle']", 30000, null, "e02e238b-81fd-4fa8-bfeb-7e9bba993313");
+                _imeInfo = new RepoItemInfo(this, "Ime", ".//text[@accessibilitylabel='Ime']", 30000, null, "795f2a0f-3746-4771-a611-8f8d1da642c9");
+                _priimekInfo = new RepoItemInfo(this, "Priimek", ".//text[@accessibilitylabel='Priimek']", 30000, null, "ff340f31-d08f-41f6-b89b-0cae00e9ba90");
+                _datumrojstvaInfo = new RepoItemInfo(this, "DatumRojstva", ".//text[@accessibilitylabel='Datum rojstva']", 30000, null, "afed9bd3-f6a4-4549-a5db-af62dc1e6e6d");
+                _spolInfo = new RepoItemInfo(this, "Spol", ".//text[@accessibilitylabel='Spol']", 30000, null, "c0b0abfd-5c94-4547-9327-06d193eb0f48");
+                _moškiInfo = new RepoItemInfo(this, "Moški", ".//button[@text='Moški']", 30000, null, "aec9f9b5-690a-47bb-9cda-599cfffec931");
+                _ženskiInfo = new RepoItemInfo(this, "Ženski", ".//button[@text='Ženski']", 30000, null, "58f91433-9ec4-4d31-b739-155bc3f4ac9e");
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("c90b324a-309c-4e34-8278-7e705faf2cf7")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The VpišiteVašeOsebnePodatke item.
+            /// </summary>
+            [RepositoryItem("e02e238b-81fd-4fa8-bfeb-7e9bba993313")]
+            public virtual Ranorex.Text VpišiteVašeOsebnePodatke
+            {
+                get
+                {
+                    return _vpišitevašeosebnepodatkeInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The VpišiteVašeOsebnePodatke item info.
+            /// </summary>
+            [RepositoryItemInfo("e02e238b-81fd-4fa8-bfeb-7e9bba993313")]
+            public virtual RepoItemInfo VpišiteVašeOsebnePodatkeInfo
+            {
+                get
+                {
+                    return _vpišitevašeosebnepodatkeInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Ime item.
+            /// </summary>
+            [RepositoryItem("795f2a0f-3746-4771-a611-8f8d1da642c9")]
+            public virtual Ranorex.Text Ime
+            {
+                get
+                {
+                    return _imeInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Ime item info.
+            /// </summary>
+            [RepositoryItemInfo("795f2a0f-3746-4771-a611-8f8d1da642c9")]
+            public virtual RepoItemInfo ImeInfo
+            {
+                get
+                {
+                    return _imeInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Priimek item.
+            /// </summary>
+            [RepositoryItem("ff340f31-d08f-41f6-b89b-0cae00e9ba90")]
+            public virtual Ranorex.Text Priimek
+            {
+                get
+                {
+                    return _priimekInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Priimek item info.
+            /// </summary>
+            [RepositoryItemInfo("ff340f31-d08f-41f6-b89b-0cae00e9ba90")]
+            public virtual RepoItemInfo PriimekInfo
+            {
+                get
+                {
+                    return _priimekInfo;
+                }
+            }
+
+            /// <summary>
+            /// The DatumRojstva item.
+            /// </summary>
+            [RepositoryItem("afed9bd3-f6a4-4549-a5db-af62dc1e6e6d")]
+            public virtual Ranorex.Text DatumRojstva
+            {
+                get
+                {
+                    return _datumrojstvaInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The DatumRojstva item info.
+            /// </summary>
+            [RepositoryItemInfo("afed9bd3-f6a4-4549-a5db-af62dc1e6e6d")]
+            public virtual RepoItemInfo DatumRojstvaInfo
+            {
+                get
+                {
+                    return _datumrojstvaInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Spol item.
+            /// </summary>
+            [RepositoryItem("c0b0abfd-5c94-4547-9327-06d193eb0f48")]
+            public virtual Ranorex.Text Spol
+            {
+                get
+                {
+                    return _spolInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Spol item info.
+            /// </summary>
+            [RepositoryItemInfo("c0b0abfd-5c94-4547-9327-06d193eb0f48")]
+            public virtual RepoItemInfo SpolInfo
+            {
+                get
+                {
+                    return _spolInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Moški item.
+            /// </summary>
+            [RepositoryItem("aec9f9b5-690a-47bb-9cda-599cfffec931")]
+            public virtual Ranorex.Button Moški
+            {
+                get
+                {
+                    return _moškiInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Moški item info.
+            /// </summary>
+            [RepositoryItemInfo("aec9f9b5-690a-47bb-9cda-599cfffec931")]
+            public virtual RepoItemInfo MoškiInfo
+            {
+                get
+                {
+                    return _moškiInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Ženski item.
+            /// </summary>
+            [RepositoryItem("58f91433-9ec4-4d31-b739-155bc3f4ac9e")]
+            public virtual Ranorex.Button Ženski
+            {
+                get
+                {
+                    return _ženskiInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Ženski item info.
+            /// </summary>
+            [RepositoryItemInfo("58f91433-9ec4-4d31-b739-155bc3f4ac9e")]
+            public virtual RepoItemInfo ŽenskiInfo
+            {
+                get
+                {
+                    return _ženskiInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The Registration_NoCard_AddressFolder folder.
+        /// </summary>
+        [RepositoryFolder("1726398d-5cd4-4bd2-8b9e-280a46e65495")]
+        public partial class Registration_NoCard_AddressFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _vpišitepodatkeoprebivališčuInfo;
+            RepoItemInfo _državaInfo;
+            RepoItemInfo _ulicaInfo;
+            RepoItemInfo _hišnaštevilkaInfo;
+            RepoItemInfo _poštnaštevilkaInfo;
+            RepoItemInfo _krajInfo;
+
+            /// <summary>
+            /// Creates a new Registration_NoCard_Address  folder.
+            /// </summary>
+            public Registration_NoCard_AddressFolder(RepoGenBaseFolder parentFolder) :
+                    base("Registration_NoCard_Address", "", parentFolder, 0, null, false, "1726398d-5cd4-4bd2-8b9e-280a46e65495", "")
+            {
+                _vpišitepodatkeoprebivališčuInfo = new RepoItemInfo(this, "VpišitePodatkeOPrebivališču", ".//text[@localizationkey='#register.residence.infoTitle']", 30000, null, "c7df342e-41c6-4465-aab2-f550d2905664");
+                _državaInfo = new RepoItemInfo(this, "Država", ".//text[@accessibilitylabel='Država']", 30000, null, "b582ea38-1fd3-44c6-9259-1a011c404e7a");
+                _ulicaInfo = new RepoItemInfo(this, "Ulica", ".//text[@accessibilitylabel='Ulica']", 30000, null, "f2d29bf9-2a56-4b3f-9f1f-0a0017cf0eab");
+                _hišnaštevilkaInfo = new RepoItemInfo(this, "HišnaŠtevilka", ".//text[@accessibilitylabel='Hišna številka']", 30000, null, "5a932524-923a-4107-812d-28ee19e4e50a");
+                _poštnaštevilkaInfo = new RepoItemInfo(this, "PoštnaŠtevilka", ".//text[@accessibilitylabel='Poštna številka']", 30000, null, "0a3c69f0-44ff-497a-b2e6-45feb073fcd2");
+                _krajInfo = new RepoItemInfo(this, "Kraj", ".//text[@accessibilitylabel='Kraj']", 30000, null, "f475efa6-8310-4bfc-8036-c4017546a9df");
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("1726398d-5cd4-4bd2-8b9e-280a46e65495")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The VpišitePodatkeOPrebivališču item.
+            /// </summary>
+            [RepositoryItem("c7df342e-41c6-4465-aab2-f550d2905664")]
+            public virtual Ranorex.Text VpišitePodatkeOPrebivališču
+            {
+                get
+                {
+                    return _vpišitepodatkeoprebivališčuInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The VpišitePodatkeOPrebivališču item info.
+            /// </summary>
+            [RepositoryItemInfo("c7df342e-41c6-4465-aab2-f550d2905664")]
+            public virtual RepoItemInfo VpišitePodatkeOPrebivališčuInfo
+            {
+                get
+                {
+                    return _vpišitepodatkeoprebivališčuInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Država item.
+            /// </summary>
+            [RepositoryItem("b582ea38-1fd3-44c6-9259-1a011c404e7a")]
+            public virtual Ranorex.Text Država
+            {
+                get
+                {
+                    return _državaInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Država item info.
+            /// </summary>
+            [RepositoryItemInfo("b582ea38-1fd3-44c6-9259-1a011c404e7a")]
+            public virtual RepoItemInfo DržavaInfo
+            {
+                get
+                {
+                    return _državaInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Ulica item.
+            /// </summary>
+            [RepositoryItem("f2d29bf9-2a56-4b3f-9f1f-0a0017cf0eab")]
+            public virtual Ranorex.Text Ulica
+            {
+                get
+                {
+                    return _ulicaInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Ulica item info.
+            /// </summary>
+            [RepositoryItemInfo("f2d29bf9-2a56-4b3f-9f1f-0a0017cf0eab")]
+            public virtual RepoItemInfo UlicaInfo
+            {
+                get
+                {
+                    return _ulicaInfo;
+                }
+            }
+
+            /// <summary>
+            /// The HišnaŠtevilka item.
+            /// </summary>
+            [RepositoryItem("5a932524-923a-4107-812d-28ee19e4e50a")]
+            public virtual Ranorex.Text HišnaŠtevilka
+            {
+                get
+                {
+                    return _hišnaštevilkaInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The HišnaŠtevilka item info.
+            /// </summary>
+            [RepositoryItemInfo("5a932524-923a-4107-812d-28ee19e4e50a")]
+            public virtual RepoItemInfo HišnaŠtevilkaInfo
+            {
+                get
+                {
+                    return _hišnaštevilkaInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PoštnaŠtevilka item.
+            /// </summary>
+            [RepositoryItem("0a3c69f0-44ff-497a-b2e6-45feb073fcd2")]
+            public virtual Ranorex.Text PoštnaŠtevilka
+            {
+                get
+                {
+                    return _poštnaštevilkaInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PoštnaŠtevilka item info.
+            /// </summary>
+            [RepositoryItemInfo("0a3c69f0-44ff-497a-b2e6-45feb073fcd2")]
+            public virtual RepoItemInfo PoštnaŠtevilkaInfo
+            {
+                get
+                {
+                    return _poštnaštevilkaInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Kraj item.
+            /// </summary>
+            [RepositoryItem("f475efa6-8310-4bfc-8036-c4017546a9df")]
+            public virtual Ranorex.Text Kraj
+            {
+                get
+                {
+                    return _krajInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Kraj item info.
+            /// </summary>
+            [RepositoryItemInfo("f475efa6-8310-4bfc-8036-c4017546a9df")]
+            public virtual RepoItemInfo KrajInfo
+            {
+                get
+                {
+                    return _krajInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The Registration_NoCard_DataFolder folder.
+        /// </summary>
+        [RepositoryFolder("3d685dd3-627c-4400-9452-e7f2e356badc")]
+        public partial class Registration_NoCard_DataFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _vpišitepodatkezaprijavoInfo;
+            RepoItemInfo _številkamobilnegatelefonaInfo;
+            RepoItemInfo _emailnaslovInfo;
+            RepoItemInfo _gesloInfo;
+            RepoItemInfo _ponovigesloInfo;
+
+            /// <summary>
+            /// Creates a new Registration_NoCard_Data  folder.
+            /// </summary>
+            public Registration_NoCard_DataFolder(RepoGenBaseFolder parentFolder) :
+                    base("Registration_NoCard_Data", "", parentFolder, 0, null, false, "3d685dd3-627c-4400-9452-e7f2e356badc", "")
+            {
+                _vpišitepodatkezaprijavoInfo = new RepoItemInfo(this, "VpišitePodatkeZaPrijavo", ".//text[@localizationkey='#register.account.infoTitle']", 30000, null, "f3dee9d1-9d9a-427a-8c9b-af4c5df09afe");
+                _številkamobilnegatelefonaInfo = new RepoItemInfo(this, "ŠtevilkaMobilnegaTelefona", ".//text[@accessibilitylabel='Številka mobilnega telefona']", 30000, null, "850fd38f-b03f-4ed1-ae40-c3a44c4f0c0e");
+                _emailnaslovInfo = new RepoItemInfo(this, "EMailNaslov", ".//text[@accessibilitylabel='E-mail naslov']", 30000, null, "df3f6c57-6c80-45da-8344-ee9d9c2d83be");
+                _gesloInfo = new RepoItemInfo(this, "Geslo", ".//text[@accessibilitylabel='Geslo']", 30000, null, "7bc730b0-37d2-4e9d-91b6-2f49b6631d7a");
+                _ponovigesloInfo = new RepoItemInfo(this, "PonoviGeslo", ".//text[@accessibilitylabel='Ponovi geslo']", 30000, null, "fddabaf0-71e6-4512-af49-a5c492f2ab35");
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("3d685dd3-627c-4400-9452-e7f2e356badc")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The VpišitePodatkeZaPrijavo item.
+            /// </summary>
+            [RepositoryItem("f3dee9d1-9d9a-427a-8c9b-af4c5df09afe")]
+            public virtual Ranorex.Text VpišitePodatkeZaPrijavo
+            {
+                get
+                {
+                    return _vpišitepodatkezaprijavoInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The VpišitePodatkeZaPrijavo item info.
+            /// </summary>
+            [RepositoryItemInfo("f3dee9d1-9d9a-427a-8c9b-af4c5df09afe")]
+            public virtual RepoItemInfo VpišitePodatkeZaPrijavoInfo
+            {
+                get
+                {
+                    return _vpišitepodatkezaprijavoInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ŠtevilkaMobilnegaTelefona item.
+            /// </summary>
+            [RepositoryItem("850fd38f-b03f-4ed1-ae40-c3a44c4f0c0e")]
+            public virtual Ranorex.Text ŠtevilkaMobilnegaTelefona
+            {
+                get
+                {
+                    return _številkamobilnegatelefonaInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ŠtevilkaMobilnegaTelefona item info.
+            /// </summary>
+            [RepositoryItemInfo("850fd38f-b03f-4ed1-ae40-c3a44c4f0c0e")]
+            public virtual RepoItemInfo ŠtevilkaMobilnegaTelefonaInfo
+            {
+                get
+                {
+                    return _številkamobilnegatelefonaInfo;
+                }
+            }
+
+            /// <summary>
+            /// The EMailNaslov item.
+            /// </summary>
+            [RepositoryItem("df3f6c57-6c80-45da-8344-ee9d9c2d83be")]
+            public virtual Ranorex.Text EMailNaslov
+            {
+                get
+                {
+                    return _emailnaslovInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The EMailNaslov item info.
+            /// </summary>
+            [RepositoryItemInfo("df3f6c57-6c80-45da-8344-ee9d9c2d83be")]
+            public virtual RepoItemInfo EMailNaslovInfo
+            {
+                get
+                {
+                    return _emailnaslovInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Geslo item.
+            /// </summary>
+            [RepositoryItem("7bc730b0-37d2-4e9d-91b6-2f49b6631d7a")]
+            public virtual Ranorex.Text Geslo
+            {
+                get
+                {
+                    return _gesloInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Geslo item info.
+            /// </summary>
+            [RepositoryItemInfo("7bc730b0-37d2-4e9d-91b6-2f49b6631d7a")]
+            public virtual RepoItemInfo GesloInfo
+            {
+                get
+                {
+                    return _gesloInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PonoviGeslo item.
+            /// </summary>
+            [RepositoryItem("fddabaf0-71e6-4512-af49-a5c492f2ab35")]
+            public virtual Ranorex.Text PonoviGeslo
+            {
+                get
+                {
+                    return _ponovigesloInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PonoviGeslo item info.
+            /// </summary>
+            [RepositoryItemInfo("fddabaf0-71e6-4512-af49-a5c492f2ab35")]
+            public virtual RepoItemInfo PonoviGesloInfo
+            {
+                get
+                {
+                    return _ponovigesloInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The Registration_NoCard_AdditionalDataFolder folder.
+        /// </summary>
+        [RepositoryFolder("3e6a1a47-0e7d-44dc-a578-3b19e09b3596")]
+        public partial class Registration_NoCard_AdditionalDataFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _dodatneinformacijeInfo;
+            RepoItemInfo _direktnapoštatogglebtnInfo;
+            RepoItemInfo _mobilnitelefontogglebtnInfo;
+            RepoItemInfo _elektronska_poštaInfo;
+            RepoItemInfo _prekosparapptogglebtnInfo;
+            RepoItemInfo _označitečeimateotrokeInfo;
+            RepoItemInfo _buttondaInfo;
+            RepoItemInfo _buttonneInfo;
+            RepoItemInfo _vpišitešteviločlanovgospodinjstvaInfo;
+
+            /// <summary>
+            /// Creates a new Registration_NoCard_AdditionalData  folder.
+            /// </summary>
+            public Registration_NoCard_AdditionalDataFolder(RepoGenBaseFolder parentFolder) :
+                    base("Registration_NoCard_AdditionalData", "", parentFolder, 0, null, false, "3e6a1a47-0e7d-44dc-a578-3b19e09b3596", "")
+            {
+                _dodatneinformacijeInfo = new RepoItemInfo(this, "DodatneInformacije", ".//text[@localizationkey='#register.additional.infoTitle']", 30000, null, "0139a08c-8b57-4f26-bb7b-ccba824181b6");
+                _direktnapoštatogglebtnInfo = new RepoItemInfo(this, "DirektnaPoštaToggleBtn", ".//container[@localizationkey='#register.additional.directMail']/?/?/togglebutton", 30000, null, "63304ee4-8c22-402c-a6ae-cda4c3973e88");
+                _mobilnitelefontogglebtnInfo = new RepoItemInfo(this, "MobilniTelefonToggleBtn", ".//container[@localizationkey='#register.additional.mobilePhone']/?/?/togglebutton", 30000, null, "26b0521a-d304-42aa-abda-469dbf6e9801");
+                _elektronska_poštaInfo = new RepoItemInfo(this, "Elektronska_pošta", ".//button[@accessibilitylabel='disclosureIndicator']", 30000, null, "bc8bcc97-c8e3-4f6a-b8f8-ec5f7c301a30");
+                _prekosparapptogglebtnInfo = new RepoItemInfo(this, "PrekoSparAppToggleBtn", ".//container[@localizationkey='#register.additional.sparPlusApp']/?/?/togglebutton", 30000, null, "cf7e2505-f741-40b6-bb99-a26c5cb13463");
+                _označitečeimateotrokeInfo = new RepoItemInfo(this, "OznačiteČeImateOtroke", ".//text[@accessibilitylabel='Označite če imate otroke']", 30000, null, "e99cb590-db67-400d-8422-cb10e7c72f1a");
+                _buttondaInfo = new RepoItemInfo(this, "ButtonDa", ".//button[@accessibilitylabel='Da']", 30000, null, "1ad49616-1495-41c0-8a34-a8d5364ed499");
+                _buttonneInfo = new RepoItemInfo(this, "ButtonNe", ".//button[@accessibilitylabel='Ne']", 30000, null, "39703060-17ec-49f7-b815-dae7e8872c6d");
+                _vpišitešteviločlanovgospodinjstvaInfo = new RepoItemInfo(this, "VpišiteŠteviloČlanovGospodinjstva", ".//text[@accessibilitylabel='Vpišite število']", 30000, null, "989bfcb2-0d37-4ad5-9e2b-4d6c3d5ae56c");
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("3e6a1a47-0e7d-44dc-a578-3b19e09b3596")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The DodatneInformacije item.
+            /// </summary>
+            [RepositoryItem("0139a08c-8b57-4f26-bb7b-ccba824181b6")]
+            public virtual Ranorex.Text DodatneInformacije
+            {
+                get
+                {
+                    return _dodatneinformacijeInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The DodatneInformacije item info.
+            /// </summary>
+            [RepositoryItemInfo("0139a08c-8b57-4f26-bb7b-ccba824181b6")]
+            public virtual RepoItemInfo DodatneInformacijeInfo
+            {
+                get
+                {
+                    return _dodatneinformacijeInfo;
+                }
+            }
+
+            /// <summary>
+            /// The DirektnaPoštaToggleBtn item.
+            /// </summary>
+            [RepositoryItem("63304ee4-8c22-402c-a6ae-cda4c3973e88")]
+            public virtual Ranorex.ToggleButton DirektnaPoštaToggleBtn
+            {
+                get
+                {
+                    return _direktnapoštatogglebtnInfo.CreateAdapter<Ranorex.ToggleButton>(true);
+                }
+            }
+
+            /// <summary>
+            /// The DirektnaPoštaToggleBtn item info.
+            /// </summary>
+            [RepositoryItemInfo("63304ee4-8c22-402c-a6ae-cda4c3973e88")]
+            public virtual RepoItemInfo DirektnaPoštaToggleBtnInfo
+            {
+                get
+                {
+                    return _direktnapoštatogglebtnInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MobilniTelefonToggleBtn item.
+            /// </summary>
+            [RepositoryItem("26b0521a-d304-42aa-abda-469dbf6e9801")]
+            public virtual Ranorex.ToggleButton MobilniTelefonToggleBtn
+            {
+                get
+                {
+                    return _mobilnitelefontogglebtnInfo.CreateAdapter<Ranorex.ToggleButton>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MobilniTelefonToggleBtn item info.
+            /// </summary>
+            [RepositoryItemInfo("26b0521a-d304-42aa-abda-469dbf6e9801")]
+            public virtual RepoItemInfo MobilniTelefonToggleBtnInfo
+            {
+                get
+                {
+                    return _mobilnitelefontogglebtnInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Elektronska_pošta item.
+            /// </summary>
+            [RepositoryItem("bc8bcc97-c8e3-4f6a-b8f8-ec5f7c301a30")]
+            public virtual Ranorex.Button Elektronska_pošta
+            {
+                get
+                {
+                    return _elektronska_poštaInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Elektronska_pošta item info.
+            /// </summary>
+            [RepositoryItemInfo("bc8bcc97-c8e3-4f6a-b8f8-ec5f7c301a30")]
+            public virtual RepoItemInfo Elektronska_poštaInfo
+            {
+                get
+                {
+                    return _elektronska_poštaInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PrekoSparAppToggleBtn item.
+            /// </summary>
+            [RepositoryItem("cf7e2505-f741-40b6-bb99-a26c5cb13463")]
+            public virtual Ranorex.ToggleButton PrekoSparAppToggleBtn
+            {
+                get
+                {
+                    return _prekosparapptogglebtnInfo.CreateAdapter<Ranorex.ToggleButton>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PrekoSparAppToggleBtn item info.
+            /// </summary>
+            [RepositoryItemInfo("cf7e2505-f741-40b6-bb99-a26c5cb13463")]
+            public virtual RepoItemInfo PrekoSparAppToggleBtnInfo
+            {
+                get
+                {
+                    return _prekosparapptogglebtnInfo;
+                }
+            }
+
+            /// <summary>
+            /// The OznačiteČeImateOtroke item.
+            /// </summary>
+            [RepositoryItem("e99cb590-db67-400d-8422-cb10e7c72f1a")]
+            public virtual Ranorex.Text OznačiteČeImateOtroke
+            {
+                get
+                {
+                    return _označitečeimateotrokeInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The OznačiteČeImateOtroke item info.
+            /// </summary>
+            [RepositoryItemInfo("e99cb590-db67-400d-8422-cb10e7c72f1a")]
+            public virtual RepoItemInfo OznačiteČeImateOtrokeInfo
+            {
+                get
+                {
+                    return _označitečeimateotrokeInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ButtonDa item.
+            /// </summary>
+            [RepositoryItem("1ad49616-1495-41c0-8a34-a8d5364ed499")]
+            public virtual Ranorex.Button ButtonDa
+            {
+                get
+                {
+                    return _buttondaInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ButtonDa item info.
+            /// </summary>
+            [RepositoryItemInfo("1ad49616-1495-41c0-8a34-a8d5364ed499")]
+            public virtual RepoItemInfo ButtonDaInfo
+            {
+                get
+                {
+                    return _buttondaInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ButtonNe item.
+            /// </summary>
+            [RepositoryItem("39703060-17ec-49f7-b815-dae7e8872c6d")]
+            public virtual Ranorex.Button ButtonNe
+            {
+                get
+                {
+                    return _buttonneInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ButtonNe item info.
+            /// </summary>
+            [RepositoryItemInfo("39703060-17ec-49f7-b815-dae7e8872c6d")]
+            public virtual RepoItemInfo ButtonNeInfo
+            {
+                get
+                {
+                    return _buttonneInfo;
+                }
+            }
+
+            /// <summary>
+            /// The VpišiteŠteviloČlanovGospodinjstva item.
+            /// </summary>
+            [RepositoryItem("989bfcb2-0d37-4ad5-9e2b-4d6c3d5ae56c")]
+            public virtual Ranorex.Text VpišiteŠteviloČlanovGospodinjstva
+            {
+                get
+                {
+                    return _vpišitešteviločlanovgospodinjstvaInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The VpišiteŠteviloČlanovGospodinjstva item info.
+            /// </summary>
+            [RepositoryItemInfo("989bfcb2-0d37-4ad5-9e2b-4d6c3d5ae56c")]
+            public virtual RepoItemInfo VpišiteŠteviloČlanovGospodinjstvaInfo
+            {
+                get
+                {
+                    return _vpišitešteviločlanovgospodinjstvaInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The Registration_PermissionsFolder folder.
+        /// </summary>
+        [RepositoryFolder("4e69e45c-d7ec-4540-9932-afaec95684d4")]
+        public partial class Registration_PermissionsFolder : RepoGenBaseFolder
+        {
+            SparRepositoryFolders.Permissions_CommonElementsFolder _permissions_commonelements;
+            SparRepositoryFolders.Permission_LocationFolder _permission_location;
+            SparRepositoryFolders.SparCardAlwaysAccessibleFolder _sparcardalwaysaccessible;
+
+            /// <summary>
+            /// Creates a new Registration_Permissions  folder.
+            /// </summary>
+            public Registration_PermissionsFolder(RepoGenBaseFolder parentFolder) :
+                    base("Registration_Permissions", "", parentFolder, 0, null, false, "4e69e45c-d7ec-4540-9932-afaec95684d4", "")
+            {
+                _permissions_commonelements = new SparRepositoryFolders.Permissions_CommonElementsFolder(this);
+                _permission_location = new SparRepositoryFolders.Permission_LocationFolder(this);
+                _sparcardalwaysaccessible = new SparRepositoryFolders.SparCardAlwaysAccessibleFolder(this);
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("4e69e45c-d7ec-4540-9932-afaec95684d4")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Permissions_CommonElements folder.
+            /// </summary>
+            [RepositoryFolder("eda4386f-047f-4dc9-9f16-e7652a6dbb97")]
+            public virtual SparRepositoryFolders.Permissions_CommonElementsFolder Permissions_CommonElements
+            {
+                get { return _permissions_commonelements; }
+            }
+
+            /// <summary>
+            /// The Permission_Location folder.
+            /// </summary>
+            [RepositoryFolder("b8066897-d061-46b3-bf32-9fe3f7b93e95")]
+            public virtual SparRepositoryFolders.Permission_LocationFolder Permission_Location
+            {
+                get { return _permission_location; }
+            }
+
+            /// <summary>
+            /// The SparCardAlwaysAccessible folder.
+            /// </summary>
+            [RepositoryFolder("25f3e2f1-4b63-4b2e-a21f-0b96d1d8c41d")]
+            public virtual SparRepositoryFolders.SparCardAlwaysAccessibleFolder SparCardAlwaysAccessible
+            {
+                get { return _sparcardalwaysaccessible; }
+            }
+        }
+
+        /// <summary>
+        /// The Permissions_CommonElementsFolder folder.
+        /// </summary>
+        [RepositoryFolder("eda4386f-047f-4dc9-9f16-e7652a6dbb97")]
+        public partial class Permissions_CommonElementsFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _nespreglejtekuponovinpromocijInfo;
+            RepoItemInfo _želitebitipravočasnoobveščeniokuponInfo;
+            RepoItemInfo _dovoliobvestilaInfo;
+
+            /// <summary>
+            /// Creates a new Permissions_CommonElements  folder.
+            /// </summary>
+            public Permissions_CommonElementsFolder(RepoGenBaseFolder parentFolder) :
+                    base("Permissions_CommonElements", "", parentFolder, 0, null, false, "eda4386f-047f-4dc9-9f16-e7652a6dbb97", "")
+            {
+                _nespreglejtekuponovinpromocijInfo = new RepoItemInfo(this, "NeSpreglejteKuponovInPromocij", ".//text[@localizationkey='#onboarding.notifications.title']", 30000, null, "53fd88cb-e2b5-4f76-8f14-9a8101a762e8");
+                _želitebitipravočasnoobveščeniokuponInfo = new RepoItemInfo(this, "ŽeliteBitiPravočasnoObveščeniOKupon", ".//text[@localizationkey='#onboarding.notifications.description']", 30000, null, "19d27d43-393e-42d9-b696-658786a45e11");
+                _dovoliobvestilaInfo = new RepoItemInfo(this, "DovoliObvestila", ".//button[@accessibilitylabel='Dovoli obvestila']", 30000, null, "b58b8e89-54a4-4df0-bff1-932a60c02c06");
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("eda4386f-047f-4dc9-9f16-e7652a6dbb97")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The NeSpreglejteKuponovInPromocij item.
+            /// </summary>
+            [RepositoryItem("53fd88cb-e2b5-4f76-8f14-9a8101a762e8")]
+            public virtual Ranorex.Text NeSpreglejteKuponovInPromocij
+            {
+                get
+                {
+                    return _nespreglejtekuponovinpromocijInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The NeSpreglejteKuponovInPromocij item info.
+            /// </summary>
+            [RepositoryItemInfo("53fd88cb-e2b5-4f76-8f14-9a8101a762e8")]
+            public virtual RepoItemInfo NeSpreglejteKuponovInPromocijInfo
+            {
+                get
+                {
+                    return _nespreglejtekuponovinpromocijInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ŽeliteBitiPravočasnoObveščeniOKupon item.
+            /// </summary>
+            [RepositoryItem("19d27d43-393e-42d9-b696-658786a45e11")]
+            public virtual Ranorex.Text ŽeliteBitiPravočasnoObveščeniOKupon
+            {
+                get
+                {
+                    return _želitebitipravočasnoobveščeniokuponInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ŽeliteBitiPravočasnoObveščeniOKupon item info.
+            /// </summary>
+            [RepositoryItemInfo("19d27d43-393e-42d9-b696-658786a45e11")]
+            public virtual RepoItemInfo ŽeliteBitiPravočasnoObveščeniOKuponInfo
+            {
+                get
+                {
+                    return _želitebitipravočasnoobveščeniokuponInfo;
+                }
+            }
+
+            /// <summary>
+            /// The DovoliObvestila item.
+            /// </summary>
+            [RepositoryItem("b58b8e89-54a4-4df0-bff1-932a60c02c06")]
+            public virtual Ranorex.Button DovoliObvestila
+            {
+                get
+                {
+                    return _dovoliobvestilaInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The DovoliObvestila item info.
+            /// </summary>
+            [RepositoryItemInfo("b58b8e89-54a4-4df0-bff1-932a60c02c06")]
+            public virtual RepoItemInfo DovoliObvestilaInfo
+            {
+                get
+                {
+                    return _dovoliobvestilaInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The Permission_LocationFolder folder.
+        /// </summary>
+        [RepositoryFolder("b8066897-d061-46b3-bf32-9fe3f7b93e95")]
+        public partial class Permission_LocationFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _kjejenajbližjisparInfo;
+            RepoItemInfo _preveriteodpiralničasvašenajbližjetInfo;
+            RepoItemInfo _dovolispremljanjelokacijeInfo;
+
+            /// <summary>
+            /// Creates a new Permission_Location  folder.
+            /// </summary>
+            public Permission_LocationFolder(RepoGenBaseFolder parentFolder) :
+                    base("Permission_Location", "", parentFolder, 0, null, false, "b8066897-d061-46b3-bf32-9fe3f7b93e95", "")
+            {
+                _kjejenajbližjisparInfo = new RepoItemInfo(this, "KjeJeNajbližjiSpar", ".//text[@localizationkey='#onboarding.location.title']", 30000, null, "384bb9f7-c6a8-48ce-81d0-031f66a9590d");
+                _preveriteodpiralničasvašenajbližjetInfo = new RepoItemInfo(this, "PreveriteOdpiralniČasVašeNajbližjeT", ".//text[@localizationkey='#onboarding.location.description']", 30000, null, "0a4c1230-16a9-41f4-9f46-5f8c0799f5ab");
+                _dovolispremljanjelokacijeInfo = new RepoItemInfo(this, "DovoliSpremljanjeLokacije", ".//button[@accessibilitylabel='Dovoli spremljanje lokacije']", 30000, null, "5898adce-63cf-45b9-acea-f5659e9a99bd");
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("b8066897-d061-46b3-bf32-9fe3f7b93e95")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The KjeJeNajbližjiSpar item.
+            /// </summary>
+            [RepositoryItem("384bb9f7-c6a8-48ce-81d0-031f66a9590d")]
+            public virtual Ranorex.Text KjeJeNajbližjiSpar
+            {
+                get
+                {
+                    return _kjejenajbližjisparInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The KjeJeNajbližjiSpar item info.
+            /// </summary>
+            [RepositoryItemInfo("384bb9f7-c6a8-48ce-81d0-031f66a9590d")]
+            public virtual RepoItemInfo KjeJeNajbližjiSparInfo
+            {
+                get
+                {
+                    return _kjejenajbližjisparInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PreveriteOdpiralniČasVašeNajbližjeT item.
+            /// </summary>
+            [RepositoryItem("0a4c1230-16a9-41f4-9f46-5f8c0799f5ab")]
+            public virtual Ranorex.Text PreveriteOdpiralniČasVašeNajbližjeT
+            {
+                get
+                {
+                    return _preveriteodpiralničasvašenajbližjetInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PreveriteOdpiralniČasVašeNajbližjeT item info.
+            /// </summary>
+            [RepositoryItemInfo("0a4c1230-16a9-41f4-9f46-5f8c0799f5ab")]
+            public virtual RepoItemInfo PreveriteOdpiralniČasVašeNajbližjeTInfo
+            {
+                get
+                {
+                    return _preveriteodpiralničasvašenajbližjetInfo;
+                }
+            }
+
+            /// <summary>
+            /// The DovoliSpremljanjeLokacije item.
+            /// </summary>
+            [RepositoryItem("5898adce-63cf-45b9-acea-f5659e9a99bd")]
+            public virtual Ranorex.Button DovoliSpremljanjeLokacije
+            {
+                get
+                {
+                    return _dovolispremljanjelokacijeInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The DovoliSpremljanjeLokacije item info.
+            /// </summary>
+            [RepositoryItemInfo("5898adce-63cf-45b9-acea-f5659e9a99bd")]
+            public virtual RepoItemInfo DovoliSpremljanjeLokacijeInfo
+            {
+                get
+                {
+                    return _dovolispremljanjelokacijeInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The SparCardAlwaysAccessibleFolder folder.
+        /// </summary>
+        [RepositoryFolder("25f3e2f1-4b63-4b2e-a21f-0b96d1d8c41d")]
+        public partial class SparCardAlwaysAccessibleFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _sparpluskarticavednoprirokiInfo;
+            RepoItemInfo _namestitesisparpluskarticovcenterInfo;
+            RepoItemInfo _dokončajInfo;
+
+            /// <summary>
+            /// Creates a new SparCardAlwaysAccessible  folder.
+            /// </summary>
+            public SparCardAlwaysAccessibleFolder(RepoGenBaseFolder parentFolder) :
+                    base("SparCardAlwaysAccessible", "", parentFolder, 0, null, false, "25f3e2f1-4b63-4b2e-a21f-0b96d1d8c41d", "")
+            {
+                _sparpluskarticavednoprirokiInfo = new RepoItemInfo(this, "SPARPlusKarticaVednoPriRoki", ".//text[@localizationkey='#onboarding.notificationcenter.title']", 30000, null, "9dd88f63-5afc-4a94-b1af-3b737530decd");
+                _namestitesisparpluskarticovcenterInfo = new RepoItemInfo(this, "NamestiteSiSPARPlusKarticoVCenter", ".//text[@localizationkey='#onboarding.notificationcenter.description']", 30000, null, "93e18a08-99e7-4c5e-b60f-71548621764c");
+                _dokončajInfo = new RepoItemInfo(this, "Dokončaj", ".//button[@accessibilitylabel='Dokončaj']", 30000, null, "28650532-fd71-4f67-a48e-22b7ebe54fbb");
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("25f3e2f1-4b63-4b2e-a21f-0b96d1d8c41d")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SPARPlusKarticaVednoPriRoki item.
+            /// </summary>
+            [RepositoryItem("9dd88f63-5afc-4a94-b1af-3b737530decd")]
+            public virtual Ranorex.Text SPARPlusKarticaVednoPriRoki
+            {
+                get
+                {
+                    return _sparpluskarticavednoprirokiInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SPARPlusKarticaVednoPriRoki item info.
+            /// </summary>
+            [RepositoryItemInfo("9dd88f63-5afc-4a94-b1af-3b737530decd")]
+            public virtual RepoItemInfo SPARPlusKarticaVednoPriRokiInfo
+            {
+                get
+                {
+                    return _sparpluskarticavednoprirokiInfo;
+                }
+            }
+
+            /// <summary>
+            /// The NamestiteSiSPARPlusKarticoVCenter item.
+            /// </summary>
+            [RepositoryItem("93e18a08-99e7-4c5e-b60f-71548621764c")]
+            public virtual Ranorex.Text NamestiteSiSPARPlusKarticoVCenter
+            {
+                get
+                {
+                    return _namestitesisparpluskarticovcenterInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The NamestiteSiSPARPlusKarticoVCenter item info.
+            /// </summary>
+            [RepositoryItemInfo("93e18a08-99e7-4c5e-b60f-71548621764c")]
+            public virtual RepoItemInfo NamestiteSiSPARPlusKarticoVCenterInfo
+            {
+                get
+                {
+                    return _namestitesisparpluskarticovcenterInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Dokončaj item.
+            /// </summary>
+            [RepositoryItem("28650532-fd71-4f67-a48e-22b7ebe54fbb")]
+            public virtual Ranorex.Button Dokončaj
+            {
+                get
+                {
+                    return _dokončajInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Dokončaj item info.
+            /// </summary>
+            [RepositoryItemInfo("28650532-fd71-4f67-a48e-22b7ebe54fbb")]
+            public virtual RepoItemInfo DokončajInfo
+            {
+                get
+                {
+                    return _dokončajInfo;
                 }
             }
         }

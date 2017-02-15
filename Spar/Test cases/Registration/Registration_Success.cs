@@ -41,6 +41,17 @@ namespace Spar.Test_cases.Registration
         /// </summary>
         public Registration_Success()
         {
+            Name = "";
+            Surname = "";
+            DateOfBirth = "";
+            Country = "";
+            Address = "";
+            PostalNumber = "";
+            City = "";
+            PhoneNumber = "";
+            Email = "";
+            Password = "";
+            Gender = "";
         }
 
         /// <summary>
@@ -52,6 +63,138 @@ namespace Spar.Test_cases.Registration
         }
 
 #region Variables
+
+        string _Name;
+
+        /// <summary>
+        /// Gets or sets the value of variable Name.
+        /// </summary>
+        [TestVariable("ba843f94-a98f-40c9-b273-2deef2a1f056")]
+        public string Name
+        {
+            get { return _Name; }
+            set { _Name = value; }
+        }
+
+        string _Surname;
+
+        /// <summary>
+        /// Gets or sets the value of variable Surname.
+        /// </summary>
+        [TestVariable("212de63e-4181-448a-b359-07c10def87b4")]
+        public string Surname
+        {
+            get { return _Surname; }
+            set { _Surname = value; }
+        }
+
+        string _DateOfBirth;
+
+        /// <summary>
+        /// Gets or sets the value of variable DateOfBirth.
+        /// </summary>
+        [TestVariable("9d01736c-c8c9-4490-a510-6160f378bbdb")]
+        public string DateOfBirth
+        {
+            get { return _DateOfBirth; }
+            set { _DateOfBirth = value; }
+        }
+
+        string _Country;
+
+        /// <summary>
+        /// Gets or sets the value of variable Country.
+        /// </summary>
+        [TestVariable("f78c676b-e99f-4d90-a462-fe331b5b7949")]
+        public string Country
+        {
+            get { return _Country; }
+            set { _Country = value; }
+        }
+
+        string _Address;
+
+        /// <summary>
+        /// Gets or sets the value of variable Address.
+        /// </summary>
+        [TestVariable("a8aac716-de1a-454a-bb1c-d89868ae7bb5")]
+        public string Address
+        {
+            get { return _Address; }
+            set { _Address = value; }
+        }
+
+        string _PostalNumber;
+
+        /// <summary>
+        /// Gets or sets the value of variable PostalNumber.
+        /// </summary>
+        [TestVariable("1b5cd7d8-a8b1-4442-a67b-1edec64b1d5c")]
+        public string PostalNumber
+        {
+            get { return _PostalNumber; }
+            set { _PostalNumber = value; }
+        }
+
+        string _City;
+
+        /// <summary>
+        /// Gets or sets the value of variable City.
+        /// </summary>
+        [TestVariable("7f104a17-a1f2-4fc4-a4d5-662e21c23529")]
+        public string City
+        {
+            get { return _City; }
+            set { _City = value; }
+        }
+
+        string _PhoneNumber;
+
+        /// <summary>
+        /// Gets or sets the value of variable PhoneNumber.
+        /// </summary>
+        [TestVariable("832dd344-3eb2-4a0a-b812-ce3e0c3bdb08")]
+        public string PhoneNumber
+        {
+            get { return _PhoneNumber; }
+            set { _PhoneNumber = value; }
+        }
+
+        string _Email;
+
+        /// <summary>
+        /// Gets or sets the value of variable Email.
+        /// </summary>
+        [TestVariable("0ed279af-b285-427f-9acb-737d265e44a3")]
+        public string Email
+        {
+            get { return _Email; }
+            set { _Email = value; }
+        }
+
+        string _Password;
+
+        /// <summary>
+        /// Gets or sets the value of variable Password.
+        /// </summary>
+        [TestVariable("1a83f61b-162e-434a-a301-703224e1610f")]
+        public string Password
+        {
+            get { return _Password; }
+            set { _Password = value; }
+        }
+
+        string _Gender;
+
+        /// <summary>
+        /// Gets or sets the value of variable Gender.
+        /// </summary>
+        [TestVariable("599c5c46-e674-4ec7-8e7a-97ff7fd23c59")]
+        public string Gender
+        {
+            get { return _Gender; }
+            set { _Gender = value; }
+        }
 
         /// <summary>
         /// Gets or sets the value of variable PackageName.
@@ -121,23 +264,43 @@ namespace Spar.Test_cases.Registration
             Validate.Attribute(repo.PlusSparSi.RegisterStep1PersonalDataActivity.RegisterPersonalInfoTitleInfo, "Text", "Enter your personal info");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to 'Domen' on item 'PlusSparSi.RegisterStep1PersonalDataActivity.EtName'.", repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtNameInfo, new RecordItemIndex(8));
-            repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtName.Element.SetAttributeValue("Text", "Domen");
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$Name' on item 'PlusSparSi.RegisterStep1PersonalDataActivity.EtName'.", repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtNameInfo, new RecordItemIndex(8));
+            repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtName.Element.SetAttributeValue("Text", Name);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to 'Fras' on item 'PlusSparSi.RegisterStep1PersonalDataActivity.EtSurname'.", repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtSurnameInfo, new RecordItemIndex(9));
-            repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtSurname.Element.SetAttributeValue("Text", "Fras");
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$Surname' on item 'PlusSparSi.RegisterStep1PersonalDataActivity.EtSurname'.", repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtSurnameInfo, new RecordItemIndex(9));
+            repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtSurname.Element.SetAttributeValue("Text", Surname);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '10.10.2000' on item 'PlusSparSi.RegisterStep1PersonalDataActivity.EtDateBirth'.", repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtDateBirthInfo, new RecordItemIndex(10));
-            repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtDateBirth.Element.SetAttributeValue("Text", "10.10.2000");
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$DateOfBirth' on item 'PlusSparSi.RegisterStep1PersonalDataActivity.EtDateBirth'.", repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtDateBirthInfo, new RecordItemIndex(10));
+            repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtDateBirth.Element.SetAttributeValue("Text", DateOfBirth);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to 'Male' on item 'PlusSparSi.RegisterStep1PersonalDataActivity.EtGender'.", repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtGenderInfo, new RecordItemIndex(11));
-            repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtGender.Element.SetAttributeValue("Text", "Male");
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$Gender' on item 'PlusSparSi.RegisterStep1PersonalDataActivity.EtGender'.", repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtGenderInfo, new RecordItemIndex(11));
+            repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtGender.Element.SetAttributeValue("Text", Gender);
             Delay.Milliseconds(0);
             
             Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.RegisterStep1PersonalDataActivity.BtnNext' at Center", repo.PlusSparSi.RegisterStep1PersonalDataActivity.BtnNextInfo, new RecordItemIndex(12));
+            repo.PlusSparSi.RegisterStep1PersonalDataActivity.BtnNext.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$Country' on item 'PlusSparSi.RegisterStep1PersonalDataActivity.EtCountry'.", repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtCountryInfo, new RecordItemIndex(13));
+            repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtCountry.Element.SetAttributeValue("Text", Country);
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$Address' on item 'PlusSparSi.RegisterStep1PersonalDataActivity.EtStreet'.", repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtStreetInfo, new RecordItemIndex(14));
+            repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtStreet.Element.SetAttributeValue("Text", Address);
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$PhoneNumber' on item 'PlusSparSi.RegisterStep1PersonalDataActivity.EtPostal'.", repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtPostalInfo, new RecordItemIndex(15));
+            repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtPostal.Element.SetAttributeValue("Text", PhoneNumber);
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$City' on item 'PlusSparSi.RegisterStep1PersonalDataActivity.EtCity'.", repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtCityInfo, new RecordItemIndex(16));
+            repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtCity.Element.SetAttributeValue("Text", City);
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.RegisterStep1PersonalDataActivity.BtnNext' at Center", repo.PlusSparSi.RegisterStep1PersonalDataActivity.BtnNextInfo, new RecordItemIndex(17));
             repo.PlusSparSi.RegisterStep1PersonalDataActivity.BtnNext.Touch();
             Delay.Milliseconds(500);
             

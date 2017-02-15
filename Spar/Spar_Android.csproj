@@ -80,6 +80,18 @@
       <RepositoryCode>true</RepositoryCode>
       <id>e65f0250-748c-4242-b30c-0c5c6e3cabaa</id>
     </Compile>
+    <Compile Include="Test cases\Registration\iOS_NoCard_Registration_Success.cs">
+      <BoundTo>389ecc87-bf10-49db-859a-b04a2408963e</BoundTo>
+      <DependentUpon>iOS_NoCard_Registration_Success.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>168b9098-1779-48df-aba2-337c1f26314a</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\iOS_NoCard_Registration_Success.UserCode.cs">
+      <BoundTo>389ecc87-bf10-49db-859a-b04a2408963e</BoundTo>
+      <DependentUpon>iOS_NoCard_Registration_Success.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>efaa62a1-3463-4a59-89e3-80a9aac48756</id>
+    </Compile>
     <Compile Include="Test cases\Registration\Registration_Success.cs">
       <BoundTo>16703862-6971-4153-8096-24cd50dd229d</BoundTo>
       <DependentUpon>Registration_Success.rxrec</DependentUpon>
@@ -131,6 +143,11 @@
       <id>591f6c44-d7a2-44b1-bef9-825c23af42c7</id>
       <repoid>c55abb3d-7d0d-4435-8640-bb30710f5f27</repoid>
       <reporootid>c12fa4a9-bf96-41a7-9866-79edafaddcf2</reporootid>
+    </None>
+    <None Include="Test cases\Registration\iOS_NoCard_Registration_Success.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>389ecc87-bf10-49db-859a-b04a2408963e</id>
+      <recordtableid>81b4ca1d-2c8b-4ed3-8bc7-111c9c666dd4</recordtableid>
     </None>
     <None Include="Test cases\Registration\Registration_Success.rxrec">
       <id>16703862-6971-4153-8096-24cd50dd229d</id>

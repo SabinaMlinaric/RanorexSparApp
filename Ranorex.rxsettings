@@ -424,7 +424,7 @@ rxversion="6.2">
 		True
 	</plugins.qt.quickfiltered>
 	<plugin.mobile.android.ConnectTimout>
-		10000ms
+		30000ms
 	</plugin.mobile.android.ConnectTimout>
 	<plugin.mobile.android.rpccalltimeout>
 		5000ms
