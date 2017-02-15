@@ -18,6 +18,7 @@ using WinForms = System.Windows.Forms;
 
 using Ranorex;
 using Ranorex.Core;
+using Ranorex.Core.Remoting;
 using Ranorex.Core.Repository;
 using Ranorex.Core.Testing;
 
@@ -39,19 +40,31 @@ namespace Spar.Test_cases.Utility
             string pathToAdb      = "C:\\Program Files (x86)\\Ranorex 6.2\\Bin\\RxEnv\\Android\\tools\\adb.exe";         //your path to adb.exe goes here
 			string appPackageName = PackageName;  																		 //the packagename of your app
 			
-			Process adbClearProcess = new Process();
-			adbClearProcess.StartInfo.FileName  = pathToAdb;
-			adbClearProcess.StartInfo.Arguments = string.Format("shell rm -r /data/data/{0}/", appPackageName);
-			adbClearProcess.Start();
 			
-			adbClearProcess.WaitForExit();
+			var app = repo.PlusSparSi.Self.As<AndroidApp>();
+			var info = app.GetDeviceInfo();
+			Report.Log(ReportLevel.Info, "Port: 5555, Host: " + info.NetworkInterfaces[0], "");
 			
 			Process adbCreateDirProcess = new Process();
 			adbCreateDirProcess.StartInfo.FileName  = pathToAdb;
-			adbCreateDirProcess.StartInfo.Arguments = string.Format("shell mkdir /data/data/ranorex.android.services/", appPackageName);
+			adbCreateDirProcess.StartInfo.Arguments = string.Format("adb tcpip 5555");
 			adbCreateDirProcess.Start();
-			
 			adbCreateDirProcess.WaitForExit();
+			
+			adbCreateDirProcess = new Process();
+			adbCreateDirProcess.StartInfo.FileName  = pathToAdb;
+			adbCreateDirProcess.StartInfo.Arguments = string.Format("adb connect {0}", info.NetworkInterfaces[0]);
+			adbCreateDirProcess.Start();
+			adbCreateDirProcess.WaitForExit();
+			
+			adbCreateDirProcess = new Process();
+			adbCreateDirProcess.StartInfo.FileName  = pathToAdb;
+			adbCreateDirProcess.StartInfo.Arguments = string.Format("adb shell pm clear {0}", appPackageName);
+			adbCreateDirProcess.Start();			
+			adbCreateDirProcess.WaitForExit();
+			
+			app.StartApp(PackageName,true);
+			
         }
     }
 }

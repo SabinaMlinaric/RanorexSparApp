@@ -35,7 +35,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="64387677-afca-4211-8795-6a1af010e433">
-					/mobileapp[@title=$PackageName]/form[@title='ScanCardActivity']//text[@resourceid='R.string.scancard_info_title']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='ScanCardActivity']//text[@resourceid='R.string.scancard_info_title']
 				</item>
 				<item
 				name="BtnScan"
@@ -44,7 +44,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="40b9c84c-33bf-422c-ae6e-c0ccd0a93437">
-					/mobileapp[@title=$PackageName]/form[@title='ScanCardActivity']//text[@rid='btn_scan']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='ScanCardActivity']//text[@rid='btn_scan']
 				</item>
 				<item
 				name="BtnNoCard"
@@ -53,7 +53,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="0291ee1a-13ab-44ea-ba2d-a84e5c538e0a">
-					/mobileapp[@title=$PackageName]/form[@title='ScanCardActivity']//text[@rid='btn_no_card']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='ScanCardActivity']//text[@rid='btn_no_card']
 				</item>
 				<item
 				name="BtnManualInsertCardNumber"
@@ -62,7 +62,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="32d73317-b8c8-4fd4-8649-310f03fa53e8">
-					/mobileapp[@title=$PackageName]/form[@title='ScanCardActivity']//text[@rid='btn_manual_insert_card_number']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='ScanCardActivity']//text[@rid='btn_manual_insert_card_number']
 				</item>
 				<item
 				name="Terms"
@@ -71,10 +71,10 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="7361423d-3295-4f38-bc16-35a3e26ac31e">
-					/mobileapp[@title=$PackageName]/form[@title='ScanCardActivity']//text[@rid='tv_footer_terms']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='ScanCardActivity']//text[@rid='tv_footer_terms']
 				</item>
 				<basepath>
-					/mobileapp[@title=$PackageName]/form[@title='ScanCardActivity']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='ScanCardActivity']
 				</basepath>
 			</folder>
 			<folder
@@ -92,7 +92,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="93228567-c371-45e2-94fc-4e01710a77bf">
-					/mobileapp[@title=$PackageName]/form[@title='RegisterWelcomeActivity']//text[@resourceid='R.string.register_welcome_info_title']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='RegisterWelcomeActivity']//text[@resourceid='R.string.register_welcome_info_title']
 				</item>
 				<item
 				name="RegisterWelcomeExclusive"
@@ -101,7 +101,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="96381afe-5b41-4b96-8686-6a7cef394936">
-					/mobileapp[@title=$PackageName]/form[@title='RegisterWelcomeActivity']//container[1]/text[@resourceid='R.string.register_welcome_exclusive']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='RegisterWelcomeActivity']//container[1]/text[@resourceid='R.string.register_welcome_exclusive']
 				</item>
 				<item
 				name="RegisterWelcomeCollectingCre"
@@ -110,7 +110,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="bff48b0c-a95b-46c1-9f54-3d7436de9682">
-					/mobileapp[@title=$PackageName]/form[@title='RegisterWelcomeActivity']//container[2]/text[@resourceid='R.string.register_welcome_collecting_credit']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='RegisterWelcomeActivity']//container[2]/text[@resourceid='R.string.register_welcome_collecting_credit']
 				</item>
 				<item
 				name="RegisterWelcomeCardAccess"
@@ -119,7 +119,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="046b69df-5d44-4949-8379-4c34fb191a0b">
-					/mobileapp[@title=$PackageName]/form[@title='RegisterWelcomeActivity']//container[3]/text[@resourceid='R.string.register_welcome_card_access']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='RegisterWelcomeActivity']//container[3]/text[@resourceid='R.string.register_welcome_card_access']
 				</item>
 				<item
 				name="BtnJoin"
@@ -128,7 +128,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="261f88aa-fe0d-4331-886c-2da7339ff7f7">
-					/mobileapp[@title=$PackageName]/form[@title='RegisterWelcomeActivity']//text[@rid='btn_join']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='RegisterWelcomeActivity']//text[@rid='btn_join']
 				</item>
 				<item
 				name="BtnSkip"
@@ -137,10 +137,10 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="78468c46-ac1d-458d-81c3-4479e9683c5c">
-					/mobileapp[@title=$PackageName]/form[@title='RegisterWelcomeActivity']//text[@rid='btn_skip']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='RegisterWelcomeActivity']//text[@rid='btn_skip']
 				</item>
 				<basepath>
-					/mobileapp[@title=$PackageName]/form[@title='RegisterWelcomeActivity']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='RegisterWelcomeActivity']
 				</basepath>
 			</folder>
 			<folder
@@ -158,7 +158,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="ce5cf439-01cd-4fb3-be63-73c96f1c3dfd">
-					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@resourceid='R.string.register_personal_info_title']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep1PersonalData']//text[@resourceid='R.string.register_personal_info_title']
 				</item>
 				<item
 				name="EtName"
@@ -167,7 +167,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="b72fca3f-347b-46f8-839b-2cb06f5e1e52">
-					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_name']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_name']
 				</item>
 				<item
 				name="EtSurname"
@@ -176,7 +176,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="fa5c5f61-3b8a-4e01-be50-0aaba230756d">
-					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_surname']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_surname']
 				</item>
 				<item
 				name="EtDateBirth"
@@ -185,7 +185,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="6eb09e9b-3b39-4a43-8cee-00849b14c9d0">
-					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_date_birth']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_date_birth']
 				</item>
 				<item
 				name="EtGender"
@@ -194,7 +194,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="14f192ba-5856-4461-8dc3-d4fe509e48c0">
-					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_gender']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_gender']
 				</item>
 				<item
 				name="BtnNext"
@@ -203,7 +203,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="110f5d13-db5e-4a39-9329-f4b9997f9122">
-					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='btn_next']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep1PersonalData']//text[@rid='btn_next']
 				</item>
 				<item
 				name="BtnSkip"
@@ -212,7 +212,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="1b30ca37-7a82-4c02-9a30-c4f227e37ff4">
-					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='btn_skip']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep1PersonalData']//text[@rid='btn_skip']
 				</item>
 				<item
 				name="EtStreet"
@@ -221,7 +221,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="12e501b3-3b53-4440-9ef3-365f8be9c167">
-					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_street']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_street']
 				</item>
 				<item
 				name="EtHouseNumber"
@@ -230,7 +230,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="69afb091-7552-4183-93cd-54a3d696f100">
-					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_house_number']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_house_number']
 				</item>
 				<item
 				name="EtCountry"
@@ -239,7 +239,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="1a4cc3a8-2d99-4e7d-888a-aefcff1ad5ea">
-					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_country']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_country']
 				</item>
 				<item
 				name="EtPostal"
@@ -248,7 +248,7 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="6fbdc155-0924-479c-9572-df59099d58e9">
-					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_postal']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_postal']
 				</item>
 				<item
 				name="EtCity"
@@ -257,14 +257,153 @@ rxversion="6.2">
 				capname="text"
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="f1fc2195-7633-47e2-adaa-c8ddc1c22ce2">
-					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_city']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_city']
 				</item>
 				<basepath>
-					/mobileapp[@title=$PackageName]/form[@title~'^RegisterStep1PersonalData']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep1PersonalData']
 				</basepath>
 			</folder>
 			<basepath>
-				/mobileapp[@title=$PackageName]
+				/mobileapp[@title='plus.spar.si.staging']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0
+U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABNSURBVDhPY6A6CA0NWQ/E//Hg9VClmAAo
+KYCmGCuGKscEQEmwAVAuVkBInqCCUQNGjgGEMFQpdoBLIS5xDABU0ICsGAtugCqlBmBgAAAcoXfL
+E78sAQAAAABJRU5ErkJggg==
+			</icon>
+		</appfolder>
+		<appfolder
+		name="ComInovaintSpar"
+		id="b7801e19-292e-4eb3-a090-c59cc302bf9a"
+		searchtimeout="30000ms"
+		capname="mobileapp"
+		refpath="/mobileapp[@title='com.inovaint.spar']"
+		addcaps="unknown,mobileapp,iosapp"
+		isrooted="True"
+		usecache="False">
+			<folder
+			name="NoCardRegistrationScreens"
+			id="401a318b-7b68-42f9-b1d5-7f62df36fc32"
+			searchtimeout="30000ms"
+			capname="container"
+			refimgid="6f016364-b965-4ad7-acc4-c4f3c254a664"
+			isrooted="True"
+			usecache="False">
+				<item
+				name="PričniteTakoDaSkenirateSvojoSPARP"
+				id="f00aca11-5741-4705-a189-849ca7c0882c"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,ioselement,mobileuielement"
+				refimgid="42dfaf37-36f4-4133-a5c0-d2df91826cb4">
+					/mobileapp[@title='com.inovaint.spar']/form/?/?/container[@containertype='ViewControllerWrapper']//text[@localizationkey='#scancard.infoTitle']
+				</item>
+				<item
+				name="Skeniraj"
+				id="8195a671-1f77-412e-b7f4-3f5e150eb28d"
+				searchtimeout="30000ms"
+				capname="button"
+				addcaps="button,ioselement,mobileuielement"
+				refimgid="0183d429-a404-4d70-9547-ec6aeadf82c4">
+					/mobileapp[@title='com.inovaint.spar']/form/?/?/container[@containertype='ViewControllerWrapper']//button[@accessibilitylabel='Skeniraj']
+				</item>
+				<item
+				name="NimamSPARPlusKartice"
+				id="c578c615-f275-4ea0-9eea-cf6f93139abb"
+				searchtimeout="30000ms"
+				capname="button"
+				addcaps="button,ioselement,mobileuielement"
+				refimgid="f36e2aa6-21ea-41bd-8351-2ff8517d69df">
+					/mobileapp[@title='com.inovaint.spar']/form/?/?/container[@containertype='ViewControllerWrapper']//button[@accessibilitylabel='Nimam SPAR plus kartice']
+				</item>
+				<item
+				name="VpišiteSerijskoŠtevilkoKartice"
+				id="a3ad497f-8d14-451c-92d5-13eea4041a31"
+				searchtimeout="30000ms"
+				capname="button"
+				addcaps="button,ioselement,mobileuielement"
+				refimgid="aa951d42-f0e9-4a55-9769-44fb82c80871">
+					/mobileapp[@title='com.inovaint.spar']/form/?/?/container[@containertype='ViewControllerWrapper']//button[@accessibilitylabel='Vpi&#353;ite serijsko &#353;tevilko kartice']
+				</item>
+				<item
+				name="PogojiUporabe"
+				id="e1e753c3-86c6-4578-8a23-2248e5f592f1"
+				searchtimeout="30000ms"
+				capname="button"
+				addcaps="button,ioselement,mobileuielement"
+				refimgid="addc1b67-bdeb-4712-96de-208459863ae3">
+					/mobileapp[@title='com.inovaint.spar']/form/?/?/container[@containertype='ViewControllerWrapper']//button[@accessibilitylabel='Z uporabo aplikacije, se strinjate s pogoji in na&#269;inom uporabe.']
+				</item>
+				<item
+				name="StePriSkeniranjuNaleteliNaTežave"
+				id="4c60459c-d714-414b-8f68-c2ad2bb8b9fa"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,ioselement,mobileuielement"
+				refimgid="1b655ada-3929-48ce-aacb-5b4b4e8eefa2">
+					/mobileapp[@title='com.inovaint.spar']/form/?/?/container[@containertype='ViewControllerWrapper']//text[@localizationkey='#scancard.problemsWithScan']
+				</item>
+				<item
+				name="PostaniČlanSPARPlus"
+				id="1ce221bc-7ec6-4ae5-b94b-0d6f6b01e94e"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,ioselement,mobileuielement"
+				refimgid="6db15762-60a7-4593-bd51-448b6fc1fb7e">
+					/mobileapp[@title='com.inovaint.spar']/form/?/?/container[@containertype='ViewControllerWrapper']//text[@localizationkey='#register.welcome.infoTitle']
+				</item>
+				<item
+				name="EkskluzivniKuponiInUgodnosti"
+				id="e7595093-abb7-4b01-ae21-56674ef48216"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,ioselement,mobileuielement"
+				refimgid="66c96e2b-d117-4be5-9783-42aea2f1d9b2">
+					/mobileapp[@title='com.inovaint.spar']/form/?/?/container[@containertype='ViewControllerWrapper']//text[@localizationkey='#register.welcome.exclusive']
+				</item>
+				<item
+				name="ZbiranjeDobropisaNaKartici"
+				id="ee7c8ee8-35ec-49e1-87bb-098b01223c8c"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,ioselement,mobileuielement"
+				refimgid="8223895a-1751-45d6-89a5-b671b5f3b403">
+					/mobileapp[@title='com.inovaint.spar']/form/?/?/container[@containertype='ViewControllerWrapper']//text[@localizationkey='#register.welcome.collectingCredit']
+				</item>
+				<item
+				name="DostopDoSPARPlusKarticeKarNaTelef"
+				id="e0d70e1f-76e1-4005-be0f-6c6376ce5746"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,ioselement,mobileuielement"
+				refimgid="56acc643-7c4a-4d80-b699-6cc26d3d1f92">
+					/mobileapp[@title='com.inovaint.spar']/form/?/?/container[@containertype='ViewControllerWrapper']//text[@localizationkey='#register.welcome.cardAccess']
+				</item>
+				<item
+				name="PridružiteSe"
+				id="dc15f500-1e7e-4935-905a-894b47c8044c"
+				searchtimeout="30000ms"
+				capname="button"
+				addcaps="button,ioselement,mobileuielement"
+				refimgid="f39b98f4-2b37-46ab-aac4-f85bf09b2984">
+					/mobileapp[@title='com.inovaint.spar']/form/?/?/container[@containertype='ViewControllerWrapper']//button[@accessibilitylabel='Pridru&#382;ite se']
+				</item>
+				<item
+				name="Preskoči"
+				id="172616bc-5c6f-4b7f-aab5-c124681def55"
+				searchtimeout="30000ms"
+				capname="button"
+				addcaps="button,ioselement,mobileuielement"
+				refimgid="5c20556a-72a2-4e7d-9ed5-b64e3ba3115d">
+					/mobileapp[@title='com.inovaint.spar']/form/?/?/container[@containertype='ViewControllerWrapper']//button[@accessibilitylabel='Presko&#269;i']
+				</item>
+				<basepath>
+					/mobileapp[@title='com.inovaint.spar']/form/?/?/container[@containertype='ViewControllerWrapper']
+				</basepath>
+			</folder>
+			<basepath>
+				/mobileapp[@title='com.inovaint.spar']
 			</basepath>
 			<icon>
 				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0

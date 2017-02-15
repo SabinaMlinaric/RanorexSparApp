@@ -28,6 +28,7 @@ namespace Spar
     {
         static SparRepository instance = new SparRepository();
         SparRepositoryFolders.PlusSparSiAppFolder _plussparsi;
+        SparRepositoryFolders.ComInovaintSparAppFolder _cominovaintspar;
 
         /// <summary>
         /// Gets the singleton class instance representing the SparRepository element repository.
@@ -45,6 +46,7 @@ namespace Spar
             : base("SparRepository", "/", null, 0, false, "c12fa4a9-bf96-41a7-9866-79edafaddcf2", ".\\RepositoryImages\\SparRepositoryc12fa4a9.rximgres")
         {
             _plussparsi = new SparRepositoryFolders.PlusSparSiAppFolder(this);
+            _cominovaintspar = new SparRepositoryFolders.ComInovaintSparAppFolder(this);
         }
 
 #region Variables
@@ -83,6 +85,15 @@ namespace Spar
         {
             get { return _plussparsi; }
         }
+
+        /// <summary>
+        /// The ComInovaintSpar folder.
+        /// </summary>
+        [RepositoryFolder("b7801e19-292e-4eb3-a090-c59cc302bf9a")]
+        public virtual SparRepositoryFolders.ComInovaintSparAppFolder ComInovaintSpar
+        {
+            get { return _cominovaintspar; }
+        }
     }
 
     /// <summary>
@@ -105,7 +116,7 @@ namespace Spar
             /// Creates a new PlusSparSi  folder.
             /// </summary>
             public PlusSparSiAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("PlusSparSi", "/mobileapp[@title=$PackageName]", parentFolder, 30000, null, false, "f885d0cd-d406-48ca-a29d-75d836c2cf92", "")
+                    base("PlusSparSi", "/mobileapp[@title='plus.spar.si.staging']", parentFolder, 30000, null, false, "f885d0cd-d406-48ca-a29d-75d836c2cf92", "")
             {
                 _scancardactivity = new SparRepositoryFolders.ScanCardActivityFolder(this);
                 _registerwelcomeactivity = new SparRepositoryFolders.RegisterWelcomeActivityFolder(this);
@@ -878,6 +889,409 @@ namespace Spar
                 get
                 {
                     return _etcityInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The ComInovaintSparAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("b7801e19-292e-4eb3-a090-c59cc302bf9a")]
+        public partial class ComInovaintSparAppFolder : RepoGenBaseFolder
+        {
+            SparRepositoryFolders.NoCardRegistrationScreensFolder _nocardregistrationscreens;
+
+            /// <summary>
+            /// Creates a new ComInovaintSpar  folder.
+            /// </summary>
+            public ComInovaintSparAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("ComInovaintSpar", "/mobileapp[@title='com.inovaint.spar']", parentFolder, 30000, null, false, "b7801e19-292e-4eb3-a090-c59cc302bf9a", "")
+            {
+                _nocardregistrationscreens = new SparRepositoryFolders.NoCardRegistrationScreensFolder(this);
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("b7801e19-292e-4eb3-a090-c59cc302bf9a")]
+            public virtual Ranorex.MobileApp Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.MobileApp>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("b7801e19-292e-4eb3-a090-c59cc302bf9a")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The NoCardRegistrationScreens folder.
+            /// </summary>
+            [RepositoryFolder("401a318b-7b68-42f9-b1d5-7f62df36fc32")]
+            public virtual SparRepositoryFolders.NoCardRegistrationScreensFolder NoCardRegistrationScreens
+            {
+                get { return _nocardregistrationscreens; }
+            }
+        }
+
+        /// <summary>
+        /// The NoCardRegistrationScreensFolder folder.
+        /// </summary>
+        [RepositoryFolder("401a318b-7b68-42f9-b1d5-7f62df36fc32")]
+        public partial class NoCardRegistrationScreensFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _pričnitetakodaskeniratesvojosparpInfo;
+            RepoItemInfo _skenirajInfo;
+            RepoItemInfo _nimamsparpluskarticeInfo;
+            RepoItemInfo _vpišiteserijskoštevilkokarticeInfo;
+            RepoItemInfo _pogojiuporabeInfo;
+            RepoItemInfo _stepriskeniranjunaletelinatežaveInfo;
+            RepoItemInfo _postaničlansparplusInfo;
+            RepoItemInfo _ekskluzivnikuponiinugodnostiInfo;
+            RepoItemInfo _zbiranjedobropisanakarticiInfo;
+            RepoItemInfo _dostopdosparpluskarticekarnatelefInfo;
+            RepoItemInfo _pridružiteseInfo;
+            RepoItemInfo _preskočiInfo;
+
+            /// <summary>
+            /// Creates a new NoCardRegistrationScreens  folder.
+            /// </summary>
+            public NoCardRegistrationScreensFolder(RepoGenBaseFolder parentFolder) :
+                    base("NoCardRegistrationScreens", "form/?/?/container[@containertype='ViewControllerWrapper']", parentFolder, 30000, null, false, "401a318b-7b68-42f9-b1d5-7f62df36fc32", "")
+            {
+                _pričnitetakodaskeniratesvojosparpInfo = new RepoItemInfo(this, "PričniteTakoDaSkenirateSvojoSPARP", ".//text[@localizationkey='#scancard.infoTitle']", 30000, null, "f00aca11-5741-4705-a189-849ca7c0882c");
+                _skenirajInfo = new RepoItemInfo(this, "Skeniraj", ".//button[@accessibilitylabel='Skeniraj']", 30000, null, "8195a671-1f77-412e-b7f4-3f5e150eb28d");
+                _nimamsparpluskarticeInfo = new RepoItemInfo(this, "NimamSPARPlusKartice", ".//button[@accessibilitylabel='Nimam SPAR plus kartice']", 30000, null, "c578c615-f275-4ea0-9eea-cf6f93139abb");
+                _vpišiteserijskoštevilkokarticeInfo = new RepoItemInfo(this, "VpišiteSerijskoŠtevilkoKartice", ".//button[@accessibilitylabel='Vpišite serijsko številko kartice']", 30000, null, "a3ad497f-8d14-451c-92d5-13eea4041a31");
+                _pogojiuporabeInfo = new RepoItemInfo(this, "PogojiUporabe", ".//button[@accessibilitylabel='Z uporabo aplikacije, se strinjate s pogoji in načinom uporabe.']", 30000, null, "e1e753c3-86c6-4578-8a23-2248e5f592f1");
+                _stepriskeniranjunaletelinatežaveInfo = new RepoItemInfo(this, "StePriSkeniranjuNaleteliNaTežave", ".//text[@localizationkey='#scancard.problemsWithScan']", 30000, null, "4c60459c-d714-414b-8f68-c2ad2bb8b9fa");
+                _postaničlansparplusInfo = new RepoItemInfo(this, "PostaniČlanSPARPlus", ".//text[@localizationkey='#register.welcome.infoTitle']", 30000, null, "1ce221bc-7ec6-4ae5-b94b-0d6f6b01e94e");
+                _ekskluzivnikuponiinugodnostiInfo = new RepoItemInfo(this, "EkskluzivniKuponiInUgodnosti", ".//text[@localizationkey='#register.welcome.exclusive']", 30000, null, "e7595093-abb7-4b01-ae21-56674ef48216");
+                _zbiranjedobropisanakarticiInfo = new RepoItemInfo(this, "ZbiranjeDobropisaNaKartici", ".//text[@localizationkey='#register.welcome.collectingCredit']", 30000, null, "ee7c8ee8-35ec-49e1-87bb-098b01223c8c");
+                _dostopdosparpluskarticekarnatelefInfo = new RepoItemInfo(this, "DostopDoSPARPlusKarticeKarNaTelef", ".//text[@localizationkey='#register.welcome.cardAccess']", 30000, null, "e0d70e1f-76e1-4005-be0f-6c6376ce5746");
+                _pridružiteseInfo = new RepoItemInfo(this, "PridružiteSe", ".//button[@accessibilitylabel='Pridružite se']", 30000, null, "dc15f500-1e7e-4935-905a-894b47c8044c");
+                _preskočiInfo = new RepoItemInfo(this, "Preskoči", ".//button[@accessibilitylabel='Preskoči']", 30000, null, "172616bc-5c6f-4b7f-aab5-c124681def55");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("401a318b-7b68-42f9-b1d5-7f62df36fc32")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("401a318b-7b68-42f9-b1d5-7f62df36fc32")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PričniteTakoDaSkenirateSvojoSPARP item.
+            /// </summary>
+            [RepositoryItem("f00aca11-5741-4705-a189-849ca7c0882c")]
+            public virtual Ranorex.Text PričniteTakoDaSkenirateSvojoSPARP
+            {
+                get
+                {
+                    return _pričnitetakodaskeniratesvojosparpInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PričniteTakoDaSkenirateSvojoSPARP item info.
+            /// </summary>
+            [RepositoryItemInfo("f00aca11-5741-4705-a189-849ca7c0882c")]
+            public virtual RepoItemInfo PričniteTakoDaSkenirateSvojoSPARPInfo
+            {
+                get
+                {
+                    return _pričnitetakodaskeniratesvojosparpInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Skeniraj item.
+            /// </summary>
+            [RepositoryItem("8195a671-1f77-412e-b7f4-3f5e150eb28d")]
+            public virtual Ranorex.Button Skeniraj
+            {
+                get
+                {
+                    return _skenirajInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Skeniraj item info.
+            /// </summary>
+            [RepositoryItemInfo("8195a671-1f77-412e-b7f4-3f5e150eb28d")]
+            public virtual RepoItemInfo SkenirajInfo
+            {
+                get
+                {
+                    return _skenirajInfo;
+                }
+            }
+
+            /// <summary>
+            /// The NimamSPARPlusKartice item.
+            /// </summary>
+            [RepositoryItem("c578c615-f275-4ea0-9eea-cf6f93139abb")]
+            public virtual Ranorex.Button NimamSPARPlusKartice
+            {
+                get
+                {
+                    return _nimamsparpluskarticeInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The NimamSPARPlusKartice item info.
+            /// </summary>
+            [RepositoryItemInfo("c578c615-f275-4ea0-9eea-cf6f93139abb")]
+            public virtual RepoItemInfo NimamSPARPlusKarticeInfo
+            {
+                get
+                {
+                    return _nimamsparpluskarticeInfo;
+                }
+            }
+
+            /// <summary>
+            /// The VpišiteSerijskoŠtevilkoKartice item.
+            /// </summary>
+            [RepositoryItem("a3ad497f-8d14-451c-92d5-13eea4041a31")]
+            public virtual Ranorex.Button VpišiteSerijskoŠtevilkoKartice
+            {
+                get
+                {
+                    return _vpišiteserijskoštevilkokarticeInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The VpišiteSerijskoŠtevilkoKartice item info.
+            /// </summary>
+            [RepositoryItemInfo("a3ad497f-8d14-451c-92d5-13eea4041a31")]
+            public virtual RepoItemInfo VpišiteSerijskoŠtevilkoKarticeInfo
+            {
+                get
+                {
+                    return _vpišiteserijskoštevilkokarticeInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PogojiUporabe item.
+            /// </summary>
+            [RepositoryItem("e1e753c3-86c6-4578-8a23-2248e5f592f1")]
+            public virtual Ranorex.Button PogojiUporabe
+            {
+                get
+                {
+                    return _pogojiuporabeInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PogojiUporabe item info.
+            /// </summary>
+            [RepositoryItemInfo("e1e753c3-86c6-4578-8a23-2248e5f592f1")]
+            public virtual RepoItemInfo PogojiUporabeInfo
+            {
+                get
+                {
+                    return _pogojiuporabeInfo;
+                }
+            }
+
+            /// <summary>
+            /// The StePriSkeniranjuNaleteliNaTežave item.
+            /// </summary>
+            [RepositoryItem("4c60459c-d714-414b-8f68-c2ad2bb8b9fa")]
+            public virtual Ranorex.Text StePriSkeniranjuNaleteliNaTežave
+            {
+                get
+                {
+                    return _stepriskeniranjunaletelinatežaveInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The StePriSkeniranjuNaleteliNaTežave item info.
+            /// </summary>
+            [RepositoryItemInfo("4c60459c-d714-414b-8f68-c2ad2bb8b9fa")]
+            public virtual RepoItemInfo StePriSkeniranjuNaleteliNaTežaveInfo
+            {
+                get
+                {
+                    return _stepriskeniranjunaletelinatežaveInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PostaniČlanSPARPlus item.
+            /// </summary>
+            [RepositoryItem("1ce221bc-7ec6-4ae5-b94b-0d6f6b01e94e")]
+            public virtual Ranorex.Text PostaniČlanSPARPlus
+            {
+                get
+                {
+                    return _postaničlansparplusInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PostaniČlanSPARPlus item info.
+            /// </summary>
+            [RepositoryItemInfo("1ce221bc-7ec6-4ae5-b94b-0d6f6b01e94e")]
+            public virtual RepoItemInfo PostaniČlanSPARPlusInfo
+            {
+                get
+                {
+                    return _postaničlansparplusInfo;
+                }
+            }
+
+            /// <summary>
+            /// The EkskluzivniKuponiInUgodnosti item.
+            /// </summary>
+            [RepositoryItem("e7595093-abb7-4b01-ae21-56674ef48216")]
+            public virtual Ranorex.Text EkskluzivniKuponiInUgodnosti
+            {
+                get
+                {
+                    return _ekskluzivnikuponiinugodnostiInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The EkskluzivniKuponiInUgodnosti item info.
+            /// </summary>
+            [RepositoryItemInfo("e7595093-abb7-4b01-ae21-56674ef48216")]
+            public virtual RepoItemInfo EkskluzivniKuponiInUgodnostiInfo
+            {
+                get
+                {
+                    return _ekskluzivnikuponiinugodnostiInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ZbiranjeDobropisaNaKartici item.
+            /// </summary>
+            [RepositoryItem("ee7c8ee8-35ec-49e1-87bb-098b01223c8c")]
+            public virtual Ranorex.Text ZbiranjeDobropisaNaKartici
+            {
+                get
+                {
+                    return _zbiranjedobropisanakarticiInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ZbiranjeDobropisaNaKartici item info.
+            /// </summary>
+            [RepositoryItemInfo("ee7c8ee8-35ec-49e1-87bb-098b01223c8c")]
+            public virtual RepoItemInfo ZbiranjeDobropisaNaKarticiInfo
+            {
+                get
+                {
+                    return _zbiranjedobropisanakarticiInfo;
+                }
+            }
+
+            /// <summary>
+            /// The DostopDoSPARPlusKarticeKarNaTelef item.
+            /// </summary>
+            [RepositoryItem("e0d70e1f-76e1-4005-be0f-6c6376ce5746")]
+            public virtual Ranorex.Text DostopDoSPARPlusKarticeKarNaTelef
+            {
+                get
+                {
+                    return _dostopdosparpluskarticekarnatelefInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The DostopDoSPARPlusKarticeKarNaTelef item info.
+            /// </summary>
+            [RepositoryItemInfo("e0d70e1f-76e1-4005-be0f-6c6376ce5746")]
+            public virtual RepoItemInfo DostopDoSPARPlusKarticeKarNaTelefInfo
+            {
+                get
+                {
+                    return _dostopdosparpluskarticekarnatelefInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PridružiteSe item.
+            /// </summary>
+            [RepositoryItem("dc15f500-1e7e-4935-905a-894b47c8044c")]
+            public virtual Ranorex.Button PridružiteSe
+            {
+                get
+                {
+                    return _pridružiteseInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PridružiteSe item info.
+            /// </summary>
+            [RepositoryItemInfo("dc15f500-1e7e-4935-905a-894b47c8044c")]
+            public virtual RepoItemInfo PridružiteSeInfo
+            {
+                get
+                {
+                    return _pridružiteseInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Preskoči item.
+            /// </summary>
+            [RepositoryItem("172616bc-5c6f-4b7f-aab5-c124681def55")]
+            public virtual Ranorex.Button Preskoči
+            {
+                get
+                {
+                    return _preskočiInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Preskoči item info.
+            /// </summary>
+            [RepositoryItemInfo("172616bc-5c6f-4b7f-aab5-c124681def55")]
+            public virtual RepoItemInfo PreskočiInfo
+            {
+                get
+                {
+                    return _preskočiInfo;
                 }
             }
         }

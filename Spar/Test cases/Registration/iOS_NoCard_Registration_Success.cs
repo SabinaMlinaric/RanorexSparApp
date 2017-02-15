@@ -20,62 +20,38 @@ using Ranorex.Core;
 using Ranorex.Core.Testing;
 using Ranorex.Core.Repository;
 
-namespace Spar.Test_cases.Utility
+namespace Spar.Test_cases.Registration
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The ClearAppData recording.
+    ///The iOS_NoCard_Registration_Success recording.
     /// </summary>
-    [TestModule("d75ab6fa-6314-46ab-8f27-4adcb17bbeb7", ModuleType.Recording, 1)]
-    public partial class ClearAppData : ITestModule
+    [TestModule("81b4ca1d-2c8b-4ed3-8bc7-111c9c666dd4", ModuleType.Recording, 1)]
+    public partial class IOS_NoCard_Registration_Success : ITestModule
     {
         /// <summary>
         /// Holds an instance of the Spar.SparRepository repository.
         /// </summary>
         public static Spar.SparRepository repo = Spar.SparRepository.Instance;
 
-        static ClearAppData instance = new ClearAppData();
+        static IOS_NoCard_Registration_Success instance = new IOS_NoCard_Registration_Success();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public ClearAppData()
+        public IOS_NoCard_Registration_Success()
         {
-            PackageName = "";
-            DeviceName = "";
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static ClearAppData Instance
+        public static IOS_NoCard_Registration_Success Instance
         {
             get { return instance; }
         }
 
 #region Variables
-
-        string _DeviceName;
-
-        /// <summary>
-        /// Gets or sets the value of variable DeviceName.
-        /// </summary>
-        [TestVariable("82366f14-af3e-4e79-a6a5-6b409168ddc5")]
-        public string DeviceName
-        {
-            get { return _DeviceName; }
-            set { _DeviceName = value; }
-        }
-
-        /// <summary>
-        /// Gets or sets the value of variable PackageName.
-        /// </summary>
-        [TestVariable("82361544-8731-4a7d-b1cb-7420ac2fac02")]
-        public string PackageName
-        {
-            get { return repo.PackageName; }
-            set { repo.PackageName = value; }
-        }
 
 #endregion
 
@@ -103,8 +79,17 @@ namespace Spar.Test_cases.Utility
 
             Init();
 
-            ClearData();
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Caption='Pričnite tako, da skenirate svojo SPAR plus kartico!') on item 'ComInovaintSpar.NoCardRegistrationScreens.PričniteTakoDaSkenirateSvojoSPARP'.", repo.ComInovaintSpar.NoCardRegistrationScreens.PričniteTakoDaSkenirateSvojoSPARPInfo, new RecordItemIndex(0));
+            Validate.Attribute(repo.ComInovaintSpar.NoCardRegistrationScreens.PričniteTakoDaSkenirateSvojoSPARPInfo, "Caption", "Pričnite tako, da skenirate svojo SPAR plus kartico!");
             Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Caption='Ste pri skeniranju naleteli na težave?') on item 'ComInovaintSpar.NoCardRegistrationScreens.StePriSkeniranjuNaleteliNaTežave'.", repo.ComInovaintSpar.NoCardRegistrationScreens.StePriSkeniranjuNaleteliNaTežaveInfo, new RecordItemIndex(1));
+            Validate.Attribute(repo.ComInovaintSpar.NoCardRegistrationScreens.StePriSkeniranjuNaleteliNaTežaveInfo, "Caption", "Ste pri skeniranju naleteli na težave?");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'ComInovaintSpar.NoCardRegistrationScreens.NimamSPARPlusKartice' at Center", repo.ComInovaintSpar.NoCardRegistrationScreens.NimamSPARPlusKarticeInfo, new RecordItemIndex(2));
+            repo.ComInovaintSpar.NoCardRegistrationScreens.NimamSPARPlusKartice.Touch();
+            Delay.Milliseconds(500);
             
         }
 
