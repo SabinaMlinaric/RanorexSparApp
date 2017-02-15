@@ -18,6 +18,7 @@ using WinForms = System.Windows.Forms;
 
 using Ranorex;
 using Ranorex.Core;
+using Ranorex.Core.Remoting;
 using Ranorex.Core.Repository;
 using Ranorex.Core.Testing;
 
@@ -39,19 +40,31 @@ namespace Spar.Test_cases.Utility
             string pathToAdb      = "C:\\Program Files (x86)\\Ranorex 6.2\\Bin\\RxEnv\\Android\\tools\\adb.exe";         //your path to adb.exe goes here
 			string appPackageName = PackageName;  																		 //the packagename of your app
 			
+			var device = RemoteServiceLocator.Service.GetByDisplayName(DeviceName);
+			int port = device.Port;
+			string host = device.Host;
+			Report.Log(ReportLevel.Info, "Device: " + device.ToString() + "Port: " + port + ", Host: " + host, "");
+			
 			Process adbCreateDirProcess = new Process();
 			adbCreateDirProcess.StartInfo.FileName  = pathToAdb;
-			adbCreateDirProcess.StartInfo.Arguments = string.Format("adb shell pm clear {0}", appPackageName);
+			adbCreateDirProcess.StartInfo.Arguments = string.Format("adb tcpip {0}", port);
 			adbCreateDirProcess.Start();
-			
 			adbCreateDirProcess.WaitForExit();
 			
-			Process adbCreateDirProcess2 = new Process();
-			adbCreateDirProcess2.StartInfo.FileName  = pathToAdb;
-			adbCreateDirProcess2.StartInfo.Arguments = string.Format("adb shell am start -n {0}", appPackageName);
-			adbCreateDirProcess2.Start();
+			adbCreateDirProcess = new Process();
+			adbCreateDirProcess.StartInfo.FileName  = pathToAdb;
+			adbCreateDirProcess.StartInfo.Arguments = string.Format("adb connect {0}", host);
+			adbCreateDirProcess.Start();
+			adbCreateDirProcess.WaitForExit();
 			
-			adbCreateDirProcess2.WaitForExit();
+			adbCreateDirProcess = new Process();
+			adbCreateDirProcess.StartInfo.FileName  = pathToAdb;
+			adbCreateDirProcess.StartInfo.Arguments = string.Format("adb shell pm clear {0}", appPackageName);
+			adbCreateDirProcess.Start();			
+			adbCreateDirProcess.WaitForExit();
+			
+			var app = device.RanorexCompatibleApps[0]; 
+			device.StartApplication(app);
 			
         }
     }

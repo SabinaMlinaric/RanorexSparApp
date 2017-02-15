@@ -16,7 +16,65 @@ rxversion="6.2">
 			name="IOS_NoCard_Registration_Success"
 			id="185a9fbd-560d-4d86-b0d8-6338ebfee521"
 			ref="81b4ca1d-2c8b-4ed3-8bc7-111c9c666dd4"
-			type="Recording"/>
+			type="Recording">
+				<databinding>
+					<var
+					variablename="iOSFirstName"
+					variableid="fa269eff-c254-4536-adf7-f3fef5f535a3"
+					dataname="iOSFirstName"
+					datasourceid="36a2d597-3ca7-4de4-a259-9893cbec6fbb"/>
+					<var
+					variablename="iOSLastName"
+					variableid="a75a0a14-8da3-4874-9156-9f738401d45e"
+					dataname="iOSLastName"
+					datasourceid="36a2d597-3ca7-4de4-a259-9893cbec6fbb"/>
+					<var
+					variablename="iOSBirthDate"
+					variableid="267179b9-ddfe-48f3-9fc5-468ab7c98b65"
+					dataname="iOSBirthDate"
+					datasourceid="36a2d597-3ca7-4de4-a259-9893cbec6fbb"/>
+					<var
+					variablename="iOSCountry"
+					variableid="4d166403-ff31-4844-a6de-8b899c411e8b"
+					dataname="iOSCountry"
+					datasourceid="36a2d597-3ca7-4de4-a259-9893cbec6fbb"/>
+					<var
+					variablename="iOSStreet"
+					variableid="d88dd6f3-5fb1-4ee4-8b86-3fa2271ab003"
+					dataname="iOSStreet"
+					datasourceid="36a2d597-3ca7-4de4-a259-9893cbec6fbb"/>
+					<var
+					variablename="iOSHouseNumber"
+					variableid="cc5fae92-18b9-482b-82fd-aeef8d0397a5"
+					dataname="iOSHouseNumber"
+					datasourceid="36a2d597-3ca7-4de4-a259-9893cbec6fbb"/>
+					<var
+					variablename="iOSPostNumber"
+					variableid="3962626b-7c3c-42d2-a449-7e1ce4814288"
+					dataname="iOSPostNumber"
+					datasourceid="36a2d597-3ca7-4de4-a259-9893cbec6fbb"/>
+					<var
+					variablename="iOSCity"
+					variableid="a010052c-a383-4868-88b6-81b31f24e715"
+					dataname="iOSCity"
+					datasourceid="36a2d597-3ca7-4de4-a259-9893cbec6fbb"/>
+					<var
+					variablename="iOSMobilePhone"
+					variableid="843c7242-7e0e-4fd2-b852-702d68c1372d"
+					dataname="iOSMobilePhone"
+					datasourceid="36a2d597-3ca7-4de4-a259-9893cbec6fbb"/>
+					<var
+					variablename="iOSEmail"
+					variableid="205b987d-9cb2-4f45-9901-539f561feda9"
+					dataname="iOSEmail"
+					datasourceid="36a2d597-3ca7-4de4-a259-9893cbec6fbb"/>
+					<var
+					variablename="iOSPassword"
+					variableid="8ca26a42-5202-40d5-acc0-e9170ac38bef"
+					dataname="iOSPassword"
+					datasourceid="36a2d597-3ca7-4de4-a259-9893cbec6fbb"/>
+				</databinding>
+			</testmodule>
 			<testcase
 			name="Spar"
 			id="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"
@@ -36,6 +94,9 @@ rxversion="6.2">
 					value="iPhone7"/>
 				</parameters>
 			</testcase>
+			<testcase
+			name="iOS_Registration_SerialNumber_Valid"
+			id="26127c63-47dc-48fa-8b29-3f10fed3c22d"/>
 			<folder
 			name="iOS_ShoppingList"
 			id="345ec70a-b3dc-470e-bfad-d175d9c1e6bc"/>
@@ -92,7 +153,8 @@ rxversion="6.2">
 			</testmodule>
 			<testcase
 			name="iOS_Registration_Success"
-			id="923fc005-b79c-498f-bba3-ed5ee691dac0"/>
+			id="923fc005-b79c-498f-bba3-ed5ee691dac0"
+			datasource="iOSRegistration"/>
 			<folder
 			name="iOS_Landing"
 			id="96cf3529-b6d9-438b-898c-5e69ab8c4e22"/>
@@ -106,6 +168,11 @@ rxversion="6.2">
 					variablename="PackageName"
 					variableid="82361544-8731-4a7d-b1cb-7420ac2fac02"
 					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="DeviceName"
+					variableid="82366f14-af3e-4e79-a6a5-6b409168ddc5"
+					dataname="DeviceName"
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</testmodule>
@@ -190,6 +257,9 @@ rxversion="6.2">
 					datasourceid="afaec420-ef52-4c72-834e-e888ed8b3511"/>
 				</databinding>
 			</testmodule>
+			<testcase
+			name="iOS_Registration_SerialNumber_Invalid"
+			id="e8f22bbf-0aab-448b-8490-503ebbabc6d2"/>
 			<folder
 			name="iOS_MySpar"
 			id="ef67d831-fed7-4946-a6c7-ee63893c08d1"/>
@@ -267,6 +337,12 @@ rxversion="6.2">
 								name="IOS_NoCard_Registration_Success"
 								id="185a9fbd-560d-4d86-b0d8-6338ebfee521"/>
 							</testcase>
+							<testcase
+							name="iOS_Registration_SerialNumber_Valid"
+							id="26127c63-47dc-48fa-8b29-3f10fed3c22d"/>
+							<testcase
+							name="iOS_Registration_SerialNumber_Invalid"
+							id="e8f22bbf-0aab-448b-8490-503ebbabc6d2"/>
 						</folder>
 						<folder
 						name="iOS_Login"
@@ -286,6 +362,120 @@ rxversion="6.2">
 		</childhierarchy>
 	</testsuiteentryhierarchy>
 	<datasources>
+		<DataSource
+		name="iOSRegistration"
+		type="Ranorex.Core.Data.SimpleDataConnector"
+		id="36a2d597-3ca7-4de4-a259-9893cbec6fbb"
+		lastknownrowcount="1">
+			<lastknowncolumns>
+				<column>
+					iOSFirstName
+				</column>
+				<column>
+					iOSLastName
+				</column>
+				<column>
+					iOSBirthDate
+				</column>
+				<column>
+					iOSCountry
+				</column>
+				<column>
+					iOSStreet
+				</column>
+				<column>
+					iOSHouseNumber
+				</column>
+				<column>
+					iOSPostNumber
+				</column>
+				<column>
+					iOSCity
+				</column>
+				<column>
+					iOSMobilePhone
+				</column>
+				<column>
+					iOSEmail
+				</column>
+				<column>
+					iOSPassword
+				</column>
+			</lastknowncolumns>
+			<maskedcolumns/>
+			<table>
+				<tr>
+					<th>
+						iOSFirstName
+					</th>
+					<th>
+						iOSLastName
+					</th>
+					<th>
+						iOSBirthDate
+					</th>
+					<th>
+						iOSCountry
+					</th>
+					<th>
+						iOSStreet
+					</th>
+					<th>
+						iOSHouseNumber
+					</th>
+					<th>
+						iOSPostNumber
+					</th>
+					<th>
+						iOSCity
+					</th>
+					<th>
+						iOSMobilePhone
+					</th>
+					<th>
+						iOSEmail
+					</th>
+					<th>
+						iOSPassword
+					</th>
+				</tr>
+				<tr>
+					<td>
+						Domen
+					</td>
+					<td>
+						Fras
+					</td>
+					<td>
+						13.01.1988
+					</td>
+					<td>
+						Slovenija
+					</td>
+					<td>
+						Cirknica
+					</td>
+					<td>
+						26
+					</td>
+					<td>
+						2212
+					</td>
+					<td>
+						&#352;entilj
+					</td>
+					<td>
+						040305750
+					</td>
+					<td>
+						domen.fras@gmail.com
+					</td>
+					<td>
+						Adgjadgj1
+					</td>
+				</tr>
+			</table>
+		</DataSource>
 		<DataSource
 		name="Registration"
 		type="Ranorex.Core.Data.SimpleDataConnector"
@@ -441,15 +631,9 @@ rxversion="6.2">
 		<testconfiguration
 		name="TestRun">
 			<testcase
-			id="06420a85-320d-4359-bae9-37915062ad13"/>
-			<testcase
 			id="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 			<testcase
-			id="4a5763ad-04e1-4b55-a029-3b1942eb99b0"/>
-			<testcase
 			id="6511acd4-9390-4189-8cdb-3559623b8f1b"/>
-			<testcase
-			id="923fc005-b79c-498f-bba3-ed5ee691dac0"/>
 			<testcase
 			id="d254f475-2cfd-490a-8865-14306964695e"/>
 			<testcase

@@ -42,6 +42,7 @@ namespace Spar.Test_cases.Utility
         public ClearAppData()
         {
             PackageName = "";
+            DeviceName = "";
         }
 
         /// <summary>
@@ -53,6 +54,18 @@ namespace Spar.Test_cases.Utility
         }
 
 #region Variables
+
+        string _DeviceName;
+
+        /// <summary>
+        /// Gets or sets the value of variable DeviceName.
+        /// </summary>
+        [TestVariable("82366f14-af3e-4e79-a6a5-6b409168ddc5")]
+        public string DeviceName
+        {
+            get { return _DeviceName; }
+            set { _DeviceName = value; }
+        }
 
         /// <summary>
         /// Gets or sets the value of variable PackageName.

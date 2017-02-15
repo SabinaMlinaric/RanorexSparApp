@@ -25,6 +25,14 @@ rxversion="6.2">
 					</groupvariable>
 				</groupvariables>
 			</modulegroupdef>
+			<modulegroupdef
+			name="CloseApp"
+			id="322eb951-de42-4e80-ac2d-fbcea6f04b38"/>
+			<testmodule
+			name="CloseiOSApplication"
+			id="4bea624b-56ca-4817-bd37-431a0775e9a5"
+			ref="7e882a85-3044-455b-bec1-26e83d6cf6d2"
+			type="Recording"/>
 			<testmodule
 			name="ClearAppData"
 			id="63cc49c0-43aa-48b7-8a9f-fd60aea2404f"
@@ -70,6 +78,13 @@ rxversion="6.2">
 					<testmodule
 					name="RunApp"
 					id="8a60ed77-bd99-43a5-b8d8-fd16521d813e"/>
+				</modulegroupdef>
+				<modulegroupdef
+				name="CloseApp"
+				id="322eb951-de42-4e80-ac2d-fbcea6f04b38">
+					<testmodule
+					name="CloseiOSApplication"
+					id="4bea624b-56ca-4817-bd37-431a0775e9a5"/>
 				</modulegroupdef>
 			</modulegroups>
 		</childhierarchy>

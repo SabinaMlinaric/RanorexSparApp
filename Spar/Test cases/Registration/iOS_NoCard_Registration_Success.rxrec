@@ -25,7 +25,60 @@ mode="Mobile">
 	<codegen
 	classname="IOS_NoCard_Registration_Success"
 	namespace="Spar.Test_cases.Registration"/>
-	<variables/>
+	<variables>
+		<var
+		name="iOSFirstName"
+		id="fa269eff-c254-4536-adf7-f3fef5f535a3">
+		</var>
+		<var
+		name="iOSLastName"
+		id="a75a0a14-8da3-4874-9156-9f738401d45e">
+		</var>
+		<var
+		name="iOSBirthDate"
+		id="267179b9-ddfe-48f3-9fc5-468ab7c98b65">
+		</var>
+		<var
+		name="iOSCountry"
+		id="4d166403-ff31-4844-a6de-8b899c411e8b">
+			Slovenija
+		</var>
+		<var
+		name="iOSStreet"
+		id="d88dd6f3-5fb1-4ee4-8b86-3fa2271ab003">
+			Cirknica
+		</var>
+		<var
+		name="iOSHouseNumber"
+		id="cc5fae92-18b9-482b-82fd-aeef8d0397a5">
+			26
+		</var>
+		<var
+		name="iOSPostNumber"
+		id="3962626b-7c3c-42d2-a449-7e1ce4814288">
+			2212
+		</var>
+		<var
+		name="iOSCity"
+		id="a010052c-a383-4868-88b6-81b31f24e715">
+			&#352;entilj
+		</var>
+		<var
+		name="iOSMobilePhone"
+		id="843c7242-7e0e-4fd2-b852-702d68c1372d">
+			040305750
+		</var>
+		<var
+		name="iOSEmail"
+		id="205b987d-9cb2-4f45-9901-539f561feda9">
+			domen.fras@gmail.com
+		</var>
+		<var
+		name="iOSPassword"
+		id="8ca26a42-5202-40d5-acc0-e9170ac38bef">
+			Adgjadgj1
+		</var>
+	</variables>
 	<recorditems>
 		<validationitem
 		enabled="True"
@@ -315,7 +368,11 @@ mode="Mobile">
 		searchpropertyid="846fe201-aaee-4f5d-a43c-2adefe16a27a"
 		attrname="Text">
 			<comment/>
-			<bindings/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="iOSFirstName"/>
+			</bindings>
 			<info
 			sourcename="RepositoryEditor"
 			id="795f2a0f-3746-4771-a611-8f8d1da642c9">
@@ -385,7 +442,11 @@ mode="Mobile">
 		searchpropertyid="a02a53e9-1e85-470c-ab4d-0262cc3ddd36"
 		attrname="Text">
 			<comment/>
-			<bindings/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="iOSLastName"/>
+			</bindings>
 			<info
 			sourcename="RepositoryEditor"
 			id="ff340f31-d08f-41f6-b89b-0cae00e9ba90">
@@ -403,7 +464,11 @@ mode="Mobile">
 		searchpropertyid="64d18527-1bcc-4cac-8c62-081b88e1337f"
 		attrname="Text">
 			<comment/>
-			<bindings/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="iOSBirthDate"/>
+			</bindings>
 			<info
 			sourcename="RepositoryEditor"
 			id="afed9bd3-f6a4-4549-a5db-af62dc1e6e6d">
@@ -556,7 +621,11 @@ mode="Mobile">
 		searchpropertyid="2f1da03f-4839-4871-a0bb-9bdb4b76c483"
 		attrname="Text">
 			<comment/>
-			<bindings/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="iOSCountry"/>
+			</bindings>
 			<info
 			sourcename="RepositoryEditor"
 			id="b582ea38-1fd3-44c6-9259-1a011c404e7a">
@@ -574,7 +643,11 @@ mode="Mobile">
 		searchpropertyid="1b28625a-02bb-4efc-9b3c-18f288ffd429"
 		attrname="Text">
 			<comment/>
-			<bindings/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="iOSStreet"/>
+			</bindings>
 			<info
 			sourcename="RepositoryEditor"
 			id="f2d29bf9-2a56-4b3f-9f1f-0a0017cf0eab">
@@ -592,7 +665,11 @@ mode="Mobile">
 		searchpropertyid="2f14d180-01fb-4d46-a1f8-a6da625b33b3"
 		attrname="Text">
 			<comment/>
-			<bindings/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="iOSHouseNumber"/>
+			</bindings>
 			<info
 			sourcename="RepositoryEditor"
 			id="5a932524-923a-4107-812d-28ee19e4e50a">
@@ -610,7 +687,11 @@ mode="Mobile">
 		searchpropertyid="8646b9bb-2ac3-49af-8a37-4ad1b93e6bda"
 		attrname="Text">
 			<comment/>
-			<bindings/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="iOSPostNumber"/>
+			</bindings>
 			<info
 			sourcename="RepositoryEditor"
 			id="0a3c69f0-44ff-497a-b2e6-45feb073fcd2">
@@ -628,7 +709,11 @@ mode="Mobile">
 		searchpropertyid="72285288-e508-4f84-a7d0-5e06db518370"
 		attrname="Text">
 			<comment/>
-			<bindings/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="iOSCity"/>
+			</bindings>
 			<info
 			sourcename="RepositoryEditor"
 			id="f475efa6-8310-4bfc-8036-c4017546a9df">
@@ -753,7 +838,11 @@ mode="Mobile">
 		searchpropertyid="6dba5f3a-6441-4484-80d5-3a894b729c05"
 		attrname="Text">
 			<comment/>
-			<bindings/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="iOSMobilePhone"/>
+			</bindings>
 			<info
 			sourcename="RepositoryEditor"
 			id="850fd38f-b03f-4ed1-ae40-c3a44c4f0c0e">
@@ -771,7 +860,11 @@ mode="Mobile">
 		searchpropertyid="af45a9cd-0d39-4863-bac4-de6cc990f6d5"
 		attrname="Text">
 			<comment/>
-			<bindings/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="iOSEmail"/>
+			</bindings>
 			<info
 			sourcename="RepositoryEditor"
 			id="df3f6c57-6c80-45da-8344-ee9d9c2d83be">
@@ -841,7 +934,11 @@ mode="Mobile">
 		searchpropertyid="b021a355-c75e-41fe-a7d7-2dc2f12e09e9"
 		attrname="Text">
 			<comment/>
-			<bindings/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="iOSPassword"/>
+			</bindings>
 			<info
 			sourcename="RepositoryEditor"
 			id="7bc730b0-37d2-4e9d-91b6-2f49b6631d7a">
@@ -859,7 +956,11 @@ mode="Mobile">
 		searchpropertyid="e9aae231-bf94-48fc-90cc-f565c6bd2e3b"
 		attrname="Text">
 			<comment/>
-			<bindings/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="iOSPassword"/>
+			</bindings>
 			<info
 			sourcename="RepositoryEditor"
 			id="fddabaf0-71e6-4512-af49-a5c492f2ab35">

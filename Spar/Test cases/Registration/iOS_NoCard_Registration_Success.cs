@@ -41,6 +41,17 @@ namespace Spar.Test_cases.Registration
         /// </summary>
         public IOS_NoCard_Registration_Success()
         {
+            iOSFirstName = "";
+            iOSLastName = "";
+            iOSBirthDate = "";
+            iOSCountry = "Slovenija";
+            iOSStreet = "Cirknica";
+            iOSHouseNumber = "26";
+            iOSPostNumber = "2212";
+            iOSCity = "Šentilj";
+            iOSMobilePhone = "040305750";
+            iOSEmail = "domen.fras@gmail.com";
+            iOSPassword = "Adgjadgj1";
         }
 
         /// <summary>
@@ -52,6 +63,138 @@ namespace Spar.Test_cases.Registration
         }
 
 #region Variables
+
+        string _iOSFirstName;
+
+        /// <summary>
+        /// Gets or sets the value of variable iOSFirstName.
+        /// </summary>
+        [TestVariable("fa269eff-c254-4536-adf7-f3fef5f535a3")]
+        public string iOSFirstName
+        {
+            get { return _iOSFirstName; }
+            set { _iOSFirstName = value; }
+        }
+
+        string _iOSLastName;
+
+        /// <summary>
+        /// Gets or sets the value of variable iOSLastName.
+        /// </summary>
+        [TestVariable("a75a0a14-8da3-4874-9156-9f738401d45e")]
+        public string iOSLastName
+        {
+            get { return _iOSLastName; }
+            set { _iOSLastName = value; }
+        }
+
+        string _iOSBirthDate;
+
+        /// <summary>
+        /// Gets or sets the value of variable iOSBirthDate.
+        /// </summary>
+        [TestVariable("267179b9-ddfe-48f3-9fc5-468ab7c98b65")]
+        public string iOSBirthDate
+        {
+            get { return _iOSBirthDate; }
+            set { _iOSBirthDate = value; }
+        }
+
+        string _iOSCountry;
+
+        /// <summary>
+        /// Gets or sets the value of variable iOSCountry.
+        /// </summary>
+        [TestVariable("4d166403-ff31-4844-a6de-8b899c411e8b")]
+        public string iOSCountry
+        {
+            get { return _iOSCountry; }
+            set { _iOSCountry = value; }
+        }
+
+        string _iOSStreet;
+
+        /// <summary>
+        /// Gets or sets the value of variable iOSStreet.
+        /// </summary>
+        [TestVariable("d88dd6f3-5fb1-4ee4-8b86-3fa2271ab003")]
+        public string iOSStreet
+        {
+            get { return _iOSStreet; }
+            set { _iOSStreet = value; }
+        }
+
+        string _iOSHouseNumber;
+
+        /// <summary>
+        /// Gets or sets the value of variable iOSHouseNumber.
+        /// </summary>
+        [TestVariable("cc5fae92-18b9-482b-82fd-aeef8d0397a5")]
+        public string iOSHouseNumber
+        {
+            get { return _iOSHouseNumber; }
+            set { _iOSHouseNumber = value; }
+        }
+
+        string _iOSPostNumber;
+
+        /// <summary>
+        /// Gets or sets the value of variable iOSPostNumber.
+        /// </summary>
+        [TestVariable("3962626b-7c3c-42d2-a449-7e1ce4814288")]
+        public string iOSPostNumber
+        {
+            get { return _iOSPostNumber; }
+            set { _iOSPostNumber = value; }
+        }
+
+        string _iOSCity;
+
+        /// <summary>
+        /// Gets or sets the value of variable iOSCity.
+        /// </summary>
+        [TestVariable("a010052c-a383-4868-88b6-81b31f24e715")]
+        public string iOSCity
+        {
+            get { return _iOSCity; }
+            set { _iOSCity = value; }
+        }
+
+        string _iOSMobilePhone;
+
+        /// <summary>
+        /// Gets or sets the value of variable iOSMobilePhone.
+        /// </summary>
+        [TestVariable("843c7242-7e0e-4fd2-b852-702d68c1372d")]
+        public string iOSMobilePhone
+        {
+            get { return _iOSMobilePhone; }
+            set { _iOSMobilePhone = value; }
+        }
+
+        string _iOSEmail;
+
+        /// <summary>
+        /// Gets or sets the value of variable iOSEmail.
+        /// </summary>
+        [TestVariable("205b987d-9cb2-4f45-9901-539f561feda9")]
+        public string iOSEmail
+        {
+            get { return _iOSEmail; }
+            set { _iOSEmail = value; }
+        }
+
+        string _iOSPassword;
+
+        /// <summary>
+        /// Gets or sets the value of variable iOSPassword.
+        /// </summary>
+        [TestVariable("8ca26a42-5202-40d5-acc0-e9170ac38bef")]
+        public string iOSPassword
+        {
+            get { return _iOSPassword; }
+            set { _iOSPassword = value; }
+        }
 
 #endregion
 
@@ -107,16 +250,16 @@ namespace Spar.Test_cases.Registration
             repo.ComInovaintSpar.Registration.Registration_NoCard_Join.PridružiteSe.Touch();
             Delay.Milliseconds(500);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to 'Domen' on item 'ComInovaintSpar.Registration.Registration_NoCard_PersonalData.Ime'.", repo.ComInovaintSpar.Registration.Registration_NoCard_PersonalData.ImeInfo, new RecordItemIndex(7));
-            repo.ComInovaintSpar.Registration.Registration_NoCard_PersonalData.Ime.Element.SetAttributeValue("Text", "Domen");
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$iOSFirstName' on item 'ComInovaintSpar.Registration.Registration_NoCard_PersonalData.Ime'.", repo.ComInovaintSpar.Registration.Registration_NoCard_PersonalData.ImeInfo, new RecordItemIndex(7));
+            repo.ComInovaintSpar.Registration.Registration_NoCard_PersonalData.Ime.Element.SetAttributeValue("Text", iOSFirstName);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to 'Fras' on item 'ComInovaintSpar.Registration.Registration_NoCard_PersonalData.Priimek'.", repo.ComInovaintSpar.Registration.Registration_NoCard_PersonalData.PriimekInfo, new RecordItemIndex(8));
-            repo.ComInovaintSpar.Registration.Registration_NoCard_PersonalData.Priimek.Element.SetAttributeValue("Text", "Fras");
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$iOSLastName' on item 'ComInovaintSpar.Registration.Registration_NoCard_PersonalData.Priimek'.", repo.ComInovaintSpar.Registration.Registration_NoCard_PersonalData.PriimekInfo, new RecordItemIndex(8));
+            repo.ComInovaintSpar.Registration.Registration_NoCard_PersonalData.Priimek.Element.SetAttributeValue("Text", iOSLastName);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '13.01.1988' on item 'ComInovaintSpar.Registration.Registration_NoCard_PersonalData.DatumRojstva'.", repo.ComInovaintSpar.Registration.Registration_NoCard_PersonalData.DatumRojstvaInfo, new RecordItemIndex(9));
-            repo.ComInovaintSpar.Registration.Registration_NoCard_PersonalData.DatumRojstva.Element.SetAttributeValue("Text", "13.01.1988");
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$iOSBirthDate' on item 'ComInovaintSpar.Registration.Registration_NoCard_PersonalData.DatumRojstva'.", repo.ComInovaintSpar.Registration.Registration_NoCard_PersonalData.DatumRojstvaInfo, new RecordItemIndex(9));
+            repo.ComInovaintSpar.Registration.Registration_NoCard_PersonalData.DatumRojstva.Element.SetAttributeValue("Text", iOSBirthDate);
             Delay.Milliseconds(0);
             
             Report.Log(ReportLevel.Info, "Touch", "Touch item 'ComInovaintSpar.Registration.Registration_NoCard_PersonalData.Spol' at Center", repo.ComInovaintSpar.Registration.Registration_NoCard_PersonalData.SpolInfo, new RecordItemIndex(10));
@@ -135,24 +278,24 @@ namespace Spar.Test_cases.Registration
             Validate.Attribute(repo.ComInovaintSpar.Registration.Registration_NoCard_Address.VpišitePodatkeOPrebivališčuInfo, "Caption", "Vpišite podatke o prebivališču");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to 'Slovenija' on item 'ComInovaintSpar.Registration.Registration_NoCard_Address.Država'.", repo.ComInovaintSpar.Registration.Registration_NoCard_Address.DržavaInfo, new RecordItemIndex(14));
-            repo.ComInovaintSpar.Registration.Registration_NoCard_Address.Država.Element.SetAttributeValue("Text", "Slovenija");
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$iOSCountry' on item 'ComInovaintSpar.Registration.Registration_NoCard_Address.Država'.", repo.ComInovaintSpar.Registration.Registration_NoCard_Address.DržavaInfo, new RecordItemIndex(14));
+            repo.ComInovaintSpar.Registration.Registration_NoCard_Address.Država.Element.SetAttributeValue("Text", iOSCountry);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to 'Cirknica' on item 'ComInovaintSpar.Registration.Registration_NoCard_Address.Ulica'.", repo.ComInovaintSpar.Registration.Registration_NoCard_Address.UlicaInfo, new RecordItemIndex(15));
-            repo.ComInovaintSpar.Registration.Registration_NoCard_Address.Ulica.Element.SetAttributeValue("Text", "Cirknica");
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$iOSStreet' on item 'ComInovaintSpar.Registration.Registration_NoCard_Address.Ulica'.", repo.ComInovaintSpar.Registration.Registration_NoCard_Address.UlicaInfo, new RecordItemIndex(15));
+            repo.ComInovaintSpar.Registration.Registration_NoCard_Address.Ulica.Element.SetAttributeValue("Text", iOSStreet);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '26' on item 'ComInovaintSpar.Registration.Registration_NoCard_Address.HišnaŠtevilka'.", repo.ComInovaintSpar.Registration.Registration_NoCard_Address.HišnaŠtevilkaInfo, new RecordItemIndex(16));
-            repo.ComInovaintSpar.Registration.Registration_NoCard_Address.HišnaŠtevilka.Element.SetAttributeValue("Text", "26");
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$iOSHouseNumber' on item 'ComInovaintSpar.Registration.Registration_NoCard_Address.HišnaŠtevilka'.", repo.ComInovaintSpar.Registration.Registration_NoCard_Address.HišnaŠtevilkaInfo, new RecordItemIndex(16));
+            repo.ComInovaintSpar.Registration.Registration_NoCard_Address.HišnaŠtevilka.Element.SetAttributeValue("Text", iOSHouseNumber);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '2212' on item 'ComInovaintSpar.Registration.Registration_NoCard_Address.PoštnaŠtevilka'.", repo.ComInovaintSpar.Registration.Registration_NoCard_Address.PoštnaŠtevilkaInfo, new RecordItemIndex(17));
-            repo.ComInovaintSpar.Registration.Registration_NoCard_Address.PoštnaŠtevilka.Element.SetAttributeValue("Text", "2212");
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$iOSPostNumber' on item 'ComInovaintSpar.Registration.Registration_NoCard_Address.PoštnaŠtevilka'.", repo.ComInovaintSpar.Registration.Registration_NoCard_Address.PoštnaŠtevilkaInfo, new RecordItemIndex(17));
+            repo.ComInovaintSpar.Registration.Registration_NoCard_Address.PoštnaŠtevilka.Element.SetAttributeValue("Text", iOSPostNumber);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to 'Šentilj' on item 'ComInovaintSpar.Registration.Registration_NoCard_Address.Kraj'.", repo.ComInovaintSpar.Registration.Registration_NoCard_Address.KrajInfo, new RecordItemIndex(18));
-            repo.ComInovaintSpar.Registration.Registration_NoCard_Address.Kraj.Element.SetAttributeValue("Text", "Šentilj");
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$iOSCity' on item 'ComInovaintSpar.Registration.Registration_NoCard_Address.Kraj'.", repo.ComInovaintSpar.Registration.Registration_NoCard_Address.KrajInfo, new RecordItemIndex(18));
+            repo.ComInovaintSpar.Registration.Registration_NoCard_Address.Kraj.Element.SetAttributeValue("Text", iOSCity);
             Delay.Milliseconds(0);
             
             Report.Log(ReportLevel.Info, "Keyboard", "Key '{ENTER}' press on 'ComInovaintSpar'.", repo.ComInovaintSpar.SelfInfo, new RecordItemIndex(19));
@@ -167,20 +310,20 @@ namespace Spar.Test_cases.Registration
             Validate.Attribute(repo.ComInovaintSpar.Registration.Registration_NoCard_Data.VpišitePodatkeZaPrijavoInfo, "Caption", "Vpišite podatke za prijavo");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '040305750' on item 'ComInovaintSpar.Registration.Registration_NoCard_Data.ŠtevilkaMobilnegaTelefona'.", repo.ComInovaintSpar.Registration.Registration_NoCard_Data.ŠtevilkaMobilnegaTelefonaInfo, new RecordItemIndex(22));
-            repo.ComInovaintSpar.Registration.Registration_NoCard_Data.ŠtevilkaMobilnegaTelefona.Element.SetAttributeValue("Text", "040305750");
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$iOSMobilePhone' on item 'ComInovaintSpar.Registration.Registration_NoCard_Data.ŠtevilkaMobilnegaTelefona'.", repo.ComInovaintSpar.Registration.Registration_NoCard_Data.ŠtevilkaMobilnegaTelefonaInfo, new RecordItemIndex(22));
+            repo.ComInovaintSpar.Registration.Registration_NoCard_Data.ŠtevilkaMobilnegaTelefona.Element.SetAttributeValue("Text", iOSMobilePhone);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to 'domen.fras@gmail.com' on item 'ComInovaintSpar.Registration.Registration_NoCard_Data.EMailNaslov'.", repo.ComInovaintSpar.Registration.Registration_NoCard_Data.EMailNaslovInfo, new RecordItemIndex(23));
-            repo.ComInovaintSpar.Registration.Registration_NoCard_Data.EMailNaslov.Element.SetAttributeValue("Text", "domen.fras@gmail.com");
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$iOSEmail' on item 'ComInovaintSpar.Registration.Registration_NoCard_Data.EMailNaslov'.", repo.ComInovaintSpar.Registration.Registration_NoCard_Data.EMailNaslovInfo, new RecordItemIndex(23));
+            repo.ComInovaintSpar.Registration.Registration_NoCard_Data.EMailNaslov.Element.SetAttributeValue("Text", iOSEmail);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to 'Adgjadgj1' on item 'ComInovaintSpar.Registration.Registration_NoCard_Data.Geslo'.", repo.ComInovaintSpar.Registration.Registration_NoCard_Data.GesloInfo, new RecordItemIndex(24));
-            repo.ComInovaintSpar.Registration.Registration_NoCard_Data.Geslo.Element.SetAttributeValue("Text", "Adgjadgj1");
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$iOSPassword' on item 'ComInovaintSpar.Registration.Registration_NoCard_Data.Geslo'.", repo.ComInovaintSpar.Registration.Registration_NoCard_Data.GesloInfo, new RecordItemIndex(24));
+            repo.ComInovaintSpar.Registration.Registration_NoCard_Data.Geslo.Element.SetAttributeValue("Text", iOSPassword);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to 'Adgjadgj1' on item 'ComInovaintSpar.Registration.Registration_NoCard_Data.PonoviGeslo'.", repo.ComInovaintSpar.Registration.Registration_NoCard_Data.PonoviGesloInfo, new RecordItemIndex(25));
-            repo.ComInovaintSpar.Registration.Registration_NoCard_Data.PonoviGeslo.Element.SetAttributeValue("Text", "Adgjadgj1");
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$iOSPassword' on item 'ComInovaintSpar.Registration.Registration_NoCard_Data.PonoviGeslo'.", repo.ComInovaintSpar.Registration.Registration_NoCard_Data.PonoviGesloInfo, new RecordItemIndex(25));
+            repo.ComInovaintSpar.Registration.Registration_NoCard_Data.PonoviGeslo.Element.SetAttributeValue("Text", iOSPassword);
             Delay.Milliseconds(0);
             
             Report.Log(ReportLevel.Info, "Keyboard", "Key '{ENTER}' press on 'ComInovaintSpar'.", repo.ComInovaintSpar.SelfInfo, new RecordItemIndex(26));

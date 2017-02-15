@@ -116,6 +116,18 @@
       <UserCode>true</UserCode>
       <id>fe7ab763-a576-4c54-bfd4-1233160aa014</id>
     </Compile>
+    <Compile Include="Test cases\Utility\CloseiOSApplication.cs">
+      <BoundTo>f9e6c4b9-bfb3-4aeb-8ad3-01c1967608b4</BoundTo>
+      <DependentUpon>CloseiOSApplication.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>fbe7619f-70f9-4358-8bd0-14dbbfa17e36</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\CloseiOSApplication.UserCode.cs">
+      <BoundTo>f9e6c4b9-bfb3-4aeb-8ad3-01c1967608b4</BoundTo>
+      <DependentUpon>CloseiOSApplication.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>db4f3ea9-7e1a-4176-8072-9e21c03c0045</id>
+    </Compile>
     <Compile Include="Test cases\Utility\RunApp.cs">
       <BoundTo>872d3426-0d4b-4c12-aadc-9000bf2e0c92</BoundTo>
       <DependentUpon>RunApp.rxrec</DependentUpon>
@@ -158,6 +170,11 @@
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
       <id>fa2fa269-3a6a-481b-b132-dcd2931ceb94</id>
       <recordtableid>d75ab6fa-6314-46ab-8f27-4adcb17bbeb7</recordtableid>
+    </None>
+    <None Include="Test cases\Utility\CloseiOSApplication.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>f9e6c4b9-bfb3-4aeb-8ad3-01c1967608b4</id>
+      <recordtableid>7e882a85-3044-455b-bec1-26e83d6cf6d2</recordtableid>
     </None>
     <None Include="Test cases\Utility\RunApp.rxrec">
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>

@@ -30,6 +30,10 @@ mode="Global">
 		name="PackageName"
 		id="82361544-8731-4a7d-b1cb-7420ac2fac02">
 		</var>
+		<var
+		name="DeviceName"
+		id="82366f14-af3e-4e79-a6a5-6b409168ddc5">
+		</var>
 	</variables>
 	<recorditems>
 		<userrecorditem

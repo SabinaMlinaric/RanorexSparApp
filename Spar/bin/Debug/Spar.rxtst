@@ -107,6 +107,11 @@ rxversion="6.2">
 					variableid="82361544-8731-4a7d-b1cb-7420ac2fac02"
 					dataname="PackageName"
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="DeviceName"
+					variableid="82366f14-af3e-4e79-a6a5-6b409168ddc5"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</testmodule>
 			<folder
