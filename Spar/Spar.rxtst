@@ -79,6 +79,9 @@ rxversion="6.2">
 			<testcase
 			name="Registration_Success"
 			id="d254f475-2cfd-490a-8865-14306964695e"/>
+			<folder
+			name="Android"
+			id="d6a174b9-f860-42b9-9890-569c2900ee01"/>
 			<testcase
 			name="Registration_SerialNumber_ValidNumber"
 			id="dfc8a0db-6d76-4332-93e4-c4a7e1b1100c"/>
@@ -107,44 +110,48 @@ rxversion="6.2">
 				name="Spar"
 				id="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642">
 					<folder
-					name="Boarding"
-					id="5979a9fe-3310-4274-9a43-6e191e81eb64"/>
-					<folder
-					name="Registration"
-					id="6511acd4-9390-4189-8cdb-3559623b8f1b">
-						<testcase
-						name="Registration_Success"
-						id="d254f475-2cfd-490a-8865-14306964695e">
-							<setup
-							name="setup"
-							id="0bb8463a-bfef-467c-959b-f7a43b5847d9">
-								<testmodule
-								name="ClearAppData"
-								id="aee1e5c7-93da-4159-b70e-7bf8e535220a"/>
-								<modulegroup
-								name="RunApp"
-								id="443e65be-0b32-4fa0-85e7-794446583f64"/>
-							</setup>
-							<testmodule
+					name="Android"
+					id="d6a174b9-f860-42b9-9890-569c2900ee01">
+						<folder
+						name="Boarding"
+						id="5979a9fe-3310-4274-9a43-6e191e81eb64"/>
+						<folder
+						name="Registration"
+						id="6511acd4-9390-4189-8cdb-3559623b8f1b">
+							<testcase
 							name="Registration_Success"
-							id="e33a145f-baee-4b9e-a89b-dcbfc98de790"/>
-						</testcase>
-						<testcase
-						name="Registration_SerialNumber_ValidNumber"
-						id="dfc8a0db-6d76-4332-93e4-c4a7e1b1100c"/>
+							id="d254f475-2cfd-490a-8865-14306964695e">
+								<setup
+								name="setup"
+								id="0bb8463a-bfef-467c-959b-f7a43b5847d9">
+									<testmodule
+									name="ClearAppData"
+									id="aee1e5c7-93da-4159-b70e-7bf8e535220a"/>
+									<modulegroup
+									name="RunApp"
+									id="443e65be-0b32-4fa0-85e7-794446583f64"/>
+								</setup>
+								<testmodule
+								name="Registration_Success"
+								id="e33a145f-baee-4b9e-a89b-dcbfc98de790"/>
+							</testcase>
+							<testcase
+							name="Registration_SerialNumber_ValidNumber"
+							id="dfc8a0db-6d76-4332-93e4-c4a7e1b1100c"/>
+						</folder>
+						<folder
+						name="Login"
+						id="d0659688-496d-40c2-b993-32f2cf860570"/>
+						<folder
+						name="Landing"
+						id="6ce6c4df-bcac-4ac0-bf58-117ada5e908f"/>
+						<folder
+						name="MySpar"
+						id="0b09c187-fef2-4ae9-85f2-1812e73b5891"/>
+						<folder
+						name="ShoppingList"
+						id="f9db67e4-b2d1-43ae-883c-0a91c6c19b73"/>
 					</folder>
-					<folder
-					name="Login"
-					id="d0659688-496d-40c2-b993-32f2cf860570"/>
-					<folder
-					name="Landing"
-					id="6ce6c4df-bcac-4ac0-bf58-117ada5e908f"/>
-					<folder
-					name="MySpar"
-					id="0b09c187-fef2-4ae9-85f2-1812e73b5891"/>
-					<folder
-					name="ShoppingList"
-					id="f9db67e4-b2d1-43ae-883c-0a91c6c19b73"/>
 				</testcase>
 			</testsuite>
 		</childhierarchy>
@@ -168,6 +175,8 @@ rxversion="6.2">
 			id="d0659688-496d-40c2-b993-32f2cf860570"/>
 			<testcase
 			id="d254f475-2cfd-490a-8865-14306964695e"/>
+			<testcase
+			id="d6a174b9-f860-42b9-9890-569c2900ee01"/>
 			<testcase
 			id="f9db67e4-b2d1-43ae-883c-0a91c6c19b73"/>
 		</testconfiguration>

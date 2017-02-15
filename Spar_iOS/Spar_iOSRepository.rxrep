@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<repository
+name="Spar_iOSRepository"
+id="b7aab452-75f0-472e-b240-38c73f3dc12b"
+rxversion="6.2">
+  <codegen
+  classname="Spar_iOSRepository"
+  namespace="Spar_iOS"/>
+  <rootfolder
+  name="Root"
+  id="65ea51bf-c99f-4718-a7e5-ad52ba5e81eb"
+  searchtimeout="30000ms"
+  capname="unknown"
+  isrooted="True"
+  usecache="True">
+    <basepath/>
+  </rootfolder>
+  <variables/>
+</repository>
