@@ -20,33 +20,33 @@ using Ranorex.Core;
 using Ranorex.Core.Testing;
 using Ranorex.Core.Repository;
 
-namespace iOS
+namespace Spar.Test_cases.Boarding
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The Recording1 recording.
+    ///The Scan recording.
     /// </summary>
-    [TestModule("5a1968b3-2f95-4452-8432-a6a2f6c736aa", ModuleType.Recording, 1)]
-    public partial class Recording1 : ITestModule
+    [TestModule("894881bf-77b0-4001-881f-968ef7c36016", ModuleType.Recording, 1)]
+    public partial class Scan : ITestModule
     {
         /// <summary>
-        /// Holds an instance of the iOSRepository repository.
+        /// Holds an instance of the Spar.SparRepository repository.
         /// </summary>
-        public static iOSRepository repo = iOSRepository.Instance;
+        public static Spar.SparRepository repo = Spar.SparRepository.Instance;
 
-        static Recording1 instance = new Recording1();
+        static Scan instance = new Scan();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public Recording1()
+        public Scan()
         {
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static Recording1 Instance
+        public static Scan Instance
         {
             get { return instance; }
         }
@@ -79,6 +79,22 @@ namespace iOS
 
             Init();
 
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.ScanCardActivity.BtnScan' at Center", repo.PlusSparSi.ScanCardActivity.BtnScanInfo, new RecordItemIndex(0));
+            repo.PlusSparSi.ScanCardActivity.BtnScan.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Scan EAN code') on item 'PlusSparSi.BarCodeScannerActivity.RStringBarCodeScannerActionbarTitl'.", repo.PlusSparSi.BarCodeScannerActivity.RStringBarCodeScannerActionbarTitlInfo, new RecordItemIndex(1));
+            Validate.Attribute(repo.PlusSparSi.BarCodeScannerActivity.RStringBarCodeScannerActionbarTitlInfo, "Text", "Scan EAN code");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.BarCodeScannerActivity.NavigateUp' at Center", repo.PlusSparSi.BarCodeScannerActivity.NavigateUpInfo, new RecordItemIndex(2));
+            repo.PlusSparSi.BarCodeScannerActivity.NavigateUp.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'PlusSparSi.ScanCardActivity'.", repo.PlusSparSi.ScanCardActivity.SelfInfo, new RecordItemIndex(3));
+            Validate.Exists(repo.PlusSparSi.ScanCardActivity.SelfInfo);
+            Delay.Milliseconds(0);
+            
         }
 
 #region Image Feature Data

@@ -20,9 +20,9 @@ using Ranorex.Core;
 using Ranorex.Core.Repository;
 using Ranorex.Core.Testing;
 
-namespace Spar.Test_cases.Registration
+namespace Spar.Test_cases.Boarding
 {
-    public partial class IOS_NoCard_Registration_Success
+    public partial class TermsAndPolicy
     {
         /// <summary>
         /// This method gets called right after the recording has been started.

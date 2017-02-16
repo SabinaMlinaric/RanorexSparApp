@@ -30,6 +30,11 @@ rxversion="6.2">
 			id="63cc49c0-43aa-48b7-8a9f-fd60aea2404f"
 			ref="d75ab6fa-6314-46ab-8f27-4adcb17bbeb7"
 			type="Recording"/>
+			<testmodule
+			name="CloseApp"
+			id="81b1b7a2-e772-495f-b70f-34a72d58e29e"
+			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
+			type="Recording"/>
 			<modulegroups
 			name="Spar"
 			id="829039fa-429a-4299-b777-4f6960a1788c"/>
@@ -38,6 +43,9 @@ rxversion="6.2">
 			id="8a60ed77-bd99-43a5-b8d8-fd16521d813e"
 			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
 			type="Recording"/>
+			<modulegroupdef
+			name="CloseApp"
+			id="b95d112a-d832-4837-a3ec-eba31200fb62"/>
 			<modulegroupdef
 			name="ClearAppData"
 			id="cccb901b-c929-4f44-9a45-ecda775976a2">
@@ -48,6 +56,14 @@ rxversion="6.2">
 						<modulevariable
 						name="PackageName"
 						variableref="82361544-8731-4a7d-b1cb-7420ac2fac02"
+						moduleref="63cc49c0-43aa-48b7-8a9f-fd60aea2404f"/>
+					</groupvariable>
+					<groupvariable
+					name="Device"
+					id="700adf51-7453-45e0-b88e-78172b77cc60">
+						<modulevariable
+						name="DeviceName"
+						variableref="82366f14-af3e-4e79-a6a5-6b409168ddc5"
 						moduleref="63cc49c0-43aa-48b7-8a9f-fd60aea2404f"/>
 					</groupvariable>
 				</groupvariables>
@@ -70,6 +86,13 @@ rxversion="6.2">
 					<testmodule
 					name="RunApp"
 					id="8a60ed77-bd99-43a5-b8d8-fd16521d813e"/>
+				</modulegroupdef>
+				<modulegroupdef
+				name="CloseApp"
+				id="b95d112a-d832-4837-a3ec-eba31200fb62">
+					<testmodule
+					name="CloseApp"
+					id="81b1b7a2-e772-495f-b70f-34a72d58e29e"/>
 				</modulegroupdef>
 			</modulegroups>
 		</childhierarchy>

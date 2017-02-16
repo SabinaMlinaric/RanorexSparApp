@@ -26,7 +26,7 @@ namespace Spar.Test_cases.Utility
     /// <summary>
     ///The CloseApp recording.
     /// </summary>
-    [TestModule("48279561-74c0-4635-992f-46d68ad27859", ModuleType.Recording, 1)]
+    [TestModule("cde5fee8-c303-485d-9686-e99e57ce5f12", ModuleType.Recording, 1)]
     public partial class CloseApp : ITestModule
     {
         /// <summary>
@@ -79,8 +79,8 @@ namespace Spar.Test_cases.Utility
 
             Init();
 
-            Report.Log(ReportLevel.Info, "Application", "Killing application containing item 'PlusSparSi'.", repo.PlusSparSi.SelfInfo, new RecordItemIndex(0));
-            Host.Local.KillApplication(repo.PlusSparSi.Self);
+            Report.Log(ReportLevel.Info, "Application", "Closing application containing item 'PlusSparSi'.", repo.PlusSparSi.SelfInfo, new RecordItemIndex(0));
+            Host.Local.CloseApplication(repo.PlusSparSi.Self, new Duration(0));
             Delay.Milliseconds(0);
             
         }

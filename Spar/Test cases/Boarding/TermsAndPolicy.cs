@@ -20,33 +20,33 @@ using Ranorex.Core;
 using Ranorex.Core.Testing;
 using Ranorex.Core.Repository;
 
-namespace Spar_iOS
+namespace Spar.Test_cases.Boarding
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The Recording1 recording.
+    ///The TermsAndPolicy recording.
     /// </summary>
-    [TestModule("e2640721-b84b-4463-b154-dad00ba6b8b5", ModuleType.Recording, 1)]
-    public partial class Recording1 : ITestModule
+    [TestModule("0f81ec01-5f5a-439a-93de-8bb75f3acc37", ModuleType.Recording, 1)]
+    public partial class TermsAndPolicy : ITestModule
     {
         /// <summary>
-        /// Holds an instance of the Spar_iOSRepository repository.
+        /// Holds an instance of the Spar.SparRepository repository.
         /// </summary>
-        public static Spar_iOSRepository repo = Spar_iOSRepository.Instance;
+        public static Spar.SparRepository repo = Spar.SparRepository.Instance;
 
-        static Recording1 instance = new Recording1();
+        static TermsAndPolicy instance = new TermsAndPolicy();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public Recording1()
+        public TermsAndPolicy()
         {
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static Recording1 Instance
+        public static TermsAndPolicy Instance
         {
             get { return instance; }
         }
@@ -79,6 +79,22 @@ namespace Spar_iOS
 
             Init();
 
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.ScanCardActivity.Terms' at CenterRight", repo.PlusSparSi.ScanCardActivity.TermsInfo, new RecordItemIndex(0));
+            repo.PlusSparSi.ScanCardActivity.Terms.Touch(Location.CenterRight);
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='yourValue') on item 'PlusSparSi.ScanCardTermsAndConditions.RStringTermsAndConditionsActionbar'.", repo.PlusSparSi.ScanCardTermsAndConditions.RStringTermsAndConditionsActionbarInfo, new RecordItemIndex(1));
+            Validate.Attribute(repo.PlusSparSi.ScanCardTermsAndConditions.RStringTermsAndConditionsActionbarInfo, "Text", "yourValue");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.ScanCardTermsAndConditions.NavigateUp' at Center", repo.PlusSparSi.ScanCardTermsAndConditions.NavigateUpInfo, new RecordItemIndex(2));
+            repo.PlusSparSi.ScanCardTermsAndConditions.NavigateUp.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'PlusSparSi.ScanCardActivity'.", repo.PlusSparSi.ScanCardActivity.SelfInfo, new RecordItemIndex(3));
+            Validate.Exists(repo.PlusSparSi.ScanCardActivity.SelfInfo);
+            Delay.Milliseconds(0);
+            
         }
 
 #region Image Feature Data

@@ -1,11 +1,15 @@
 ﻿<Properties>
   <Array name="active">
-    <Element value="Spar.rxtst" />
+    <Element value="Test cases\Utility\ClearAppData.UserCode.cs" />
   </Array>
-  <Array name="bookmarks" />
+  <Array name="bookmarks">
+    <Element value="Breakpoint|C:\Users\sabinam\Documents\Ranorex\RanorexSparApp\Spar\Test cases\Utility\ClearAppData.UserCode.cs|66|4|True|Break||" />
+  </Array>
   <Array name="files">
     <Element value="Spar.rxtst" />
     <Element value="Test cases\Registration\Registration_Success.rxrec" />
+    <Element value="Test cases\Utility\ClearAppData.rxrec" />
+    <Element value="Test cases\Utility\ClearAppData.UserCode.cs" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

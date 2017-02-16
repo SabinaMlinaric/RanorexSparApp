@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -24,47 +25,28 @@ using Ranorex.Core.Testing;
 
 namespace Spar.Test_cases.Utility
 {
-    public partial class ClearAppData
-    {
-        /// <summary>
-        /// This method gets called right after the recording has been started.
-        /// It can be used to execute recording specific initialization code.
-        /// </summary>
-        private void Init()
-        {
-            // Your recording specific initialization code goes here.
-        }
-                
-        public void ClearData()
-        {            
-            string pathToAdb      = "C:\\Program Files (x86)\\Ranorex 6.2\\Bin\\RxEnv\\Android\\tools\\adb.exe";         //your path to adb.exe goes here
-			string appPackageName = PackageName;  																		 //the packagename of your app
+	public partial class ClearAppData
+	{
+		/// <summary>
+		/// This method gets called right after the recording has been started.
+		/// It can be used to execute recording specific initialization code.
+		/// </summary>
+		private void Init()
+		{
+			// Your recording specific initialization code goes here.
+		}
+		
+		public void ClearData(RepoItemInfo mobileappInfo)
+		{
+			string path      = @"C:\Program Files (x86)\Ranorex 6.2\Bin\RxEnv\Android\tools\adb.exe";         //your path to adb.exe goes here
+			string appPackageName = PackageName;  							 					  			  //the packagename of your app
 			
-			
-			var app = repo.PlusSparSi.Self.As<AndroidApp>();
-			var info = app.GetDeviceInfo();
-			Report.Log(ReportLevel.Info, "Port: 5555, Host: " + info.NetworkInterfaces[0], "");
-			
-			Process adbCreateDirProcess = new Process();
-			adbCreateDirProcess.StartInfo.FileName  = pathToAdb;
-			adbCreateDirProcess.StartInfo.Arguments = string.Format("adb tcpip 5555");
-			adbCreateDirProcess.Start();
-			adbCreateDirProcess.WaitForExit();
-			
-			adbCreateDirProcess = new Process();
-			adbCreateDirProcess.StartInfo.FileName  = pathToAdb;
-			adbCreateDirProcess.StartInfo.Arguments = string.Format("adb connect {0}", info.NetworkInterfaces[0]);
-			adbCreateDirProcess.Start();
-			adbCreateDirProcess.WaitForExit();
-			
-			adbCreateDirProcess = new Process();
-			adbCreateDirProcess.StartInfo.FileName  = pathToAdb;
-			adbCreateDirProcess.StartInfo.Arguments = string.Format("adb shell pm clear {0}", appPackageName);
-			adbCreateDirProcess.Start();			
-			adbCreateDirProcess.WaitForExit();
-			
-			app.StartApp(PackageName,true);
-			
-        }
-    }
+			Process process = new Process();
+			process.StartInfo.FileName = path;
+			process.StartInfo.Arguments = @"shell pm clear" + appPackageName;
+			process.Start();
+
+			process.WaitForExit();
+		}
+	}
 }

@@ -1,0 +1,4 @@
+id,name,surname,dateOfBirth,country,address,houseNumber,postalNumber,city,phoneNumber,email,password,status
+0,Sabina,Mlinari�,29.11.1991,Slovenia,Gornji Ivanjci,8a,9245,Spodnji Ivanjci,040432997,sparapp1@mailinator.com,Adgjadgj1,success
+1,John,Smith,12.5.1987,Slovenia,Gregorčičeva,16,2000,Maribor,+38640896157,john.smith1@mailinator.com,Adgjadgj1,Success
+2,John,Smith,12.5.1987,Slovenia,Gregorčičeva,16,2000,Maribor,+38640896157,john.smith2@mailinator.com,Adgjadgj1,Success

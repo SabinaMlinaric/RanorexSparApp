@@ -80,17 +80,65 @@
       <RepositoryCode>true</RepositoryCode>
       <id>e65f0250-748c-4242-b30c-0c5c6e3cabaa</id>
     </Compile>
-    <Compile Include="Test cases\Registration\iOS_NoCard_Registration_Success.cs">
-      <BoundTo>389ecc87-bf10-49db-859a-b04a2408963e</BoundTo>
-      <DependentUpon>iOS_NoCard_Registration_Success.rxrec</DependentUpon>
+    <Compile Include="Test cases\Boarding\EnterSerialNumberManually.cs">
+      <BoundTo>91a42dcd-f84b-4d94-b151-2771c1201be7</BoundTo>
+      <DependentUpon>EnterSerialNumberManually.rxrec</DependentUpon>
       <RecorderCode>true</RecorderCode>
-      <id>168b9098-1779-48df-aba2-337c1f26314a</id>
+      <id>6170bf40-657e-4584-b10b-dae0a60701ee</id>
     </Compile>
-    <Compile Include="Test cases\Registration\iOS_NoCard_Registration_Success.UserCode.cs">
-      <BoundTo>389ecc87-bf10-49db-859a-b04a2408963e</BoundTo>
-      <DependentUpon>iOS_NoCard_Registration_Success.rxrec</DependentUpon>
+    <Compile Include="Test cases\Boarding\EnterSerialNumberManually.UserCode.cs">
+      <BoundTo>91a42dcd-f84b-4d94-b151-2771c1201be7</BoundTo>
+      <DependentUpon>EnterSerialNumberManually.rxrec</DependentUpon>
       <UserCode>true</UserCode>
-      <id>efaa62a1-3463-4a59-89e3-80a9aac48756</id>
+      <id>238fe000-3efb-419d-9851-1475bdea63a6</id>
+    </Compile>
+    <Compile Include="Test cases\Boarding\NoCard_AllowAll.cs">
+      <BoundTo>5391781e-9b4f-49a8-8366-bdde71ed548e</BoundTo>
+      <DependentUpon>NoCard_AllowAll.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>82dfd64d-cbcb-44a0-add5-2160cb6ee013</id>
+    </Compile>
+    <Compile Include="Test cases\Boarding\NoCard_AllowAll.UserCode.cs">
+      <BoundTo>5391781e-9b4f-49a8-8366-bdde71ed548e</BoundTo>
+      <DependentUpon>NoCard_AllowAll.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>821b3150-6ddc-42d1-bee6-26926ba90a21</id>
+    </Compile>
+    <Compile Include="Test cases\Boarding\NoCard_SkipAll.cs">
+      <BoundTo>de7dc483-40e4-4dbf-ab75-0bd21e9e06e2</BoundTo>
+      <DependentUpon>NoCard_SkipAll.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>68de6664-9b2e-4b9a-8c44-bc0fa06bfd41</id>
+    </Compile>
+    <Compile Include="Test cases\Boarding\NoCard_SkipAll.UserCode.cs">
+      <BoundTo>de7dc483-40e4-4dbf-ab75-0bd21e9e06e2</BoundTo>
+      <DependentUpon>NoCard_SkipAll.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>29c2ee5c-d980-4cb2-a9e3-590881f25efe</id>
+    </Compile>
+    <Compile Include="Test cases\Boarding\Scan.cs">
+      <BoundTo>6c8e8f2f-d06c-4e30-8181-6ef642114df9</BoundTo>
+      <DependentUpon>Scan.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>23d88ade-e40e-40b2-818f-76e8d66e77d7</id>
+    </Compile>
+    <Compile Include="Test cases\Boarding\Scan.UserCode.cs">
+      <BoundTo>6c8e8f2f-d06c-4e30-8181-6ef642114df9</BoundTo>
+      <DependentUpon>Scan.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>bd96f699-c57b-4189-985e-d7afb8eab67c</id>
+    </Compile>
+    <Compile Include="Test cases\Boarding\TermsAndPolicy.cs">
+      <BoundTo>d6b5aceb-72fe-4be1-afb4-5ddfdb47d7c5</BoundTo>
+      <DependentUpon>TermsAndPolicy.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>70e169e9-9d75-4d93-9b16-1bb16faa8727</id>
+    </Compile>
+    <Compile Include="Test cases\Boarding\TermsAndPolicy.UserCode.cs">
+      <BoundTo>d6b5aceb-72fe-4be1-afb4-5ddfdb47d7c5</BoundTo>
+      <DependentUpon>TermsAndPolicy.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>c82a1ed0-3f58-4167-bc96-200cf78c87f0</id>
     </Compile>
     <Compile Include="Test cases\Registration\Registration_Success.cs">
       <BoundTo>16703862-6971-4153-8096-24cd50dd229d</BoundTo>
@@ -115,6 +163,18 @@
       <DependentUpon>ClearAppData.rxrec</DependentUpon>
       <UserCode>true</UserCode>
       <id>fe7ab763-a576-4c54-bfd4-1233160aa014</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\CloseApp.cs">
+      <BoundTo>d6945c95-b7c4-44f5-9cd8-c32abe7a58d2</BoundTo>
+      <DependentUpon>CloseApp.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>1df13f4d-07f9-4734-9a8a-db5a9d1ab4c8</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\CloseApp.UserCode.cs">
+      <BoundTo>d6945c95-b7c4-44f5-9cd8-c32abe7a58d2</BoundTo>
+      <DependentUpon>CloseApp.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>45f1cced-44c8-4089-9b8a-b6e399a76039</id>
     </Compile>
     <Compile Include="Test cases\Utility\RunApp.cs">
       <BoundTo>872d3426-0d4b-4c12-aadc-9000bf2e0c92</BoundTo>
@@ -144,10 +204,30 @@
       <repoid>c55abb3d-7d0d-4435-8640-bb30710f5f27</repoid>
       <reporootid>c12fa4a9-bf96-41a7-9866-79edafaddcf2</reporootid>
     </None>
-    <None Include="Test cases\Registration\iOS_NoCard_Registration_Success.rxrec">
-      <id>389ecc87-bf10-49db-859a-b04a2408963e</id>
-      <recordtableid>81b4ca1d-2c8b-4ed3-8bc7-111c9c666dd4</recordtableid>
+    <None Include="Test cases\Boarding\EnterSerialNumberManually.rxrec">
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>91a42dcd-f84b-4d94-b151-2771c1201be7</id>
+      <recordtableid>26753f43-843f-4900-b108-34c6c6376398</recordtableid>
+    </None>
+    <None Include="Test cases\Boarding\NoCard_AllowAll.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>5391781e-9b4f-49a8-8366-bdde71ed548e</id>
+      <recordtableid>e1e6948f-5f32-4b7b-8461-7eaab1c746e6</recordtableid>
+    </None>
+    <None Include="Test cases\Boarding\NoCard_SkipAll.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>de7dc483-40e4-4dbf-ab75-0bd21e9e06e2</id>
+      <recordtableid>c39e8614-8d6b-4096-8572-acd96170c2aa</recordtableid>
+    </None>
+    <None Include="Test cases\Boarding\Scan.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>6c8e8f2f-d06c-4e30-8181-6ef642114df9</id>
+      <recordtableid>894881bf-77b0-4001-881f-968ef7c36016</recordtableid>
+    </None>
+    <None Include="Test cases\Boarding\TermsAndPolicy.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>d6b5aceb-72fe-4be1-afb4-5ddfdb47d7c5</id>
+      <recordtableid>0f81ec01-5f5a-439a-93de-8bb75f3acc37</recordtableid>
     </None>
     <None Include="Test cases\Registration\Registration_Success.rxrec">
       <id>16703862-6971-4153-8096-24cd50dd229d</id>
@@ -158,6 +238,11 @@
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
       <id>fa2fa269-3a6a-481b-b132-dcd2931ceb94</id>
       <recordtableid>d75ab6fa-6314-46ab-8f27-4adcb17bbeb7</recordtableid>
+    </None>
+    <None Include="Test cases\Utility\CloseApp.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>d6945c95-b7c4-44f5-9cd8-c32abe7a58d2</id>
+      <recordtableid>cde5fee8-c303-485d-9686-e99e57ce5f12</recordtableid>
     </None>
     <None Include="Test cases\Utility\RunApp.rxrec">
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>

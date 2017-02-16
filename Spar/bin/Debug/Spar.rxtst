@@ -3,9 +3,11 @@
 rxversion="6.2">
 	<testsuiteentryhierarchy>
 		<flatlistofchildren>
-			<folder
-			name="iOS"
-			id="06420a85-320d-4359-bae9-37915062ad13"/>
+			<testmodule
+			name="CloseApp"
+			id="00eb0a10-06db-457a-8603-ecc3c74fe9f0"
+			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
+			type="Recording"/>
 			<folder
 			name="MySpar"
 			id="0b09c187-fef2-4ae9-85f2-1812e73b5891"/>
@@ -13,10 +15,32 @@ rxversion="6.2">
 			name="setup"
 			id="0bb8463a-bfef-467c-959b-f7a43b5847d9"/>
 			<testmodule
-			name="IOS_NoCard_Registration_Success"
-			id="185a9fbd-560d-4d86-b0d8-6338ebfee521"
-			ref="81b4ca1d-2c8b-4ed3-8bc7-111c9c666dd4"
+			name="NoCard_AllowAll"
+			id="0e04c45a-fb86-4afd-8a93-29891bfce23c"
+			ref="e1e6948f-5f32-4b7b-8461-7eaab1c746e6"
 			type="Recording"/>
+			<setup
+			name="setup3"
+			id="120a9f52-154d-4fbc-a24b-0f8fe8a9f063"/>
+			<setup
+			name="setup5"
+			id="1328e268-6211-4f97-99aa-2289c25e37a7"/>
+			<testcase
+			name="TermsAndPolicy"
+			id="1544ff2c-6b68-46aa-90e3-29268352bcf2"/>
+			<testmodule
+			name="EnterSerialNumberManually"
+			id="18e54829-fc6b-4e3b-a787-a7d34d860881"
+			ref="26753f43-843f-4900-b108-34c6c6376398"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="SerialNumber"
+					variableid="136c7f21-6d80-49cd-b9c6-deb114bd0d19"
+					dataname="SerialNumber"
+					datasourceid="da33e9a9-76e8-4b41-8212-67b0184f4244"/>
+				</databinding>
+			</testmodule>
 			<testcase
 			name="Spar"
 			id="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"
@@ -27,109 +51,31 @@ rxversion="6.2">
 					value="spar.plus.si.staging"/>
 					<param
 					name="DeviceName"
-					value="SM-G900F"/>
-					<param
-					name="iOSPackageName"
-					value="com.inovaint.spar"/>
-					<param
-					name="iOSDeviceName"
-					value="iPhone7"/>
+					value="SM-N910F"/>
 				</parameters>
 			</testcase>
-			<folder
-			name="iOS_ShoppingList"
-			id="345ec70a-b3dc-470e-bfad-d175d9c1e6bc"/>
-			<setup
-			name="setup"
-			id="36c0b0f1-41b9-4e49-9656-cc8f98d83fd3"/>
-			<folder
-			name="iOS_Registration"
-			id="4a5763ad-04e1-4b55-a029-3b1942eb99b0"/>
+			<testmodule
+			name="CloseApp"
+			id="2bc9081c-ab4c-4445-acd6-3ebf0e31a756"
+			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
+			type="Recording"/>
+			<testmodule
+			name="NoCard_SkipAll"
+			id="3d01b244-907f-4ce6-afbe-b760374c81be"
+			ref="c39e8614-8d6b-4096-8572-acd96170c2aa"
+			type="Recording"/>
+			<testcase
+			name="NoCard_AllowAll"
+			id="4f40a9e1-e87f-40bf-832d-b544cdf39d1f"/>
+			<teardown
+			name="teardown"
+			id="505615e6-ec1f-461a-8062-cca78f4cfb01"/>
 			<folder
 			name="Boarding"
 			id="5979a9fe-3310-4274-9a43-6e191e81eb64"/>
-			<folder
-			name="Registration"
-			id="6511acd4-9390-4189-8cdb-3559623b8f1b"/>
-			<folder
-			name="Landing"
-			id="6ce6c4df-bcac-4ac0-bf58-117ada5e908f"/>
-			<testsuite
-			name="Spar"
-			id="6fe2597c-1ee0-4e3b-ad15-1b68872dd2b8"
-			reportfilename="%S_%Y%M%D_%T.rxlog"
-			reporttemplatefolder=""
-			placescreenshotsinfolder="True"
-			reportwriteinterval="30000ms"
-			reportcompress="False"
-			enabletracingscreenshots="True"
-			ReportTime="RelativeToTestSuiteStartTime"
-			TracingScreenshotMode="Foreground"
-			TracingScreenshotQuality="40"/>
-			<folder
-			name="iOS_Login"
-			id="7828d82a-8ccf-4f22-a421-2127d4f081cf"/>
-			<folder
-			name="iOS__Boarding"
-			id="890b6152-814a-4e79-8ef0-41205a412edd"/>
-			<testmodule
-			name="RunApp"
-			id="8c2bc23b-f589-4597-aa95-5d3357e770de"
-			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
-			type="Recording">
-				<databinding>
-					<var
-					variablename="DeviceName"
-					variableid="7ba94856-ce36-433b-aa83-673fcd1b06d7"
-					dataname="iOSDeviceName"
-					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
-					<var
-					variablename="PackageName"
-					variableid="4de25083-df64-42d6-97dd-017c0a227675"
-					dataname="iOSPackageName"
-					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
-				</databinding>
-			</testmodule>
-			<testcase
-			name="iOS_Registration_Success"
-			id="923fc005-b79c-498f-bba3-ed5ee691dac0"/>
-			<folder
-			name="iOS_Landing"
-			id="96cf3529-b6d9-438b-898c-5e69ab8c4e22"/>
-			<testmodule
-			name="ClearAppData"
-			id="aee1e5c7-93da-4159-b70e-7bf8e535220a"
-			ref="d75ab6fa-6314-46ab-8f27-4adcb17bbeb7"
-			type="Recording">
-				<databinding>
-					<var
-					variablename="PackageName"
-					variableid="82361544-8731-4a7d-b1cb-7420ac2fac02"
-					dataname="PackageName"
-					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
-					<var
-					variablename="DeviceName"
-					variableid="82366f14-af3e-4e79-a6a5-6b409168ddc5"
-					dataname="DeviceName"
-					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
-				</databinding>
-			</testmodule>
-			<folder
-			name="Login"
-			id="d0659688-496d-40c2-b993-32f2cf860570"/>
-			<testcase
-			name="Registration_Success"
-			id="d254f475-2cfd-490a-8865-14306964695e"
-			datasource="Registration"/>
-			<folder
-			name="Android"
-			id="d6a174b9-f860-42b9-9890-569c2900ee01"/>
-			<testcase
-			name="Registration_SerialNumber_ValidNumber"
-			id="dfc8a0db-6d76-4332-93e4-c4a7e1b1100c"/>
 			<testmodule
 			name="Registration_Success"
-			id="e33a145f-baee-4b9e-a89b-dcbfc98de790"
+			id="60051e11-9a22-4f37-9c3b-5b7b71939973"
 			ref="3b5eaeef-79af-4751-be86-63848da88ff6"
 			type="Recording">
 				<databinding>
@@ -188,11 +134,210 @@ rxversion="6.2">
 					variableid="9d01736c-c8c9-4490-a510-6160f378bbdb"
 					dataname="DateOfBrirth"
 					datasourceid="afaec420-ef52-4c72-834e-e888ed8b3511"/>
+					<var
+					variablename="HouseNumber"
+					variableid="a5038dd5-02f8-499d-8675-06c22162e3aa"
+					dataname="HouseNumber"
+					datasourceid="afaec420-ef52-4c72-834e-e888ed8b3511"/>
+				</databinding>
+			</testmodule>
+			<testmodule
+			name="CloseApp"
+			id="612a012f-f304-4f1c-b119-2a82ce19dc52"
+			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
+			type="Recording"/>
+			<folder
+			name="Registration"
+			id="6511acd4-9390-4189-8cdb-3559623b8f1b"/>
+			<testmodule
+			name="RunApp"
+			id="699d01a3-e46a-419f-9004-00ada9539889"
+			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="7ba94856-ce36-433b-aa83-673fcd1b06d7"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="4de25083-df64-42d6-97dd-017c0a227675"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</testmodule>
 			<folder
-			name="iOS_MySpar"
-			id="ef67d831-fed7-4946-a6c7-ee63893c08d1"/>
+			name="Landing"
+			id="6ce6c4df-bcac-4ac0-bf58-117ada5e908f"/>
+			<testsuite
+			name="Spar"
+			id="6fe2597c-1ee0-4e3b-ad15-1b68872dd2b8"
+			reportfilename="%S_%Y%M%D_%T.rxlog"
+			reporttemplatefolder=""
+			placescreenshotsinfolder="True"
+			reportwriteinterval="30000ms"
+			reportcompress="False"
+			enabletracingscreenshots="True"
+			ReportTime="RelativeToTestSuiteStartTime"
+			TracingScreenshotMode="Foreground"
+			TracingScreenshotQuality="40"/>
+			<testcase
+			name="NoCard_SkipAll"
+			id="73bef189-c024-4247-a785-a2c9ba8f3257"/>
+			<testcase
+			name="Scan_card"
+			id="82161bb2-5e13-4f6a-9c27-78b8a0d7abaa"/>
+			<teardown
+			name="teardown2"
+			id="83caa810-d78e-4698-8c0e-29461d1a663f"/>
+			<testmodule
+			name="Scan"
+			id="87c7eaa3-4829-4433-89df-86908fc5eca1"
+			ref="894881bf-77b0-4001-881f-968ef7c36016"
+			type="Recording"/>
+			<testmodule
+			name="TermsAndPolicy"
+			id="8e6c5b60-5138-4ad0-9148-a82fa463aa43"
+			ref="0f81ec01-5f5a-439a-93de-8bb75f3acc37"
+			type="Recording"/>
+			<testmodule
+			name="RunApp"
+			id="918f9cec-72b8-4150-bbb2-cb1f483fbff9"
+			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="7ba94856-ce36-433b-aa83-673fcd1b06d7"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="4de25083-df64-42d6-97dd-017c0a227675"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<testmodule
+			name="CloseApp"
+			id="930bbee2-cdd3-4e36-8093-dd8b4b631457"
+			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
+			type="Recording"/>
+			<setup
+			name="setup1"
+			id="9cc1653c-c656-45ff-bb94-59b1e7efe98d"/>
+			<setup
+			name="setup11"
+			id="a894b579-5d64-4afd-bdc4-85cbf89ceff3"/>
+			<teardown
+			name="teardown3"
+			id="a9ca9b0a-052a-4b14-bf2f-0fa76e9e45c3"/>
+			<testmodule
+			name="RunApp"
+			id="b3163334-5324-4e47-9f90-d6dc335292df"
+			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="7ba94856-ce36-433b-aa83-673fcd1b06d7"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="4de25083-df64-42d6-97dd-017c0a227675"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<testmodule
+			name="RunApp"
+			id="b73b27ef-0807-475b-bad6-3ad3f9061101"
+			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="7ba94856-ce36-433b-aa83-673fcd1b06d7"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="4de25083-df64-42d6-97dd-017c0a227675"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<testmodule
+			name="RunApp"
+			id="c4a6b0f7-f35d-4b42-86a5-c2ba5b3a8731"
+			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="7ba94856-ce36-433b-aa83-673fcd1b06d7"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="4de25083-df64-42d6-97dd-017c0a227675"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<testmodule
+			name="CloseApp"
+			id="c5711b22-f02e-4078-bba7-87f9381a81ec"
+			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
+			type="Recording"/>
+			<setup
+			name="setup12"
+			id="c99364c5-28ae-4d8f-aea7-7bd3ac804d54"/>
+			<teardown
+			name="teardown4"
+			id="c9dda5aa-1e42-4939-b3f7-b7a30f01ce79"/>
+			<folder
+			name="Login"
+			id="d0659688-496d-40c2-b993-32f2cf860570"/>
+			<testcase
+			name="Registration_Success"
+			id="d254f475-2cfd-490a-8865-14306964695e"
+			datasource="Registration"/>
+			<testmodule
+			name="RunApp"
+			id="d6834c48-bad5-4a7a-b254-f325db00a16d"
+			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="7ba94856-ce36-433b-aa83-673fcd1b06d7"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="4de25083-df64-42d6-97dd-017c0a227675"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<folder
+			name="Android"
+			id="d6a174b9-f860-42b9-9890-569c2900ee01"/>
+			<testcase
+			name="EnterSerialNumberManually"
+			id="da33e9a9-76e8-4b41-8212-67b0184f4244">
+				<parameters>
+					<param
+					name="SerialNumber"
+					value=""/>
+				</parameters>
+			</testcase>
+			<teardown
+			name="teardown1"
+			id="f890f5c6-9328-486d-bffe-cbf160c603ec"/>
 			<folder
 			name="ShoppingList"
 			id="f9db67e4-b2d1-43ae-883c-0a91c6c19b73"/>
@@ -209,7 +354,113 @@ rxversion="6.2">
 					id="d6a174b9-f860-42b9-9890-569c2900ee01">
 						<folder
 						name="Boarding"
-						id="5979a9fe-3310-4274-9a43-6e191e81eb64"/>
+						id="5979a9fe-3310-4274-9a43-6e191e81eb64">
+							<testcase
+							name="Scan_card"
+							id="82161bb2-5e13-4f6a-9c27-78b8a0d7abaa">
+								<setup
+								name="setup1"
+								id="9cc1653c-c656-45ff-bb94-59b1e7efe98d">
+									<testmodule
+									name="RunApp"
+									id="918f9cec-72b8-4150-bbb2-cb1f483fbff9"/>
+								</setup>
+								<testmodule
+								name="Scan"
+								id="87c7eaa3-4829-4433-89df-86908fc5eca1"/>
+								<teardown
+								name="teardown"
+								id="505615e6-ec1f-461a-8062-cca78f4cfb01">
+									<testmodule
+									name="CloseApp"
+									id="612a012f-f304-4f1c-b119-2a82ce19dc52"/>
+								</teardown>
+							</testcase>
+							<testcase
+							name="NoCard_SkipAll"
+							id="73bef189-c024-4247-a785-a2c9ba8f3257">
+								<setup
+								name="setup3"
+								id="120a9f52-154d-4fbc-a24b-0f8fe8a9f063">
+									<testmodule
+									name="RunApp"
+									id="d6834c48-bad5-4a7a-b254-f325db00a16d"/>
+								</setup>
+								<testmodule
+								name="NoCard_SkipAll"
+								id="3d01b244-907f-4ce6-afbe-b760374c81be"/>
+								<teardown
+								name="teardown2"
+								id="83caa810-d78e-4698-8c0e-29461d1a663f">
+									<testmodule
+									name="CloseApp"
+									id="2bc9081c-ab4c-4445-acd6-3ebf0e31a756"/>
+								</teardown>
+							</testcase>
+							<testcase
+							name="NoCard_AllowAll"
+							id="4f40a9e1-e87f-40bf-832d-b544cdf39d1f">
+								<setup
+								name="setup5"
+								id="1328e268-6211-4f97-99aa-2289c25e37a7">
+									<testmodule
+									name="RunApp"
+									id="b73b27ef-0807-475b-bad6-3ad3f9061101"/>
+								</setup>
+								<testmodule
+								name="NoCard_AllowAll"
+								id="0e04c45a-fb86-4afd-8a93-29891bfce23c"/>
+								<teardown
+								name="teardown4"
+								id="c9dda5aa-1e42-4939-b3f7-b7a30f01ce79">
+									<testmodule
+									name="CloseApp"
+									id="00eb0a10-06db-457a-8603-ecc3c74fe9f0"/>
+								</teardown>
+							</testcase>
+							<testcase
+							name="EnterSerialNumberManually"
+							id="da33e9a9-76e8-4b41-8212-67b0184f4244">
+								<setup
+								name="setup11"
+								id="a894b579-5d64-4afd-bdc4-85cbf89ceff3">
+									<testmodule
+									name="RunApp"
+									id="b3163334-5324-4e47-9f90-d6dc335292df"/>
+								</setup>
+								<testmodule
+								name="EnterSerialNumberManually"
+								id="18e54829-fc6b-4e3b-a787-a7d34d860881"/>
+								<teardown
+								name="teardown1"
+								id="f890f5c6-9328-486d-bffe-cbf160c603ec">
+									<testmodule
+									name="CloseApp"
+									id="c5711b22-f02e-4078-bba7-87f9381a81ec"/>
+								</teardown>
+							</testcase>
+							<testcase
+							name="TermsAndPolicy"
+							id="1544ff2c-6b68-46aa-90e3-29268352bcf2">
+								<setup
+								name="setup12"
+								id="c99364c5-28ae-4d8f-aea7-7bd3ac804d54">
+									<testmodule
+									name="RunApp"
+									id="699d01a3-e46a-419f-9004-00ada9539889"/>
+								</setup>
+								<testmodule
+								name="TermsAndPolicy"
+								id="8e6c5b60-5138-4ad0-9148-a82fa463aa43"/>
+								<teardown
+								name="teardown3"
+								id="a9ca9b0a-052a-4b14-bf2f-0fa76e9e45c3">
+									<testmodule
+									name="CloseApp"
+									id="930bbee2-cdd3-4e36-8093-dd8b4b631457"/>
+								</teardown>
+							</testcase>
+						</folder>
 						<folder
 						name="Registration"
 						id="6511acd4-9390-4189-8cdb-3559623b8f1b">
@@ -220,16 +471,13 @@ rxversion="6.2">
 								name="setup"
 								id="0bb8463a-bfef-467c-959b-f7a43b5847d9">
 									<testmodule
-									name="ClearAppData"
-									id="aee1e5c7-93da-4159-b70e-7bf8e535220a"/>
+									name="RunApp"
+									id="c4a6b0f7-f35d-4b42-86a5-c2ba5b3a8731"/>
 								</setup>
 								<testmodule
 								name="Registration_Success"
-								id="e33a145f-baee-4b9e-a89b-dcbfc98de790"/>
+								id="60051e11-9a22-4f37-9c3b-5b7b71939973"/>
 							</testcase>
-							<testcase
-							name="Registration_SerialNumber_ValidNumber"
-							id="dfc8a0db-6d76-4332-93e4-c4a7e1b1100c"/>
 						</folder>
 						<folder
 						name="Login"
@@ -244,43 +492,6 @@ rxversion="6.2">
 						name="ShoppingList"
 						id="f9db67e4-b2d1-43ae-883c-0a91c6c19b73"/>
 					</folder>
-					<folder
-					name="iOS"
-					id="06420a85-320d-4359-bae9-37915062ad13">
-						<folder
-						name="iOS__Boarding"
-						id="890b6152-814a-4e79-8ef0-41205a412edd"/>
-						<folder
-						name="iOS_Registration"
-						id="4a5763ad-04e1-4b55-a029-3b1942eb99b0">
-							<testcase
-							name="iOS_Registration_Success"
-							id="923fc005-b79c-498f-bba3-ed5ee691dac0">
-								<setup
-								name="setup"
-								id="36c0b0f1-41b9-4e49-9656-cc8f98d83fd3">
-									<testmodule
-									name="RunApp"
-									id="8c2bc23b-f589-4597-aa95-5d3357e770de"/>
-								</setup>
-								<testmodule
-								name="IOS_NoCard_Registration_Success"
-								id="185a9fbd-560d-4d86-b0d8-6338ebfee521"/>
-							</testcase>
-						</folder>
-						<folder
-						name="iOS_Login"
-						id="7828d82a-8ccf-4f22-a421-2127d4f081cf"/>
-						<folder
-						name="iOS_Landing"
-						id="96cf3529-b6d9-438b-898c-5e69ab8c4e22"/>
-						<folder
-						name="iOS_MySpar"
-						id="ef67d831-fed7-4946-a6c7-ee63893c08d1"/>
-						<folder
-						name="iOS_ShoppingList"
-						id="345ec70a-b3dc-470e-bfad-d175d9c1e6bc"/>
-					</folder>
 				</testcase>
 			</testsuite>
 		</childhierarchy>
@@ -290,7 +501,7 @@ rxversion="6.2">
 		name="Registration"
 		type="Ranorex.Core.Data.SimpleDataConnector"
 		id="afaec420-ef52-4c72-834e-e888ed8b3511"
-		lastknownrowcount="2">
+		lastknownrowcount="1">
 			<lastknowncolumns>
 				<column>
 					FirstName
@@ -311,6 +522,9 @@ rxversion="6.2">
 					Address
 				</column>
 				<column>
+					HouseNumber
+				</column>
+				<column>
 					PostalNumber
 				</column>
 				<column>
@@ -324,6 +538,9 @@ rxversion="6.2">
 				</column>
 				<column>
 					Password
+				</column>
+				<column>
+					Status
 				</column>
 			</lastknowncolumns>
 			<maskedcolumns/>
@@ -348,6 +565,9 @@ rxversion="6.2">
 						Address
 					</th>
 					<th>
+						HouseNumber
+					</th>
+					<th>
 						PostalNumber
 					</th>
 					<th>
@@ -361,6 +581,9 @@ rxversion="6.2">
 					</th>
 					<th>
 						Password
+					</th>
+					<th>
+						Status
 					</th>
 				</tr>
 				<tr>
@@ -380,7 +603,10 @@ rxversion="6.2">
 						Slovenia
 					</td>
 					<td>
-						Gregor&#269;i&#269;eva 16
+						Gregor&#269;i&#269;eva
+					</td>
+					<td>
+						16
 					</td>
 					<td>
 						2000
@@ -395,42 +621,10 @@ rxversion="6.2">
 						john.smith@mailinator.com
 					</td>
 					<td>
-						adgjadgj1
-					</td>
-				</tr>
-				<tr>
-					<td>
-						Johanna
+						Adgjadgj1
 					</td>
 					<td>
-						Smith
-					</td>
-					<td>
-						28.2.1990
-					</td>
-					<td>
-						Female
-					</td>
-					<td>
-						Slovenia
-					</td>
-					<td>
-						A&#353;&#269;kr&#269;eva 48
-					</td>
-					<td>
-						1000
-					</td>
-					<td>
-						Ljubljana
-					</td>
-					<td>
-						015248961
-					</td>
-					<td>
-						johanna.smith@mailinator.com
-					</td>
-					<td>
-						adgjadgj1
+						Success
 					</td>
 				</tr>
 			</table>
@@ -441,15 +635,9 @@ rxversion="6.2">
 		<testconfiguration
 		name="TestRun">
 			<testcase
-			id="06420a85-320d-4359-bae9-37915062ad13"/>
-			<testcase
 			id="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 			<testcase
-			id="4a5763ad-04e1-4b55-a029-3b1942eb99b0"/>
-			<testcase
 			id="6511acd4-9390-4189-8cdb-3559623b8f1b"/>
-			<testcase
-			id="923fc005-b79c-498f-bba3-ed5ee691dac0"/>
 			<testcase
 			id="d254f475-2cfd-490a-8865-14306964695e"/>
 			<testcase

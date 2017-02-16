@@ -63,11 +63,11 @@ rxversion="6.2">
 	<rxpath.weights>
 		<rxpathweights>
 			<rule
-			name="CMS - NotificationType"
+			name="ID over ResourceID"
 			enabled="True"
-			capability="optiontag"
-			attribute="label"
-			setweight="200"
+			capability="androidelement"
+			attribute="rid"
+			setweight="190"
 			conditionsoperator="or"/>
 			<rule
 			name="RxWeb ASP.net"

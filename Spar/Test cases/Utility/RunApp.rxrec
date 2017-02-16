@@ -40,7 +40,7 @@ mode="Global">
 		enabled="True"
 		optional="False"
 		duration="3500ms"
-		application=""
+		application="plus.spar.si.staging"
 		devicename="DeviceName"
 		resetInitialState="True">
 			<comment/>
@@ -48,9 +48,6 @@ mode="Global">
 				<binding
 				target="DeviceDisplayName"
 				variable="DeviceName"/>
-				<binding
-				target="AppArgs"
-				variable="PackageName"/>
 			</bindings>
 		</runmobileapprecorditem>
 	</recorditems>

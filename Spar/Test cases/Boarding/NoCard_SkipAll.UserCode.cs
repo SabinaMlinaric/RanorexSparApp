@@ -20,9 +20,9 @@ using Ranorex.Core;
 using Ranorex.Core.Repository;
 using Ranorex.Core.Testing;
 
-namespace iOS
+namespace Spar.Test_cases.Boarding
 {
-    public partial class Recording1
+    public partial class NoCard_SkipAll
     {
         /// <summary>
         /// This method gets called right after the recording has been started.

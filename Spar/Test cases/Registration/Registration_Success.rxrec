@@ -70,29 +70,12 @@ mode="Mobile">
 		name="Gender"
 		id="599c5c46-e674-4ec7-8e7a-97ff7fd23c59">
 		</var>
+		<var
+		name="HouseNumber"
+		id="a5038dd5-02f8-499d-8675-06c22162e3aa">
+		</var>
 	</variables>
 	<recorditems>
-		<validationitem
-		enabled="True"
-		optional="False"
-		searchpropertyid="8ce4a01b-577d-4857-9a77-89d55017ffe9"
-		action="AttributeEqual">
-			<comment/>
-			<bindings/>
-			<info
-			sourcename="ItemRecorderEditor"
-			id="98bbe845-d99b-4151-8a22-9689ba200472">
-				<path>
-					/mobileapp[@title='plus.spar.si']/form[@title='ScanCardActivity']//text[@resourceid='R.string.scancard_info_title']
-				</path>
-			</info>
-			<matchname>
-				Text
-			</matchname>
-			<matchvalue>
-				Start with scanning your SPAR plus card!
-			</matchvalue>
-		</validationitem>
 		<touchrecorditem
 		enabled="True"
 		optional="False"
@@ -118,90 +101,6 @@ mode="Mobile">
 				</path>
 			</info>
 		</touchrecorditem>
-		<validationitem
-		enabled="True"
-		optional="False"
-		searchpropertyid="b8bdc2b3-317b-4ba2-ab24-b1d81e9a642d"
-		action="AttributeEqual">
-			<comment/>
-			<bindings/>
-			<info
-			sourcename="ItemRecorderEditor"
-			id="ccf96f7e-be42-417e-a9d3-d4fed0d57bd4">
-				<path>
-					/mobileapp[@title='plus.spar.si']/form[@title='RegisterWelcomeActivity']//text[@resourceid='R.string.register_welcome_info_title']
-				</path>
-			</info>
-			<matchname>
-				Text
-			</matchname>
-			<matchvalue>
-				Become SPAR plus member
-			</matchvalue>
-		</validationitem>
-		<validationitem
-		enabled="True"
-		optional="False"
-		searchpropertyid="b8bdc2b3-317b-4ba2-ab24-b1d81e9a642d"
-		action="AttributeEqual">
-			<comment/>
-			<bindings/>
-			<info
-			sourcename="ItemRecorderEditor"
-			id="4917a2ec-8ef3-4c6e-ab8b-b44b109a5259">
-				<path>
-					/mobileapp[@title='plus.spar.si']/form[@title='RegisterWelcomeActivity']//container[1]/text[@resourceid='R.string.register_welcome_exclusive']
-				</path>
-			</info>
-			<matchname>
-				Text
-			</matchname>
-			<matchvalue>
-				Exclusive coupons and bonuses
-			</matchvalue>
-		</validationitem>
-		<validationitem
-		enabled="True"
-		optional="False"
-		searchpropertyid="b8bdc2b3-317b-4ba2-ab24-b1d81e9a642d"
-		action="AttributeEqual">
-			<comment/>
-			<bindings/>
-			<info
-			sourcename="ItemRecorderEditor"
-			id="5d9adda4-730f-4802-b5d8-4544b3c1056b">
-				<path>
-					/mobileapp[@title='plus.spar.si']/form[@title='RegisterWelcomeActivity']//container[2]/text[@resourceid='R.string.register_welcome_collecting_credit']
-				</path>
-			</info>
-			<matchname>
-				Text
-			</matchname>
-			<matchvalue>
-				Collect credit on card
-			</matchvalue>
-		</validationitem>
-		<validationitem
-		enabled="True"
-		optional="False"
-		searchpropertyid="b8bdc2b3-317b-4ba2-ab24-b1d81e9a642d"
-		action="AttributeEqual">
-			<comment/>
-			<bindings/>
-			<info
-			sourcename="ItemRecorderEditor"
-			id="e8353065-e159-4ffd-ad3e-cf97b1c4a7fc">
-				<path>
-					/mobileapp[@title='plus.spar.si']/form[@title='RegisterWelcomeActivity']//container[3]/text[@resourceid='R.string.register_welcome_card_access']
-				</path>
-			</info>
-			<matchname>
-				Text
-			</matchname>
-			<matchvalue>
-				SPAR plus card access on phone
-			</matchvalue>
-		</validationitem>
 		<touchrecorditem
 		enabled="True"
 		optional="False"
@@ -227,27 +126,6 @@ mode="Mobile">
 				</path>
 			</info>
 		</touchrecorditem>
-		<validationitem
-		enabled="True"
-		optional="False"
-		searchpropertyid="b111fa23-111d-4fde-b24c-7cfea6c44b17"
-		action="AttributeEqual">
-			<comment/>
-			<bindings/>
-			<info
-			sourcename="ItemRecorderEditor"
-			id="d80a8e96-dd8f-4152-addc-368098ee47a6">
-				<path>
-					/mobileapp[@title='plus.spar.si']/form[@title~'^RegisterStep1PersonalData']//text[@resourceid='R.string.register_personal_info_title']
-				</path>
-			</info>
-			<matchname>
-				Text
-			</matchname>
-			<matchvalue>
-				Enter your personal info
-			</matchvalue>
-		</validationitem>
 		<setvaluerecorditem
 		enabled="True"
 		optional="False"
@@ -408,13 +286,35 @@ mode="Mobile">
 		<setvaluerecorditem
 		enabled="True"
 		optional="False"
+		searchpropertyid="0f0b2dd1-7431-4370-b7f1-0a9fe81073e4"
+		attrname="Text">
+			<comment/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="HouseNumber"/>
+			</bindings>
+			<info
+			sourcename="RepositoryEditor"
+			id="8a32bf22-f047-4166-a798-67aff6f5ac55">
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep2ResidentData']//text[@rid='et_house_number']
+				</path>
+			</info>
+			<AttributeValue>
+				yourValue
+			</AttributeValue>
+		</setvaluerecorditem>
+		<setvaluerecorditem
+		enabled="True"
+		optional="False"
 		searchpropertyid="f81f7ca7-aa3e-406e-8f6f-41edbdc7f487"
 		attrname="Text">
 			<comment/>
 			<bindings>
 				<binding
 				target="AttributeValue"
-				variable="PhoneNumber"/>
+				variable="PostalNumber"/>
 			</bindings>
 			<info
 			sourcename="RepositoryEditor"
@@ -468,12 +368,295 @@ mode="Mobile">
 			<bindings/>
 			<info
 			sourcename="RepositoryEditor"
-			id="7b133682-4665-4f25-989e-1bf1b36453f6">
+			id="bea13b39-c736-4c61-834d-3c78e3dc53b0">
 				<path>
-					/mobileapp[@title='plus.spar.si']/form[@title~'^RegisterStep1PersonalData']//text[@rid='bnt_next']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep2ResidentData']//text[@rid='btn_next']
 				</path>
 			</info>
 		</touchrecorditem>
+		<setvaluerecorditem
+		enabled="True"
+		optional="False"
+		searchpropertyid="8e372560-a8d9-4a3e-b08e-eb5c1227653c"
+		attrname="Text">
+			<comment/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="PhoneNumber"/>
+			</bindings>
+			<info
+			sourcename="RepositoryEditor"
+			id="86087f93-e41d-4a52-9ff2-a6c741535ff6">
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep3AccountDataA']//text[@rid='et_phone_number']
+				</path>
+			</info>
+			<AttributeValue>
+				yourValue
+			</AttributeValue>
+		</setvaluerecorditem>
+		<userrecorditem
+		enabled="True"
+		optional="False"
+		namespace="Spar.Test_cases.Registration"
+		classname="Registration_Success"
+		methodname="Set_Value_EtEmail"
+		isexternaltestmethod="False"
+		varname="">
+			<comment/>
+			<bindings/>
+			<arguments
+			id="9cbddf8f-4b09-4660-960a-addce88c69d3">
+				<argument
+				argname="textInfo"
+				id="a258a1f9-71d0-4d08-97f2-0aa209cef638">
+					<argvaluetype>
+						Ranorex.Core.Repository.RepoItemInfo, Ranorex.Core, Culture=neutral
+					</argvaluetype>
+					<argvalue/>
+					<info
+					sourcename="ItemRecorderEditor"
+					id="dd8b817e-43e6-4eb3-acdd-fe4cfa613285">
+						<path>
+							/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep3AccountDataA']//text[@rid='et_email']
+						</path>
+					</info>
+				</argument>
+			</arguments>
+		</userrecorditem>
+		<validationitem
+		enabled="True"
+		optional="False"
+		searchpropertyid="8427834d-ee4e-4fe8-a6a6-280addfcdce7"
+		action="AttributeEqual">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="02913f13-be82-4974-9501-0a6a16b4f3be">
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep3AccountDataA']//text[@rid='btn_next']
+				</path>
+			</info>
+			<matchname>
+				Enabled
+			</matchname>
+			<matchvalue>
+				False
+			</matchvalue>
+		</validationitem>
+		<setvaluerecorditem
+		enabled="True"
+		optional="False"
+		searchpropertyid="25a697d6-e230-42f6-96a3-b735b3e8c7cb"
+		attrname="Text">
+			<comment/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="Password"/>
+			</bindings>
+			<info
+			sourcename="RepositoryEditor"
+			id="b94776fd-ca45-4855-9816-4b32ed83c7f4">
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep3AccountDataA']//text[@rid='et_password']
+				</path>
+			</info>
+			<AttributeValue>
+				yourValue
+			</AttributeValue>
+		</setvaluerecorditem>
+		<setvaluerecorditem
+		enabled="True"
+		optional="False"
+		searchpropertyid="3a18ffc5-6e6c-43d9-9b51-1c81b397825b"
+		attrname="Text">
+			<comment/>
+			<bindings>
+				<binding
+				target="AttributeValue"
+				variable="Password"/>
+			</bindings>
+			<info
+			sourcename="RepositoryEditor"
+			id="a9d0dbc1-3122-4c3d-b4ea-7f4df0d9a069">
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep3AccountDataA']//text[@rid='et_password_repeat']
+				</path>
+			</info>
+			<AttributeValue>
+				yourValue
+			</AttributeValue>
+		</setvaluerecorditem>
+		<validationitem
+		enabled="True"
+		optional="False"
+		searchpropertyid="b145cec4-fd2a-4d73-a035-19059428c70f"
+		action="AttributeEqual">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="02913f13-be82-4974-9501-0a6a16b4f3be">
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep3AccountDataA']//text[@rid='btn_next']
+				</path>
+			</info>
+			<matchname>
+				Enabled
+			</matchname>
+			<matchvalue>
+				True
+			</matchvalue>
+		</validationitem>
+		<touchrecorditem
+		enabled="True"
+		optional="False"
+		duration="500ms"
+		screenshotname=""
+		searchpropertyid="97b1617b-c9fe-4170-bd5c-13541472edee"
+		touchtype="Touch"
+		elementlocation="Center"
+		fingerid="0"
+		touchduration="100ms"
+		longtouchduration="1000ms"
+		moveduration="100ms"
+		isremote="False"
+		sx="0"
+		sy="0">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="02913f13-be82-4974-9501-0a6a16b4f3be">
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep3AccountDataA']//text[@rid='btn_next']
+				</path>
+			</info>
+		</touchrecorditem>
+		<swiperecorditem
+		enabled="True"
+		optional="False"
+		duration="500ms"
+		screenshotname=""
+		searchpropertyid="72504b68-a34a-4318-b421-bbea03e87b5c"
+		direction="270"
+		swipeduration="500ms"
+		distance="1.0"
+		steps="0"
+		startlocation="Center">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="8625c355-2d72-4d5a-819d-ef0b52abe409">
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep4AdditionalDa']
+				</path>
+			</info>
+		</swiperecorditem>
+		<touchrecorditem
+		enabled="True"
+		optional="False"
+		duration="500ms"
+		screenshotname=""
+		searchpropertyid="03aa8691-a3c6-48d3-9c85-1d891c24dc90"
+		touchtype="Touch"
+		elementlocation="Center"
+		fingerid="0"
+		touchduration="100ms"
+		longtouchduration="1000ms"
+		moveduration="100ms"
+		isremote="False"
+		sx="0"
+		sy="0">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="f6a02fd7-e788-4ed5-a98c-571bb1b28315">
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep4AdditionalDa']//text[@rid='btn_next']
+				</path>
+			</info>
+		</touchrecorditem>
+		<userrecorditem
+		enabled="True"
+		optional="False"
+		namespace="Spar.Test_cases.Registration"
+		classname="Registration_Success"
+		methodname="Validate_LoginEmailSentActivity"
+		isexternaltestmethod="False"
+		varname="">
+			<comment/>
+			<bindings/>
+			<arguments
+			id="0df206e2-fbd9-4359-a4d6-8e1610f9082c">
+				<argument
+				argname="formInfo"
+				id="7509d320-6d1c-4438-8514-d91b48c7cc0b">
+					<argvaluetype>
+						Ranorex.Core.Repository.RepoItemInfo, Ranorex.Core, Culture=neutral
+					</argvaluetype>
+					<argvalue/>
+					<info
+					sourcename="ItemRecorderEditor"
+					id="138292e3-349e-40be-ad83-efa673a0e21f">
+						<path>
+							/mobileapp[@title='plus.spar.si.staging']/form[@title='LoginEmailSentActivity']
+						</path>
+					</info>
+				</argument>
+			</arguments>
+		</userrecorditem>
+		<touchrecorditem
+		enabled="True"
+		optional="False"
+		duration="500ms"
+		screenshotname=""
+		searchpropertyid="f4b926b0-795c-4202-b58d-cb5ccb963f37"
+		touchtype="Touch"
+		elementlocation="Center"
+		fingerid="0"
+		touchduration="100ms"
+		longtouchduration="1000ms"
+		moveduration="100ms"
+		isremote="False"
+		sx="0"
+		sy="0">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="c2955545-b608-4227-acc1-cb48909ed7a2">
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='LoginEmailSentActivity']//text[@rid='btn_email_sent_skip']
+				</path>
+			</info>
+		</touchrecorditem>
+		<validationitem
+		enabled="True"
+		optional="False"
+		searchpropertyid="f128b2ec-0576-44ec-a37c-fdf99e776cb7"
+		action="AttributeEqual">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="e5288b06-59df-4612-b679-57269effd9b3">
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='OnBoardingStepOneActivity']
+				</path>
+			</info>
+			<matchname>
+				Visible
+			</matchname>
+			<matchvalue>
+				True
+			</matchvalue>
+		</validationitem>
 	</recorditems>
 	<repository
 	name="SparRepository"

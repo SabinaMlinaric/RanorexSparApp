@@ -36,6 +36,20 @@ mode="Global">
 		</var>
 	</variables>
 	<recorditems>
+		<runmobileapprecorditem
+		enabled="True"
+		optional="False"
+		duration="3500ms"
+		application="plus.spar.si.staging"
+		devicename=""
+		resetInitialState="True">
+			<comment/>
+			<bindings>
+				<binding
+				target="DeviceDisplayName"
+				variable="DeviceName"/>
+			</bindings>
+		</runmobileapprecorditem>
 		<userrecorditem
 		enabled="True"
 		optional="False"
@@ -47,7 +61,23 @@ mode="Global">
 			<comment/>
 			<bindings/>
 			<arguments
-			id="d7279bb4-4247-48b5-9097-4e8c22de826a"/>
+			id="30e2c863-0282-48c2-b03f-f4f54054ed28">
+				<argument
+				argname="mobileappInfo"
+				id="1abc6b24-a530-488d-9fb0-38ee7d8ab546">
+					<argvaluetype>
+						Ranorex.Core.Repository.RepoItemInfo, Ranorex.Core, Culture=neutral
+					</argvaluetype>
+					<argvalue/>
+					<info
+					sourcename="ItemRecorderEditor"
+					id="f885d0cd-d406-48ca-a29d-75d836c2cf92">
+						<path>
+							/mobileapp[@title='plus.spar.si.staging']
+						</path>
+					</info>
+				</argument>
+			</arguments>
 		</userrecorditem>
 	</recorditems>
 	<repository
