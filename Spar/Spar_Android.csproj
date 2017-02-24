@@ -446,8 +446,20 @@
       <UserCode>true</UserCode>
       <id>e260acb0-49e0-4c62-9fc1-6bfd16be2ccb</id>
     </Compile>
+    <Compile Include="Test cases\Utility\C#\Classes\Catalog.cs">
+      <id>4e4a86eb-10bb-4384-afa0-d14ceb35e531</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\C#\Classes\Dashboard.cs">
+      <id>cbc4f6bd-a952-48fe-bc74-b1828720303b</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\C#\Classes\ShopsResponse.cs">
+      <id>46bd476b-4dcf-4adf-8d8b-caaf4552f256</id>
+    </Compile>
     <Compile Include="Test cases\Utility\C#\Classes\Token.cs">
       <id>f7b22341-e9bb-42e1-a8a6-fd38d4490602</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\C#\Classes\UserDetailsResponse.cs">
+      <id>4fcc1f5e-5fa7-49f2-bcdd-535b92f8b9c7</id>
     </Compile>
     <Compile Include="Test cases\Utility\C#\HttpClientMethod.cs">
       <id>038cb0b7-68a4-41b2-be7e-8fd0eb22bdac</id>

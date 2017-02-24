@@ -300,6 +300,11 @@ rxversion="6.2">
 					variableid="a33fe5c3-eb05-43c0-8c72-cfecaf95e468"
 					dataname="accessToken"
 					datasourceid="99db626b-4107-4e62-98d3-0ec1be186135"/>
+					<var
+					variablename="catalogNum"
+					variableid="534276be-f600-40f6-bf3c-4538a0a7023c"
+					dataname="catalogNum"
+					datasourceid="dd8090f3-7c05-4a64-8ec9-76c97845c871"/>
 				</databinding>
 			</testmodule>
 			<testmodule
@@ -561,6 +566,11 @@ rxversion="6.2">
 			<folder
 			name="Locations"
 			id="52d07ec6-8d3d-4d62-8c9a-5b390058502c"/>
+			<testmodule
+			name="SkipBoardingToLanding"
+			id="54022e54-5f41-4359-8c1a-1303b8753e51"
+			ref="cf205871-aa48-4224-9200-739b934831cd"
+			type="Recording"/>
 			<modulegroup
 			name="AllowPermissions"
 			id="56815689-d2b6-48d1-b8c5-ef1fe9798407"
@@ -840,6 +850,18 @@ rxversion="6.2">
 			<setup
 			name="setup227"
 			id="6dc9a5fe-47bd-4515-8327-a9e5eeeee203"/>
+			<modulegroup
+			name="AllowPermissions"
+			id="6f6e4cb1-83f4-4054-bdcc-48ff7d27218d"
+			ref="b6a763ab-152b-4bdf-8af2-430dfe4c10c9">
+				<databinding>
+					<var
+					variablename="PackageName"
+					variableid="f7d21799-6692-45f8-a1a2-8ee1e98b723d"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</modulegroup>
 			<testmodule
 			name="SkipBoardingToLanding"
 			id="6fca4302-f6d5-4d22-ad44-d1f419bcff50"
@@ -932,6 +954,11 @@ rxversion="6.2">
 			<testmodule
 			name="CloseApp"
 			id="79add112-0470-44e8-8173-12489572bedb"
+			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
+			type="Recording"/>
+			<testmodule
+			name="CloseApp"
+			id="7a056265-89c6-476a-8187-16dcc5e9977e"
 			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
 			type="Recording"/>
 			<testmodule
@@ -1639,6 +1666,9 @@ rxversion="6.2">
 					datasourceid="afaec420-ef52-4c72-834e-e888ed8b3511"/>
 				</databinding>
 			</testmodule>
+			<setup
+			name="setup51111"
+			id="b24c5291-f39c-4c1d-9dd6-d508eb1d1180"/>
 			<testmodule
 			name="RunApp"
 			id="b2e8fa6a-f767-472f-8b27-89c31c852c53"
@@ -2058,6 +2088,24 @@ rxversion="6.2">
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</testmodule>
+			<testmodule
+			name="RunApp"
+			id="d952435b-7510-4de8-9671-9e06e1fa6f92"
+			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="7ba94856-ce36-433b-aa83-673fcd1b06d7"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="4de25083-df64-42d6-97dd-017c0a227675"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
 			<setup
 			name="setup226"
 			id="d9d001fd-f6b8-4936-9cbb-b375af61bf05"/>
@@ -2075,6 +2123,15 @@ rxversion="6.2">
 			id="dc001e96-ea5e-476a-954c-aa77fe91c605"
 			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
 			type="Recording"/>
+			<testcase
+			name="Catalogs_CheckItems_CatalogNum"
+			id="dd8090f3-7c05-4a64-8ec9-76c97845c871">
+				<parameters>
+					<param
+					name="catalogNum"
+					value=""/>
+				</parameters>
+			</testcase>
 			<testmodule
 			name="ClearAppData"
 			id="ddbd7711-fbcd-49d9-954a-723ecd0bfb77"
@@ -2364,6 +2421,9 @@ rxversion="6.2">
 			<folder
 			name="Spar_Klub"
 			id="f60c7a94-dfa5-40bc-9441-51d4364014e3"/>
+			<teardown
+			name="teardown41111"
+			id="f61946f4-0e12-4ca3-8584-916656473afc"/>
 			<testmodule
 			name="SkipBoardingToLanding"
 			id="f8362cd8-f73c-4d19-bcf1-59fe3bd08ad4"
@@ -2411,6 +2471,24 @@ rxversion="6.2">
 					<var
 					variablename="PackageName"
 					variableid="4de25083-df64-42d6-97dd-017c0a227675"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<testmodule
+			name="ClearAppData"
+			id="fda8a500-efd5-4a19-99f7-13324dcc0cc3"
+			ref="d75ab6fa-6314-46ab-8f27-4adcb17bbeb7"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="82366f14-af3e-4e79-a6a5-6b409168ddc5"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="82361544-8731-4a7d-b1cb-7420ac2fac02"
 					dataname="PackageName"
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
@@ -2943,9 +3021,36 @@ rxversion="6.2">
 								<testcase
 								name="Catalogs_CheckItems"
 								id="99db626b-4107-4e62-98d3-0ec1be186135">
-									<testmodule
-									name="Catalog_CheckItems_SectionsNum"
-									id="3297440c-bd7e-4c5e-a1ed-74309c6fd32d"/>
+									<setup
+									name="setup51111"
+									id="b24c5291-f39c-4c1d-9dd6-d508eb1d1180">
+										<testmodule
+										name="ClearAppData"
+										id="fda8a500-efd5-4a19-99f7-13324dcc0cc3"/>
+										<modulegroup
+										name="AllowPermissions"
+										id="6f6e4cb1-83f4-4054-bdcc-48ff7d27218d"/>
+										<testmodule
+										name="RunApp"
+										id="d952435b-7510-4de8-9671-9e06e1fa6f92"/>
+										<testmodule
+										name="SkipBoardingToLanding"
+										id="54022e54-5f41-4359-8c1a-1303b8753e51"/>
+									</setup>
+									<testcase
+									name="Catalogs_CheckItems_CatalogNum"
+									id="dd8090f3-7c05-4a64-8ec9-76c97845c871">
+										<testmodule
+										name="Catalog_CheckItems_SectionsNum"
+										id="3297440c-bd7e-4c5e-a1ed-74309c6fd32d"/>
+									</testcase>
+									<teardown
+									name="teardown41111"
+									id="f61946f4-0e12-4ca3-8584-916656473afc">
+										<testmodule
+										name="CloseApp"
+										id="7a056265-89c6-476a-8187-16dcc5e9977e"/>
+									</teardown>
 								</testcase>
 							</folder>
 							<folder
@@ -3516,22 +3621,7 @@ rxversion="6.2">
 	<testconfigurations
 	default="TestRun">
 		<testconfiguration
-		name="TestRun">
-			<testcase
-			id="01cde481-c381-4e9a-8ef4-3dcb9994b3c5"/>
-			<testcase
-			id="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
-			<testcase
-			id="4592f5b7-0cff-4bc1-a79e-1a1890988d4d"/>
-			<testcase
-			id="52d07ec6-8d3d-4d62-8c9a-5b390058502c"/>
-			<testcase
-			id="6ce6c4df-bcac-4ac0-bf58-117ada5e908f"/>
-			<testcase
-			id="c326b772-1ca3-4c20-9ae9-b4bd6a34299b"/>
-			<testcase
-			id="d6a174b9-f860-42b9-9890-569c2900ee01"/>
-		</testconfiguration>
+		name="TestRun"/>
 	</testconfigurations>
 	<references>
 		<reference>

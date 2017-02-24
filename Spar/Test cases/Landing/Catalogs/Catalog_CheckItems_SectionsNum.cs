@@ -42,6 +42,7 @@ namespace Spar.Test_cases.Landing.Catalogs
         public Catalog_CheckItems_SectionsNum()
         {
             accessToken = "";
+            catalogNum = "";
         }
 
         /// <summary>
@@ -64,6 +65,18 @@ namespace Spar.Test_cases.Landing.Catalogs
         {
             get { return _accessToken; }
             set { _accessToken = value; }
+        }
+
+        string _catalogNum;
+
+        /// <summary>
+        /// Gets or sets the value of variable catalogNum.
+        /// </summary>
+        [TestVariable("534276be-f600-40f6-bf3c-4538a0a7023c")]
+        public string catalogNum
+        {
+            get { return _catalogNum; }
+            set { _catalogNum = value; }
         }
 
 #endregion
@@ -96,6 +109,14 @@ namespace Spar.Test_cases.Landing.Catalogs
             Delay.Milliseconds(0);
             
             CheckNumOfCatalogs();
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.BtnBrowse' at Center", repo.PlusSparSi.MainActivity.BtnBrowseInfo, new RecordItemIndex(2));
+            repo.PlusSparSi.MainActivity.BtnBrowse.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$catalogNum) on item 'PlusSparSi.MainActivity.MenuBadge'.", repo.PlusSparSi.MainActivity.MenuBadgeInfo, new RecordItemIndex(3));
+            Validate.Attribute(repo.PlusSparSi.MainActivity.MenuBadgeInfo, "Text", catalogNum);
             Delay.Milliseconds(0);
             
         }

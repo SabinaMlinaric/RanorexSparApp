@@ -67,7 +67,9 @@ namespace Spar.Test_cases.Landing.Catalogs
 			
 			if(message.StatusCode == 200){
 				
+				//TODO
 				
+				catalogNum = 3 + ""; 
 				
 				Report.Log(ReportLevel.Info, "Access token", accessToken);
 			}else

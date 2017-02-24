@@ -1427,6 +1427,7 @@ namespace Spar
             RepoItemInfo _tvopenuntilvalueInfo;
             RepoItemInfo _tvclosedInfo;
             RepoItemInfo _tvdistanceInfo;
+            RepoItemInfo _menubadgeInfo;
 
             /// <summary>
             /// Creates a new MainActivity  folder.
@@ -1449,6 +1450,7 @@ namespace Spar
                 _tvopenuntilvalueInfo = new RepoItemInfo(this, "TvOpenUntilValue", ".//text[@rid='tv_open_until_value']", 30000, null, "ef00071e-13f4-409c-ab3d-130a8f4c15fb");
                 _tvclosedInfo = new RepoItemInfo(this, "TvClosed", ".//text[@rid='tv_closed']", 30000, null, "2654fc6c-ba81-47c2-b16a-4df2ea849b73");
                 _tvdistanceInfo = new RepoItemInfo(this, "TvDistance", ".//text[@rid='tv_distance']", 30000, null, "fa93569f-39e1-4b93-9059-c47105b0b21e");
+                _menubadgeInfo = new RepoItemInfo(this, "MenuBadge", ".//text[@rid='menu_badge']", 30000, null, "5be303f9-06a1-40b3-be81-f7c179c9c3be");
             }
 
             /// <summary>
@@ -1808,6 +1810,30 @@ namespace Spar
                 get
                 {
                     return _tvdistanceInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MenuBadge item.
+            /// </summary>
+            [RepositoryItem("5be303f9-06a1-40b3-be81-f7c179c9c3be")]
+            public virtual Ranorex.Text MenuBadge
+            {
+                get
+                {
+                    return _menubadgeInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MenuBadge item info.
+            /// </summary>
+            [RepositoryItemInfo("5be303f9-06a1-40b3-be81-f7c179c9c3be")]
+            public virtual RepoItemInfo MenuBadgeInfo
+            {
+                get
+                {
+                    return _menubadgeInfo;
                 }
             }
 

@@ -699,6 +699,15 @@ rxversion="6.2">
 						/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']
 					</basepath>
 				</folder>
+				<item
+				name="MenuBadge"
+				id="5be303f9-06a1-40b3-be81-f7c179c9c3be"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="c389de71-4cb1-401d-b205-9db8e4e195d9">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='menu_badge']
+				</item>
 				<basepath>
 					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']
 				</basepath>
