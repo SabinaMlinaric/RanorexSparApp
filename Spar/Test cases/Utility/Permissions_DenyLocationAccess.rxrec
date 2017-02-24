@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+rxversion="6.2"
+id="39ea6478-6c49-4624-a897-86086fcb8414"
+embeddedrepository="False"
+mode="Global">
+	<name>
+		Permissions_DenyLocationAccess
+	</name>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="Permissions_DenyLocationAccess"
+	namespace="Spar.Test_cases.Utility"/>
+	<variables>
+		<var
+		name="PackageName"
+		id="5e2a555c-cc05-4331-b3f2-0409610fcead">
+		</var>
+	</variables>
+	<recorditems>
+		<userrecorditem
+		enabled="True"
+		optional="False"
+		namespace="Spar.Test_cases.Utility"
+		classname="Permissions_DenyLocationAccess"
+		methodname="DenyLocationPermission"
+		isexternaltestmethod="False"
+		varname="">
+			<comment/>
+			<bindings/>
+			<arguments
+			id="c8ff3498-4ccb-4e76-9f96-fdc58734426f"/>
+		</userrecorditem>
+	</recorditems>
+	<repository
+	name="SparRepository"
+	id="c55abb3d-7d0d-4435-8640-bb30710f5f27"
+	rxversion="6.2"
+	relativepath="..\..\SparRepository.rxrep">
+		<codegen
+		classname="SparRepository"
+		namespace="Spar"/>
+		<rootfolder
+		name="_rootdummy_"
+		id="c12fa4a9-bf96-41a7-9866-79edafaddcf2"/>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		Permissions_DenyLocationAccess.UserCode.cs
+	</usercodefile>
+	<references/>
+</recordtable>

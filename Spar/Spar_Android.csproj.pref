@@ -1,22 +1,29 @@
 ﻿<Properties>
   <Array name="active">
-    <Element value="Test cases\Utility\ClearAppData.UserCode.cs" />
+    <Element value="Test cases\Landing\Catalogs\Catalog_CheckItems_SectionsNum.rxrec" />
   </Array>
   <Array name="bookmarks">
-    <Element value="Breakpoint|C:\Users\sabinam\Documents\Ranorex\RanorexSparApp\Spar\Test cases\Utility\ClearAppData.UserCode.cs|66|4|True|Break||" />
+    <Element value="Breakpoint|C:\Users\sabinam\Documents\Ranorex\RanorexSparApp\Spar\Test cases\Landing\JedelBi_Open.UserCode.cs|45|6|True|Break||" />
   </Array>
   <Array name="files">
     <Element value="Spar.rxtst" />
-    <Element value="Test cases\Registration\Registration_Success.rxrec" />
-    <Element value="Test cases\Utility\ClearAppData.rxrec" />
-    <Element value="Test cases\Utility\ClearAppData.UserCode.cs" />
+    <Element value="Spar.rxtmg" />
+    <Element value="Test cases\Landing\Catalogs\Catalog_CheckItems_SectionsNum.UserCode.cs" />
+    <Element value="Test cases\Utility\C#\HttpClientMethod.cs" />
+    <Element value="Test cases\Landing\Catalogs\Catalog_CheckItems_SectionsNum.rxrec" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">
+      <fileNames value="" />
       <runOnBuild value="False" />
     </Properties>
     <Array name="recentusercodeselections">
-      <Element value="Spar.Registration_Success.Test()" />
+      <Element value="Spar.Test_cases.Landing.Catalogs.Catalog_CheckItems_SectionsNum.GetValidToken()" />
+      <Element value="Spar.HttpClientMethod.GetAsync(String url, String accessToken, String contentType)" />
+      <Element value="Spar.Test_cases.Landing.Locations.Location_PermissionDenied_Overview.FindLocations()" />
+      <Element value="Spar.Test_cases.Landing.News_Overview.FindNews()" />
+      <Element value="Spar.Test_cases.Landing.News_Overview.OpenJedelBi()" />
+      <Element value="Spar.Test_cases.Landing.JedelBi_Open.OpenJedelBi()" />
     </Array>
   </Properties>
 </Properties>

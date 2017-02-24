@@ -61,6 +61,30 @@ namespace Spar
             set { _PackageName = value; }
         }
 
+        string _ItemNum = "1";
+
+        /// <summary>
+        /// Gets or sets the value of variable ItemNum.
+        /// </summary>
+        [TestVariable("4c23dbd2-adf2-4497-bbd0-ceb77e5b1c7f")]
+        public string ItemNum
+        {
+            get { return _ItemNum; }
+            set { _ItemNum = value; }
+        }
+
+        string _ItemNext = "";
+
+        /// <summary>
+        /// Gets or sets the value of variable ItemNext.
+        /// </summary>
+        [TestVariable("8992f9a3-7813-4126-a43b-3f32845bd00e")]
+        public string ItemNext
+        {
+            get { return _ItemNext; }
+            set { _ItemNext = value; }
+        }
+
 #endregion
 
         /// <summary>
@@ -111,6 +135,7 @@ namespace Spar
             SparRepositoryFolders.RegisterStep3AccountDataActivityFolder _registerstep3accountdataactivity;
             SparRepositoryFolders.RegisterStep4AdditionalDataActivityFolder _registerstep4additionaldataactivity;
             SparRepositoryFolders.LoginEmailSentActivityFolder _loginemailsentactivity;
+            SparRepositoryFolders.RegisterEmailNotificationsActivityFolder _registeremailnotificationsactivity;
 
             /// <summary>
             /// Creates a new PlusSparSi  folder.
@@ -132,6 +157,7 @@ namespace Spar
                 _registerstep3accountdataactivity = new SparRepositoryFolders.RegisterStep3AccountDataActivityFolder(this);
                 _registerstep4additionaldataactivity = new SparRepositoryFolders.RegisterStep4AdditionalDataActivityFolder(this);
                 _loginemailsentactivity = new SparRepositoryFolders.LoginEmailSentActivityFolder(this);
+                _registeremailnotificationsactivity = new SparRepositoryFolders.RegisterEmailNotificationsActivityFolder(this);
             }
 
             /// <summary>
@@ -282,6 +308,15 @@ namespace Spar
             public virtual SparRepositoryFolders.LoginEmailSentActivityFolder LoginEmailSentActivity
             {
                 get { return _loginemailsentactivity; }
+            }
+
+            /// <summary>
+            /// The RegisterEmailNotificationsActivity folder.
+            /// </summary>
+            [RepositoryFolder("44c03c59-306b-4349-8558-9c7318451118")]
+            public virtual SparRepositoryFolders.RegisterEmailNotificationsActivityFolder RegisterEmailNotificationsActivity
+            {
+                get { return _registeremailnotificationsactivity; }
             }
         }
 
@@ -1377,6 +1412,21 @@ namespace Spar
         [RepositoryFolder("04550d2f-0065-4f16-a9d6-1d6d447f1a0a")]
         public partial class MainActivityFolder : RepoGenBaseFolder
         {
+            SparRepositoryFolders.LocationsFolder _locations;
+            RepoItemInfo _btnbrowseInfo;
+            RepoItemInfo _tvsparplusklubInfo;
+            RepoItemInfo _navigateupInfo;
+            RepoItemInfo _imgjedelbiInfo;
+            RepoItemInfo _imgnewsInfo;
+            RepoItemInfo _tvreadmoreInfo;
+            RepoItemInfo _tvtitleInfo;
+            RepoItemInfo _tvnoteInfo;
+            RepoItemInfo _tvdescriptionInfo;
+            RepoItemInfo _rstringtabtitleInfo;
+            RepoItemInfo _tvopenuntillabelInfo;
+            RepoItemInfo _tvopenuntilvalueInfo;
+            RepoItemInfo _tvclosedInfo;
+            RepoItemInfo _tvdistanceInfo;
 
             /// <summary>
             /// Creates a new MainActivity  folder.
@@ -1384,6 +1434,21 @@ namespace Spar
             public MainActivityFolder(RepoGenBaseFolder parentFolder) :
                     base("MainActivity", "form[@title='MainActivity']", parentFolder, 30000, null, false, "04550d2f-0065-4f16-a9d6-1d6d447f1a0a", "")
             {
+                _locations = new SparRepositoryFolders.LocationsFolder(this);
+                _btnbrowseInfo = new RepoItemInfo(this, "BtnBrowse", ".//text[@rid='btn_browse']", 30000, null, "5866c59c-3def-48ec-89ac-c451f7bedf8c");
+                _tvsparplusklubInfo = new RepoItemInfo(this, "TvSparPlusKlub", ".//text[@rid='tv_spar_plus_klub']", 30000, null, "8253f4a2-d685-4b34-9c74-87100f88a46f");
+                _navigateupInfo = new RepoItemInfo(this, "NavigateUp", ".//button[@contentdescription='Navigate up']", 30000, null, "4faab30c-ceb5-4de7-be98-3acaa0b88516");
+                _imgjedelbiInfo = new RepoItemInfo(this, "ImgJedelBi", ".//picture[@rid='img_jedel_bi']", 30000, null, "950dd791-9de6-4243-bbfe-96c4d9ee8110");
+                _imgnewsInfo = new RepoItemInfo(this, "ImgNews", ".//picture[@rid='img_news']", 30000, null, "2b2e1260-4fbe-41cd-830d-40e484002ca3");
+                _tvreadmoreInfo = new RepoItemInfo(this, "TvReadMore", ".//text[@rid='tv_read_more']", 30000, null, "1a7ebec4-d191-46ab-9bd5-3c2297e8fb13");
+                _tvtitleInfo = new RepoItemInfo(this, "TvTitle", ".//text[@rid='tv_title']", 30000, null, "acb10d91-bb88-4371-8f4c-6d1b4e686c9b");
+                _tvnoteInfo = new RepoItemInfo(this, "TvNote", ".//text[@rid='tv_note']", 30000, null, "e0d02870-aa9a-4564-a42c-9c6b75f26397");
+                _tvdescriptionInfo = new RepoItemInfo(this, "TvDescription", ".//text[@rid='tv_description']", 30000, null, "2073c3c7-43d0-401b-a35c-b66680f6e9fc");
+                _rstringtabtitleInfo = new RepoItemInfo(this, "RStringTabTitle", ".//androidelement[@rid='toolbar']/container/text[1]", 30000, null, "25fb0b88-deaa-45e6-9e27-fd1c22183d6d");
+                _tvopenuntillabelInfo = new RepoItemInfo(this, "TvOpenUntilLabel", ".//text[@resourceid='R.string.news_location_open_until']", 30000, null, "64274d25-1607-4023-8a5c-59bf8763131b");
+                _tvopenuntilvalueInfo = new RepoItemInfo(this, "TvOpenUntilValue", ".//text[@rid='tv_open_until_value']", 30000, null, "ef00071e-13f4-409c-ab3d-130a8f4c15fb");
+                _tvclosedInfo = new RepoItemInfo(this, "TvClosed", ".//text[@rid='tv_closed']", 30000, null, "2654fc6c-ba81-47c2-b16a-4df2ea849b73");
+                _tvdistanceInfo = new RepoItemInfo(this, "TvDistance", ".//text[@rid='tv_distance']", 30000, null, "fa93569f-39e1-4b93-9059-c47105b0b21e");
             }
 
             /// <summary>
@@ -1407,6 +1472,911 @@ namespace Spar
                 get
                 {
                     return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnBrowse item.
+            /// </summary>
+            [RepositoryItem("5866c59c-3def-48ec-89ac-c451f7bedf8c")]
+            public virtual Ranorex.Text BtnBrowse
+            {
+                get
+                {
+                    return _btnbrowseInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnBrowse item info.
+            /// </summary>
+            [RepositoryItemInfo("5866c59c-3def-48ec-89ac-c451f7bedf8c")]
+            public virtual RepoItemInfo BtnBrowseInfo
+            {
+                get
+                {
+                    return _btnbrowseInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvSparPlusKlub item.
+            /// </summary>
+            [RepositoryItem("8253f4a2-d685-4b34-9c74-87100f88a46f")]
+            public virtual Ranorex.Text TvSparPlusKlub
+            {
+                get
+                {
+                    return _tvsparplusklubInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvSparPlusKlub item info.
+            /// </summary>
+            [RepositoryItemInfo("8253f4a2-d685-4b34-9c74-87100f88a46f")]
+            public virtual RepoItemInfo TvSparPlusKlubInfo
+            {
+                get
+                {
+                    return _tvsparplusklubInfo;
+                }
+            }
+
+            /// <summary>
+            /// The NavigateUp item.
+            /// </summary>
+            [RepositoryItem("4faab30c-ceb5-4de7-be98-3acaa0b88516")]
+            public virtual Ranorex.Button NavigateUp
+            {
+                get
+                {
+                    return _navigateupInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The NavigateUp item info.
+            /// </summary>
+            [RepositoryItemInfo("4faab30c-ceb5-4de7-be98-3acaa0b88516")]
+            public virtual RepoItemInfo NavigateUpInfo
+            {
+                get
+                {
+                    return _navigateupInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ImgJedelBi item.
+            /// </summary>
+            [RepositoryItem("950dd791-9de6-4243-bbfe-96c4d9ee8110")]
+            public virtual Ranorex.Picture ImgJedelBi
+            {
+                get
+                {
+                    return _imgjedelbiInfo.CreateAdapter<Ranorex.Picture>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ImgJedelBi item info.
+            /// </summary>
+            [RepositoryItemInfo("950dd791-9de6-4243-bbfe-96c4d9ee8110")]
+            public virtual RepoItemInfo ImgJedelBiInfo
+            {
+                get
+                {
+                    return _imgjedelbiInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ImgNews item.
+            /// </summary>
+            [RepositoryItem("2b2e1260-4fbe-41cd-830d-40e484002ca3")]
+            public virtual Ranorex.Picture ImgNews
+            {
+                get
+                {
+                    return _imgnewsInfo.CreateAdapter<Ranorex.Picture>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ImgNews item info.
+            /// </summary>
+            [RepositoryItemInfo("2b2e1260-4fbe-41cd-830d-40e484002ca3")]
+            public virtual RepoItemInfo ImgNewsInfo
+            {
+                get
+                {
+                    return _imgnewsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvReadMore item.
+            /// </summary>
+            [RepositoryItem("1a7ebec4-d191-46ab-9bd5-3c2297e8fb13")]
+            public virtual Ranorex.Text TvReadMore
+            {
+                get
+                {
+                    return _tvreadmoreInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvReadMore item info.
+            /// </summary>
+            [RepositoryItemInfo("1a7ebec4-d191-46ab-9bd5-3c2297e8fb13")]
+            public virtual RepoItemInfo TvReadMoreInfo
+            {
+                get
+                {
+                    return _tvreadmoreInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvTitle item.
+            /// </summary>
+            [RepositoryItem("acb10d91-bb88-4371-8f4c-6d1b4e686c9b")]
+            public virtual Ranorex.Text TvTitle
+            {
+                get
+                {
+                    return _tvtitleInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvTitle item info.
+            /// </summary>
+            [RepositoryItemInfo("acb10d91-bb88-4371-8f4c-6d1b4e686c9b")]
+            public virtual RepoItemInfo TvTitleInfo
+            {
+                get
+                {
+                    return _tvtitleInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvNote item.
+            /// </summary>
+            [RepositoryItem("e0d02870-aa9a-4564-a42c-9c6b75f26397")]
+            public virtual Ranorex.Text TvNote
+            {
+                get
+                {
+                    return _tvnoteInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvNote item info.
+            /// </summary>
+            [RepositoryItemInfo("e0d02870-aa9a-4564-a42c-9c6b75f26397")]
+            public virtual RepoItemInfo TvNoteInfo
+            {
+                get
+                {
+                    return _tvnoteInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvDescription item.
+            /// </summary>
+            [RepositoryItem("2073c3c7-43d0-401b-a35c-b66680f6e9fc")]
+            public virtual Ranorex.Text TvDescription
+            {
+                get
+                {
+                    return _tvdescriptionInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvDescription item info.
+            /// </summary>
+            [RepositoryItemInfo("2073c3c7-43d0-401b-a35c-b66680f6e9fc")]
+            public virtual RepoItemInfo TvDescriptionInfo
+            {
+                get
+                {
+                    return _tvdescriptionInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RStringTabTitle item.
+            /// </summary>
+            [RepositoryItem("25fb0b88-deaa-45e6-9e27-fd1c22183d6d")]
+            public virtual Ranorex.Text RStringTabTitle
+            {
+                get
+                {
+                    return _rstringtabtitleInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RStringTabTitle item info.
+            /// </summary>
+            [RepositoryItemInfo("25fb0b88-deaa-45e6-9e27-fd1c22183d6d")]
+            public virtual RepoItemInfo RStringTabTitleInfo
+            {
+                get
+                {
+                    return _rstringtabtitleInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvOpenUntilLabel item.
+            /// </summary>
+            [RepositoryItem("64274d25-1607-4023-8a5c-59bf8763131b")]
+            public virtual Ranorex.Text TvOpenUntilLabel
+            {
+                get
+                {
+                    return _tvopenuntillabelInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvOpenUntilLabel item info.
+            /// </summary>
+            [RepositoryItemInfo("64274d25-1607-4023-8a5c-59bf8763131b")]
+            public virtual RepoItemInfo TvOpenUntilLabelInfo
+            {
+                get
+                {
+                    return _tvopenuntillabelInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvOpenUntilValue item.
+            /// </summary>
+            [RepositoryItem("ef00071e-13f4-409c-ab3d-130a8f4c15fb")]
+            public virtual Ranorex.Text TvOpenUntilValue
+            {
+                get
+                {
+                    return _tvopenuntilvalueInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvOpenUntilValue item info.
+            /// </summary>
+            [RepositoryItemInfo("ef00071e-13f4-409c-ab3d-130a8f4c15fb")]
+            public virtual RepoItemInfo TvOpenUntilValueInfo
+            {
+                get
+                {
+                    return _tvopenuntilvalueInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvClosed item.
+            /// </summary>
+            [RepositoryItem("2654fc6c-ba81-47c2-b16a-4df2ea849b73")]
+            public virtual Ranorex.Text TvClosed
+            {
+                get
+                {
+                    return _tvclosedInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvClosed item info.
+            /// </summary>
+            [RepositoryItemInfo("2654fc6c-ba81-47c2-b16a-4df2ea849b73")]
+            public virtual RepoItemInfo TvClosedInfo
+            {
+                get
+                {
+                    return _tvclosedInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvDistance item.
+            /// </summary>
+            [RepositoryItem("fa93569f-39e1-4b93-9059-c47105b0b21e")]
+            public virtual Ranorex.Text TvDistance
+            {
+                get
+                {
+                    return _tvdistanceInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvDistance item info.
+            /// </summary>
+            [RepositoryItemInfo("fa93569f-39e1-4b93-9059-c47105b0b21e")]
+            public virtual RepoItemInfo TvDistanceInfo
+            {
+                get
+                {
+                    return _tvdistanceInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Locations folder.
+            /// </summary>
+            [RepositoryFolder("4d4421cb-44a9-40d4-ba29-13dd394f241b")]
+            public virtual SparRepositoryFolders.LocationsFolder Locations
+            {
+                get { return _locations; }
+            }
+        }
+
+        /// <summary>
+        /// The LocationsFolder folder.
+        /// </summary>
+        [RepositoryFolder("4d4421cb-44a9-40d4-ba29-13dd394f241b")]
+        public partial class LocationsFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _searchviewInfo;
+            RepoItemInfo _swshowonlyopenInfo;
+            RepoItemInfo _rstringshoptypeintersparInfo;
+            RepoItemInfo _rstringshoptypesparInfo;
+            RepoItemInfo _searchedittextInfo;
+            RepoItemInfo _rstringshoptyperestavrationInfo;
+            RepoItemInfo _rstringshoptypepartnerInfo;
+            RepoItemInfo _mapfragmentwrapperInfo;
+            RepoItemInfo _rstringshopsactionbartitleInfo;
+            RepoItemInfo _rstringshopshowonlyopenInfo;
+            RepoItemInfo _tvlocationtitleInfo;
+            RepoItemInfo _rstringshopdetailssectionopenhoursInfo;
+            RepoItemInfo _rstringshopdetailssectioncontactInfo;
+            RepoItemInfo _btnshowallshopsInfo;
+            RepoItemInfo _recyclerviewInfo;
+            RepoItemInfo _recyclerview_item_nextInfo;
+            RepoItemInfo _recyclerview_itemsInfo;
+            RepoItemInfo _recyclerview_items_tvclosedInfo;
+            RepoItemInfo _recyclerview_firstInfo;
+            RepoItemInfo _recyclerview_items_tvtitleInfo;
+
+            /// <summary>
+            /// Creates a new Locations  folder.
+            /// </summary>
+            public LocationsFolder(RepoGenBaseFolder parentFolder) :
+                    base("Locations", "", parentFolder, 30000, null, false, "4d4421cb-44a9-40d4-ba29-13dd394f241b", "")
+            {
+                _searchviewInfo = new RepoItemInfo(this, "SearchView", ".//androidelement[@rid='search_view']", 30000, null, "124ae2f4-fcec-4bec-b9f3-ca120632839e");
+                _swshowonlyopenInfo = new RepoItemInfo(this, "SwShowOnlyOpen", ".//button[@rid='sw_show_only_open']", 30000, null, "c01ed482-8e06-416a-a266-1e60ab48ae50");
+                _rstringshoptypeintersparInfo = new RepoItemInfo(this, "RStringShopTypeInterspar", ".//text[@resourceid='R.string.shop_type_interspar']", 30000, null, "0ed87de2-3b46-4894-a012-26d721adb59c");
+                _rstringshoptypesparInfo = new RepoItemInfo(this, "RStringShopTypeSpar", ".//text[@resourceid='R.string.shop_type_spar']", 30000, null, "fd818d68-28ea-4fcb-8254-1936f8d8502d");
+                _searchedittextInfo = new RepoItemInfo(this, "SearchEditText", ".//text[@rid='search_edit_text']", 30000, null, "a7524525-2807-4c9b-a37c-8a3d235ea2ac");
+                _rstringshoptyperestavrationInfo = new RepoItemInfo(this, "RStringShopTypeRestavration", ".//text[@resourceid='R.string.shop_type_restavration']", 30000, null, "6d5a6863-b598-4e03-9485-efab58bae98d");
+                _rstringshoptypepartnerInfo = new RepoItemInfo(this, "RStringShopTypePartner", ".//text[@resourceid='R.string.shop_type_partner']", 30000, null, "05cac608-41b1-4676-a1ec-357fba569c70");
+                _mapfragmentwrapperInfo = new RepoItemInfo(this, "MapFragmentWrapper", ".//androidelement[@rid='map_fragment_wrapper']", 30000, null, "1c6a4463-a4f8-447b-804b-81e43a719bc2");
+                _rstringshopsactionbartitleInfo = new RepoItemInfo(this, "RStringShopsActionbarTitle", ".//text[@resourceid='R.string.shops_actionbar_title']", 30000, null, "a1b6064b-8fc9-44ca-b3b2-400ff11dead2");
+                _rstringshopshowonlyopenInfo = new RepoItemInfo(this, "RStringShopShowOnlyOpen", ".//text[@resourceid='R.string.shop_show_only_open']", 30000, null, "6ec50f6e-2608-488b-b062-4c5adf240ea9");
+                _tvlocationtitleInfo = new RepoItemInfo(this, "TvLocationTitle", ".//text[@resourceid='R.string.news_location_title_markets']", 30000, null, "122cef4f-abab-4c74-80b0-cee8b429ec43");
+                _rstringshopdetailssectionopenhoursInfo = new RepoItemInfo(this, "RStringShopDetailsSectionOpenHours", ".//text[@resourceid='R.string.shop_details_section_open_hours']", 30000, null, "8a77b70f-c4f0-4b34-ba9f-4f7bfb4f53b8");
+                _rstringshopdetailssectioncontactInfo = new RepoItemInfo(this, "RStringShopDetailsSectionContact", ".//text[@resourceid='R.string.shop_details_section_contact']", 30000, null, "c2d8adf5-dff0-4733-8f7e-2ead3a4ab3ae");
+                _btnshowallshopsInfo = new RepoItemInfo(this, "BtnShowAllShops", ".//text[@resourceid='R.string.shop_show_all_shops']", 30000, null, "6c5402cf-b767-48ee-93ad-66dc92f52974");
+                _recyclerviewInfo = new RepoItemInfo(this, "RecyclerView", ".//androidelement[@rid='recycler_view']", 30000, null, "9fcb6ab0-5f66-4f27-b177-fe013e234a40");
+                _recyclerview_item_nextInfo = new RepoItemInfo(this, "RecyclerView_Item_Next", ".//androidelement[@rid='recycler_view']/androidelement[$ItemNext]", 30000, null, "ab0be892-0890-4ed5-b82d-10cf4c4ba1cc");
+                _recyclerview_itemsInfo = new RepoItemInfo(this, "RecyclerView_Items", ".//androidelement[@rid='recycler_view']/androidelement[$ItemNum]", 30000, null, "e5854210-a5e5-4a4b-aff9-58e213d7cb29");
+                _recyclerview_items_tvclosedInfo = new RepoItemInfo(this, "RecyclerView_items_TvClosed", ".//androidelement[@rid='recycler_view']/androidelement[$ItemNum]//text[@rid='tv_closed']", 30000, null, "d85fbb47-1ae3-41b8-b469-811b423d9c9a");
+                _recyclerview_firstInfo = new RepoItemInfo(this, "RecyclerView_First", ".//androidelement[@rid='recycler_view']/container[1]", 30000, null, "59093bfc-8e2b-4639-a28f-fc5fd8726b95");
+                _recyclerview_items_tvtitleInfo = new RepoItemInfo(this, "RecyclerView_Items_TvTitle", ".//androidelement[@rid='recycler_view']/androidelement[$ItemNum]/text[@rid='tv_title']", 30000, null, "6d7ba2ff-f8c9-4418-b350-a93dfd2adda2");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("4d4421cb-44a9-40d4-ba29-13dd394f241b")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("4d4421cb-44a9-40d4-ba29-13dd394f241b")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SearchView item.
+            /// </summary>
+            [RepositoryItem("124ae2f4-fcec-4bec-b9f3-ca120632839e")]
+            public virtual Ranorex.AndroidElement SearchView
+            {
+                get
+                {
+                    return _searchviewInfo.CreateAdapter<Ranorex.AndroidElement>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SearchView item info.
+            /// </summary>
+            [RepositoryItemInfo("124ae2f4-fcec-4bec-b9f3-ca120632839e")]
+            public virtual RepoItemInfo SearchViewInfo
+            {
+                get
+                {
+                    return _searchviewInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SwShowOnlyOpen item.
+            /// </summary>
+            [RepositoryItem("c01ed482-8e06-416a-a266-1e60ab48ae50")]
+            public virtual Ranorex.Button SwShowOnlyOpen
+            {
+                get
+                {
+                    return _swshowonlyopenInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SwShowOnlyOpen item info.
+            /// </summary>
+            [RepositoryItemInfo("c01ed482-8e06-416a-a266-1e60ab48ae50")]
+            public virtual RepoItemInfo SwShowOnlyOpenInfo
+            {
+                get
+                {
+                    return _swshowonlyopenInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RStringShopTypeInterspar item.
+            /// </summary>
+            [RepositoryItem("0ed87de2-3b46-4894-a012-26d721adb59c")]
+            public virtual Ranorex.Text RStringShopTypeInterspar
+            {
+                get
+                {
+                    return _rstringshoptypeintersparInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RStringShopTypeInterspar item info.
+            /// </summary>
+            [RepositoryItemInfo("0ed87de2-3b46-4894-a012-26d721adb59c")]
+            public virtual RepoItemInfo RStringShopTypeIntersparInfo
+            {
+                get
+                {
+                    return _rstringshoptypeintersparInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RStringShopTypeSpar item.
+            /// </summary>
+            [RepositoryItem("fd818d68-28ea-4fcb-8254-1936f8d8502d")]
+            public virtual Ranorex.Text RStringShopTypeSpar
+            {
+                get
+                {
+                    return _rstringshoptypesparInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RStringShopTypeSpar item info.
+            /// </summary>
+            [RepositoryItemInfo("fd818d68-28ea-4fcb-8254-1936f8d8502d")]
+            public virtual RepoItemInfo RStringShopTypeSparInfo
+            {
+                get
+                {
+                    return _rstringshoptypesparInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SearchEditText item.
+            /// </summary>
+            [RepositoryItem("a7524525-2807-4c9b-a37c-8a3d235ea2ac")]
+            public virtual Ranorex.Text SearchEditText
+            {
+                get
+                {
+                    return _searchedittextInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SearchEditText item info.
+            /// </summary>
+            [RepositoryItemInfo("a7524525-2807-4c9b-a37c-8a3d235ea2ac")]
+            public virtual RepoItemInfo SearchEditTextInfo
+            {
+                get
+                {
+                    return _searchedittextInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RStringShopTypeRestavration item.
+            /// </summary>
+            [RepositoryItem("6d5a6863-b598-4e03-9485-efab58bae98d")]
+            public virtual Ranorex.Text RStringShopTypeRestavration
+            {
+                get
+                {
+                    return _rstringshoptyperestavrationInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RStringShopTypeRestavration item info.
+            /// </summary>
+            [RepositoryItemInfo("6d5a6863-b598-4e03-9485-efab58bae98d")]
+            public virtual RepoItemInfo RStringShopTypeRestavrationInfo
+            {
+                get
+                {
+                    return _rstringshoptyperestavrationInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RStringShopTypePartner item.
+            /// </summary>
+            [RepositoryItem("05cac608-41b1-4676-a1ec-357fba569c70")]
+            public virtual Ranorex.Text RStringShopTypePartner
+            {
+                get
+                {
+                    return _rstringshoptypepartnerInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RStringShopTypePartner item info.
+            /// </summary>
+            [RepositoryItemInfo("05cac608-41b1-4676-a1ec-357fba569c70")]
+            public virtual RepoItemInfo RStringShopTypePartnerInfo
+            {
+                get
+                {
+                    return _rstringshoptypepartnerInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MapFragmentWrapper item.
+            /// </summary>
+            [RepositoryItem("1c6a4463-a4f8-447b-804b-81e43a719bc2")]
+            public virtual Ranorex.AndroidElement MapFragmentWrapper
+            {
+                get
+                {
+                    return _mapfragmentwrapperInfo.CreateAdapter<Ranorex.AndroidElement>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MapFragmentWrapper item info.
+            /// </summary>
+            [RepositoryItemInfo("1c6a4463-a4f8-447b-804b-81e43a719bc2")]
+            public virtual RepoItemInfo MapFragmentWrapperInfo
+            {
+                get
+                {
+                    return _mapfragmentwrapperInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RStringShopsActionbarTitle item.
+            /// </summary>
+            [RepositoryItem("a1b6064b-8fc9-44ca-b3b2-400ff11dead2")]
+            public virtual Ranorex.Text RStringShopsActionbarTitle
+            {
+                get
+                {
+                    return _rstringshopsactionbartitleInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RStringShopsActionbarTitle item info.
+            /// </summary>
+            [RepositoryItemInfo("a1b6064b-8fc9-44ca-b3b2-400ff11dead2")]
+            public virtual RepoItemInfo RStringShopsActionbarTitleInfo
+            {
+                get
+                {
+                    return _rstringshopsactionbartitleInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RStringShopShowOnlyOpen item.
+            /// </summary>
+            [RepositoryItem("6ec50f6e-2608-488b-b062-4c5adf240ea9")]
+            public virtual Ranorex.Text RStringShopShowOnlyOpen
+            {
+                get
+                {
+                    return _rstringshopshowonlyopenInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RStringShopShowOnlyOpen item info.
+            /// </summary>
+            [RepositoryItemInfo("6ec50f6e-2608-488b-b062-4c5adf240ea9")]
+            public virtual RepoItemInfo RStringShopShowOnlyOpenInfo
+            {
+                get
+                {
+                    return _rstringshopshowonlyopenInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvLocationTitle item.
+            /// </summary>
+            [RepositoryItem("122cef4f-abab-4c74-80b0-cee8b429ec43")]
+            public virtual Ranorex.Text TvLocationTitle
+            {
+                get
+                {
+                    return _tvlocationtitleInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvLocationTitle item info.
+            /// </summary>
+            [RepositoryItemInfo("122cef4f-abab-4c74-80b0-cee8b429ec43")]
+            public virtual RepoItemInfo TvLocationTitleInfo
+            {
+                get
+                {
+                    return _tvlocationtitleInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RStringShopDetailsSectionOpenHours item.
+            /// </summary>
+            [RepositoryItem("8a77b70f-c4f0-4b34-ba9f-4f7bfb4f53b8")]
+            public virtual Ranorex.Text RStringShopDetailsSectionOpenHours
+            {
+                get
+                {
+                    return _rstringshopdetailssectionopenhoursInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RStringShopDetailsSectionOpenHours item info.
+            /// </summary>
+            [RepositoryItemInfo("8a77b70f-c4f0-4b34-ba9f-4f7bfb4f53b8")]
+            public virtual RepoItemInfo RStringShopDetailsSectionOpenHoursInfo
+            {
+                get
+                {
+                    return _rstringshopdetailssectionopenhoursInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RStringShopDetailsSectionContact item.
+            /// </summary>
+            [RepositoryItem("c2d8adf5-dff0-4733-8f7e-2ead3a4ab3ae")]
+            public virtual Ranorex.Text RStringShopDetailsSectionContact
+            {
+                get
+                {
+                    return _rstringshopdetailssectioncontactInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RStringShopDetailsSectionContact item info.
+            /// </summary>
+            [RepositoryItemInfo("c2d8adf5-dff0-4733-8f7e-2ead3a4ab3ae")]
+            public virtual RepoItemInfo RStringShopDetailsSectionContactInfo
+            {
+                get
+                {
+                    return _rstringshopdetailssectioncontactInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnShowAllShops item.
+            /// </summary>
+            [RepositoryItem("6c5402cf-b767-48ee-93ad-66dc92f52974")]
+            public virtual Ranorex.Text BtnShowAllShops
+            {
+                get
+                {
+                    return _btnshowallshopsInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnShowAllShops item info.
+            /// </summary>
+            [RepositoryItemInfo("6c5402cf-b767-48ee-93ad-66dc92f52974")]
+            public virtual RepoItemInfo BtnShowAllShopsInfo
+            {
+                get
+                {
+                    return _btnshowallshopsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RecyclerView item.
+            /// </summary>
+            [RepositoryItem("9fcb6ab0-5f66-4f27-b177-fe013e234a40")]
+            public virtual Ranorex.AndroidElement RecyclerView
+            {
+                get
+                {
+                    return _recyclerviewInfo.CreateAdapter<Ranorex.AndroidElement>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RecyclerView item info.
+            /// </summary>
+            [RepositoryItemInfo("9fcb6ab0-5f66-4f27-b177-fe013e234a40")]
+            public virtual RepoItemInfo RecyclerViewInfo
+            {
+                get
+                {
+                    return _recyclerviewInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RecyclerView_Item_Next item.
+            /// </summary>
+            [RepositoryItem("ab0be892-0890-4ed5-b82d-10cf4c4ba1cc")]
+            public virtual Ranorex.AndroidElement RecyclerView_Item_Next
+            {
+                get
+                {
+                    return _recyclerview_item_nextInfo.CreateAdapter<Ranorex.AndroidElement>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RecyclerView_Item_Next item info.
+            /// </summary>
+            [RepositoryItemInfo("ab0be892-0890-4ed5-b82d-10cf4c4ba1cc")]
+            public virtual RepoItemInfo RecyclerView_Item_NextInfo
+            {
+                get
+                {
+                    return _recyclerview_item_nextInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RecyclerView_Items item.
+            /// </summary>
+            [RepositoryItem("e5854210-a5e5-4a4b-aff9-58e213d7cb29")]
+            public virtual Ranorex.AndroidElement RecyclerView_Items
+            {
+                get
+                {
+                    return _recyclerview_itemsInfo.CreateAdapter<Ranorex.AndroidElement>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RecyclerView_Items item info.
+            /// </summary>
+            [RepositoryItemInfo("e5854210-a5e5-4a4b-aff9-58e213d7cb29")]
+            public virtual RepoItemInfo RecyclerView_ItemsInfo
+            {
+                get
+                {
+                    return _recyclerview_itemsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RecyclerView_items_TvClosed item.
+            /// </summary>
+            [RepositoryItem("d85fbb47-1ae3-41b8-b469-811b423d9c9a")]
+            public virtual Ranorex.Text RecyclerView_items_TvClosed
+            {
+                get
+                {
+                    return _recyclerview_items_tvclosedInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RecyclerView_items_TvClosed item info.
+            /// </summary>
+            [RepositoryItemInfo("d85fbb47-1ae3-41b8-b469-811b423d9c9a")]
+            public virtual RepoItemInfo RecyclerView_items_TvClosedInfo
+            {
+                get
+                {
+                    return _recyclerview_items_tvclosedInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RecyclerView_First item.
+            /// </summary>
+            [RepositoryItem("59093bfc-8e2b-4639-a28f-fc5fd8726b95")]
+            public virtual Ranorex.Container RecyclerView_First
+            {
+                get
+                {
+                    return _recyclerview_firstInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RecyclerView_First item info.
+            /// </summary>
+            [RepositoryItemInfo("59093bfc-8e2b-4639-a28f-fc5fd8726b95")]
+            public virtual RepoItemInfo RecyclerView_FirstInfo
+            {
+                get
+                {
+                    return _recyclerview_firstInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RecyclerView_Items_TvTitle item.
+            /// </summary>
+            [RepositoryItem("6d7ba2ff-f8c9-4418-b350-a93dfd2adda2")]
+            public virtual Ranorex.Text RecyclerView_Items_TvTitle
+            {
+                get
+                {
+                    return _recyclerview_items_tvtitleInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RecyclerView_Items_TvTitle item info.
+            /// </summary>
+            [RepositoryItemInfo("6d7ba2ff-f8c9-4418-b350-a93dfd2adda2")]
+            public virtual RepoItemInfo RecyclerView_Items_TvTitleInfo
+            {
+                get
+                {
+                    return _recyclerview_items_tvtitleInfo;
                 }
             }
         }
@@ -2401,6 +3371,98 @@ namespace Spar
                 get
                 {
                     return _btnemailsentskipInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The RegisterEmailNotificationsActivityFolder folder.
+        /// </summary>
+        [RepositoryFolder("44c03c59-306b-4349-8558-9c7318451118")]
+        public partial class RegisterEmailNotificationsActivityFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _swsparplusInfo;
+            RepoItemInfo _navigateupInfo;
+
+            /// <summary>
+            /// Creates a new RegisterEmailNotificationsActivity  folder.
+            /// </summary>
+            public RegisterEmailNotificationsActivityFolder(RepoGenBaseFolder parentFolder) :
+                    base("RegisterEmailNotificationsActivity", "form[@title~'^RegisterEmailNotification']", parentFolder, 30000, null, false, "44c03c59-306b-4349-8558-9c7318451118", "")
+            {
+                _swsparplusInfo = new RepoItemInfo(this, "SwSparPlus", ".//button[@rid='sw_spar_plus']", 30000, null, "ff7edfeb-a0fe-480a-849c-6f7d77564f2a");
+                _navigateupInfo = new RepoItemInfo(this, "NavigateUp", ".//button[@contentdescription='Navigate up']", 30000, null, "cbd33f62-2d28-4110-b90e-2df4aaed2b45");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("44c03c59-306b-4349-8558-9c7318451118")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("44c03c59-306b-4349-8558-9c7318451118")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SwSparPlus item.
+            /// </summary>
+            [RepositoryItem("ff7edfeb-a0fe-480a-849c-6f7d77564f2a")]
+            public virtual Ranorex.Button SwSparPlus
+            {
+                get
+                {
+                    return _swsparplusInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SwSparPlus item info.
+            /// </summary>
+            [RepositoryItemInfo("ff7edfeb-a0fe-480a-849c-6f7d77564f2a")]
+            public virtual RepoItemInfo SwSparPlusInfo
+            {
+                get
+                {
+                    return _swsparplusInfo;
+                }
+            }
+
+            /// <summary>
+            /// The NavigateUp item.
+            /// </summary>
+            [RepositoryItem("cbd33f62-2d28-4110-b90e-2df4aaed2b45")]
+            public virtual Ranorex.Button NavigateUp
+            {
+                get
+                {
+                    return _navigateupInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The NavigateUp item info.
+            /// </summary>
+            [RepositoryItemInfo("cbd33f62-2d28-4110-b90e-2df4aaed2b45")]
+            public virtual RepoItemInfo NavigateUpInfo
+            {
+                get
+                {
+                    return _navigateupInfo;
                 }
             }
         }

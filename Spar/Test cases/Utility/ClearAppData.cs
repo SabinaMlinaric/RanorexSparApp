@@ -104,7 +104,7 @@ namespace Spar.Test_cases.Utility
             Init();
 
             Report.Log(ReportLevel.Info, "Application", "Run mobile app 'plus.spar.si.staging' on device from variable $DeviceName.", new RecordItemIndex(0));
-            Host.Local.RunMobileApp(DeviceName, "plus.spar.si.staging", true);
+            Host.Local.RunMobileApp(DeviceName, "plus.spar.si.staging", false);
             Delay.Milliseconds(3500);
             
             ClearData(repo.PlusSparSi.SelfInfo);

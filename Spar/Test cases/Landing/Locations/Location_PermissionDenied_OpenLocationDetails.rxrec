@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+rxversion="6.2"
+id="f8876515-4b7f-418d-ab6c-fc63fb228a31"
+embeddedrepository="False"
+mode="Global">
+	<name>
+		Location_PermissionDenied_OpenLocationDetails
+	</name>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="Location_PermissionDenied_OpenLocationDetails"
+	namespace="Spar.Test_cases.Landing.Locations"/>
+	<variables>
+		<var
+		name="StoreTitle"
+		id="5e6eb797-9665-457a-b110-89e61feb0cf4">
+		</var>
+	</variables>
+	<recorditems>
+		<userrecorditem
+		enabled="True"
+		optional="False"
+		namespace="Spar.Test_cases.Landing.Locations"
+		classname="Location_PermissionDenied_OpenLocationDetails"
+		methodname="FindFirstLocation"
+		isexternaltestmethod="False"
+		varname="">
+			<comment/>
+			<bindings/>
+			<arguments
+			id="efdfe098-2191-4c9d-bbfb-feb455faabcc"/>
+		</userrecorditem>
+	</recorditems>
+	<repository
+	name="SparRepository"
+	id="c55abb3d-7d0d-4435-8640-bb30710f5f27"
+	rxversion="6.2"
+	relativepath="..\..\..\SparRepository.rxrep">
+		<codegen
+		classname="SparRepository"
+		namespace="Spar"/>
+		<rootfolder
+		name="_rootdummy_"
+		id="c12fa4a9-bf96-41a7-9866-79edafaddcf2"/>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		Location_PermissionDenied_OpenLocationDetails.UserCode.cs
+	</usercodefile>
+	<references/>
+</recordtable>

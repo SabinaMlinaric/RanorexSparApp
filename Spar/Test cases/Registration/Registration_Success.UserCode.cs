@@ -64,7 +64,6 @@ namespace Spar.Test_cases.Registration
 				
 			}catch (Exception e)
 			{
-				// TODO Auto-generated catch block
 				Report.Log(ReportLevel.Error, "Email: " + Email, e.Message);
 			}
 			
@@ -77,7 +76,7 @@ namespace Spar.Test_cases.Registration
 			
 			if(repo.PlusSparSi.LoginEmailSentActivity.Self.Visible == true){
 
-				using(StreamWriter sw = File.AppendText("RegistrationLog.csv")){
+				using(StreamWriter sw = new StreamWriter(new FileStream("RegistrationLog.csv", FileMode.Append, FileAccess.Write), Encoding.UTF8)){
 					
 					sw.WriteLine(ID + "," +
 					             Name + "," +

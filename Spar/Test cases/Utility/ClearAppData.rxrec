@@ -42,7 +42,7 @@ mode="Global">
 		duration="3500ms"
 		application="plus.spar.si.staging"
 		devicename=""
-		resetInitialState="True">
+		resetInitialState="False">
 			<comment/>
 			<bindings>
 				<binding

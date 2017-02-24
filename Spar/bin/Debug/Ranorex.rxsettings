@@ -67,8 +67,8 @@ rxversion="6.2">
 			enabled="True"
 			capability="androidelement"
 			attribute="rid"
-			setweight="190"
-			conditionsoperator="or"/>
+			setweight="200"
+			conditionsoperator="and"/>
 			<rule
 			name="RxWeb ASP.net"
 			enabled="False"
@@ -448,10 +448,10 @@ rxversion="6.2">
 		50
 	</plugin.mobile.ios.maxcollectionviewvcellcount>
 	<plugin.mobile.android.UseAndroidOS>
-		False
+		True
 	</plugin.mobile.android.UseAndroidOS>
 	<plugin.mobile.android.FetchAndroidOSScreenshots>
-		True
+		False
 	</plugin.mobile.android.FetchAndroidOSScreenshots>
 	<plugin.cef.processblacklist>
 		spotify;chrome;

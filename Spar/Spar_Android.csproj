@@ -34,6 +34,9 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\Desktop\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Ranorex.Core" />
     <Reference Include="Ranorex.Plugin.Cef" />
     <Reference Include="Ranorex.Plugin.ChromeWeb" />
@@ -61,6 +64,21 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="system.net.http">
+      <HintPath>..\..\..\..\Desktop\system.net.http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>..\..\..\..\Desktop\System.ObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>..\..\..\..\Desktop\System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Json">
+      <HintPath>..\..\..\..\Desktop\System.Runtime.Serialization.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <HintPath>..\..\..\..\Desktop\System.ServiceModel.Web.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq">
@@ -140,6 +158,162 @@
       <UserCode>true</UserCode>
       <id>c82a1ed0-3f58-4167-bc96-200cf78c87f0</id>
     </Compile>
+    <Compile Include="Test cases\Landing\Catalogs\Catalog_CheckItems_SectionsNum.cs">
+      <BoundTo>ecc6e06e-0429-48cd-8dbb-8812722adf41</BoundTo>
+      <DependentUpon>Catalog_CheckItems_SectionsNum.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>a229082d-ae46-4542-9ceb-ae4e0f0811db</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Catalogs\Catalog_CheckItems_SectionsNum.UserCode.cs">
+      <BoundTo>ecc6e06e-0429-48cd-8dbb-8812722adf41</BoundTo>
+      <DependentUpon>Catalog_CheckItems_SectionsNum.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>c96eadbe-a4d2-4a23-b4c3-244f7318e551</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\JedelBi_Open.cs">
+      <BoundTo>0998f07f-8a6a-4bf7-8a10-c3c5404a16ea</BoundTo>
+      <DependentUpon>JedelBi_Open.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>60564532-1748-4113-b3fb-65d9443524b6</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\JedelBi_Open.UserCode.cs">
+      <BoundTo>0998f07f-8a6a-4bf7-8a10-c3c5404a16ea</BoundTo>
+      <DependentUpon>JedelBi_Open.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>b954d4c2-3b53-468e-bfd6-275a9be7ab72</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Landing_Overview.cs">
+      <BoundTo>b5699353-3f61-4d94-8575-44a74d3aa7e4</BoundTo>
+      <DependentUpon>Landing_Overview.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>f68d1556-6c70-41a0-8cfd-b216e0b7890e</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Landing_Overview.UserCode.cs">
+      <BoundTo>b5699353-3f61-4d94-8575-44a74d3aa7e4</BoundTo>
+      <DependentUpon>Landing_Overview.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>b0d064d0-7d66-48da-8f69-704b71c180d5</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Locations\LocationDetails_Overview.cs">
+      <BoundTo>c3e1dfbd-ef89-4ba8-aba3-7bf9ad7783ba</BoundTo>
+      <DependentUpon>LocationDetails_Overview.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>6c29237f-fbfb-4406-b443-8730a5af0be4</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Locations\LocationDetails_Overview.UserCode.cs">
+      <BoundTo>c3e1dfbd-ef89-4ba8-aba3-7bf9ad7783ba</BoundTo>
+      <DependentUpon>LocationDetails_Overview.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>4e58ca22-2e26-49b6-b481-d3d71e1ba249</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Locations\Location_PermissionDenied_OpenLocationDetails.cs">
+      <BoundTo>b29a9e80-b3d6-4251-a021-8643318e849e</BoundTo>
+      <DependentUpon>Location_PermissionDenied_OpenLocationDetails.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>4abbfa34-7fbe-4c63-b40e-45865038d076</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Locations\Location_PermissionDenied_OpenLocationDetails.UserCode.cs">
+      <BoundTo>b29a9e80-b3d6-4251-a021-8643318e849e</BoundTo>
+      <DependentUpon>Location_PermissionDenied_OpenLocationDetails.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>db74a2c9-c93b-4c7a-a765-5e4b028bc10b</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Locations\Location_PermissionDenied_Overview.cs">
+      <BoundTo>d6ea2c07-eefb-444d-b21f-532aa0619a2e</BoundTo>
+      <DependentUpon>Location_PermissionDenied_Overview.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>ce9c4c93-422e-4aa5-ab92-55f2e15d377c</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Locations\Location_PermissionDenied_Overview.UserCode.cs">
+      <BoundTo>d6ea2c07-eefb-444d-b21f-532aa0619a2e</BoundTo>
+      <DependentUpon>Location_PermissionDenied_Overview.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>ac4542f6-b2d6-4390-9af8-1da75cf98a1f</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Locations\Location_ShowOpenOnly.cs">
+      <BoundTo>8923a691-c1c7-46d0-b904-7aeddbff2990</BoundTo>
+      <DependentUpon>Location_ShowOpenOnly.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>24f094ad-221c-430e-864c-2d67173a99b5</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Locations\Location_ShowOpenOnly.UserCode.cs">
+      <BoundTo>8923a691-c1c7-46d0-b904-7aeddbff2990</BoundTo>
+      <DependentUpon>Location_ShowOpenOnly.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>ad998283-96a7-4e7d-b132-e1aed8b51de8</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\News_Overview.cs">
+      <BoundTo>12e321d5-b75b-4064-81bc-9a5b0844f0dc</BoundTo>
+      <DependentUpon>News_Overview.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>080cae03-7e07-4006-82a2-cf96fe8729f5</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\News_Overview.UserCode.cs">
+      <BoundTo>12e321d5-b75b-4064-81bc-9a5b0844f0dc</BoundTo>
+      <DependentUpon>News_Overview.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>8579f3cc-bd8b-4542-9c4c-9006673638c0</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\News_ReadMore.cs">
+      <BoundTo>6d37c936-bd38-4b5e-bc95-5ab1bb6746af</BoundTo>
+      <DependentUpon>News_ReadMore.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>3ac86236-c309-4927-b2ec-b6d092271ca7</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\News_ReadMore.UserCode.cs">
+      <BoundTo>6d37c936-bd38-4b5e-bc95-5ab1bb6746af</BoundTo>
+      <DependentUpon>News_ReadMore.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>b3813149-0fa2-4184-8e94-1a34c7b1575f</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\SparKlub_Open.cs">
+      <BoundTo>65fd8658-d208-4b81-b7e4-500da2b71b81</BoundTo>
+      <DependentUpon>SparKlub_Open.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>2533cc6f-6527-4ca4-96ee-10bfa6ac626c</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\SparKlub_Open.UserCode.cs">
+      <BoundTo>65fd8658-d208-4b81-b7e4-500da2b71b81</BoundTo>
+      <DependentUpon>SparKlub_Open.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>3dd7e3f2-3ac9-4734-99a8-123fb5e38cb8</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Registration_SkipStep1.cs">
+      <BoundTo>5ea97cb8-084b-48bc-bdcf-182f66b22621</BoundTo>
+      <DependentUpon>Registration_SkipStep1.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>d4d98b87-125e-4e8c-8c57-b2d91f96cb93</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Registration_SkipStep1.UserCode.cs">
+      <BoundTo>5ea97cb8-084b-48bc-bdcf-182f66b22621</BoundTo>
+      <DependentUpon>Registration_SkipStep1.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>f703a65c-1704-443d-8261-5f427f883e15</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Registration_SkipStep2.cs">
+      <BoundTo>546be92a-9550-4468-ad49-40899500ded9</BoundTo>
+      <DependentUpon>Registration_SkipStep2.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>6ab1ba57-ef7d-4986-97bd-b4f2062fa20d</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Registration_SkipStep2.UserCode.cs">
+      <BoundTo>546be92a-9550-4468-ad49-40899500ded9</BoundTo>
+      <DependentUpon>Registration_SkipStep2.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>27efce41-cdb7-4379-bbbc-13524d8d5841</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Registration_SkipStep3.cs">
+      <BoundTo>9a7e6580-30fe-40ec-b500-d86b5596b93a</BoundTo>
+      <DependentUpon>Registration_SkipStep3.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>e4eea1e6-6e69-496a-bee8-ddd24b48a41f</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Registration_SkipStep3.UserCode.cs">
+      <BoundTo>9a7e6580-30fe-40ec-b500-d86b5596b93a</BoundTo>
+      <DependentUpon>Registration_SkipStep3.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>a255a685-428e-4931-bd95-0b7ec2c6fff7</id>
+    </Compile>
     <Compile Include="Test cases\Registration\Registration_Success.cs">
       <BoundTo>16703862-6971-4153-8096-24cd50dd229d</BoundTo>
       <DependentUpon>Registration_Success.rxrec</DependentUpon>
@@ -151,6 +325,132 @@
       <DependentUpon>Registration_Success.rxrec</DependentUpon>
       <UserCode>true</UserCode>
       <id>1306d5b6-857e-4698-ad97-4070c1a94581</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step1_MissingData.cs">
+      <BoundTo>6581df08-c502-4a09-ba4b-c3404a012d49</BoundTo>
+      <DependentUpon>Step1_MissingData.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>7e23340f-4796-4575-84ba-34615f725ee0</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step1_MissingData.UserCode.cs">
+      <BoundTo>6581df08-c502-4a09-ba4b-c3404a012d49</BoundTo>
+      <DependentUpon>Step1_MissingData.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>98f92649-b51e-4f3e-b776-29a9d9280379</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step2_HouseNumber_NoNumber.cs">
+      <BoundTo>2174b310-a3f2-4af9-a042-9197158cee2f</BoundTo>
+      <DependentUpon>Step2_HouseNumber_NoNumber.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>92359557-d8a0-4719-bad2-6487e2e542f5</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step2_HouseNumber_NoNumber.UserCode.cs">
+      <BoundTo>2174b310-a3f2-4af9-a042-9197158cee2f</BoundTo>
+      <DependentUpon>Step2_HouseNumber_NoNumber.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>68b80b13-2844-4d70-898e-4360f4fd6367</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step2_MissingData.cs">
+      <BoundTo>18950cc4-f4b2-4e9b-832b-e920edb43694</BoundTo>
+      <DependentUpon>Step2_MissingData.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>69372098-8829-430e-8486-362a0e1dacc7</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step2_MissingData.UserCode.cs">
+      <BoundTo>18950cc4-f4b2-4e9b-832b-e920edb43694</BoundTo>
+      <DependentUpon>Step2_MissingData.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>28dc926f-2802-4ceb-8e85-7c0a13838b64</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step2_PostalNumber_Invalid.cs">
+      <BoundTo>9904289f-4bd9-4d1e-a386-7d50dbc63769</BoundTo>
+      <DependentUpon>Step2_PostalNumber_Invalid.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>357ef4be-e512-452a-acb1-d9340c8ad2e8</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step2_PostalNumber_Invalid.UserCode.cs">
+      <BoundTo>9904289f-4bd9-4d1e-a386-7d50dbc63769</BoundTo>
+      <DependentUpon>Step2_PostalNumber_Invalid.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>c7870b5a-1885-4d05-a100-0ce4e1005651</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step3_Email_Invalid.cs">
+      <BoundTo>5e85e1fb-ebd7-4754-b5af-ac24cee7cde0</BoundTo>
+      <DependentUpon>Step3_Email_Invalid.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>1be3dfc1-2ac1-443d-b5fb-a1adeca97fed</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step3_Email_Invalid.UserCode.cs">
+      <BoundTo>5e85e1fb-ebd7-4754-b5af-ac24cee7cde0</BoundTo>
+      <DependentUpon>Step3_Email_Invalid.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>625cbeea-c2fa-416e-9a8c-c23b16377473</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step3_MissingData.cs">
+      <BoundTo>8a3995c0-f319-4eff-ad90-145bb9121dbd</BoundTo>
+      <DependentUpon>Step3_MissingData.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>c0bf9185-c7f6-4b28-a665-a60a9a518349</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step3_MissingData.UserCode.cs">
+      <BoundTo>8a3995c0-f319-4eff-ad90-145bb9121dbd</BoundTo>
+      <DependentUpon>Step3_MissingData.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>e1bbe590-ef18-45ba-b657-f03c52ada515</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step3_Password_Invalid.cs">
+      <BoundTo>54b4fb95-6db9-48de-ad30-3d3e6546f38f</BoundTo>
+      <DependentUpon>Step3_Password_Invalid.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>9dd6757a-021e-4d0e-8833-8c851a8bc080</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step3_Password_Invalid.UserCode.cs">
+      <BoundTo>54b4fb95-6db9-48de-ad30-3d3e6546f38f</BoundTo>
+      <DependentUpon>Step3_Password_Invalid.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>70b49be2-eec3-4f67-b736-87b163a53a0c</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step3_Password_NotMatching.cs">
+      <BoundTo>0664bc72-3484-4d47-bf19-6c0492340a33</BoundTo>
+      <DependentUpon>Step3_Password_NotMatching.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>53f03276-a211-43e6-85c4-5c372a870279</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step3_Password_NotMatching.UserCode.cs">
+      <BoundTo>0664bc72-3484-4d47-bf19-6c0492340a33</BoundTo>
+      <DependentUpon>Step3_Password_NotMatching.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>f401a411-27e7-485b-9b64-09154fd7949e</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step4_OptionalFieldsAdded.cs">
+      <BoundTo>269c5115-652d-4fec-9244-caaf077d56ce</BoundTo>
+      <DependentUpon>Step4_OptionalFieldsAdded.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>de9ac005-109d-47d2-bc43-409ad7688ed7</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step4_OptionalFieldsAdded.UserCode.cs">
+      <BoundTo>269c5115-652d-4fec-9244-caaf077d56ce</BoundTo>
+      <DependentUpon>Step4_OptionalFieldsAdded.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>9da4c6ca-d26e-4d55-9b19-ee878b467139</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step4_Skip.cs">
+      <BoundTo>d3310a2d-d897-4bf1-875d-552f3eaf3195</BoundTo>
+      <DependentUpon>Step4_Skip.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>442109d3-d7cf-4178-ad58-b2ddd52f6cff</id>
+    </Compile>
+    <Compile Include="Test cases\Registration\Step4_Skip.UserCode.cs">
+      <BoundTo>d3310a2d-d897-4bf1-875d-552f3eaf3195</BoundTo>
+      <DependentUpon>Step4_Skip.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>e260acb0-49e0-4c62-9fc1-6bfd16be2ccb</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\C#\Classes\Token.cs">
+      <id>f7b22341-e9bb-42e1-a8a6-fd38d4490602</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\C#\HttpClientMethod.cs">
+      <id>038cb0b7-68a4-41b2-be7e-8fd0eb22bdac</id>
     </Compile>
     <Compile Include="Test cases\Utility\ClearAppData.cs">
       <BoundTo>fa2fa269-3a6a-481b-b132-dcd2931ceb94</BoundTo>
@@ -176,6 +476,54 @@
       <UserCode>true</UserCode>
       <id>45f1cced-44c8-4089-9b8a-b6e399a76039</id>
     </Compile>
+    <Compile Include="Test cases\Utility\Permissions_AddCamera.cs">
+      <BoundTo>7239c6c3-b0dd-4aa7-a604-19e18159be1f</BoundTo>
+      <DependentUpon>Permissions_AddCamera.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>88c56b02-e318-44da-8e92-83e1be339f39</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\Permissions_AddCamera.UserCode.cs">
+      <BoundTo>7239c6c3-b0dd-4aa7-a604-19e18159be1f</BoundTo>
+      <DependentUpon>Permissions_AddCamera.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>c168e25d-b599-466a-94a3-8fe37b962852</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\Permissions_AddLocation.cs">
+      <BoundTo>3a7db084-cdc0-43a5-aedb-2ca45563e56d</BoundTo>
+      <DependentUpon>Permissions_AddLocation.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>fe38abea-01ca-45a4-a119-40d340643725</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\Permissions_AddLocation.UserCode.cs">
+      <BoundTo>3a7db084-cdc0-43a5-aedb-2ca45563e56d</BoundTo>
+      <DependentUpon>Permissions_AddLocation.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>c9215f61-cf6f-475a-aa08-4d38995b1cd6</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\Permissions_DenyCameraAccess.cs">
+      <BoundTo>3b3217a8-3d0f-4a41-9d71-34d2703bc303</BoundTo>
+      <DependentUpon>Permissions_DenyCameraAccess.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>09cf7217-3e19-435d-92b0-bf91731650a9</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\Permissions_DenyCameraAccess.UserCode.cs">
+      <BoundTo>3b3217a8-3d0f-4a41-9d71-34d2703bc303</BoundTo>
+      <DependentUpon>Permissions_DenyCameraAccess.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>c68454cc-3f2c-4841-a02b-4a2dc6edd5e9</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\Permissions_DenyLocationAccess.cs">
+      <BoundTo>ec46df2d-298e-4700-a367-93055199511d</BoundTo>
+      <DependentUpon>Permissions_DenyLocationAccess.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>d209d109-b8c6-4a0b-a3e9-695491617d1b</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\Permissions_DenyLocationAccess.UserCode.cs">
+      <BoundTo>ec46df2d-298e-4700-a367-93055199511d</BoundTo>
+      <DependentUpon>Permissions_DenyLocationAccess.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>e16f9f5e-2103-4509-b575-97c5c42f13ed</id>
+    </Compile>
     <Compile Include="Test cases\Utility\RunApp.cs">
       <BoundTo>872d3426-0d4b-4c12-aadc-9000bf2e0c92</BoundTo>
       <DependentUpon>RunApp.rxrec</DependentUpon>
@@ -187,6 +535,18 @@
       <DependentUpon>RunApp.rxrec</DependentUpon>
       <UserCode>true</UserCode>
       <id>a9abb124-7ea1-48ad-ada0-53b6f404bb6e</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\SkipBoardingToLanding.cs">
+      <BoundTo>8beccdc5-1dd6-40ce-bf73-5752f1175a8a</BoundTo>
+      <DependentUpon>SkipBoardingToLanding.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>66450ef7-fc24-4047-b215-e85c35679337</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\SkipBoardingToLanding.UserCode.cs">
+      <BoundTo>8beccdc5-1dd6-40ce-bf73-5752f1175a8a</BoundTo>
+      <DependentUpon>SkipBoardingToLanding.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>4e8fccfe-a063-4a60-9d6c-b394e2f401f4</id>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -229,10 +589,125 @@
       <id>d6b5aceb-72fe-4be1-afb4-5ddfdb47d7c5</id>
       <recordtableid>0f81ec01-5f5a-439a-93de-8bb75f3acc37</recordtableid>
     </None>
+    <None Include="Test cases\Landing\Catalogs\Catalog_CheckItems_SectionsNum.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>ecc6e06e-0429-48cd-8dbb-8812722adf41</id>
+      <recordtableid>123236bf-d451-4233-a509-8c549a048c85</recordtableid>
+    </None>
+    <None Include="Test cases\Landing\JedelBi_Open.rxrec">
+      <id>0998f07f-8a6a-4bf7-8a10-c3c5404a16ea</id>
+      <recordtableid>4503e5ff-a381-47d0-8f10-60211957b928</recordtableid>
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+    </None>
+    <None Include="Test cases\Landing\Landing_Overview.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>b5699353-3f61-4d94-8575-44a74d3aa7e4</id>
+      <recordtableid>bc3fa62d-29d6-442e-ba78-eb9d5186c239</recordtableid>
+    </None>
+    <None Include="Test cases\Landing\Locations\LocationDetails_Overview.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>c3e1dfbd-ef89-4ba8-aba3-7bf9ad7783ba</id>
+      <recordtableid>242d6933-a350-4632-8041-ef415889eea1</recordtableid>
+    </None>
+    <None Include="Test cases\Landing\Locations\Location_PermissionDenied_OpenLocationDetails.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>b29a9e80-b3d6-4251-a021-8643318e849e</id>
+      <recordtableid>f8876515-4b7f-418d-ab6c-fc63fb228a31</recordtableid>
+    </None>
+    <None Include="Test cases\Landing\Locations\Location_PermissionDenied_Overview.rxrec">
+      <id>d6ea2c07-eefb-444d-b21f-532aa0619a2e</id>
+      <recordtableid>1a5b452c-e40f-481f-a4f3-a879e99df009</recordtableid>
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+    </None>
+    <None Include="Test cases\Landing\Locations\Location_ShowOpenOnly.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>8923a691-c1c7-46d0-b904-7aeddbff2990</id>
+      <recordtableid>754ccd8d-899d-4bd6-8fa7-04d70ab6827a</recordtableid>
+    </None>
+    <None Include="Test cases\Landing\News_Overview.rxrec">
+      <id>12e321d5-b75b-4064-81bc-9a5b0844f0dc</id>
+      <recordtableid>f0951450-56ef-41f3-809b-168d121fc2cf</recordtableid>
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+    </None>
+    <None Include="Test cases\Landing\News_ReadMore.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>6d37c936-bd38-4b5e-bc95-5ab1bb6746af</id>
+      <recordtableid>f1695f7e-8691-46f1-9cd5-a74d6d5c1639</recordtableid>
+    </None>
+    <None Include="Test cases\Landing\SparKlub_Open.rxrec">
+      <id>65fd8658-d208-4b81-b7e4-500da2b71b81</id>
+      <recordtableid>19b7fe95-2458-47b8-9745-87a4cc6a9f5d</recordtableid>
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+    </None>
+    <None Include="Test cases\Registration\Registration_SkipStep1.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>5ea97cb8-084b-48bc-bdcf-182f66b22621</id>
+      <recordtableid>f48b69f3-acec-45de-94c0-04aa035fc112</recordtableid>
+    </None>
+    <None Include="Test cases\Registration\Registration_SkipStep2.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>546be92a-9550-4468-ad49-40899500ded9</id>
+      <recordtableid>1c19fa45-88d5-4246-9f9a-777f796e5f50</recordtableid>
+    </None>
+    <None Include="Test cases\Registration\Registration_SkipStep3.rxrec">
+      <id>9a7e6580-30fe-40ec-b500-d86b5596b93a</id>
+      <recordtableid>302cdafe-c2cd-4f85-a01f-9f7ff0ebf9fa</recordtableid>
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+    </None>
     <None Include="Test cases\Registration\Registration_Success.rxrec">
       <id>16703862-6971-4153-8096-24cd50dd229d</id>
       <recordtableid>3b5eaeef-79af-4751-be86-63848da88ff6</recordtableid>
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+    </None>
+    <None Include="Test cases\Registration\Step1_MissingData.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>6581df08-c502-4a09-ba4b-c3404a012d49</id>
+      <recordtableid>9ab4fa77-5aa1-4af0-b5e9-e0a4f632945f</recordtableid>
+    </None>
+    <None Include="Test cases\Registration\Step2_HouseNumber_NoNumber.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>2174b310-a3f2-4af9-a042-9197158cee2f</id>
+      <recordtableid>0b8c2bfb-c5a6-4ccc-a2be-ff5c68015768</recordtableid>
+    </None>
+    <None Include="Test cases\Registration\Step2_MissingData.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>18950cc4-f4b2-4e9b-832b-e920edb43694</id>
+      <recordtableid>5acab748-64c1-48a5-8ed4-3762dc8404f1</recordtableid>
+    </None>
+    <None Include="Test cases\Registration\Step2_PostalNumber_Invalid.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>9904289f-4bd9-4d1e-a386-7d50dbc63769</id>
+      <recordtableid>1a9d6ac9-2215-489a-95e3-a41561768827</recordtableid>
+    </None>
+    <None Include="Test cases\Registration\Step3_Email_Invalid.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>5e85e1fb-ebd7-4754-b5af-ac24cee7cde0</id>
+      <recordtableid>ac1b41f5-8c19-4ef8-bc96-44445654c96d</recordtableid>
+    </None>
+    <None Include="Test cases\Registration\Step3_MissingData.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>8a3995c0-f319-4eff-ad90-145bb9121dbd</id>
+      <recordtableid>0539ed33-a11e-45d6-8b83-01a71f0ba734</recordtableid>
+    </None>
+    <None Include="Test cases\Registration\Step3_Password_Invalid.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>54b4fb95-6db9-48de-ad30-3d3e6546f38f</id>
+      <recordtableid>683ed6f5-91bb-4823-a8a5-811733e88fb1</recordtableid>
+    </None>
+    <None Include="Test cases\Registration\Step3_Password_NotMatching.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>0664bc72-3484-4d47-bf19-6c0492340a33</id>
+      <recordtableid>d1e00b05-491c-40cb-9dfb-3af661a6b7af</recordtableid>
+    </None>
+    <None Include="Test cases\Registration\Step4_OptionalFieldsAdded.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>269c5115-652d-4fec-9244-caaf077d56ce</id>
+      <recordtableid>749c63db-6011-4a86-8400-91d30050ef1a</recordtableid>
+    </None>
+    <None Include="Test cases\Registration\Step4_Skip.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>d3310a2d-d897-4bf1-875d-552f3eaf3195</id>
+      <recordtableid>a09c6726-2f15-4452-9ab4-7ccb2df7f48d</recordtableid>
     </None>
     <None Include="Test cases\Utility\ClearAppData.rxrec">
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
@@ -244,10 +719,35 @@
       <id>d6945c95-b7c4-44f5-9cd8-c32abe7a58d2</id>
       <recordtableid>cde5fee8-c303-485d-9686-e99e57ce5f12</recordtableid>
     </None>
+    <None Include="Test cases\Utility\Permissions_AddCamera.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>7239c6c3-b0dd-4aa7-a604-19e18159be1f</id>
+      <recordtableid>b0cf1124-f7db-40b8-ab48-d94c6de00ecb</recordtableid>
+    </None>
+    <None Include="Test cases\Utility\Permissions_AddLocation.rxrec">
+      <id>3a7db084-cdc0-43a5-aedb-2ca45563e56d</id>
+      <recordtableid>b18ec5a7-4112-45d5-b5a0-4acf17ef5636</recordtableid>
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+    </None>
+    <None Include="Test cases\Utility\Permissions_DenyCameraAccess.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>3b3217a8-3d0f-4a41-9d71-34d2703bc303</id>
+      <recordtableid>19e657f0-7eb6-4f2b-964c-019c6c6f1509</recordtableid>
+    </None>
+    <None Include="Test cases\Utility\Permissions_DenyLocationAccess.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>ec46df2d-298e-4700-a367-93055199511d</id>
+      <recordtableid>39ea6478-6c49-4624-a897-86086fcb8414</recordtableid>
+    </None>
     <None Include="Test cases\Utility\RunApp.rxrec">
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
       <id>872d3426-0d4b-4c12-aadc-9000bf2e0c92</id>
       <recordtableid>47c4d39f-0d71-4abc-bcb7-f146aaa7813a</recordtableid>
+    </None>
+    <None Include="Test cases\Utility\SkipBoardingToLanding.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>8beccdc5-1dd6-40ce-bf73-5752f1175a8a</id>
+      <recordtableid>cf205871-aa48-4224-9200-739b934831cd</recordtableid>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -267,6 +767,12 @@
     <Folder Include="Test cases\Boarding">
       <id>680a8890-e105-4344-a655-c94e0d4a5e85</id>
     </Folder>
+    <Folder Include="Test cases\Landing\Catalogs">
+      <id>7bfa156c-fd6e-4c96-ac53-88ef6fbcb77b</id>
+    </Folder>
+    <Folder Include="Test cases\Landing\Locations">
+      <id>5cad0eb1-663f-4ee3-ac29-97e49d71cbc4</id>
+    </Folder>
     <Folder Include="Test cases\Login">
       <id>a05d9000-eace-4f4f-ae56-7769a01123a8</id>
     </Folder>
@@ -284,6 +790,12 @@
     </Folder>
     <Folder Include="Test cases\Registration">
       <id>c27e7a85-fe5e-40f7-9a77-bffc5dac17f5</id>
+    </Folder>
+    <Folder Include="Test cases\Utility\C#">
+      <id>4ff62760-f269-4fdc-a996-a638838cecf5</id>
+    </Folder>
+    <Folder Include="Test cases\Utility\C#\Classes">
+      <id>3592aef1-558a-411e-804f-21c3f0683875</id>
     </Folder>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

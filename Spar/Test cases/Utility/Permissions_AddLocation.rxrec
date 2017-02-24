@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+rxversion="6.2"
+id="b18ec5a7-4112-45d5-b5a0-4acf17ef5636"
+embeddedrepository="False"
+mode="Global">
+	<name>
+		Permissions_AddLocation
+	</name>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="Permissions_AddLocation"
+	namespace="Spar.Test_cases.Utility"/>
+	<variables>
+		<var
+		name="PackageName"
+		id="a60d2cbc-31e8-4637-9869-ca8dedf73abe">
+		</var>
+	</variables>
+	<recorditems>
+		<userrecorditem
+		enabled="True"
+		optional="False"
+		namespace="Spar.Test_cases.Utility"
+		classname="Permissions_AddLocation"
+		methodname="AddLocationPermission"
+		isexternaltestmethod="False"
+		varname="">
+			<comment/>
+			<bindings/>
+			<arguments
+			id="c8ff3498-4ccb-4e76-9f96-fdc58734426f"/>
+		</userrecorditem>
+	</recorditems>
+	<repository
+	name="SparRepository"
+	id="c55abb3d-7d0d-4435-8640-bb30710f5f27"
+	rxversion="6.2"
+	relativepath="..\..\SparRepository.rxrep">
+		<codegen
+		classname="SparRepository"
+		namespace="Spar"/>
+		<rootfolder
+		name="_rootdummy_"
+		id="c12fa4a9-bf96-41a7-9866-79edafaddcf2"/>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		Permissions_AddLocation.UserCode.cs
+	</usercodefile>
+	<references/>
+</recordtable>

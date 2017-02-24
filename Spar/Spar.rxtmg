@@ -26,9 +26,19 @@ rxversion="6.2">
 				</groupvariables>
 			</modulegroupdef>
 			<testmodule
+			name="Permissions_AddCamera"
+			id="562434ca-5558-4181-a82f-bffd081a6ade"
+			ref="b0cf1124-f7db-40b8-ab48-d94c6de00ecb"
+			type="Recording"/>
+			<testmodule
 			name="ClearAppData"
 			id="63cc49c0-43aa-48b7-8a9f-fd60aea2404f"
 			ref="d75ab6fa-6314-46ab-8f27-4adcb17bbeb7"
+			type="Recording"/>
+			<testmodule
+			name="Permissions_DenyCameraAccess"
+			id="65fbaed0-932b-4ab2-8fec-da2fa841742b"
+			ref="19e657f0-7eb6-4f2b-964c-019c6c6f1509"
 			type="Recording"/>
 			<testmodule
 			name="CloseApp"
@@ -43,6 +53,29 @@ rxversion="6.2">
 			id="8a60ed77-bd99-43a5-b8d8-fd16521d813e"
 			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
 			type="Recording"/>
+			<testmodule
+			name="Permissions_DenyLocationAccess"
+			id="992a03b2-7f3c-4af0-b532-308303eaac3c"
+			ref="39ea6478-6c49-4624-a897-86086fcb8414"
+			type="Recording"/>
+			<modulegroupdef
+			name="AllowPermissions"
+			id="b6a763ab-152b-4bdf-8af2-430dfe4c10c9">
+				<groupvariables>
+					<groupvariable
+					name="PackageName"
+					id="f7d21799-6692-45f8-a1a2-8ee1e98b723d">
+						<modulevariable
+						name="PackageName"
+						variableref="7e61ceee-eaf8-4e5d-9a3f-47c5308f0c8a"
+						moduleref="562434ca-5558-4181-a82f-bffd081a6ade"/>
+						<modulevariable
+						name="PackageName"
+						variableref="a60d2cbc-31e8-4637-9869-ca8dedf73abe"
+						moduleref="f11a298e-c6b6-4b3a-8300-cfe85291f464"/>
+					</groupvariable>
+				</groupvariables>
+			</modulegroupdef>
 			<modulegroupdef
 			name="CloseApp"
 			id="b95d112a-d832-4837-a3ec-eba31200fb62"/>
@@ -68,6 +101,29 @@ rxversion="6.2">
 					</groupvariable>
 				</groupvariables>
 			</modulegroupdef>
+			<modulegroupdef
+			name="DenyPermissions"
+			id="e668208f-abea-4f37-9244-0bb33ef4c037">
+				<groupvariables>
+					<groupvariable
+					name="PackageName"
+					id="6d6f6249-d6b1-4715-809c-80e944e719ad">
+						<modulevariable
+						name="PackageName"
+						variableref="64deb10f-7b00-48f8-ad5f-a676e3545db7"
+						moduleref="65fbaed0-932b-4ab2-8fec-da2fa841742b"/>
+						<modulevariable
+						name="PackageName"
+						variableref="5e2a555c-cc05-4331-b3f2-0409610fcead"
+						moduleref="992a03b2-7f3c-4af0-b532-308303eaac3c"/>
+					</groupvariable>
+				</groupvariables>
+			</modulegroupdef>
+			<testmodule
+			name="Permissions_AddLocation"
+			id="f11a298e-c6b6-4b3a-8300-cfe85291f464"
+			ref="b18ec5a7-4112-45d5-b5a0-4acf17ef5636"
+			type="Recording"/>
 		</flatlistofchildren>
 		<childhierarchy>
 			<modulegroups
@@ -93,6 +149,26 @@ rxversion="6.2">
 					<testmodule
 					name="CloseApp"
 					id="81b1b7a2-e772-495f-b70f-34a72d58e29e"/>
+				</modulegroupdef>
+				<modulegroupdef
+				name="AllowPermissions"
+				id="b6a763ab-152b-4bdf-8af2-430dfe4c10c9">
+					<testmodule
+					name="Permissions_AddCamera"
+					id="562434ca-5558-4181-a82f-bffd081a6ade"/>
+					<testmodule
+					name="Permissions_AddLocation"
+					id="f11a298e-c6b6-4b3a-8300-cfe85291f464"/>
+				</modulegroupdef>
+				<modulegroupdef
+				name="DenyPermissions"
+				id="e668208f-abea-4f37-9244-0bb33ef4c037">
+					<testmodule
+					name="Permissions_DenyCameraAccess"
+					id="65fbaed0-932b-4ab2-8fec-da2fa841742b"/>
+					<testmodule
+					name="Permissions_DenyLocationAccess"
+					id="992a03b2-7f3c-4af0-b532-308303eaac3c"/>
 				</modulegroupdef>
 			</modulegroups>
 		</childhierarchy>

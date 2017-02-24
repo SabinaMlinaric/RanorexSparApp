@@ -38,15 +38,29 @@ namespace Spar.Test_cases.Utility
 		
 		public void ClearData(RepoItemInfo mobileappInfo)
 		{
-			string path      = @"C:\Program Files (x86)\Ranorex 6.2\Bin\RxEnv\Android\tools\adb.exe";         //your path to adb.exe goes here
-			string appPackageName = PackageName;  							 					  			  //the packagename of your app
+			string appPackageName = PackageName;
+			string pathToAdb = "C:\\Program Files (x86)\\Ranorex 6.2\\Bin\\RxEnv\\Android\\tools\\adb.exe";
 			
-			Process process = new Process();
-			process.StartInfo.FileName = path;
-			process.StartInfo.Arguments = @"shell pm clear" + appPackageName;
-			process.Start();
-
-			process.WaitForExit();
+			var app = repo.PlusSparSi.Self.As<AndroidApp>();
+			var info = app.GetDeviceInfo();
+			String[] host = info.NetworkInterfaces[0].Split(':');
+			
+			Report.Log(ReportLevel.Info, "Host", host[1]);
+			
+			Process adbClearProcess = new Process();
+			adbClearProcess.StartInfo.FileName  = pathToAdb;
+			adbClearProcess.StartInfo.Arguments = string.Format("connect {0}:5555",host[1]);
+			adbClearProcess.Start();
+			
+			adbClearProcess.WaitForExit();
+			
+			Process adbClearProcess1 = new Process();
+			adbClearProcess1.StartInfo.FileName  = pathToAdb;
+			adbClearProcess1.StartInfo.Arguments = string.Format("shell pm clear {0}", PackageName);
+			adbClearProcess1.Start();
+			
+			adbClearProcess1.WaitForExit();
+			
 		}
 	}
 }

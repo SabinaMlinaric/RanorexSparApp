@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+rxversion="6.2"
+id="19e657f0-7eb6-4f2b-964c-019c6c6f1509"
+embeddedrepository="False"
+mode="Global">
+	<name>
+		Permissions_DenyCameraAccess
+	</name>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="Permissions_DenyCameraAccess"
+	namespace="Spar.Test_cases.Utility"/>
+	<variables>
+		<var
+		name="PackageName"
+		id="64deb10f-7b00-48f8-ad5f-a676e3545db7">
+		</var>
+	</variables>
+	<recorditems>
+		<userrecorditem
+		enabled="True"
+		optional="False"
+		namespace="Spar.Test_cases.Utility"
+		classname="Permissions_DenyCameraAccess"
+		methodname="DenyCameraPermission"
+		isexternaltestmethod="False"
+		varname="">
+			<comment/>
+			<bindings/>
+			<arguments
+			id="0ef08387-f145-43a7-bae4-7fdcc3003db0"/>
+		</userrecorditem>
+	</recorditems>
+	<repository
+	name="SparRepository"
+	id="c55abb3d-7d0d-4435-8640-bb30710f5f27"
+	rxversion="6.2"
+	relativepath="..\..\SparRepository.rxrep">
+		<codegen
+		classname="SparRepository"
+		namespace="Spar"/>
+		<rootfolder
+		name="_rootdummy_"
+		id="c12fa4a9-bf96-41a7-9866-79edafaddcf2"/>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		Permissions_DenyCameraAccess.UserCode.cs
+	</usercodefile>
+	<references/>
+</recordtable>

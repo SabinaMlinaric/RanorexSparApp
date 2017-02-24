@@ -83,8 +83,8 @@ namespace Spar.Test_cases.Boarding
             repo.PlusSparSi.ScanCardActivity.Terms.Touch(Location.CenterRight);
             Delay.Milliseconds(500);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='yourValue') on item 'PlusSparSi.ScanCardTermsAndConditions.RStringTermsAndConditionsActionbar'.", repo.PlusSparSi.ScanCardTermsAndConditions.RStringTermsAndConditionsActionbarInfo, new RecordItemIndex(1));
-            Validate.Attribute(repo.PlusSparSi.ScanCardTermsAndConditions.RStringTermsAndConditionsActionbarInfo, "Text", "yourValue");
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Terms and conditions') on item 'PlusSparSi.ScanCardTermsAndConditions.RStringTermsAndConditionsActionbar'.", repo.PlusSparSi.ScanCardTermsAndConditions.RStringTermsAndConditionsActionbarInfo, new RecordItemIndex(1));
+            Validate.Attribute(repo.PlusSparSi.ScanCardTermsAndConditions.RStringTermsAndConditionsActionbarInfo, "Text", "Terms and conditions");
             Delay.Milliseconds(0);
             
             Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.ScanCardTermsAndConditions.NavigateUp' at Center", repo.PlusSparSi.ScanCardTermsAndConditions.NavigateUpInfo, new RecordItemIndex(2));

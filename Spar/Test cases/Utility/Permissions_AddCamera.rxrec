@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+rxversion="6.2"
+id="b0cf1124-f7db-40b8-ab48-d94c6de00ecb"
+embeddedrepository="False"
+mode="Global">
+	<name>
+		Permissions_AddCamera
+	</name>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="Permissions_AddCamera"
+	namespace="Spar.Test_cases.Utility"/>
+	<variables>
+		<var
+		name="PackageName"
+		id="7e61ceee-eaf8-4e5d-9a3f-47c5308f0c8a">
+		</var>
+	</variables>
+	<recorditems>
+		<userrecorditem
+		enabled="True"
+		optional="False"
+		namespace="Spar.Test_cases.Utility"
+		classname="Permissions_AddCamera"
+		methodname="AddCameraPermission"
+		isexternaltestmethod="False"
+		varname="">
+			<comment/>
+			<bindings/>
+			<arguments
+			id="0ef08387-f145-43a7-bae4-7fdcc3003db0"/>
+		</userrecorditem>
+	</recorditems>
+	<repository
+	name="SparRepository"
+	id="c55abb3d-7d0d-4435-8640-bb30710f5f27"
+	rxversion="6.2"
+	relativepath="..\..\SparRepository.rxrep">
+		<codegen
+		classname="SparRepository"
+		namespace="Spar"/>
+		<rootfolder
+		name="_rootdummy_"
+		id="c12fa4a9-bf96-41a7-9866-79edafaddcf2"/>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		Permissions_AddCamera.UserCode.cs
+	</usercodefile>
+	<references/>
+</recordtable>
