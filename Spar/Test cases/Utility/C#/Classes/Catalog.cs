@@ -21,7 +21,7 @@ namespace Spar.Test_cases.Utility.C_.Classes
 	{
 		public CatalogList(){}
 		
-		[DataMember] 
+		[DataMember]
 		public List<Catalog> catalogs {get; set;}
 		
 	}
@@ -52,11 +52,30 @@ namespace Spar.Test_cases.Utility.C_.Classes
 	
 	[DataContract]
 	public class Category
-		{
+	{
 		public Category(){}
 		
 		[DataMember]
-		public int promoPicture {get; set;}
+		public int id {get; set;}
+		
+		[DataMember]
+		public string title {get; set;}
+		
+		[DataMember]
+		public List<Item> items  {get; set;}
+		
+	}
+	
+	[DataContract]
+	public class Item
+	{
+		public Item(){}
+		
+		[DataMember]
+		public int id {get; set;}
+		
+		[DataMember]
+		public string promoPicture {get; set;}
 		
 		[DataMember]
 		public string promoTitle {get; set;}
@@ -111,11 +130,12 @@ namespace Spar.Test_cases.Utility.C_.Classes
 		
 		[DataMember]
 		public bool shareable {get; set;}
+		
 	}
 	
 	[DataContract]
 	public class PromoPrice
-		{
+	{
 		public PromoPrice(){}
 		
 		[DataMember]

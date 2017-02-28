@@ -5,7 +5,7 @@ id="123236bf-d451-4233-a509-8c549a048c85"
 embeddedrepository="False"
 mode="Global">
 	<name>
-		Catalog_CheckItems_SectionsNum
+		Catalog_CheckItems_CatalogNum
 	</name>
 	<repeatcount>
 		1
@@ -23,7 +23,7 @@ mode="Global">
 		True
 	</useDefaultItemLogging>
 	<codegen
-	classname="Catalog_CheckItems_SectionsNum"
+	classname="Catalog_CheckItems_CatalogNum"
 	namespace="Spar.Test_cases.Landing.Catalogs"/>
 	<variables>
 		<var
@@ -40,20 +40,7 @@ mode="Global">
 		enabled="True"
 		optional="False"
 		namespace="Spar.Test_cases.Landing.Catalogs"
-		classname="Catalog_CheckItems_SectionsNum"
-		methodname="GetValidToken"
-		isexternaltestmethod="False"
-		varname="">
-			<comment/>
-			<bindings/>
-			<arguments
-			id="f3ca940c-7013-4701-90cc-5deffad36d4b"/>
-		</userrecorditem>
-		<userrecorditem
-		enabled="True"
-		optional="False"
-		namespace="Spar.Test_cases.Landing.Catalogs"
-		classname="Catalog_CheckItems_SectionsNum"
+		classname="Catalog_CheckItems_CatalogNum"
 		methodname="CheckNumOfCatalogs"
 		isexternaltestmethod="False"
 		varname="">
@@ -112,6 +99,31 @@ mode="Global">
 				yourValue
 			</matchvalue>
 		</validationitem>
+		<touchrecorditem
+		enabled="True"
+		optional="False"
+		duration="500ms"
+		screenshotname=""
+		searchpropertyid="3b4a7326-42a0-44d7-9029-3e822a4c7133"
+		touchtype="Touch"
+		elementlocation="Center"
+		fingerid="0"
+		touchduration="100ms"
+		longtouchduration="1000ms"
+		moveduration="100ms"
+		isremote="False"
+		sx="0"
+		sy="0">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="4faab30c-ceb5-4de7-be98-3acaa0b88516">
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//button[@contentdescription='Navigate up']
+				</path>
+			</info>
+		</touchrecorditem>
 	</recorditems>
 	<repository
 	name="SparRepository"
@@ -127,7 +139,7 @@ mode="Global">
 	</repository>
 	<usercodefile
 	lang="CSharp">
-		Catalog_CheckItems_SectionsNum.UserCode.cs
+		Catalog_CheckItems_CatalogNum.UserCode.cs
 	</usercodefile>
 	<references/>
 </recordtable>

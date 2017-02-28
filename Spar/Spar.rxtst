@@ -21,6 +21,11 @@ rxversion="6.2">
 			name="Catalogs"
 			id="025cd63d-2782-4fe0-8aaa-729514bc6faa"/>
 			<testmodule
+			name="CloseApp"
+			id="039ded06-342e-46cc-90a0-83960f2afdb8"
+			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
+			type="Recording"/>
+			<testmodule
 			name="ClearAppData"
 			id="046960c4-40cc-49d5-a19f-66c7ddbbf6df"
 			ref="d75ab6fa-6314-46ab-8f27-4adcb17bbeb7"
@@ -50,6 +55,19 @@ rxversion="6.2">
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</modulegroup>
+			<testmodule
+			name="GetAccessToken"
+			id="06221bf6-d22a-41af-901d-26ced518fcc1"
+			ref="2bce3e35-5051-477a-b59d-25e0192cc7f7"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="accessToken"
+					variableid="201492f6-b17d-456a-86c5-86f72c914a6d"
+					dataname="accessToken"
+					datasourceid="99db626b-4107-4e62-98d3-0ec1be186135"/>
+				</databinding>
+			</testmodule>
 			<testcase
 			name="Step3_MissingData"
 			id="094e9a7c-fc87-4aa2-afcc-57aafbf6f433"
@@ -57,6 +75,18 @@ rxversion="6.2">
 			maxrange="0"
 			datarangeactive="True"
 			datasource="Registration"/>
+			<modulegroup
+			name="AllowPermissions"
+			id="0ab7e05f-98c8-4cb7-9f72-842756c1a94f"
+			ref="b6a763ab-152b-4bdf-8af2-430dfe4c10c9">
+				<databinding>
+					<var
+					variablename="PackageName"
+					variableid="f7d21799-6692-45f8-a1a2-8ee1e98b723d"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</modulegroup>
 			<folder
 			name="MySpar"
 			id="0b09c187-fef2-4ae9-85f2-1812e73b5891"/>
@@ -192,6 +222,9 @@ rxversion="6.2">
 			<setup
 			name="setup5111"
 			id="1cf8fd83-d159-42a3-9ef7-6960c760e94d"/>
+			<setup
+			name="setup511111"
+			id="1da10b96-7b08-4821-862d-55527c7b84e9"/>
 			<teardown
 			name="teardown31123"
 			id="1e971a55-df38-43e1-8d67-3e0398081e5c"/>
@@ -215,8 +248,29 @@ rxversion="6.2">
 					<param
 					name="PackageName"
 					value="plus.spar.si.staging"/>
+					<param
+					name="accessToken"
+					value=""/>
 				</parameters>
 			</testcase>
+			<testmodule
+			name="RunApp"
+			id="26f5884d-7e97-4467-a1b9-9ea5fdb9f1db"
+			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="7ba94856-ce36-433b-aa83-673fcd1b06d7"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="4de25083-df64-42d6-97dd-017c0a227675"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
 			<folder
 			name="News"
 			id="285c5c97-c0b3-43b1-abff-3f15f46a65c4"/>
@@ -269,6 +323,11 @@ rxversion="6.2">
 				</databinding>
 			</testmodule>
 			<testmodule
+			name="SkipBoardingToLanding"
+			id="2e6953b1-f9d4-4f2c-8618-d55e5ffd879a"
+			ref="cf205871-aa48-4224-9200-739b934831cd"
+			type="Recording"/>
+			<testmodule
 			name="RunApp"
 			id="2ed0a00b-4a7e-46a1-a3a2-75e9e51f33a7"
 			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
@@ -290,7 +349,7 @@ rxversion="6.2">
 			name="teardown311"
 			id="32148456-6ee9-4115-a48f-474c654a168c"/>
 			<testmodule
-			name="Catalog_CheckItems_SectionsNum"
+			name="Catalog_CheckItems_CatalogNum"
 			id="3297440c-bd7e-4c5e-a1ed-74309c6fd32d"
 			ref="123236bf-d451-4233-a509-8c549a048c85"
 			type="Recording">
@@ -670,6 +729,36 @@ rxversion="6.2">
 			id="5e86e837-a504-420f-9284-41c9447870fe"
 			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
 			type="Recording"/>
+			<testcase
+			name="Dashboard_Overview"
+			id="5ee6bb56-33c7-488c-959b-09924f6ad4cf">
+				<parameters>
+					<param
+					name="CatalogTitle"
+					value=""/>
+					<param
+					name="News1Title"
+					value=""/>
+					<param
+					name="News2Title"
+					value=""/>
+					<param
+					name="News3Title"
+					value=""/>
+					<param
+					name="JedelBiTitle"
+					value=""/>
+					<param
+					name="SparPlusKlubTitle"
+					value=""/>
+					<param
+					name="accessToken"
+					value=""/>
+					<param
+					name="SwipeHeight"
+					value=""/>
+				</parameters>
+			</testcase>
 			<teardown
 			name="teardown411"
 			id="5f1fbd4f-a448-4f29-b8be-562851c0ba0b"/>
@@ -795,6 +884,24 @@ rxversion="6.2">
 					<var
 					variablename="PackageName"
 					variableid="7e61ceee-eaf8-4e5d-9a3f-47c5308f0c8a"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<testmodule
+			name="ClearAppData"
+			id="66b0a276-6ba7-49e5-938e-7cc4ebc6b7fa"
+			ref="d75ab6fa-6314-46ab-8f27-4adcb17bbeb7"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="82366f14-af3e-4e79-a6a5-6b409168ddc5"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="82361544-8731-4a7d-b1cb-7420ac2fac02"
 					dataname="PackageName"
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
@@ -1409,6 +1516,27 @@ rxversion="6.2">
 			name="teardown31122"
 			id="9456185e-ce31-47c3-a43f-95d61361a200"/>
 			<testmodule
+			name="Catalogs_CheckItems_Sections"
+			id="95d8f7d3-7f20-4dd3-a634-7aa6956470b2"
+			ref="a235f551-fe53-4213-93fd-dc32fd2894ac"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="accessToken"
+					variableid="2b5ef107-2110-4760-8897-c40844b27988"
+					dataname="accessToken"
+					datasourceid="99db626b-4107-4e62-98d3-0ec1be186135"/>
+					<var
+					variablename="sectionNum"
+					variableid="bc0b033c-d7ce-4b19-87f9-8d6d00a2c3ed"
+					dataname="sectionNum"
+					datasourceid="dc4f4f4a-be81-4677-ad15-a61772eb7678"/>
+				</databinding>
+			</testmodule>
+			<teardown
+			name="teardown411111"
+			id="97a8d5c2-c0ab-4b72-84f2-e46587b1d730"/>
+			<testmodule
 			name="CloseApp"
 			id="9860566d-e27f-4d56-a0cb-ae3c021c62e4"
 			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
@@ -1709,6 +1837,19 @@ rxversion="6.2">
 			name="setup511"
 			id="b4e46094-1629-461d-83a5-4f4c0e566f9e"/>
 			<testmodule
+			name="GetAccessToken"
+			id="b589f99f-f934-48c5-b48d-a8a3e6656ff8"
+			ref="2bce3e35-5051-477a-b59d-25e0192cc7f7"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="accessToken"
+					variableid="201492f6-b17d-456a-86c5-86f72c914a6d"
+					dataname="accessToken"
+					datasourceid="99db626b-4107-4e62-98d3-0ec1be186135"/>
+				</databinding>
+			</testmodule>
+			<testmodule
 			name="RunApp"
 			id="b73b27ef-0807-475b-bad6-3ad3f9061101"
 			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
@@ -1852,6 +1993,19 @@ rxversion="6.2">
 			<setup
 			name="setup54"
 			id="c4c74e1c-e567-4a20-917e-961f0014d753"/>
+			<testmodule
+			name="GetAccessToken"
+			id="c4e8b4eb-0cdc-43cf-956b-7a346676af17"
+			ref="2bce3e35-5051-477a-b59d-25e0192cc7f7"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="accessToken"
+					variableid="201492f6-b17d-456a-86c5-86f72c914a6d"
+					dataname="accessToken"
+					datasourceid="5ee6bb56-33c7-488c-959b-09924f6ad4cf"/>
+				</databinding>
+			</testmodule>
 			<testmodule
 			name="CloseApp"
 			id="c5711b22-f02e-4078-bba7-87f9381a81ec"
@@ -2124,6 +2278,15 @@ rxversion="6.2">
 			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
 			type="Recording"/>
 			<testcase
+			name="Catalogs_CheckItems_Sections"
+			id="dc4f4f4a-be81-4677-ad15-a61772eb7678">
+				<parameters>
+					<param
+					name="sectionNum"
+					value=""/>
+				</parameters>
+			</testcase>
+			<testcase
 			name="Catalogs_CheckItems_CatalogNum"
 			id="dd8090f3-7c05-4a64-8ec9-76c97845c871">
 				<parameters>
@@ -2221,6 +2384,54 @@ rxversion="6.2">
 					variableid="ca6672f5-8de9-46b7-bde5-8db9299247f6"
 					dataname="Email"
 					datasourceid="afaec420-ef52-4c72-834e-e888ed8b3511"/>
+				</databinding>
+			</testmodule>
+			<testmodule
+			name="Landing_Overview"
+			id="e351a4d4-5aad-48a9-83d8-0e5bad041256"
+			ref="bc3fa62d-29d6-442e-ba78-eb9d5186c239"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="CatalogTitle"
+					variableid="d071693a-42ee-4702-890c-34ad2f1004e7"
+					dataname="CatalogTitle"
+					datasourceid="5ee6bb56-33c7-488c-959b-09924f6ad4cf"/>
+					<var
+					variablename="News1Title"
+					variableid="b1de4316-ce7e-43c0-bd25-ec84faf7e068"
+					dataname="News1Title"
+					datasourceid="5ee6bb56-33c7-488c-959b-09924f6ad4cf"/>
+					<var
+					variablename="News2Title"
+					variableid="836e316e-9a00-42ef-ba0b-f43e6b0804b1"
+					dataname="News2Title"
+					datasourceid="5ee6bb56-33c7-488c-959b-09924f6ad4cf"/>
+					<var
+					variablename="News3Title"
+					variableid="1924bce7-335a-4153-a297-ffaa92e321fe"
+					dataname="News3Title"
+					datasourceid="5ee6bb56-33c7-488c-959b-09924f6ad4cf"/>
+					<var
+					variablename="JedelBiTitle"
+					variableid="b8cb20d4-0fab-42cc-9f2e-31761bf51eb0"
+					dataname="JedelBiTitle"
+					datasourceid="5ee6bb56-33c7-488c-959b-09924f6ad4cf"/>
+					<var
+					variablename="SparPlusKlubTitle"
+					variableid="2f79e8d0-8049-4789-b463-b8492d13b248"
+					dataname="SparPlusKlubTitle"
+					datasourceid="5ee6bb56-33c7-488c-959b-09924f6ad4cf"/>
+					<var
+					variablename="accessToken"
+					variableid="22e36eaf-6ac8-4b3b-bd16-93e522b5a962"
+					dataname="accessToken"
+					datasourceid="5ee6bb56-33c7-488c-959b-09924f6ad4cf"/>
+					<var
+					variablename="SwipeHeight"
+					variableid="024548ff-1243-45ab-a6ba-4085b6e119c4"
+					dataname="SwipeHeight"
+					datasourceid="5ee6bb56-33c7-488c-959b-09924f6ad4cf"/>
 				</databinding>
 			</testmodule>
 			<testmodule
@@ -3006,6 +3217,39 @@ rxversion="6.2">
 						<folder
 						name="Landing"
 						id="6ce6c4df-bcac-4ac0-bf58-117ada5e908f">
+							<testcase
+							name="Dashboard_Overview"
+							id="5ee6bb56-33c7-488c-959b-09924f6ad4cf">
+								<setup
+								name="setup511111"
+								id="1da10b96-7b08-4821-862d-55527c7b84e9">
+									<testmodule
+									name="ClearAppData"
+									id="66b0a276-6ba7-49e5-938e-7cc4ebc6b7fa"/>
+									<modulegroup
+									name="AllowPermissions"
+									id="0ab7e05f-98c8-4cb7-9f72-842756c1a94f"/>
+									<testmodule
+									name="RunApp"
+									id="26f5884d-7e97-4467-a1b9-9ea5fdb9f1db"/>
+									<testmodule
+									name="SkipBoardingToLanding"
+									id="2e6953b1-f9d4-4f2c-8618-d55e5ffd879a"/>
+								</setup>
+								<testmodule
+								name="GetAccessToken"
+								id="c4e8b4eb-0cdc-43cf-956b-7a346676af17"/>
+								<testmodule
+								name="Landing_Overview"
+								id="e351a4d4-5aad-48a9-83d8-0e5bad041256"/>
+								<teardown
+								name="teardown411111"
+								id="97a8d5c2-c0ab-4b72-84f2-e46587b1d730">
+									<testmodule
+									name="CloseApp"
+									id="039ded06-342e-46cc-90a0-83960f2afdb8"/>
+								</teardown>
+							</testcase>
 							<folder
 							name="Catalogs"
 							id="025cd63d-2782-4fe0-8aaa-729514bc6faa">
@@ -3041,8 +3285,21 @@ rxversion="6.2">
 									name="Catalogs_CheckItems_CatalogNum"
 									id="dd8090f3-7c05-4a64-8ec9-76c97845c871">
 										<testmodule
-										name="Catalog_CheckItems_SectionsNum"
+										name="GetAccessToken"
+										id="06221bf6-d22a-41af-901d-26ced518fcc1"/>
+										<testmodule
+										name="Catalog_CheckItems_CatalogNum"
 										id="3297440c-bd7e-4c5e-a1ed-74309c6fd32d"/>
+									</testcase>
+									<testcase
+									name="Catalogs_CheckItems_Sections"
+									id="dc4f4f4a-be81-4677-ad15-a61772eb7678">
+										<testmodule
+										name="GetAccessToken"
+										id="b589f99f-f934-48c5-b48d-a8a3e6656ff8"/>
+										<testmodule
+										name="Catalogs_CheckItems_Sections"
+										id="95d8f7d3-7f20-4dd3-a634-7aa6956470b2"/>
 									</testcase>
 									<teardown
 									name="teardown41111"

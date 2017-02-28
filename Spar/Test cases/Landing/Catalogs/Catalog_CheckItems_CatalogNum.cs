@@ -24,22 +24,22 @@ namespace Spar.Test_cases.Landing.Catalogs
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The Catalog_CheckItems_SectionsNum recording.
+    ///The Catalog_CheckItems_CatalogNum recording.
     /// </summary>
     [TestModule("123236bf-d451-4233-a509-8c549a048c85", ModuleType.Recording, 1)]
-    public partial class Catalog_CheckItems_SectionsNum : ITestModule
+    public partial class Catalog_CheckItems_CatalogNum : ITestModule
     {
         /// <summary>
         /// Holds an instance of the Spar.SparRepository repository.
         /// </summary>
         public static Spar.SparRepository repo = Spar.SparRepository.Instance;
 
-        static Catalog_CheckItems_SectionsNum instance = new Catalog_CheckItems_SectionsNum();
+        static Catalog_CheckItems_CatalogNum instance = new Catalog_CheckItems_CatalogNum();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public Catalog_CheckItems_SectionsNum()
+        public Catalog_CheckItems_CatalogNum()
         {
             accessToken = "";
             catalogNum = "";
@@ -48,7 +48,7 @@ namespace Spar.Test_cases.Landing.Catalogs
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static Catalog_CheckItems_SectionsNum Instance
+        public static Catalog_CheckItems_CatalogNum Instance
         {
             get { return instance; }
         }
@@ -105,19 +105,20 @@ namespace Spar.Test_cases.Landing.Catalogs
 
             Init();
 
-            GetValidToken();
-            Delay.Milliseconds(0);
-            
             CheckNumOfCatalogs();
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.BtnBrowse' at Center", repo.PlusSparSi.MainActivity.BtnBrowseInfo, new RecordItemIndex(2));
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.BtnBrowse' at Center", repo.PlusSparSi.MainActivity.BtnBrowseInfo, new RecordItemIndex(1));
             repo.PlusSparSi.MainActivity.BtnBrowse.Touch();
             Delay.Milliseconds(500);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$catalogNum) on item 'PlusSparSi.MainActivity.MenuBadge'.", repo.PlusSparSi.MainActivity.MenuBadgeInfo, new RecordItemIndex(3));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$catalogNum) on item 'PlusSparSi.MainActivity.MenuBadge'.", repo.PlusSparSi.MainActivity.MenuBadgeInfo, new RecordItemIndex(2));
             Validate.Attribute(repo.PlusSparSi.MainActivity.MenuBadgeInfo, "Text", catalogNum);
             Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.NavigateUp' at Center", repo.PlusSparSi.MainActivity.NavigateUpInfo, new RecordItemIndex(3));
+            repo.PlusSparSi.MainActivity.NavigateUp.Touch();
+            Delay.Milliseconds(500);
             
         }
 

@@ -9,29 +9,196 @@
 
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
+using System.Linq.Expressions;
+using System.Net.Http;
+using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Drawing;
 using System.Threading;
+using System.Threading.Tasks;
 using WinForms = System.Windows.Forms;
 
 using Ranorex;
 using Ranorex.Core;
 using Ranorex.Core.Repository;
 using Ranorex.Core.Testing;
+using Spar.Test_cases.Utility;
+using Spar.Test_cases.Utility.C_.Classes;
 
 namespace Spar.Test_cases.Landing
 {
-    public partial class Landing_Overview
-    {
-        /// <summary>
-        /// This method gets called right after the recording has been started.
-        /// It can be used to execute recording specific initialization code.
-        /// </summary>
-        private void Init()
-        {
-            // Your recording specific initialization code goes here.
-        }
+	public partial class Landing_Overview
+	{
+		/// <summary>
+		/// This method gets called right after the recording has been started.
+		/// It can be used to execute recording specific initialization code.
+		/// </summary>
+		private void Init()
+		{
+			// Your recording specific initialization code goes here.
+		}
 
-    }
+		public void GetValidToken()
+		{
+			Task<HttpResponseInfo> response = HttpClientMethod.GetAsync("https://qa-sparplusapp.spar.si/api/Catalog/token",null,"application/json");
+			
+			HttpResponseInfo message = response.Result;
+			
+			if(message.StatusCode == 200){
+				
+				Token token = new Token();
+				
+				token = HttpClientMethod.Deserialize<Token>(message.Content);
+				accessToken = token.access_token;
+				
+				Report.Log(ReportLevel.Info, "Access token", accessToken);
+			}else
+				Report.Log(ReportLevel.Failure, "Failed", "Status: " + message.StatusCode + ", message: " + message.Content.ToString());
+		}
+
+		public void GetDashboardInfo()
+		{
+			Task<HttpResponseInfo> response = HttpClientMethod.GetAsync("https://qa-sparplusapp.spar.si/api/Dashboard",null,"application/json");
+			
+			HttpResponseInfo message = response.Result;
+			
+			if(message.StatusCode == 200){
+				
+				Dashboard landing = new Dashboard();
+				
+				landing = HttpClientMethod.Deserialize<Dashboard>(message.Content);
+				
+				CatalogTitle = landing.catalogs[0].title;
+				News1Title = landing.news[0].title;
+				News2Title = landing.news[1].title;
+				News3Title = landing.news[2].title;
+				JedelBiTitle = landing.jedelBi.title;
+				SparPlusKlubTitle = landing.sparPlusKlub.title;
+				
+				Report.Log(ReportLevel.Info, "Access token", accessToken);
+			}else
+				Report.Log(ReportLevel.Warn, "Failed", "Status: " + message.StatusCode + ", message: " + message.Content.ToString());
+			
+			CatalogTitle = "Katalog Spar in Interspar 1";
+			News1Title = "Podpiramo slovenske pridelovalce!";
+			News2Title = "Profesionalni noži v vaši kuhinji";
+			News3Title = "Joker popust";
+			JedelBiTitle = "10 izbranih jesenskih receptov";
+			SparPlusKlubTitle = "Ponudbe družinskih vikend oddihov";
+		}
+
+		public void GetHightForSwipe()
+		{
+			int catalogHeight = repo.PlusSparSi.MainActivity.Catalog.ScreenRectangle.Height;
+			int locationHeight = repo.PlusSparSi.MainActivity.Location.ScreenRectangle.Height;
+			int toolbarHeight = repo.PlusSparSi.MainActivity.Toolbar.ScreenRectangle.Height;
+			int newsHeight = repo.PlusSparSi.MainActivity.News.ScreenRectangle.Height;
+			
+			SwipeHeight = (catalogHeight - toolbarHeight + locationHeight + 50 + newsHeight).ToString();
+			
+			Report.Log(ReportLevel.Info, "Height", "catalogHeight: " + catalogHeight + ", toolbarHeight: " + toolbarHeight + ", locationHeight;" + locationHeight + ", newsHeight: " + newsHeight);
+			Report.Log(ReportLevel.Info, "SwipeHeight", SwipeHeight);
+		}
+
+		public void Swipe_Gesture_FragmentStackLanding(RepoItemInfo containerInfo)
+		{
+			Report.Log(ReportLevel.Info, "Touch Gestures", "Swipe gesture with direction 'Up (270°)' starting from 'Center' with distance from variable $SwipeHeight with swipe duration'1s' and step count '0' on item 'containerInfo'.", containerInfo);
+			containerInfo.FindAdapter<Container>().Swipe(Ranorex.Location.LowerCenter, ValueConverter.ArgumentFromString<Ranorex.Core.Recorder.Touch.GestureDirection>("SwipeDirection", "Up (270°)"), ValueConverter.ArgumentFromString<Ranorex.Core.Distance>("Distance", SwipeHeight), ValueConverter.ArgumentFromString<Ranorex.Duration>("SwipeDuration", "1s"), 0);
+		}
+
+		public void MergedUserCodeMethod(RepoItemInfo textInfo, RepoItemInfo textInfo1, RepoItemInfo textInfo2)
+		{
+
+			Delay.Duration(3000, false);
+			repo.PlusSparSi.SearchTimeout = new Duration(1000);
+			repo.PlusSparSi.MainActivity.SearchTimeout = new Duration(1000);
+			repo.PlusSparSi.MainActivity.News1_TitleInfo.SearchTimeout = new Duration(1500);
+			repo.PlusSparSi.MainActivity.News2_TitleInfo.SearchTimeout = new Duration(1500);
+			repo.PlusSparSi.MainActivity.News3_TitleInfo.SearchTimeout = new Duration(1500);
+			
+			if(repo.PlusSparSi.MainActivity.News1_TitleInfo.Exists()){
+				
+				Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$News1Title) on item 'textInfo'.", textInfo);
+				Validate.Attribute(textInfo, "Text", News1Title);
+				
+			}else{
+				
+				Report.Log(ReportLevel.Info, "Touch Gestures", "Swipe gesture with direction 'Up (270°)' starting from 'Center' with distance from variable $SwipeHeight with swipe duration'1s' and step count '0' on item 'containerInfo'.", repo.PlusSparSi.MainActivity.FragmentStackLandingInfo);
+				repo.PlusSparSi.MainActivity.FragmentStackLandingInfo.FindAdapter<Container>().Swipe(Ranorex.Location.LowerCenter, ValueConverter.ArgumentFromString<Ranorex.Core.Recorder.Touch.GestureDirection>("SwipeDirection", "Up (270°)"), ValueConverter.ArgumentFromString<Ranorex.Core.Distance>("Distance", "0.5"), ValueConverter.ArgumentFromString<Ranorex.Duration>("SwipeDuration", "1s"), 0);
+				
+				Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$News1Title) on item 'textInfo'.", textInfo);
+				Validate.Attribute(textInfo, "Text", News1Title);
+			}
+			
+			if(repo.PlusSparSi.MainActivity.News2_TitleInfo.Exists()){
+				
+				Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$News2Title) on item 'textInfo1'.", textInfo1);
+				Validate.Attribute(textInfo1, "Text", News2Title);
+				
+			}else{
+				
+				Report.Log(ReportLevel.Info, "Touch Gestures", "Swipe gesture with direction 'Up (270°)' starting from 'Center' with distance from variable $SwipeHeight with swipe duration'1s' and step count '0' on item 'containerInfo'.", repo.PlusSparSi.MainActivity.FragmentStackLandingInfo);
+				repo.PlusSparSi.MainActivity.FragmentStackLandingInfo.FindAdapter<Container>().Swipe(Ranorex.Location.LowerCenter, ValueConverter.ArgumentFromString<Ranorex.Core.Recorder.Touch.GestureDirection>("SwipeDirection", "Up (270°)"), ValueConverter.ArgumentFromString<Ranorex.Core.Distance>("Distance", "0.5"), ValueConverter.ArgumentFromString<Ranorex.Duration>("SwipeDuration", "1s"), 0);
+				
+				Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$News2Title) on item 'textInfo1'.", textInfo1);
+				Validate.Attribute(textInfo1, "Text", News2Title);
+			}
+			
+			if(repo.PlusSparSi.MainActivity.News3_TitleInfo.Exists()){
+				
+				Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$News3Title) on item 'textInfo2'.", textInfo2);
+				Validate.Attribute(textInfo2, "Text", News3Title);
+				
+			}else{
+				
+				Report.Log(ReportLevel.Info, "Touch Gestures", "Swipe gesture with direction 'Up (270°)' starting from 'Center' with distance from variable $SwipeHeight with swipe duration'1s' and step count '0' on item 'containerInfo'.", repo.PlusSparSi.MainActivity.FragmentStackLandingInfo);
+				repo.PlusSparSi.MainActivity.FragmentStackLandingInfo.FindAdapter<Container>().Swipe(Ranorex.Location.LowerCenter, ValueConverter.ArgumentFromString<Ranorex.Core.Recorder.Touch.GestureDirection>("SwipeDirection", "Up (270°)"), ValueConverter.ArgumentFromString<Ranorex.Core.Distance>("Distance", "0.5"), ValueConverter.ArgumentFromString<Ranorex.Duration>("SwipeDuration", "1s"), 0);
+				
+				Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$News3Title) on item 'textInfo2'.", textInfo2);
+				Validate.Attribute(textInfo2, "Text", News3Title);
+			}
+			
+		}
+
+		public void MergedUserCodeMethod1(RepoItemInfo textInfo, RepoItemInfo textInfo1)
+		{
+			
+			repo.PlusSparSi.SearchTimeout = new Duration(1000);
+			repo.PlusSparSi.MainActivity.SearchTimeout = new Duration(1000);
+			repo.PlusSparSi.MainActivity.TvJedelBiInfo.SearchTimeout = new Duration(1500);
+			repo.PlusSparSi.MainActivity.TvSparPlusKlubInfo.SearchTimeout = new Duration(1500);
+			
+			if(repo.PlusSparSi.MainActivity.TvJedelBiInfo.Exists()){
+				
+				Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$JedelBiTitle) on item 'textInfo'.", textInfo);
+				Validate.Attribute(textInfo, "Text", JedelBiTitle);
+				
+			}else{
+				
+				Report.Log(ReportLevel.Info, "Touch Gestures", "Swipe gesture with direction 'Up (270°)' starting from 'Center' with distance from variable $SwipeHeight with swipe duration'1s' and step count '0' on item 'containerInfo'.", repo.PlusSparSi.MainActivity.FragmentStackLandingInfo);
+				repo.PlusSparSi.MainActivity.FragmentStackLandingInfo.FindAdapter<Container>().Swipe(Ranorex.Location.LowerCenter, ValueConverter.ArgumentFromString<Ranorex.Core.Recorder.Touch.GestureDirection>("SwipeDirection", "Up (270°)"), ValueConverter.ArgumentFromString<Ranorex.Core.Distance>("Distance", "0.5"), ValueConverter.ArgumentFromString<Ranorex.Duration>("SwipeDuration", "1s"), 0);
+				
+				Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$JedelBiTitle) on item 'textInfo'.", textInfo);
+				Validate.Attribute(textInfo, "Text", JedelBiTitle);
+			}
+			
+			if(repo.PlusSparSi.MainActivity.TvSparPlusKlubInfo.Exists()){
+				
+				Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$SparPlusKlubTitle) on item 'textInfo1'.", textInfo1);
+				Validate.Attribute(textInfo1, "Text", SparPlusKlubTitle);
+				
+			}else{
+				
+				Report.Log(ReportLevel.Info, "Touch Gestures", "Swipe gesture with direction 'Up (270°)' starting from 'Center' with distance from variable $SwipeHeight with swipe duration'1s' and step count '0' on item 'containerInfo'.", repo.PlusSparSi.MainActivity.FragmentStackLandingInfo);
+				repo.PlusSparSi.MainActivity.FragmentStackLandingInfo.FindAdapter<Container>().Swipe(Ranorex.Location.LowerCenter, ValueConverter.ArgumentFromString<Ranorex.Core.Recorder.Touch.GestureDirection>("SwipeDirection", "Up (270°)"), ValueConverter.ArgumentFromString<Ranorex.Core.Distance>("Distance", "0.5"), ValueConverter.ArgumentFromString<Ranorex.Duration>("SwipeDuration", "1s"), 0);
+				
+				Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$SparPlusKlubTitle) on item 'textInfo1'.", textInfo1);
+				Validate.Attribute(textInfo1, "Text", SparPlusKlubTitle);
+			}
+			
+		}
+
+	}
 }

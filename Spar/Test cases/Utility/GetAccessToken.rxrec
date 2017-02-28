@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+rxversion="6.2"
+id="2bce3e35-5051-477a-b59d-25e0192cc7f7"
+embeddedrepository="False"
+mode="Global">
+	<name>
+		GetAccessToken
+	</name>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="GetAccessToken"
+	namespace="Spar.Test_cases.Utility"/>
+	<variables>
+		<var
+		name="accessToken"
+		id="201492f6-b17d-456a-86c5-86f72c914a6d">
+		</var>
+	</variables>
+	<recorditems>
+		<userrecorditem
+		enabled="True"
+		optional="False"
+		namespace="Spar.Test_cases.Utility"
+		classname="GetAccessToken"
+		methodname="GetValidToken"
+		isexternaltestmethod="False"
+		varname="">
+			<comment/>
+			<bindings/>
+			<arguments
+			id="d3b2889c-eee9-482a-977f-af1aadecb70e"/>
+		</userrecorditem>
+	</recorditems>
+	<repository
+	name="SparRepository"
+	id="c55abb3d-7d0d-4435-8640-bb30710f5f27"
+	rxversion="6.2"
+	relativepath="..\..\SparRepository.rxrep">
+		<codegen
+		classname="SparRepository"
+		namespace="Spar"/>
+		<rootfolder
+		name="_rootdummy_"
+		id="c12fa4a9-bf96-41a7-9866-79edafaddcf2"/>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		GetAccessToken.UserCode.cs
+	</usercodefile>
+	<references/>
+</recordtable>

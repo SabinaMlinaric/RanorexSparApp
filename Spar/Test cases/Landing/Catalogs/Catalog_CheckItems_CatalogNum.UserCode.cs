@@ -29,7 +29,7 @@ using Spar.Test_cases.Utility.C_.Classes;
 
 namespace Spar.Test_cases.Landing.Catalogs
 {
-	public partial class Catalog_CheckItems_SectionsNum
+	public partial class Catalog_CheckItems_CatalogNum
 	{
 		/// <summary>
 		/// This method gets called right after the recording has been started.
@@ -40,28 +40,9 @@ namespace Spar.Test_cases.Landing.Catalogs
 			// Your recording specific initialization code goes here.
 		}
 
-		public void GetValidToken()
-		{
-			Task<HttpResponseInfo> response = HttpClientMethod.GetAsync("http://10.10.1.33:9090/api/Catalog/token",null,"application/json");
-			
-			HttpResponseInfo message = response.Result;
-			
-			if(message.StatusCode == 200){
-				
-				Token token = new Token();
-				
-				token = HttpClientMethod.Deserialize<Token>(message.Content);
-				accessToken = token.access_token;
-				
-				Report.Log(ReportLevel.Info, "Access token", accessToken);
-			}else
-				Report.Log(ReportLevel.Failure, "Failed", "Status: " + message.StatusCode + ", message: " + message.Content.ToString());
-			
-		}
-
         public void CheckNumOfCatalogs()
         {
-            Task<HttpResponseInfo> response = HttpClientMethod.GetAsync("http://10.10.1.33:9090/api/Catalog",accessToken,"application/json");
+            Task<HttpResponseInfo> response = HttpClientMethod.GetAsync("https://qa-sparplusapp.spar.si/api/Dashboard",accessToken,"application/json");
 			
 			HttpResponseInfo message = response.Result;
 			
@@ -71,7 +52,7 @@ namespace Spar.Test_cases.Landing.Catalogs
 				
 				catalogNum = 3 + ""; 
 				
-				Report.Log(ReportLevel.Info, "Access token", accessToken);
+				Report.Log(ReportLevel.Info, "Catalog num: ", catalogNum);
 			}else
 				Report.Log(ReportLevel.Warn, "Failed", "Status: " + message.StatusCode + ", message: " + message.Content.ToString());
         }

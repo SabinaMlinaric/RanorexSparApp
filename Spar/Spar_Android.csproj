@@ -158,15 +158,27 @@
       <UserCode>true</UserCode>
       <id>c82a1ed0-3f58-4167-bc96-200cf78c87f0</id>
     </Compile>
-    <Compile Include="Test cases\Landing\Catalogs\Catalog_CheckItems_SectionsNum.cs">
+    <Compile Include="Test cases\Landing\Catalogs\Catalogs_CheckItems_Sections.cs">
+      <BoundTo>7a039538-2ac8-49c8-8b5d-721007fded7c</BoundTo>
+      <DependentUpon>Catalogs_CheckItems_Sections.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>bc1b998f-9a6d-4263-957d-2f89c3e34e4c</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Catalogs\Catalogs_CheckItems_Sections.UserCode.cs">
+      <BoundTo>7a039538-2ac8-49c8-8b5d-721007fded7c</BoundTo>
+      <DependentUpon>Catalogs_CheckItems_Sections.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>85bd0711-dd6a-48dd-8a4f-0b477501c120</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Catalogs\Catalog_CheckItems_CatalogNum.cs">
       <BoundTo>ecc6e06e-0429-48cd-8dbb-8812722adf41</BoundTo>
-      <DependentUpon>Catalog_CheckItems_SectionsNum.rxrec</DependentUpon>
+      <DependentUpon>Catalog_CheckItems_CatalogNum.rxrec</DependentUpon>
       <RecorderCode>true</RecorderCode>
       <id>a229082d-ae46-4542-9ceb-ae4e0f0811db</id>
     </Compile>
-    <Compile Include="Test cases\Landing\Catalogs\Catalog_CheckItems_SectionsNum.UserCode.cs">
+    <Compile Include="Test cases\Landing\Catalogs\Catalog_CheckItems_CatalogNum.UserCode.cs">
       <BoundTo>ecc6e06e-0429-48cd-8dbb-8812722adf41</BoundTo>
-      <DependentUpon>Catalog_CheckItems_SectionsNum.rxrec</DependentUpon>
+      <DependentUpon>Catalog_CheckItems_CatalogNum.rxrec</DependentUpon>
       <UserCode>true</UserCode>
       <id>c96eadbe-a4d2-4a23-b4c3-244f7318e551</id>
     </Compile>
@@ -488,6 +500,21 @@
       <UserCode>true</UserCode>
       <id>45f1cced-44c8-4089-9b8a-b6e399a76039</id>
     </Compile>
+    <Compile Include="Test cases\Utility\GetAccessToken.cs">
+      <BoundTo>c6978092-5535-4b0d-a877-ca1763c5ff0c</BoundTo>
+      <DependentUpon>GetAccessToken.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>8c0a3ad7-9e65-409e-912d-7a07c681e34c</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\GetAccessToken.UserCode.cs">
+      <BoundTo>c6978092-5535-4b0d-a877-ca1763c5ff0c</BoundTo>
+      <DependentUpon>GetAccessToken.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>1a079fcf-6119-4818-bc2e-e7703a188ebf</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\GetUserToken.cs">
+      <id>0a60a9f1-ccc6-41af-be33-9d86dea7c3ad</id>
+    </Compile>
     <Compile Include="Test cases\Utility\Permissions_AddCamera.cs">
       <BoundTo>7239c6c3-b0dd-4aa7-a604-19e18159be1f</BoundTo>
       <DependentUpon>Permissions_AddCamera.rxrec</DependentUpon>
@@ -601,7 +628,12 @@
       <id>d6b5aceb-72fe-4be1-afb4-5ddfdb47d7c5</id>
       <recordtableid>0f81ec01-5f5a-439a-93de-8bb75f3acc37</recordtableid>
     </None>
-    <None Include="Test cases\Landing\Catalogs\Catalog_CheckItems_SectionsNum.rxrec">
+    <None Include="Test cases\Landing\Catalogs\Catalogs_CheckItems_Sections.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>7a039538-2ac8-49c8-8b5d-721007fded7c</id>
+      <recordtableid>a235f551-fe53-4213-93fd-dc32fd2894ac</recordtableid>
+    </None>
+    <None Include="Test cases\Landing\Catalogs\Catalog_CheckItems_CatalogNum.rxrec">
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
       <id>ecc6e06e-0429-48cd-8dbb-8812722adf41</id>
       <recordtableid>123236bf-d451-4233-a509-8c549a048c85</recordtableid>
@@ -730,6 +762,11 @@
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
       <id>d6945c95-b7c4-44f5-9cd8-c32abe7a58d2</id>
       <recordtableid>cde5fee8-c303-485d-9686-e99e57ce5f12</recordtableid>
+    </None>
+    <None Include="Test cases\Utility\GetAccessToken.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>c6978092-5535-4b0d-a877-ca1763c5ff0c</id>
+      <recordtableid>2bce3e35-5051-477a-b59d-25e0192cc7f7</recordtableid>
     </None>
     <None Include="Test cases\Utility\Permissions_AddCamera.rxrec">
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
