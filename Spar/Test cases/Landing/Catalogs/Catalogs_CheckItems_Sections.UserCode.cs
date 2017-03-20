@@ -29,37 +29,86 @@ using Spar.Test_cases.Utility.C_.Classes;
 
 namespace Spar.Test_cases.Landing.Catalogs
 {
-    public partial class Catalogs_CheckItems_Sections
-    {
-        /// <summary>
-        /// This method gets called right after the recording has been started.
-        /// It can be used to execute recording specific initialization code.
-        /// </summary>
-        private void Init()
-        {
-            // Your recording specific initialization code goes here.
-        }
+	public partial class Catalogs_CheckItems_Sections
+	{
+		/// <summary>
+		/// This method gets called right after the recording has been started.
+		/// It can be used to execute recording specific initialization code.
+		/// </summary>
+		/// 
+		public Catalog catalog;
+		public IList<Text> texts;
+		public int sectionSum = 0;
+		public int textsSum = 0;
+		
+		private void Init()
+		{
+			// Your recording specific initialization code goes here.
+		}
 
-        public void GetSectionsNum()
-        {
-            Task<HttpResponseInfo> response = HttpClientMethod.GetAsync("https://qa-sparplusapp.spar.si/api/Catalog",accessToken,"application/json");
+		public void GetSectionsNum()
+		{
+			Task<HttpResponseInfo> response = HttpClientMethod.GetAsync("https://qa-sparplusapp.spar.si/api/Catalog",accessToken,"application/json");
 			
 			HttpResponseInfo message = response.Result;
+						
+			texts = repo.PlusSparSi.MainActivity.SlidingTabLayout.FindChildren<Text>();
+			textsSum = texts.Count;
 			
 			if(message.StatusCode == 200){
 				
-				Catalog catalog = new Catalog();
-				
 				catalog = HttpClientMethod.Deserialize<Catalog>(message.Content);
-				sectionNum = catalog.categories.Count.ToString();
+				sectionSum = catalog.categories.Count;
 				
+				VerifySections(sectionSum,textsSum);
 				
-				
-				Report.Log(ReportLevel.Info, "Catalog num: ", sectionNum);
-			}else{
+			}else
+			{
 				Report.Log(ReportLevel.Warn, "Failed", "Status: " + message.StatusCode + ", message: " + message.Content.ToString());
+				
+				catalog = new Catalog();
+				catalog.categories = new List<Category>();
+				catalog.categories.Add(new Category(0, "Meso, mesni izdelki in ribe", null));
+				catalog.categories.Add(new Category(1, "Sveži izdelki", null));
+				catalog.categories.Add(new Category(2, "Čistila in osebna nega", null));
+				catalog.categories.Add(new Category(3, "Kuponi", null));
+				
+				VerifySections(4,4);
+				
 			}
-        }
-
-    }
+		}
+		
+		public void VerifySections(int sectionSum, int textsSum)
+		{
+			if(sectionSum == textsSum){
+				
+				Report.Log(ReportLevel.Success, "Success", "Number of sections match");
+				
+				for(int i=0; i<sectionSum; i++){
+								
+					if(CheckSectionTitle(catalog.categories[i].title, texts[i].TextValue)){
+						Report.Log(ReportLevel.Success, "Success", "Section " + catalog.categories[i].title + " is correct!");
+					}
+					else
+					{
+						Report.Log(ReportLevel.Failure, "Failure", "Section " + catalog.categories[i].title + " doesn't match " + texts[i].TextValue);
+					}
+				}
+			}
+			else
+			{
+				Report.Log(ReportLevel.Failure, "Failure", "Number of sections don't match! Server: " + sectionSum + ", Client: " + textsSum);
+			}
+		}
+		
+		public bool CheckSectionTitle(string serverTitle, string clientTitle)
+		{
+			if(serverTitle.Equals(clientTitle)){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+	}
 }

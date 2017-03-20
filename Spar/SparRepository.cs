@@ -85,6 +85,18 @@ namespace Spar
             set { _ItemNext = value; }
         }
 
+        string _LastSection = "4";
+
+        /// <summary>
+        /// Gets or sets the value of variable LastSection.
+        /// </summary>
+        [TestVariable("ebda0c33-dfe1-4e12-a3a9-dd6d83ba5720")]
+        public string LastSection
+        {
+            get { return _LastSection; }
+            set { _LastSection = value; }
+        }
+
 #endregion
 
         /// <summary>
@@ -1368,22 +1380,65 @@ namespace Spar
             RepoItemInfo _imgnewsInfo;
             RepoItemInfo _tvreadmoreInfo;
             RepoItemInfo _tvtitleInfo;
-            RepoItemInfo _catalogtitleInfo;
+            RepoItemInfo _sectiontitleInfo;
+            RepoItemInfo _catalogorsectiontitleInfo;
             RepoItemInfo _tvnoteInfo;
             RepoItemInfo _tvdescriptionInfo;
             RepoItemInfo _rstringtabtitleInfo;
+            RepoItemInfo _rstringtabsubtitleInfo;
             RepoItemInfo _tvclosedInfo;
             RepoItemInfo _menubadgeInfo;
             RepoItemInfo _tvjedelbiInfo;
             RepoItemInfo _locationInfo;
+            RepoItemInfo _itemsInfo;
             RepoItemInfo _catalogInfo;
             RepoItemInfo _newsInfo;
+            RepoItemInfo _fourthcontInfo;
+            RepoItemInfo _fifthcontInfo;
             RepoItemInfo _toolbarInfo;
             RepoItemInfo _fragmentstacklandingInfo;
             RepoItemInfo _news1_titleInfo;
             RepoItemInfo _news2_titleInfo;
             RepoItemInfo _news3_titleInfo;
             RepoItemInfo _slidingtablayoutInfo;
+            RepoItemInfo _slidingtablayout_firstbuttontextInfo;
+            RepoItemInfo _slidingtablayout_secondbuttontextInfo;
+            RepoItemInfo _slidingtablayout_lastbuttontextInfo;
+            RepoItemInfo _tvdateInfo;
+            RepoItemInfo _tvexpiredInfo;
+            RepoItemInfo _btnaddInfo;
+            RepoItemInfo _imgpromotionInfo;
+            RepoItemInfo _tvpricemainrow2Info;
+            RepoItemInfo _tvpriceprefixInfo;
+            RepoItemInfo _tvpriceintegerInfo;
+            RepoItemInfo _tvpricedecimalInfo;
+            RepoItemInfo _tvpercentageInfo;
+            RepoItemInfo _tvpercentage4Info;
+            RepoItemInfo _tvpercentage4mainrowInfo;
+            RepoItemInfo _tvpricemainrow3Info;
+            RepoItemInfo _tvpriceinfobottom1Info;
+            RepoItemInfo _tvpercentage4withpriceInfo;
+            RepoItemInfo _tvpercentage4withpricemainrowInfo;
+            RepoItemInfo _pricebottominfotopInfo;
+            RepoItemInfo _pricebottominfobottomInfo;
+            RepoItemInfo _imgpricesparplusInfo;
+            RepoItemInfo _tvhighlightInfo;
+            RepoItemInfo _tvpricemainrow1Info;
+            RepoItemInfo _tvpercentage4withprice1Info;
+            RepoItemInfo _tvpercentage4withpricemainrow1Info;
+            RepoItemInfo _tvfreetext1Info;
+            RepoItemInfo _tvfreetext2Info;
+            RepoItemInfo _tvfreetext3Info;
+            RepoItemInfo _tvtermconditionsInfo;
+            RepoItemInfo _btnshareInfo;
+            RepoItemInfo _tvstorestype1Info;
+            RepoItemInfo _tvstorestype2Info;
+            RepoItemInfo _tvstorestype3Info;
+            RepoItemInfo _imgbrandlogo1Info;
+            RepoItemInfo _imgbrandlogo2Info;
+            RepoItemInfo _imgbrandlogo3Info;
+            RepoItemInfo _imgpictureInfo;
+            RepoItemInfo _mainitemdataInfo;
 
             /// <summary>
             /// Creates a new MainActivity  folder.
@@ -1399,22 +1454,65 @@ namespace Spar
                 _imgnewsInfo = new RepoItemInfo(this, "ImgNews", ".//picture[@rid='img_news']", 30000, null, "2b2e1260-4fbe-41cd-830d-40e484002ca3");
                 _tvreadmoreInfo = new RepoItemInfo(this, "TvReadMore", ".//text[@rid='tv_read_more']", 30000, null, "1a7ebec4-d191-46ab-9bd5-3c2297e8fb13");
                 _tvtitleInfo = new RepoItemInfo(this, "TvTitle", ".//text[@rid='tv_title']", 30000, null, "acb10d91-bb88-4371-8f4c-6d1b4e686c9b");
-                _catalogtitleInfo = new RepoItemInfo(this, "CatalogTitle", ".//androidelement[@rid='recycler_view']/container[1]//text[@rid='tv_title']", 30000, null, "5e980a6c-9364-497e-a3d7-7c145d7fa330");
+                _sectiontitleInfo = new RepoItemInfo(this, "SectionTitle", ".//androidelement[@rid='recycler_view']/container[@containertype='Linear']//text[@rid='tv_title']", 30000, null, "80753b5e-f5d7-41c6-ba53-5e925a8c06af");
+                _catalogorsectiontitleInfo = new RepoItemInfo(this, "CatalogOrSectionTitle", ".//androidelement[@rid='recycler_view']/container[1]//text[@rid='tv_title']", 30000, null, "5e980a6c-9364-497e-a3d7-7c145d7fa330");
                 _tvnoteInfo = new RepoItemInfo(this, "TvNote", ".//text[@rid='tv_note']", 30000, null, "e0d02870-aa9a-4564-a42c-9c6b75f26397");
                 _tvdescriptionInfo = new RepoItemInfo(this, "TvDescription", ".//text[@rid='tv_description']", 30000, null, "2073c3c7-43d0-401b-a35c-b66680f6e9fc");
                 _rstringtabtitleInfo = new RepoItemInfo(this, "RStringTabTitle", ".//androidelement[@rid='toolbar']/container/text[1]", 30000, null, "25fb0b88-deaa-45e6-9e27-fd1c22183d6d");
+                _rstringtabsubtitleInfo = new RepoItemInfo(this, "RStringTabSubTitle", ".//androidelement[@rid='toolbar']/container/text[2]", 30000, null, "1fe6a91b-ee4c-429b-8d07-b849081eff19");
                 _tvclosedInfo = new RepoItemInfo(this, "TvClosed", ".//text[@rid='tv_closed']", 30000, null, "2654fc6c-ba81-47c2-b16a-4df2ea849b73");
                 _menubadgeInfo = new RepoItemInfo(this, "MenuBadge", ".//text[@rid='menu_badge']", 30000, null, "5be303f9-06a1-40b3-be81-f7c179c9c3be");
                 _tvjedelbiInfo = new RepoItemInfo(this, "TvJedelBi", ".//text[@rid='tv_jedel_bi']", 30000, null, "67873c1e-ab65-4758-a224-9e2511a9ce47");
                 _locationInfo = new RepoItemInfo(this, "Location", ".//androidelement[@rid='recycler_view']/container[2]", 30000, null, "2934de3e-bcc2-459e-a692-e1d279c8ffd5");
+                _itemsInfo = new RepoItemInfo(this, "Items", ".//androidelement[@rid='recycler_view']", 30000, null, "1771eb30-2627-4a05-b885-b679fda3d17c");
                 _catalogInfo = new RepoItemInfo(this, "Catalog", ".//androidelement[@rid='recycler_view']/container[1]", 30000, null, "27246ccd-d37f-4190-8651-54994b46bb86");
                 _newsInfo = new RepoItemInfo(this, "News", ".//androidelement[@rid='recycler_view']/container[3]", 30000, null, "6b78c7db-24a2-4dfb-8549-edd2ae6cc29b");
+                _fourthcontInfo = new RepoItemInfo(this, "FourthCont", ".//androidelement[@rid='recycler_view']/container[4]", 30000, null, "c96504cb-3b5c-454e-a3d6-f3e8db2a7b88");
+                _fifthcontInfo = new RepoItemInfo(this, "FifthCont", ".//androidelement[@rid='recycler_view']/container[5]", 30000, null, "1cc71f4f-58e1-499e-af21-120f90089413");
                 _toolbarInfo = new RepoItemInfo(this, "Toolbar", ".//androidelement[@rid='toolbar']", 30000, null, "dd63d75a-faa5-456e-a653-d6c31bbf8a0e");
                 _fragmentstacklandingInfo = new RepoItemInfo(this, "FragmentStackLanding", ".//container[@rid='fragment_stack_landing']", 30000, null, "c96a465c-b510-42e9-a6bd-9033a2f0df9e");
                 _news1_titleInfo = new RepoItemInfo(this, "News1_Title", ".//androidelement[@rid='recycler_view']/androidelement[1]//text[@rid='tv_title']", 30000, null, "0202aef6-71d5-4236-a106-186661967963");
                 _news2_titleInfo = new RepoItemInfo(this, "News2_Title", ".//androidelement[@rid='recycler_view']/androidelement[2]//text[@rid='tv_title']", 30000, null, "354f5f03-4d51-4aac-b302-ce73af598385");
                 _news3_titleInfo = new RepoItemInfo(this, "News3_Title", ".//androidelement[@rid='recycler_view']/androidelement[3]//text[@rid='tv_title']", 30000, null, "fc50e70b-f3f3-4201-874a-380b18513d9d");
                 _slidingtablayoutInfo = new RepoItemInfo(this, "SlidingTabLayout", ".//androidelement[@rid='sliding_tab_layout']/container", 30000, null, "57dbf3de-34b2-4872-9906-dc32264720b5");
+                _slidingtablayout_firstbuttontextInfo = new RepoItemInfo(this, "SlidingTabLayout_FirstButtonText", ".//androidelement[@rid='sliding_tab_layout']/container/text[1]", 30000, null, "a99aaa09-4349-40b8-94e9-f9c98ca8b18b");
+                _slidingtablayout_secondbuttontextInfo = new RepoItemInfo(this, "SlidingTabLayout_SecondButtonText", ".//androidelement[@rid='sliding_tab_layout']/container/text[2]", 30000, null, "d838752d-594e-4210-8566-9faaf80ea8f0");
+                _slidingtablayout_lastbuttontextInfo = new RepoItemInfo(this, "SlidingTabLayout_LastButtonText", ".//androidelement[@rid='sliding_tab_layout']/container/text[$LastSection]", 30000, null, "a7fcf1e8-00a9-4dce-9c02-8a446d3f699f");
+                _tvdateInfo = new RepoItemInfo(this, "TvDate", ".//text[@rid='tv_date']", 30000, null, "031e344b-04ce-4df8-ba8f-fc5dbb601977");
+                _tvexpiredInfo = new RepoItemInfo(this, "TvExpired", ".//text[@rid='tv_expired']", 30000, null, "34aa07ee-526a-484f-bae4-ebb6b4487bb2");
+                _btnaddInfo = new RepoItemInfo(this, "BtnAdd", ".//text[@rid='btn_add']", 30000, null, "1ab69615-5964-4979-aae6-539e1622bea4");
+                _imgpromotionInfo = new RepoItemInfo(this, "ImgPromotion", ".//picture[@rid='img_promotion']", 30000, null, "5499c403-a734-4eae-8d11-488080ddff4a");
+                _tvpricemainrow2Info = new RepoItemInfo(this, "TvPriceMainRow2", ".//text[@rid='tv_price_main_row_2']", 30000, null, "2d324ff9-f1b5-4cca-8b81-09ed83fb25d8");
+                _tvpriceprefixInfo = new RepoItemInfo(this, "TvPricePrefix", ".//text[@rid='tv_price_prefix']", 30000, null, "bced6382-0446-4b21-adb5-87bbafdaca56");
+                _tvpriceintegerInfo = new RepoItemInfo(this, "TvPriceInteger", ".//text[@rid='tv_price_integer']", 30000, null, "d21c3dc3-b5e1-4ca3-812a-97ba03f22707");
+                _tvpricedecimalInfo = new RepoItemInfo(this, "TvPriceDecimal", ".//text[@rid='tv_price_decimal']", 30000, null, "2c9da0d8-03ab-4cde-93da-177e4bc97374");
+                _tvpercentageInfo = new RepoItemInfo(this, "TvPercentage", ".//text[@rid='tv_percentage']", 30000, null, "62e9a655-b3eb-4748-be8c-2000f3440a1e");
+                _tvpercentage4Info = new RepoItemInfo(this, "TvPercentage4", ".//text[@rid='tv_percentage_4']", 30000, null, "42b1250b-8d36-4fca-8e51-fef482fdc063");
+                _tvpercentage4mainrowInfo = new RepoItemInfo(this, "TvPercentage4MainRow", ".//text[@rid='tv_percentage_4_main_row']", 30000, null, "b93f9ee2-74dd-4267-8c0c-4b84eecd8b96");
+                _tvpricemainrow3Info = new RepoItemInfo(this, "TvPriceMainRow3", ".//text[@rid='tv_price_main_row_3']", 30000, null, "264382a8-6a60-4311-9367-1ece56d84e56");
+                _tvpriceinfobottom1Info = new RepoItemInfo(this, "TvPriceInfoBottom1", ".//text[@rid='tv_price_info_bottom_1']", 30000, null, "6c3d8187-bdc1-47c2-95c7-e8549b719b29");
+                _tvpercentage4withpriceInfo = new RepoItemInfo(this, "TvPercentage4WithPrice", ".//text[@rid='tv_percentage_4_with_price']", 30000, null, "7e43273d-6821-4538-920e-d97fb5465b83");
+                _tvpercentage4withpricemainrowInfo = new RepoItemInfo(this, "TvPercentage4WithPriceMainRow", ".//text[@rid='tv_percentage_4_with_price_main_row']", 30000, null, "221bcb0a-2fda-4601-ba60-6afeb59b292c");
+                _pricebottominfotopInfo = new RepoItemInfo(this, "PriceBottomInfoTop", ".//text[@rid='price_bottom_info_top']", 30000, null, "492638ed-bde6-4eea-974b-d0ad052274e4");
+                _pricebottominfobottomInfo = new RepoItemInfo(this, "PriceBottomInfoBottom", ".//text[@rid='price_bottom_info_bottom']", 30000, null, "2bf8fae3-ef80-44f3-afc1-211d301de5be");
+                _imgpricesparplusInfo = new RepoItemInfo(this, "ImgPriceSparPlus", ".//picture[@rid='img_price_spar_plus']", 30000, null, "eb1c17a2-e7e1-45d9-8992-94770c500530");
+                _tvhighlightInfo = new RepoItemInfo(this, "TvHighlight", ".//text[@rid='tv_highlight']", 30000, null, "e400ea77-14b7-4196-b345-a6887b861f84");
+                _tvpricemainrow1Info = new RepoItemInfo(this, "TvPriceMainRow1", ".//text[@rid='tv_price_main_row_1']", 30000, null, "a720ff10-56ea-449c-8ab5-9c9f92fedb78");
+                _tvpercentage4withprice1Info = new RepoItemInfo(this, "TvPercentage4WithPrice1", ".//text[@rid='tv_percentage_4_with_price']", 30000, null, "9b57469b-9dd3-4206-a85d-187e375fad37");
+                _tvpercentage4withpricemainrow1Info = new RepoItemInfo(this, "TvPercentage4WithPriceMainRow1", ".//text[@rid='tv_percentage_4_with_price_main_row']", 30000, null, "5fcee565-2d14-4a49-90e4-028d7abac1c6");
+                _tvfreetext1Info = new RepoItemInfo(this, "TvFreeText1", ".//text[@rid='tv_free_text_1']", 30000, null, "ec81c224-4f15-4d0d-8778-e07c18cb7257");
+                _tvfreetext2Info = new RepoItemInfo(this, "TvFreeText2", ".//text[@rid='tv_free_text_2']", 30000, null, "e03034b2-3f21-4b42-9632-83cbbf14a3f7");
+                _tvfreetext3Info = new RepoItemInfo(this, "TvFreeText3", ".//text[@rid='tv_free_text_3']", 30000, null, "35dabec1-f481-4af8-85d0-b784f4f70835");
+                _tvtermconditionsInfo = new RepoItemInfo(this, "TvTermConditions", ".//text[@resourceid='R.string.catalog_item_details_term_conditions']", 30000, null, "24e62529-9af2-47ca-95c0-b70d90af25e9");
+                _btnshareInfo = new RepoItemInfo(this, "BtnShare", ".//text[@rid='btn_share']", 30000, null, "854074b7-74fa-46be-a878-dfa0f69fa899");
+                _tvstorestype1Info = new RepoItemInfo(this, "TvStoresType1", ".//text[@rid='tv_stores_type_1']", 30000, null, "292689dc-c217-4862-8e6f-c2ead3a46be6");
+                _tvstorestype2Info = new RepoItemInfo(this, "TvStoresType2", ".//text[@rid='tv_stores_type_2']", 30000, null, "0776e747-337e-4552-b71c-6fa6322247ca");
+                _tvstorestype3Info = new RepoItemInfo(this, "TvStoresType3", ".//text[@rid='tv_stores_type_3']", 30000, null, "3a709a8f-7aee-4f42-abe8-73928dafebf9");
+                _imgbrandlogo1Info = new RepoItemInfo(this, "ImgBrandLogo1", ".//picture[@rid='img_brand_logo_1']", 30000, null, "90560738-aa7e-4e33-b916-6e2f1f2c2b7e");
+                _imgbrandlogo2Info = new RepoItemInfo(this, "ImgBrandLogo2", ".//picture[@rid='img_brand_logo_2']", 30000, null, "1e585384-df41-406b-82bc-dca08eeb1593");
+                _imgbrandlogo3Info = new RepoItemInfo(this, "ImgBrandLogo3", ".//picture[@rid='img_brand_logo_3']", 30000, null, "9560c9bc-a635-45ad-8df1-7d14dc3790ef");
+                _imgpictureInfo = new RepoItemInfo(this, "ImgPicture", "androidelement[@rid='content']/container[@rid='main_container']/container[@rid='fragment_stack_container']/container[@rid='fragment_stack_landing']/?/?/container[@rid='content_placeholder']/container[@rid='child_fragment_placeholder']//picture", 30000, null, "a006130e-a47e-4aa0-81d7-d1533e65b02b");
+                _mainitemdataInfo = new RepoItemInfo(this, "MainItemData", ".//androidelement[@rid='spar_scrollview_default_id']/container", 30000, null, "aaa89261-0e22-4900-8ccd-4c126aca2143");
             }
 
             /// <summary>
@@ -1610,26 +1708,50 @@ namespace Spar
             }
 
             /// <summary>
-            /// The CatalogTitle item.
+            /// The SectionTitle item.
             /// </summary>
-            [RepositoryItem("5e980a6c-9364-497e-a3d7-7c145d7fa330")]
-            public virtual Ranorex.Text CatalogTitle
+            [RepositoryItem("80753b5e-f5d7-41c6-ba53-5e925a8c06af")]
+            public virtual Ranorex.Text SectionTitle
             {
                 get
                 {
-                    return _catalogtitleInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _sectiontitleInfo.CreateAdapter<Ranorex.Text>(true);
                 }
             }
 
             /// <summary>
-            /// The CatalogTitle item info.
+            /// The SectionTitle item info.
             /// </summary>
-            [RepositoryItemInfo("5e980a6c-9364-497e-a3d7-7c145d7fa330")]
-            public virtual RepoItemInfo CatalogTitleInfo
+            [RepositoryItemInfo("80753b5e-f5d7-41c6-ba53-5e925a8c06af")]
+            public virtual RepoItemInfo SectionTitleInfo
             {
                 get
                 {
-                    return _catalogtitleInfo;
+                    return _sectiontitleInfo;
+                }
+            }
+
+            /// <summary>
+            /// The CatalogOrSectionTitle item.
+            /// </summary>
+            [RepositoryItem("5e980a6c-9364-497e-a3d7-7c145d7fa330")]
+            public virtual Ranorex.Text CatalogOrSectionTitle
+            {
+                get
+                {
+                    return _catalogorsectiontitleInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The CatalogOrSectionTitle item info.
+            /// </summary>
+            [RepositoryItemInfo("5e980a6c-9364-497e-a3d7-7c145d7fa330")]
+            public virtual RepoItemInfo CatalogOrSectionTitleInfo
+            {
+                get
+                {
+                    return _catalogorsectiontitleInfo;
                 }
             }
 
@@ -1702,6 +1824,30 @@ namespace Spar
                 get
                 {
                     return _rstringtabtitleInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RStringTabSubTitle item.
+            /// </summary>
+            [RepositoryItem("1fe6a91b-ee4c-429b-8d07-b849081eff19")]
+            public virtual Ranorex.Text RStringTabSubTitle
+            {
+                get
+                {
+                    return _rstringtabsubtitleInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RStringTabSubTitle item info.
+            /// </summary>
+            [RepositoryItemInfo("1fe6a91b-ee4c-429b-8d07-b849081eff19")]
+            public virtual RepoItemInfo RStringTabSubTitleInfo
+            {
+                get
+                {
+                    return _rstringtabsubtitleInfo;
                 }
             }
 
@@ -1802,6 +1948,30 @@ namespace Spar
             }
 
             /// <summary>
+            /// The Items item.
+            /// </summary>
+            [RepositoryItem("1771eb30-2627-4a05-b885-b679fda3d17c")]
+            public virtual Ranorex.AndroidElement Items
+            {
+                get
+                {
+                    return _itemsInfo.CreateAdapter<Ranorex.AndroidElement>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Items item info.
+            /// </summary>
+            [RepositoryItemInfo("1771eb30-2627-4a05-b885-b679fda3d17c")]
+            public virtual RepoItemInfo ItemsInfo
+            {
+                get
+                {
+                    return _itemsInfo;
+                }
+            }
+
+            /// <summary>
             /// The Catalog item.
             /// </summary>
             [RepositoryItem("27246ccd-d37f-4190-8651-54994b46bb86")]
@@ -1846,6 +2016,54 @@ namespace Spar
                 get
                 {
                     return _newsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The FourthCont item.
+            /// </summary>
+            [RepositoryItem("c96504cb-3b5c-454e-a3d6-f3e8db2a7b88")]
+            public virtual Ranorex.Container FourthCont
+            {
+                get
+                {
+                    return _fourthcontInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The FourthCont item info.
+            /// </summary>
+            [RepositoryItemInfo("c96504cb-3b5c-454e-a3d6-f3e8db2a7b88")]
+            public virtual RepoItemInfo FourthContInfo
+            {
+                get
+                {
+                    return _fourthcontInfo;
+                }
+            }
+
+            /// <summary>
+            /// The FifthCont item.
+            /// </summary>
+            [RepositoryItem("1cc71f4f-58e1-499e-af21-120f90089413")]
+            public virtual Ranorex.Container FifthCont
+            {
+                get
+                {
+                    return _fifthcontInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The FifthCont item info.
+            /// </summary>
+            [RepositoryItemInfo("1cc71f4f-58e1-499e-af21-120f90089413")]
+            public virtual RepoItemInfo FifthContInfo
+            {
+                get
+                {
+                    return _fifthcontInfo;
                 }
             }
 
@@ -1990,6 +2208,918 @@ namespace Spar
                 get
                 {
                     return _slidingtablayoutInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SlidingTabLayout_FirstButtonText item.
+            /// </summary>
+            [RepositoryItem("a99aaa09-4349-40b8-94e9-f9c98ca8b18b")]
+            public virtual Ranorex.Text SlidingTabLayout_FirstButtonText
+            {
+                get
+                {
+                    return _slidingtablayout_firstbuttontextInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SlidingTabLayout_FirstButtonText item info.
+            /// </summary>
+            [RepositoryItemInfo("a99aaa09-4349-40b8-94e9-f9c98ca8b18b")]
+            public virtual RepoItemInfo SlidingTabLayout_FirstButtonTextInfo
+            {
+                get
+                {
+                    return _slidingtablayout_firstbuttontextInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SlidingTabLayout_SecondButtonText item.
+            /// </summary>
+            [RepositoryItem("d838752d-594e-4210-8566-9faaf80ea8f0")]
+            public virtual Ranorex.Text SlidingTabLayout_SecondButtonText
+            {
+                get
+                {
+                    return _slidingtablayout_secondbuttontextInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SlidingTabLayout_SecondButtonText item info.
+            /// </summary>
+            [RepositoryItemInfo("d838752d-594e-4210-8566-9faaf80ea8f0")]
+            public virtual RepoItemInfo SlidingTabLayout_SecondButtonTextInfo
+            {
+                get
+                {
+                    return _slidingtablayout_secondbuttontextInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SlidingTabLayout_LastButtonText item.
+            /// </summary>
+            [RepositoryItem("a7fcf1e8-00a9-4dce-9c02-8a446d3f699f")]
+            public virtual Ranorex.Text SlidingTabLayout_LastButtonText
+            {
+                get
+                {
+                    return _slidingtablayout_lastbuttontextInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SlidingTabLayout_LastButtonText item info.
+            /// </summary>
+            [RepositoryItemInfo("a7fcf1e8-00a9-4dce-9c02-8a446d3f699f")]
+            public virtual RepoItemInfo SlidingTabLayout_LastButtonTextInfo
+            {
+                get
+                {
+                    return _slidingtablayout_lastbuttontextInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvDate item.
+            /// </summary>
+            [RepositoryItem("031e344b-04ce-4df8-ba8f-fc5dbb601977")]
+            public virtual Ranorex.Text TvDate
+            {
+                get
+                {
+                    return _tvdateInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvDate item info.
+            /// </summary>
+            [RepositoryItemInfo("031e344b-04ce-4df8-ba8f-fc5dbb601977")]
+            public virtual RepoItemInfo TvDateInfo
+            {
+                get
+                {
+                    return _tvdateInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvExpired item.
+            /// </summary>
+            [RepositoryItem("34aa07ee-526a-484f-bae4-ebb6b4487bb2")]
+            public virtual Ranorex.Text TvExpired
+            {
+                get
+                {
+                    return _tvexpiredInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvExpired item info.
+            /// </summary>
+            [RepositoryItemInfo("34aa07ee-526a-484f-bae4-ebb6b4487bb2")]
+            public virtual RepoItemInfo TvExpiredInfo
+            {
+                get
+                {
+                    return _tvexpiredInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnAdd item.
+            /// </summary>
+            [RepositoryItem("1ab69615-5964-4979-aae6-539e1622bea4")]
+            public virtual Ranorex.Text BtnAdd
+            {
+                get
+                {
+                    return _btnaddInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnAdd item info.
+            /// </summary>
+            [RepositoryItemInfo("1ab69615-5964-4979-aae6-539e1622bea4")]
+            public virtual RepoItemInfo BtnAddInfo
+            {
+                get
+                {
+                    return _btnaddInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ImgPromotion item.
+            /// </summary>
+            [RepositoryItem("5499c403-a734-4eae-8d11-488080ddff4a")]
+            public virtual Ranorex.Picture ImgPromotion
+            {
+                get
+                {
+                    return _imgpromotionInfo.CreateAdapter<Ranorex.Picture>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ImgPromotion item info.
+            /// </summary>
+            [RepositoryItemInfo("5499c403-a734-4eae-8d11-488080ddff4a")]
+            public virtual RepoItemInfo ImgPromotionInfo
+            {
+                get
+                {
+                    return _imgpromotionInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvPriceMainRow2 item.
+            /// </summary>
+            [RepositoryItem("2d324ff9-f1b5-4cca-8b81-09ed83fb25d8")]
+            public virtual Ranorex.Text TvPriceMainRow2
+            {
+                get
+                {
+                    return _tvpricemainrow2Info.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvPriceMainRow2 item info.
+            /// </summary>
+            [RepositoryItemInfo("2d324ff9-f1b5-4cca-8b81-09ed83fb25d8")]
+            public virtual RepoItemInfo TvPriceMainRow2Info
+            {
+                get
+                {
+                    return _tvpricemainrow2Info;
+                }
+            }
+
+            /// <summary>
+            /// The TvPricePrefix item.
+            /// </summary>
+            [RepositoryItem("bced6382-0446-4b21-adb5-87bbafdaca56")]
+            public virtual Ranorex.Text TvPricePrefix
+            {
+                get
+                {
+                    return _tvpriceprefixInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvPricePrefix item info.
+            /// </summary>
+            [RepositoryItemInfo("bced6382-0446-4b21-adb5-87bbafdaca56")]
+            public virtual RepoItemInfo TvPricePrefixInfo
+            {
+                get
+                {
+                    return _tvpriceprefixInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvPriceInteger item.
+            /// </summary>
+            [RepositoryItem("d21c3dc3-b5e1-4ca3-812a-97ba03f22707")]
+            public virtual Ranorex.Text TvPriceInteger
+            {
+                get
+                {
+                    return _tvpriceintegerInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvPriceInteger item info.
+            /// </summary>
+            [RepositoryItemInfo("d21c3dc3-b5e1-4ca3-812a-97ba03f22707")]
+            public virtual RepoItemInfo TvPriceIntegerInfo
+            {
+                get
+                {
+                    return _tvpriceintegerInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvPriceDecimal item.
+            /// </summary>
+            [RepositoryItem("2c9da0d8-03ab-4cde-93da-177e4bc97374")]
+            public virtual Ranorex.Text TvPriceDecimal
+            {
+                get
+                {
+                    return _tvpricedecimalInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvPriceDecimal item info.
+            /// </summary>
+            [RepositoryItemInfo("2c9da0d8-03ab-4cde-93da-177e4bc97374")]
+            public virtual RepoItemInfo TvPriceDecimalInfo
+            {
+                get
+                {
+                    return _tvpricedecimalInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvPercentage item.
+            /// </summary>
+            [RepositoryItem("62e9a655-b3eb-4748-be8c-2000f3440a1e")]
+            public virtual Ranorex.Text TvPercentage
+            {
+                get
+                {
+                    return _tvpercentageInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvPercentage item info.
+            /// </summary>
+            [RepositoryItemInfo("62e9a655-b3eb-4748-be8c-2000f3440a1e")]
+            public virtual RepoItemInfo TvPercentageInfo
+            {
+                get
+                {
+                    return _tvpercentageInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvPercentage4 item.
+            /// </summary>
+            [RepositoryItem("42b1250b-8d36-4fca-8e51-fef482fdc063")]
+            public virtual Ranorex.Text TvPercentage4
+            {
+                get
+                {
+                    return _tvpercentage4Info.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvPercentage4 item info.
+            /// </summary>
+            [RepositoryItemInfo("42b1250b-8d36-4fca-8e51-fef482fdc063")]
+            public virtual RepoItemInfo TvPercentage4Info
+            {
+                get
+                {
+                    return _tvpercentage4Info;
+                }
+            }
+
+            /// <summary>
+            /// The TvPercentage4MainRow item.
+            /// </summary>
+            [RepositoryItem("b93f9ee2-74dd-4267-8c0c-4b84eecd8b96")]
+            public virtual Ranorex.Text TvPercentage4MainRow
+            {
+                get
+                {
+                    return _tvpercentage4mainrowInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvPercentage4MainRow item info.
+            /// </summary>
+            [RepositoryItemInfo("b93f9ee2-74dd-4267-8c0c-4b84eecd8b96")]
+            public virtual RepoItemInfo TvPercentage4MainRowInfo
+            {
+                get
+                {
+                    return _tvpercentage4mainrowInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvPriceMainRow3 item.
+            /// </summary>
+            [RepositoryItem("264382a8-6a60-4311-9367-1ece56d84e56")]
+            public virtual Ranorex.Text TvPriceMainRow3
+            {
+                get
+                {
+                    return _tvpricemainrow3Info.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvPriceMainRow3 item info.
+            /// </summary>
+            [RepositoryItemInfo("264382a8-6a60-4311-9367-1ece56d84e56")]
+            public virtual RepoItemInfo TvPriceMainRow3Info
+            {
+                get
+                {
+                    return _tvpricemainrow3Info;
+                }
+            }
+
+            /// <summary>
+            /// The TvPriceInfoBottom1 item.
+            /// </summary>
+            [RepositoryItem("6c3d8187-bdc1-47c2-95c7-e8549b719b29")]
+            public virtual Ranorex.Text TvPriceInfoBottom1
+            {
+                get
+                {
+                    return _tvpriceinfobottom1Info.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvPriceInfoBottom1 item info.
+            /// </summary>
+            [RepositoryItemInfo("6c3d8187-bdc1-47c2-95c7-e8549b719b29")]
+            public virtual RepoItemInfo TvPriceInfoBottom1Info
+            {
+                get
+                {
+                    return _tvpriceinfobottom1Info;
+                }
+            }
+
+            /// <summary>
+            /// The TvPercentage4WithPrice item.
+            /// </summary>
+            [RepositoryItem("7e43273d-6821-4538-920e-d97fb5465b83")]
+            public virtual Ranorex.Text TvPercentage4WithPrice
+            {
+                get
+                {
+                    return _tvpercentage4withpriceInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvPercentage4WithPrice item info.
+            /// </summary>
+            [RepositoryItemInfo("7e43273d-6821-4538-920e-d97fb5465b83")]
+            public virtual RepoItemInfo TvPercentage4WithPriceInfo
+            {
+                get
+                {
+                    return _tvpercentage4withpriceInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvPercentage4WithPriceMainRow item.
+            /// </summary>
+            [RepositoryItem("221bcb0a-2fda-4601-ba60-6afeb59b292c")]
+            public virtual Ranorex.Text TvPercentage4WithPriceMainRow
+            {
+                get
+                {
+                    return _tvpercentage4withpricemainrowInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvPercentage4WithPriceMainRow item info.
+            /// </summary>
+            [RepositoryItemInfo("221bcb0a-2fda-4601-ba60-6afeb59b292c")]
+            public virtual RepoItemInfo TvPercentage4WithPriceMainRowInfo
+            {
+                get
+                {
+                    return _tvpercentage4withpricemainrowInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PriceBottomInfoTop item.
+            /// </summary>
+            [RepositoryItem("492638ed-bde6-4eea-974b-d0ad052274e4")]
+            public virtual Ranorex.Text PriceBottomInfoTop
+            {
+                get
+                {
+                    return _pricebottominfotopInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PriceBottomInfoTop item info.
+            /// </summary>
+            [RepositoryItemInfo("492638ed-bde6-4eea-974b-d0ad052274e4")]
+            public virtual RepoItemInfo PriceBottomInfoTopInfo
+            {
+                get
+                {
+                    return _pricebottominfotopInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PriceBottomInfoBottom item.
+            /// </summary>
+            [RepositoryItem("2bf8fae3-ef80-44f3-afc1-211d301de5be")]
+            public virtual Ranorex.Text PriceBottomInfoBottom
+            {
+                get
+                {
+                    return _pricebottominfobottomInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PriceBottomInfoBottom item info.
+            /// </summary>
+            [RepositoryItemInfo("2bf8fae3-ef80-44f3-afc1-211d301de5be")]
+            public virtual RepoItemInfo PriceBottomInfoBottomInfo
+            {
+                get
+                {
+                    return _pricebottominfobottomInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ImgPriceSparPlus item.
+            /// </summary>
+            [RepositoryItem("eb1c17a2-e7e1-45d9-8992-94770c500530")]
+            public virtual Ranorex.Picture ImgPriceSparPlus
+            {
+                get
+                {
+                    return _imgpricesparplusInfo.CreateAdapter<Ranorex.Picture>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ImgPriceSparPlus item info.
+            /// </summary>
+            [RepositoryItemInfo("eb1c17a2-e7e1-45d9-8992-94770c500530")]
+            public virtual RepoItemInfo ImgPriceSparPlusInfo
+            {
+                get
+                {
+                    return _imgpricesparplusInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvHighlight item.
+            /// </summary>
+            [RepositoryItem("e400ea77-14b7-4196-b345-a6887b861f84")]
+            public virtual Ranorex.Text TvHighlight
+            {
+                get
+                {
+                    return _tvhighlightInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvHighlight item info.
+            /// </summary>
+            [RepositoryItemInfo("e400ea77-14b7-4196-b345-a6887b861f84")]
+            public virtual RepoItemInfo TvHighlightInfo
+            {
+                get
+                {
+                    return _tvhighlightInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvPriceMainRow1 item.
+            /// </summary>
+            [RepositoryItem("a720ff10-56ea-449c-8ab5-9c9f92fedb78")]
+            public virtual Ranorex.Text TvPriceMainRow1
+            {
+                get
+                {
+                    return _tvpricemainrow1Info.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvPriceMainRow1 item info.
+            /// </summary>
+            [RepositoryItemInfo("a720ff10-56ea-449c-8ab5-9c9f92fedb78")]
+            public virtual RepoItemInfo TvPriceMainRow1Info
+            {
+                get
+                {
+                    return _tvpricemainrow1Info;
+                }
+            }
+
+            /// <summary>
+            /// The TvPercentage4WithPrice1 item.
+            /// </summary>
+            [RepositoryItem("9b57469b-9dd3-4206-a85d-187e375fad37")]
+            public virtual Ranorex.Text TvPercentage4WithPrice1
+            {
+                get
+                {
+                    return _tvpercentage4withprice1Info.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvPercentage4WithPrice1 item info.
+            /// </summary>
+            [RepositoryItemInfo("9b57469b-9dd3-4206-a85d-187e375fad37")]
+            public virtual RepoItemInfo TvPercentage4WithPrice1Info
+            {
+                get
+                {
+                    return _tvpercentage4withprice1Info;
+                }
+            }
+
+            /// <summary>
+            /// The TvPercentage4WithPriceMainRow1 item.
+            /// </summary>
+            [RepositoryItem("5fcee565-2d14-4a49-90e4-028d7abac1c6")]
+            public virtual Ranorex.Text TvPercentage4WithPriceMainRow1
+            {
+                get
+                {
+                    return _tvpercentage4withpricemainrow1Info.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvPercentage4WithPriceMainRow1 item info.
+            /// </summary>
+            [RepositoryItemInfo("5fcee565-2d14-4a49-90e4-028d7abac1c6")]
+            public virtual RepoItemInfo TvPercentage4WithPriceMainRow1Info
+            {
+                get
+                {
+                    return _tvpercentage4withpricemainrow1Info;
+                }
+            }
+
+            /// <summary>
+            /// The TvFreeText1 item.
+            /// </summary>
+            [RepositoryItem("ec81c224-4f15-4d0d-8778-e07c18cb7257")]
+            public virtual Ranorex.Text TvFreeText1
+            {
+                get
+                {
+                    return _tvfreetext1Info.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvFreeText1 item info.
+            /// </summary>
+            [RepositoryItemInfo("ec81c224-4f15-4d0d-8778-e07c18cb7257")]
+            public virtual RepoItemInfo TvFreeText1Info
+            {
+                get
+                {
+                    return _tvfreetext1Info;
+                }
+            }
+
+            /// <summary>
+            /// The TvFreeText2 item.
+            /// </summary>
+            [RepositoryItem("e03034b2-3f21-4b42-9632-83cbbf14a3f7")]
+            public virtual Ranorex.Text TvFreeText2
+            {
+                get
+                {
+                    return _tvfreetext2Info.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvFreeText2 item info.
+            /// </summary>
+            [RepositoryItemInfo("e03034b2-3f21-4b42-9632-83cbbf14a3f7")]
+            public virtual RepoItemInfo TvFreeText2Info
+            {
+                get
+                {
+                    return _tvfreetext2Info;
+                }
+            }
+
+            /// <summary>
+            /// The TvFreeText3 item.
+            /// </summary>
+            [RepositoryItem("35dabec1-f481-4af8-85d0-b784f4f70835")]
+            public virtual Ranorex.Text TvFreeText3
+            {
+                get
+                {
+                    return _tvfreetext3Info.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvFreeText3 item info.
+            /// </summary>
+            [RepositoryItemInfo("35dabec1-f481-4af8-85d0-b784f4f70835")]
+            public virtual RepoItemInfo TvFreeText3Info
+            {
+                get
+                {
+                    return _tvfreetext3Info;
+                }
+            }
+
+            /// <summary>
+            /// The TvTermConditions item.
+            /// </summary>
+            [RepositoryItem("24e62529-9af2-47ca-95c0-b70d90af25e9")]
+            public virtual Ranorex.Text TvTermConditions
+            {
+                get
+                {
+                    return _tvtermconditionsInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvTermConditions item info.
+            /// </summary>
+            [RepositoryItemInfo("24e62529-9af2-47ca-95c0-b70d90af25e9")]
+            public virtual RepoItemInfo TvTermConditionsInfo
+            {
+                get
+                {
+                    return _tvtermconditionsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnShare item.
+            /// </summary>
+            [RepositoryItem("854074b7-74fa-46be-a878-dfa0f69fa899")]
+            public virtual Ranorex.Text BtnShare
+            {
+                get
+                {
+                    return _btnshareInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnShare item info.
+            /// </summary>
+            [RepositoryItemInfo("854074b7-74fa-46be-a878-dfa0f69fa899")]
+            public virtual RepoItemInfo BtnShareInfo
+            {
+                get
+                {
+                    return _btnshareInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvStoresType1 item.
+            /// </summary>
+            [RepositoryItem("292689dc-c217-4862-8e6f-c2ead3a46be6")]
+            public virtual Ranorex.Text TvStoresType1
+            {
+                get
+                {
+                    return _tvstorestype1Info.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvStoresType1 item info.
+            /// </summary>
+            [RepositoryItemInfo("292689dc-c217-4862-8e6f-c2ead3a46be6")]
+            public virtual RepoItemInfo TvStoresType1Info
+            {
+                get
+                {
+                    return _tvstorestype1Info;
+                }
+            }
+
+            /// <summary>
+            /// The TvStoresType2 item.
+            /// </summary>
+            [RepositoryItem("0776e747-337e-4552-b71c-6fa6322247ca")]
+            public virtual Ranorex.Text TvStoresType2
+            {
+                get
+                {
+                    return _tvstorestype2Info.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvStoresType2 item info.
+            /// </summary>
+            [RepositoryItemInfo("0776e747-337e-4552-b71c-6fa6322247ca")]
+            public virtual RepoItemInfo TvStoresType2Info
+            {
+                get
+                {
+                    return _tvstorestype2Info;
+                }
+            }
+
+            /// <summary>
+            /// The TvStoresType3 item.
+            /// </summary>
+            [RepositoryItem("3a709a8f-7aee-4f42-abe8-73928dafebf9")]
+            public virtual Ranorex.Text TvStoresType3
+            {
+                get
+                {
+                    return _tvstorestype3Info.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvStoresType3 item info.
+            /// </summary>
+            [RepositoryItemInfo("3a709a8f-7aee-4f42-abe8-73928dafebf9")]
+            public virtual RepoItemInfo TvStoresType3Info
+            {
+                get
+                {
+                    return _tvstorestype3Info;
+                }
+            }
+
+            /// <summary>
+            /// The ImgBrandLogo1 item.
+            /// </summary>
+            [RepositoryItem("90560738-aa7e-4e33-b916-6e2f1f2c2b7e")]
+            public virtual Ranorex.Picture ImgBrandLogo1
+            {
+                get
+                {
+                    return _imgbrandlogo1Info.CreateAdapter<Ranorex.Picture>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ImgBrandLogo1 item info.
+            /// </summary>
+            [RepositoryItemInfo("90560738-aa7e-4e33-b916-6e2f1f2c2b7e")]
+            public virtual RepoItemInfo ImgBrandLogo1Info
+            {
+                get
+                {
+                    return _imgbrandlogo1Info;
+                }
+            }
+
+            /// <summary>
+            /// The ImgBrandLogo2 item.
+            /// </summary>
+            [RepositoryItem("1e585384-df41-406b-82bc-dca08eeb1593")]
+            public virtual Ranorex.Picture ImgBrandLogo2
+            {
+                get
+                {
+                    return _imgbrandlogo2Info.CreateAdapter<Ranorex.Picture>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ImgBrandLogo2 item info.
+            /// </summary>
+            [RepositoryItemInfo("1e585384-df41-406b-82bc-dca08eeb1593")]
+            public virtual RepoItemInfo ImgBrandLogo2Info
+            {
+                get
+                {
+                    return _imgbrandlogo2Info;
+                }
+            }
+
+            /// <summary>
+            /// The ImgBrandLogo3 item.
+            /// </summary>
+            [RepositoryItem("9560c9bc-a635-45ad-8df1-7d14dc3790ef")]
+            public virtual Ranorex.Picture ImgBrandLogo3
+            {
+                get
+                {
+                    return _imgbrandlogo3Info.CreateAdapter<Ranorex.Picture>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ImgBrandLogo3 item info.
+            /// </summary>
+            [RepositoryItemInfo("9560c9bc-a635-45ad-8df1-7d14dc3790ef")]
+            public virtual RepoItemInfo ImgBrandLogo3Info
+            {
+                get
+                {
+                    return _imgbrandlogo3Info;
+                }
+            }
+
+            /// <summary>
+            /// The ImgPicture item.
+            /// </summary>
+            [RepositoryItem("a006130e-a47e-4aa0-81d7-d1533e65b02b")]
+            public virtual Ranorex.Picture ImgPicture
+            {
+                get
+                {
+                    return _imgpictureInfo.CreateAdapter<Ranorex.Picture>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ImgPicture item info.
+            /// </summary>
+            [RepositoryItemInfo("a006130e-a47e-4aa0-81d7-d1533e65b02b")]
+            public virtual RepoItemInfo ImgPictureInfo
+            {
+                get
+                {
+                    return _imgpictureInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MainItemData item.
+            /// </summary>
+            [RepositoryItem("aaa89261-0e22-4900-8ccd-4c126aca2143")]
+            public virtual Ranorex.Container MainItemData
+            {
+                get
+                {
+                    return _mainitemdataInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MainItemData item info.
+            /// </summary>
+            [RepositoryItemInfo("aaa89261-0e22-4900-8ccd-4c126aca2143")]
+            public virtual RepoItemInfo MainItemDataInfo
+            {
+                get
+                {
+                    return _mainitemdataInfo;
                 }
             }
 

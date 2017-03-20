@@ -158,6 +158,30 @@
       <UserCode>true</UserCode>
       <id>c82a1ed0-3f58-4167-bc96-200cf78c87f0</id>
     </Compile>
+    <Compile Include="Test cases\Landing\Catalogs\Catalogs_ChangeCatalog.cs">
+      <BoundTo>9937bf43-1771-45fd-9f5b-63afc1bd3cd2</BoundTo>
+      <DependentUpon>Catalogs_ChangeCatalog.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>fcd7c412-66ca-42e1-bd82-f5e8b07d160b</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Catalogs\Catalogs_ChangeCatalog.UserCode.cs">
+      <BoundTo>9937bf43-1771-45fd-9f5b-63afc1bd3cd2</BoundTo>
+      <DependentUpon>Catalogs_ChangeCatalog.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>a4d1e998-e4ce-46dc-8ad9-b63355e1acb4</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Catalogs\Catalogs_ChangeSection.cs">
+      <BoundTo>50ecdf54-3051-4057-8b44-0320b0a8b029</BoundTo>
+      <DependentUpon>Catalogs_ChangeSection.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>8e32c6f0-1c32-4349-96d2-b41ef96ab47d</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Catalogs\Catalogs_ChangeSection.UserCode.cs">
+      <BoundTo>50ecdf54-3051-4057-8b44-0320b0a8b029</BoundTo>
+      <DependentUpon>Catalogs_ChangeSection.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>3c9a88b7-be5e-478a-84cd-cf43b42a4f7c</id>
+    </Compile>
     <Compile Include="Test cases\Landing\Catalogs\Catalogs_CheckItems_Sections.cs">
       <BoundTo>7a039538-2ac8-49c8-8b5d-721007fded7c</BoundTo>
       <DependentUpon>Catalogs_CheckItems_Sections.rxrec</DependentUpon>
@@ -170,6 +194,30 @@
       <UserCode>true</UserCode>
       <id>85bd0711-dd6a-48dd-8a4f-0b477501c120</id>
     </Compile>
+    <Compile Include="Test cases\Landing\Catalogs\Catalogs_Default.cs">
+      <BoundTo>ae3fee89-92fc-4b10-b917-308d3f877c30</BoundTo>
+      <DependentUpon>Catalogs_Default.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>ab20d71e-3bc5-4ced-8a76-b679f3edc2a2</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Catalogs\Catalogs_Default.UserCode.cs">
+      <BoundTo>ae3fee89-92fc-4b10-b917-308d3f877c30</BoundTo>
+      <DependentUpon>Catalogs_Default.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>ad9247ff-115c-4edb-a53d-e9c5883c02d0</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Catalogs\Catalog_ChangeSection_CheckIfChanged.cs">
+      <BoundTo>c4a078ef-feb3-42b7-90df-c57a93d12ad0</BoundTo>
+      <DependentUpon>Catalog_ChangeSection_CheckIfChanged.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>e7432b1a-49fc-4a61-aed9-7dd1b158417b</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Catalogs\Catalog_ChangeSection_CheckIfChanged.UserCode.cs">
+      <BoundTo>c4a078ef-feb3-42b7-90df-c57a93d12ad0</BoundTo>
+      <DependentUpon>Catalog_ChangeSection_CheckIfChanged.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>358c60c0-2071-4961-8d18-86f208ccc7bc</id>
+    </Compile>
     <Compile Include="Test cases\Landing\Catalogs\Catalog_CheckItems_CatalogNum.cs">
       <BoundTo>ecc6e06e-0429-48cd-8dbb-8812722adf41</BoundTo>
       <DependentUpon>Catalog_CheckItems_CatalogNum.rxrec</DependentUpon>
@@ -181,6 +229,18 @@
       <DependentUpon>Catalog_CheckItems_CatalogNum.rxrec</DependentUpon>
       <UserCode>true</UserCode>
       <id>c96eadbe-a4d2-4a23-b4c3-244f7318e551</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Catalogs\RetrieveCatalogData.cs">
+      <BoundTo>49f8e5f7-5096-49da-bfd2-a4ef9028c461</BoundTo>
+      <DependentUpon>RetrieveCatalogData.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>60b82164-0f03-45cd-85d0-ea6b22709461</id>
+    </Compile>
+    <Compile Include="Test cases\Landing\Catalogs\RetrieveCatalogData.UserCode.cs">
+      <BoundTo>49f8e5f7-5096-49da-bfd2-a4ef9028c461</BoundTo>
+      <DependentUpon>RetrieveCatalogData.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>2b8259b2-d401-4038-9b6e-8c0e8e4a9376</id>
     </Compile>
     <Compile Include="Test cases\Landing\JedelBi_Open.cs">
       <BoundTo>0998f07f-8a6a-4bf7-8a10-c3c5404a16ea</BoundTo>
@@ -628,15 +688,40 @@
       <id>d6b5aceb-72fe-4be1-afb4-5ddfdb47d7c5</id>
       <recordtableid>0f81ec01-5f5a-439a-93de-8bb75f3acc37</recordtableid>
     </None>
-    <None Include="Test cases\Landing\Catalogs\Catalogs_CheckItems_Sections.rxrec">
+    <None Include="Test cases\Landing\Catalogs\Catalogs_ChangeCatalog.rxrec">
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>9937bf43-1771-45fd-9f5b-63afc1bd3cd2</id>
+      <recordtableid>d8b50200-7f3e-40a2-bfe7-c4dcb54827ad</recordtableid>
+    </None>
+    <None Include="Test cases\Landing\Catalogs\Catalogs_ChangeSection.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>50ecdf54-3051-4057-8b44-0320b0a8b029</id>
+      <recordtableid>b11ebad9-313c-4c30-bcc3-f538a2a97fa1</recordtableid>
+    </None>
+    <None Include="Test cases\Landing\Catalogs\Catalogs_CheckItems_Sections.rxrec">
       <id>7a039538-2ac8-49c8-8b5d-721007fded7c</id>
       <recordtableid>a235f551-fe53-4213-93fd-dc32fd2894ac</recordtableid>
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+    </None>
+    <None Include="Test cases\Landing\Catalogs\Catalogs_Default.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>ae3fee89-92fc-4b10-b917-308d3f877c30</id>
+      <recordtableid>1bee34a3-d4bb-4d1b-9592-1f6a7c28a49e</recordtableid>
+    </None>
+    <None Include="Test cases\Landing\Catalogs\Catalog_ChangeSection_CheckIfChanged.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>c4a078ef-feb3-42b7-90df-c57a93d12ad0</id>
+      <recordtableid>e7467d75-ba85-4bce-b76c-4eff1b7f2105</recordtableid>
     </None>
     <None Include="Test cases\Landing\Catalogs\Catalog_CheckItems_CatalogNum.rxrec">
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
       <id>ecc6e06e-0429-48cd-8dbb-8812722adf41</id>
       <recordtableid>123236bf-d451-4233-a509-8c549a048c85</recordtableid>
+    </None>
+    <None Include="Test cases\Landing\Catalogs\RetrieveCatalogData.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>49f8e5f7-5096-49da-bfd2-a4ef9028c461</id>
+      <recordtableid>aeaa983d-2d0a-491f-9c9e-52f916788920</recordtableid>
     </None>
     <None Include="Test cases\Landing\JedelBi_Open.rxrec">
       <id>0998f07f-8a6a-4bf7-8a10-c3c5404a16ea</id>

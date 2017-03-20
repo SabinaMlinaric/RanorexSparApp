@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+rxversion="6.2"
+id="e7467d75-ba85-4bce-b76c-4eff1b7f2105"
+embeddedrepository="False"
+mode="Global">
+	<name>
+		Catalog_ChangeSection_CheckIfChanged
+	</name>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="Catalog_ChangeSection_CheckIfChanged"
+	namespace="Spar.Test_cases.Landing.Catalogs"/>
+	<variables>
+		<var
+		name="NewSection"
+		id="49d5805a-5211-4cd3-8536-45fab25a7d54">
+		</var>
+	</variables>
+	<recorditems>
+		<validationitem
+		enabled="True"
+		optional="False"
+		searchpropertyid="63919ad3-c3d9-454a-b624-41f0a361e8b8"
+		action="AttributeEqual">
+			<comment/>
+			<bindings>
+				<binding
+				target="MatchValue"
+				variable="NewSection"/>
+			</bindings>
+			<info
+			sourcename="RepositoryEditor"
+			id="5e980a6c-9364-497e-a3d7-7c145d7fa330">
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//androidelement[@rid='recycler_view']/container[1]//text[@rid='tv_title']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+	</recorditems>
+	<repository
+	name="SparRepository"
+	id="c55abb3d-7d0d-4435-8640-bb30710f5f27"
+	rxversion="6.2"
+	relativepath="..\..\..\SparRepository.rxrep">
+		<codegen
+		classname="SparRepository"
+		namespace="Spar"/>
+		<rootfolder
+		name="_rootdummy_"
+		id="c12fa4a9-bf96-41a7-9866-79edafaddcf2"/>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		Catalog_ChangeSection_CheckIfChanged.UserCode.cs
+	</usercodefile>
+	<references/>
+</recordtable>

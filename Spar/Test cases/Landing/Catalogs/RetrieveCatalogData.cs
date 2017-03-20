@@ -24,31 +24,30 @@ namespace Spar.Test_cases.Landing.Catalogs
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The Catalogs_CheckItems_Sections recording.
+    ///The RetrieveCatalogData recording.
     /// </summary>
-    [TestModule("a235f551-fe53-4213-93fd-dc32fd2894ac", ModuleType.Recording, 1)]
-    public partial class Catalogs_CheckItems_Sections : ITestModule
+    [TestModule("aeaa983d-2d0a-491f-9c9e-52f916788920", ModuleType.Recording, 1)]
+    public partial class RetrieveCatalogData : ITestModule
     {
         /// <summary>
         /// Holds an instance of the Spar.SparRepository repository.
         /// </summary>
         public static Spar.SparRepository repo = Spar.SparRepository.Instance;
 
-        static Catalogs_CheckItems_Sections instance = new Catalogs_CheckItems_Sections();
+        static RetrieveCatalogData instance = new RetrieveCatalogData();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public Catalogs_CheckItems_Sections()
+        public RetrieveCatalogData()
         {
             accessToken = "";
-            sectionNum = "";
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static Catalogs_CheckItems_Sections Instance
+        public static RetrieveCatalogData Instance
         {
             get { return instance; }
         }
@@ -60,23 +59,21 @@ namespace Spar.Test_cases.Landing.Catalogs
         /// <summary>
         /// Gets or sets the value of variable accessToken.
         /// </summary>
-        [TestVariable("2b5ef107-2110-4760-8897-c40844b27988")]
+        [TestVariable("0e3b8310-835b-460b-93a6-a923b89a9543")]
         public string accessToken
         {
             get { return _accessToken; }
             set { _accessToken = value; }
         }
 
-        string _sectionNum;
-
         /// <summary>
-        /// Gets or sets the value of variable sectionNum.
+        /// Gets or sets the value of variable LastSection.
         /// </summary>
-        [TestVariable("bc0b033c-d7ce-4b19-87f9-8d6d00a2c3ed")]
-        public string sectionNum
+        [TestVariable("ebda0c33-dfe1-4e12-a3a9-dd6d83ba5720")]
+        public string LastSection
         {
-            get { return _sectionNum; }
-            set { _sectionNum = value; }
+            get { return repo.LastSection; }
+            set { repo.LastSection = value; }
         }
 
 #endregion
@@ -109,12 +106,8 @@ namespace Spar.Test_cases.Landing.Catalogs
             repo.PlusSparSi.MainActivity.BtnBrowse.Touch();
             Delay.Milliseconds(500);
             
-            GetSectionsNum();
+            GetCatalogData();
             Delay.Milliseconds(0);
-            
-            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.NavigateUp' at Center", repo.PlusSparSi.MainActivity.NavigateUpInfo, new RecordItemIndex(2));
-            repo.PlusSparSi.MainActivity.NavigateUp.Touch();
-            Delay.Milliseconds(500);
             
         }
 

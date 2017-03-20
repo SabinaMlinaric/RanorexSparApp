@@ -1,14 +1,14 @@
 ﻿<Properties>
   <Array name="active">
-    <Element value="Test cases\Landing\Landing_Overview.rxrec" />
+    <Element value="Test cases\Landing\Catalogs\RetrieveCatalogData.UserCode.cs" />
   </Array>
   <Array name="bookmarks">
     <Element value="Breakpoint|C:\Users\sabinam\Documents\Ranorex\RanorexSparApp\Spar\Test cases\Landing\JedelBi_Open.UserCode.cs|45|6|True|Break||" />
   </Array>
   <Array name="files">
     <Element value="Spar.rxtst" />
-    <Element value="Spar.rxtmg" />
-    <Element value="Test cases\Landing\Landing_Overview.rxrec" />
+    <Element value="Test cases\Landing\Catalogs\RetrieveCatalogData.rxrec" />
+    <Element value="Test cases\Landing\Catalogs\RetrieveCatalogData.UserCode.cs" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">
@@ -16,12 +16,13 @@
       <runOnBuild value="False" />
     </Properties>
     <Array name="recentusercodeselections">
-      <Element value="Spar.Test_cases.Landing.Landing_Overview.GetHightForSwipe()" />
-      <Element value="Spar.Test_cases.Landing.Landing_Overview.žGetHightForSwipe()" />
-      <Element value="Spar.Test_cases.Landing.Landing_Overview.GetDashboardInfo()" />
-      <Element value="Spar.Test_cases.Landing.Catalogs.Catalog_CheckItems_SectionsNum.CheckNumOfCatalogs()" />
-      <Element value="Spar.Test_cases.Landing.Catalogs.Catalog_CheckItems_SectionsNum.GetValidToken()" />
-      <Element value="Spar.HttpClientMethod.GetAsync(String url, String accessToken, String contentType)" />
+      <Element value="Spar.Test_cases.Landing.Catalogs.RetrieveCatalogData.GetCatalogData()" />
+      <Element value="Spar.Test_cases.Utility.ChangeDateTimeOnDevice.ChangeDateTime()" />
+      <Element value="Spar.Test_cases.Landing.Catalogs.Catalogs_ChangeCatalog.OpenCatalogSelection()" />
+      <Element value="Spar.Test_cases.Landing.Catalogs.Catalogs_ChangeCatalog.CheckIfMultipleCatalogs()" />
+      <Element value="Spar.Test_cases.Landing.Catalogs.Catalogs_CheckItems_Sections.GetSectionsNum()" />
+      <Element value="Spar.Test_cases.Utility.GetAccessToken.GetValidToken()" />
     </Array>
+    <Properties name="watchVars" />
   </Properties>
 </Properties>

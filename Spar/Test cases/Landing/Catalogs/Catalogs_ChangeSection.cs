@@ -24,59 +24,59 @@ namespace Spar.Test_cases.Landing.Catalogs
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The Catalogs_CheckItems_Sections recording.
+    ///The Catalogs_ChangeSection recording.
     /// </summary>
-    [TestModule("a235f551-fe53-4213-93fd-dc32fd2894ac", ModuleType.Recording, 1)]
-    public partial class Catalogs_CheckItems_Sections : ITestModule
+    [TestModule("b11ebad9-313c-4c30-bcc3-f538a2a97fa1", ModuleType.Recording, 1)]
+    public partial class Catalogs_ChangeSection : ITestModule
     {
         /// <summary>
         /// Holds an instance of the Spar.SparRepository repository.
         /// </summary>
         public static Spar.SparRepository repo = Spar.SparRepository.Instance;
 
-        static Catalogs_CheckItems_Sections instance = new Catalogs_CheckItems_Sections();
+        static Catalogs_ChangeSection instance = new Catalogs_ChangeSection();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public Catalogs_CheckItems_Sections()
+        public Catalogs_ChangeSection()
         {
-            accessToken = "";
-            sectionNum = "";
+            SelectedSection = "";
+            NewSection = "";
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static Catalogs_CheckItems_Sections Instance
+        public static Catalogs_ChangeSection Instance
         {
             get { return instance; }
         }
 
 #region Variables
 
-        string _accessToken;
+        string _SelectedSection;
 
         /// <summary>
-        /// Gets or sets the value of variable accessToken.
+        /// Gets or sets the value of variable SelectedSection.
         /// </summary>
-        [TestVariable("2b5ef107-2110-4760-8897-c40844b27988")]
-        public string accessToken
+        [TestVariable("bf0c8e83-6af7-4ace-bcc7-512e5b53e99e")]
+        public string SelectedSection
         {
-            get { return _accessToken; }
-            set { _accessToken = value; }
+            get { return _SelectedSection; }
+            set { _SelectedSection = value; }
         }
 
-        string _sectionNum;
+        string _NewSection;
 
         /// <summary>
-        /// Gets or sets the value of variable sectionNum.
+        /// Gets or sets the value of variable NewSection.
         /// </summary>
-        [TestVariable("bc0b033c-d7ce-4b19-87f9-8d6d00a2c3ed")]
-        public string sectionNum
+        [TestVariable("29e66f6f-22d4-49fa-86d0-37f440338ba0")]
+        public string NewSection
         {
-            get { return _sectionNum; }
-            set { _sectionNum = value; }
+            get { return _NewSection; }
+            set { _NewSection = value; }
         }
 
 #endregion
@@ -109,11 +109,20 @@ namespace Spar.Test_cases.Landing.Catalogs
             repo.PlusSparSi.MainActivity.BtnBrowse.Touch();
             Delay.Milliseconds(500);
             
-            GetSectionsNum();
+            Report.Log(ReportLevel.Info, "Get Value", "Getting attribute 'Text' from item 'PlusSparSi.MainActivity.SlidingTabLayout_FirstButtonText' and assigning its value to variable 'SelectedSection'.", repo.PlusSparSi.MainActivity.SlidingTabLayout_FirstButtonTextInfo, new RecordItemIndex(1));
+            SelectedSection = repo.PlusSparSi.MainActivity.SlidingTabLayout_FirstButtonText.Element.GetAttributeValueText("Text");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.NavigateUp' at Center", repo.PlusSparSi.MainActivity.NavigateUpInfo, new RecordItemIndex(2));
-            repo.PlusSparSi.MainActivity.NavigateUp.Touch();
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$SelectedSection) on item 'PlusSparSi.MainActivity.CatalogOrSectionTitle'.", repo.PlusSparSi.MainActivity.CatalogOrSectionTitleInfo, new RecordItemIndex(2));
+            Validate.Attribute(repo.PlusSparSi.MainActivity.CatalogOrSectionTitleInfo, "Text", SelectedSection);
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Get Value", "Getting attribute 'Text' from item 'PlusSparSi.MainActivity.SlidingTabLayout_SecondButtonText' and assigning its value to variable 'NewSection'.", repo.PlusSparSi.MainActivity.SlidingTabLayout_SecondButtonTextInfo, new RecordItemIndex(3));
+            NewSection = repo.PlusSparSi.MainActivity.SlidingTabLayout_SecondButtonText.Element.GetAttributeValueText("Text");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.SlidingTabLayout_SecondButtonText' at Center", repo.PlusSparSi.MainActivity.SlidingTabLayout_SecondButtonTextInfo, new RecordItemIndex(4));
+            repo.PlusSparSi.MainActivity.SlidingTabLayout_SecondButtonText.Touch();
             Delay.Milliseconds(500);
             
         }

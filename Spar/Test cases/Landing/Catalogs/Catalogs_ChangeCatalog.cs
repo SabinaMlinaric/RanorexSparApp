@@ -24,59 +24,46 @@ namespace Spar.Test_cases.Landing.Catalogs
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The Catalogs_CheckItems_Sections recording.
+    ///The Catalogs_ChangeCatalog recording.
     /// </summary>
-    [TestModule("a235f551-fe53-4213-93fd-dc32fd2894ac", ModuleType.Recording, 1)]
-    public partial class Catalogs_CheckItems_Sections : ITestModule
+    [TestModule("d8b50200-7f3e-40a2-bfe7-c4dcb54827ad", ModuleType.Recording, 1)]
+    public partial class Catalogs_ChangeCatalog : ITestModule
     {
         /// <summary>
         /// Holds an instance of the Spar.SparRepository repository.
         /// </summary>
         public static Spar.SparRepository repo = Spar.SparRepository.Instance;
 
-        static Catalogs_CheckItems_Sections instance = new Catalogs_CheckItems_Sections();
+        static Catalogs_ChangeCatalog instance = new Catalogs_ChangeCatalog();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public Catalogs_CheckItems_Sections()
+        public Catalogs_ChangeCatalog()
         {
-            accessToken = "";
-            sectionNum = "";
+            Catalog2Title = "";
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static Catalogs_CheckItems_Sections Instance
+        public static Catalogs_ChangeCatalog Instance
         {
             get { return instance; }
         }
 
 #region Variables
 
-        string _accessToken;
+        string _Catalog2Title;
 
         /// <summary>
-        /// Gets or sets the value of variable accessToken.
+        /// Gets or sets the value of variable Catalog2Title.
         /// </summary>
-        [TestVariable("2b5ef107-2110-4760-8897-c40844b27988")]
-        public string accessToken
+        [TestVariable("c74b0e37-6836-46fa-9ddb-67d199e3a542")]
+        public string Catalog2Title
         {
-            get { return _accessToken; }
-            set { _accessToken = value; }
-        }
-
-        string _sectionNum;
-
-        /// <summary>
-        /// Gets or sets the value of variable sectionNum.
-        /// </summary>
-        [TestVariable("bc0b033c-d7ce-4b19-87f9-8d6d00a2c3ed")]
-        public string sectionNum
-        {
-            get { return _sectionNum; }
-            set { _sectionNum = value; }
+            get { return _Catalog2Title; }
+            set { _Catalog2Title = value; }
         }
 
 #endregion
@@ -109,12 +96,11 @@ namespace Spar.Test_cases.Landing.Catalogs
             repo.PlusSparSi.MainActivity.BtnBrowse.Touch();
             Delay.Milliseconds(500);
             
-            GetSectionsNum();
+            CheckIfMultipleCatalogs();
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.NavigateUp' at Center", repo.PlusSparSi.MainActivity.NavigateUpInfo, new RecordItemIndex(2));
-            repo.PlusSparSi.MainActivity.NavigateUp.Touch();
-            Delay.Milliseconds(500);
+            OpenCatalogSelection();
+            Delay.Milliseconds(0);
             
         }
 

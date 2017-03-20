@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <recordtable
 rxversion="6.2"
-id="a235f551-fe53-4213-93fd-dc32fd2894ac"
+id="aeaa983d-2d0a-491f-9c9e-52f916788920"
 embeddedrepository="False"
 mode="Global">
 	<name>
-		Catalogs_CheckItems_Sections
+		RetrieveCatalogData
 	</name>
 	<repeatcount>
 		1
@@ -23,16 +23,12 @@ mode="Global">
 		True
 	</useDefaultItemLogging>
 	<codegen
-	classname="Catalogs_CheckItems_Sections"
+	classname="RetrieveCatalogData"
 	namespace="Spar.Test_cases.Landing.Catalogs"/>
 	<variables>
 		<var
 		name="accessToken"
-		id="2b5ef107-2110-4760-8897-c40844b27988">
-		</var>
-		<var
-		name="sectionNum"
-		id="bc0b033c-d7ce-4b19-87f9-8d6d00a2c3ed">
+		id="0e3b8310-835b-460b-93a6-a923b89a9543">
 		</var>
 	</variables>
 	<recorditems>
@@ -41,7 +37,7 @@ mode="Global">
 		optional="False"
 		duration="500ms"
 		screenshotname=""
-		searchpropertyid="604bf566-fc1e-4b2c-b681-f2c29bd04879"
+		searchpropertyid="badd4b5f-3f96-4b5e-8a7a-b3d4157907c5"
 		touchtype="Touch"
 		elementlocation="Center"
 		fingerid="0"
@@ -65,40 +61,15 @@ mode="Global">
 		enabled="True"
 		optional="False"
 		namespace="Spar.Test_cases.Landing.Catalogs"
-		classname="Catalogs_CheckItems_Sections"
-		methodname="GetSectionsNum"
+		classname="RetrieveCatalogData"
+		methodname="GetCatalogData"
 		isexternaltestmethod="False"
 		varname="">
 			<comment/>
 			<bindings/>
 			<arguments
-			id="42507725-c903-41b1-8cc2-dc8c0dca2f91"/>
+			id="06500830-9da9-409e-88bd-8f95a0ce684a"/>
 		</userrecorditem>
-		<touchrecorditem
-		enabled="True"
-		optional="False"
-		duration="500ms"
-		screenshotname=""
-		searchpropertyid="97679446-1cb9-4524-9bf0-1191aad62a12"
-		touchtype="Touch"
-		elementlocation="Center"
-		fingerid="0"
-		touchduration="100ms"
-		longtouchduration="1000ms"
-		moveduration="100ms"
-		isremote="False"
-		sx="0"
-		sy="0">
-			<comment/>
-			<bindings/>
-			<info
-			sourcename="RepositoryEditor"
-			id="4faab30c-ceb5-4de7-be98-3acaa0b88516">
-				<path>
-					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//button[@contentdescription='Navigate up']
-				</path>
-			</info>
-		</touchrecorditem>
 	</recorditems>
 	<repository
 	name="SparRepository"
@@ -114,7 +85,7 @@ mode="Global">
 	</repository>
 	<usercodefile
 	lang="CSharp">
-		Catalogs_CheckItems_Sections.UserCode.cs
+		RetrieveCatalogData.UserCode.cs
 	</usercodefile>
 	<references/>
 </recordtable>

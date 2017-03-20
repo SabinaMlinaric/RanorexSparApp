@@ -54,6 +54,12 @@ namespace Spar.Test_cases.Utility.C_.Classes
 	public class Category
 	{
 		public Category(){}
+		public Category(int id, string title, List<Item> items)
+		{
+			this.id = id;
+			this.title = title;
+			this.items = items;
+		}
 		
 		[DataMember]
 		public int id {get; set;}
@@ -87,9 +93,39 @@ namespace Spar.Test_cases.Utility.C_.Classes
 		public PromoPrice promoPrice {get; set;}
 		
 		[DataMember]
-		public string promoInfoBottom1 {get; set;}
+		public string promoPercentage {get; set;}
 		
 		[DataMember]
+		public string promoPrefix {get; set;}
+		
+		[DataMember(IsRequired=false)]
+		public string promoHighlight {get; set;}
+		
+		[DataMember(IsRequired=false)]
+		public string promoMainRow1 {get; set;}
+		
+		[DataMember(IsRequired=false)]
+		public bool promoMainRow1Striked {get; set;}
+		
+		[DataMember(IsRequired=false)]
+		public string promoMainRow2 {get; set;}
+		
+		[DataMember(IsRequired=false)]
+		public bool promoMainRow2Striked {get; set;}
+		
+		[DataMember(IsRequired=false)]
+		public string promoMainRow3 {get; set;}
+		
+		[DataMember(IsRequired=false)]
+		public bool promoMainRow3Striked {get; set;}
+		
+		[DataMember(IsRequired=false)]
+		public bool sparPlus {get; set;}
+		
+		[DataMember(IsRequired=false)]
+		public string promoInfoBottom1 {get; set;}
+		
+		[DataMember(IsRequired=false)]
 		public string promoInfoBottom2 {get; set;}
 		
 		[DataMember]
@@ -98,37 +134,37 @@ namespace Spar.Test_cases.Utility.C_.Classes
 		[DataMember]
 		public string promoValidTo {get; set;}
 		
-		[DataMember]
+		[DataMember(IsRequired=false)]
 		public string freeText1 {get; set;}
 		
-		[DataMember]
+		[DataMember(IsRequired=false)]
 		public string freeText2 {get; set;}
 		
 		[DataMember]
 		public string leafletTermCond {get; set;}
 		
-		[DataMember]
+		[DataMember(IsRequired=false)]
 		public string freeText3 {get; set;}
 		
-		[DataMember]
+		[DataMember(IsRequired=false)]
 		public string brandLogo1 {get; set;}
 		
-		[DataMember]
+		[DataMember(IsRequired=false)]
 		public string brandLogo2 {get; set;}
 		
-		[DataMember]
+		[DataMember(IsRequired=false)]
 		public string brandLogo3 {get; set;}
 		
-		[DataMember]
+		[DataMember(IsRequired=false)]
 		public bool storesType1 {get; set;}
 		
-		[DataMember]
+		[DataMember(IsRequired=false)]
 		public bool storesType2 {get; set;}
 		
-		[DataMember]
+		[DataMember(IsRequired=false)]
 		public bool storesType3 {get; set;}
 		
-		[DataMember]
+		[DataMember(IsRequired=false)]
 		public bool shareable {get; set;}
 		
 	}
@@ -141,7 +177,7 @@ namespace Spar.Test_cases.Utility.C_.Classes
 		[DataMember]
 		public int integer {get; set;}
 		
-		[DataMember]
+		[DataMember(IsRequired=false)]
 		public int fraction {get; set;}
 	}
 }

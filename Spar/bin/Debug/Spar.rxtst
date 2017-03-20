@@ -26,6 +26,11 @@ rxversion="6.2">
 			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
 			type="Recording"/>
 			<testmodule
+			name="CloseApp"
+			id="03cb1547-8003-412a-9ef3-5521f2d9de33"
+			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
+			type="Recording"/>
+			<testmodule
 			name="ClearAppData"
 			id="046960c4-40cc-49d5-a19f-66c7ddbbf6df"
 			ref="d75ab6fa-6314-46ab-8f27-4adcb17bbeb7"
@@ -43,6 +48,9 @@ rxversion="6.2">
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</testmodule>
+			<testcase
+			name="Catalogs_CheckItems_SectionItems"
+			id="04e5a433-e87f-4d35-b8f3-fb1f3635df97"/>
 			<modulegroup
 			name="AllowPermissions"
 			id="0550244f-b550-4e92-a708-5f2f9026285e"
@@ -120,6 +128,11 @@ rxversion="6.2">
 			maxrange="0"
 			datarangeactive="True"
 			datasource="Registration"/>
+			<testmodule
+			name="SkipBoardingToLanding"
+			id="1134a5bb-40c3-4882-a02b-604a9f350fa2"
+			ref="cf205871-aa48-4224-9200-739b934831cd"
+			type="Recording"/>
 			<setup
 			name="setup3"
 			id="120a9f52-154d-4fbc-a24b-0f8fe8a9f063"/>
@@ -216,6 +229,19 @@ rxversion="6.2">
 					datasourceid="da33e9a9-76e8-4b41-8212-67b0184f4244"/>
 				</databinding>
 			</testmodule>
+			<testmodule
+			name="GetAccessToken"
+			id="1a900540-4216-4f0d-ad16-9b139d9503d5"
+			ref="2bce3e35-5051-477a-b59d-25e0192cc7f7"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="accessToken"
+					variableid="201492f6-b17d-456a-86c5-86f72c914a6d"
+					dataname="accessToken"
+					datasourceid="99db626b-4107-4e62-98d3-0ec1be186135"/>
+				</databinding>
+			</testmodule>
 			<setup
 			name="setup2"
 			id="1b844a4e-d979-4b0c-a3e9-36e5bbec3a28"/>
@@ -230,7 +256,19 @@ rxversion="6.2">
 			id="1e971a55-df38-43e1-8d67-3e0398081e5c"/>
 			<testcase
 			name="Catalogs_Default"
-			id="20d129b3-fe37-4eaf-adff-837a59c785d8"/>
+			id="20d129b3-fe37-4eaf-adff-837a59c785d8">
+				<parameters>
+					<param
+					name="CatalogTitle"
+					value=""/>
+					<param
+					name="CatalogTime"
+					value=""/>
+					<param
+					name="FirstSection"
+					value=""/>
+				</parameters>
+			</testcase>
 			<folder
 			name="Step3"
 			id="2149805c-67c5-4e6e-b92f-b2bda76bf06c"/>
@@ -244,7 +282,7 @@ rxversion="6.2">
 				<parameters>
 					<param
 					name="DeviceName"
-					value="HTC One M9"/>
+					value="HUAWEI VNS-L31"/>
 					<param
 					name="PackageName"
 					value="plus.spar.si.staging"/>
@@ -320,6 +358,24 @@ rxversion="6.2">
 					variableid="82361544-8731-4a7d-b1cb-7420ac2fac02"
 					dataname="PackageName"
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<testmodule
+			name="Catalogs_ChangeSection"
+			id="2c99c1a1-75e8-4f32-8840-67b00c4bf065"
+			ref="b11ebad9-313c-4c30-bcc3-f538a2a97fa1"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="SelectedSection"
+					variableid="bf0c8e83-6af7-4ace-bcc7-512e5b53e99e"
+					dataname="SelectedSection"
+					datasourceid="70808a8f-51f9-432d-b5ea-409fc89c5340"/>
+					<var
+					variablename="NewSection"
+					variableid="29e66f6f-22d4-49fa-86d0-37f440338ba0"
+					dataname="NewSection"
+					datasourceid="70808a8f-51f9-432d-b5ea-409fc89c5340"/>
 				</databinding>
 			</testmodule>
 			<testmodule
@@ -434,6 +490,9 @@ rxversion="6.2">
 					value=""/>
 				</parameters>
 			</testcase>
+			<setup
+			name="setup511113"
+			id="4685d7a1-1333-47a3-a05b-5465470e3465"/>
 			<testcase
 			name="News_Overview"
 			id="4798d64f-f841-452d-8bea-63b512d91f96"/>
@@ -527,6 +586,24 @@ rxversion="6.2">
 					datasourceid="afaec420-ef52-4c72-834e-e888ed8b3511"/>
 				</databinding>
 			</testmodule>
+			<testmodule
+			name="ClearAppData"
+			id="4ec9323d-00ad-49be-9c0e-71e522ea6ece"
+			ref="d75ab6fa-6314-46ab-8f27-4adcb17bbeb7"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="82366f14-af3e-4e79-a6a5-6b409168ddc5"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="82361544-8731-4a7d-b1cb-7420ac2fac02"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
 			<testcase
 			name="NoCard_AllowAll"
 			id="4f40a9e1-e87f-40bf-832d-b544cdf39d1f"/>
@@ -536,6 +613,9 @@ rxversion="6.2">
 			<teardown
 			name="teardown"
 			id="505615e6-ec1f-461a-8062-cca78f4cfb01"/>
+			<setup
+			name="setup511114"
+			id="508c41eb-b1f7-4391-99ef-94054aa70b4f"/>
 			<testmodule
 			name="Step3_Email_Invalid"
 			id="51297ab2-d6a6-4f77-96be-6c56db415609"
@@ -626,10 +706,46 @@ rxversion="6.2">
 			name="Locations"
 			id="52d07ec6-8d3d-4d62-8c9a-5b390058502c"/>
 			<testmodule
+			name="RetrieveCatalogData"
+			id="53c833fc-dc88-4fd8-934d-9341b341ed91"
+			ref="aeaa983d-2d0a-491f-9c9e-52f916788920"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="accessToken"
+					variableid="0e3b8310-835b-460b-93a6-a923b89a9543"
+					dataname="accessToken"
+					datasourceid="99db626b-4107-4e62-98d3-0ec1be186135"/>
+					<var
+					variablename="LastSection"
+					variableid="ebda0c33-dfe1-4e12-a3a9-dd6d83ba5720"
+					dataname="LastSection"
+					datasourceid="8592f1ef-d6ae-4ce0-99da-e91f642be4f3"/>
+				</databinding>
+			</testmodule>
+			<testmodule
 			name="SkipBoardingToLanding"
 			id="54022e54-5f41-4359-8c1a-1303b8753e51"
 			ref="cf205871-aa48-4224-9200-739b934831cd"
 			type="Recording"/>
+			<testmodule
+			name="RunApp"
+			id="5426457d-4198-464e-b2e1-c321625bc9ad"
+			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="7ba94856-ce36-433b-aa83-673fcd1b06d7"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="4de25083-df64-42d6-97dd-017c0a227675"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
 			<modulegroup
 			name="AllowPermissions"
 			id="56815689-d2b6-48d1-b8c5-ef1fe9798407"
@@ -663,6 +779,9 @@ rxversion="6.2">
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</testmodule>
+			<teardown
+			name="teardown411112"
+			id="5b170108-2f21-4e50-b8b4-27ac627508c4"/>
 			<testmodule
 			name="Registration_SkipStep2"
 			id="5bce72df-9b65-4493-8745-b3d617be8d89"
@@ -714,6 +833,24 @@ rxversion="6.2">
 					variableid="b2b46ead-a792-4eda-99d0-b9e0d3513cd1"
 					dataname="DateOfBrirth"
 					datasourceid="afaec420-ef52-4c72-834e-e888ed8b3511"/>
+				</databinding>
+			</testmodule>
+			<testmodule
+			name="ClearAppData"
+			id="5bef566d-c68d-4420-8c79-4e3b96eeb924"
+			ref="d75ab6fa-6314-46ab-8f27-4adcb17bbeb7"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="82366f14-af3e-4e79-a6a5-6b409168ddc5"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="82361544-8731-4a7d-b1cb-7420ac2fac02"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</testmodule>
 			<testmodule
@@ -867,6 +1004,18 @@ rxversion="6.2">
 					datasourceid="01cde481-c381-4e9a-8ef4-3dcb9994b3c5"/>
 				</databinding>
 			</testmodule>
+			<modulegroup
+			name="AllowPermissions"
+			id="63e82733-7f18-48d9-82fc-d57c73217ee2"
+			ref="b6a763ab-152b-4bdf-8af2-430dfe4c10c9">
+				<databinding>
+					<var
+					variablename="PackageName"
+					variableid="f7d21799-6692-45f8-a1a2-8ee1e98b723d"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</modulegroup>
 			<folder
 			name="Registration"
 			id="6511acd4-9390-4189-8cdb-3559623b8f1b"/>
@@ -906,9 +1055,15 @@ rxversion="6.2">
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</testmodule>
+			<testcase
+			name="Catalogs_CheckItems_Coupons"
+			id="67295ba3-8828-4d7c-9b82-8b8eaa9f2238"/>
 			<teardown
 			name="teardown313"
 			id="68d3359a-a7e0-4a32-a239-0340ad16d07b"/>
+			<teardown
+			name="teardown411113"
+			id="6991bccf-d8c4-4dbd-ae09-6de7a36953f4"/>
 			<testmodule
 			name="RunApp"
 			id="699d01a3-e46a-419f-9004-00ada9539889"
@@ -1006,7 +1161,16 @@ rxversion="6.2">
 			</testmodule>
 			<testcase
 			name="Catalogs_ChangeSection"
-			id="70808a8f-51f9-432d-b5ea-409fc89c5340"/>
+			id="70808a8f-51f9-432d-b5ea-409fc89c5340">
+				<parameters>
+					<param
+					name="SelectedSection"
+					value=""/>
+					<param
+					name="NewSection"
+					value=""/>
+				</parameters>
+			</testcase>
 			<testcase
 			name="Step4_OptionalFieldsAdded"
 			id="73af372a-6ba3-490e-bd09-f2988996b7c1"
@@ -1057,6 +1221,11 @@ rxversion="6.2">
 			name="JedelBi_Open"
 			id="77e90977-92fa-43b8-a40b-cf4dd49bcded"
 			ref="4503e5ff-a381-47d0-8f10-60211957b928"
+			type="Recording"/>
+			<testmodule
+			name="SkipBoardingToLanding"
+			id="78d0b823-a404-4464-b3bd-9113c96f525f"
+			ref="cf205871-aa48-4224-9200-739b934831cd"
 			type="Recording"/>
 			<testmodule
 			name="CloseApp"
@@ -1198,6 +1367,9 @@ rxversion="6.2">
 			<teardown
 			name="teardown31125"
 			id="7c46bafd-994d-4e2c-8a67-c263ec5dc3cd"/>
+			<setup
+			name="setup511112"
+			id="7e520112-0244-4bbe-909b-9c1fd25dd037"/>
 			<testcase
 			name="Scan_card"
 			id="82161bb2-5e13-4f6a-9c27-78b8a0d7abaa"/>
@@ -1261,6 +1433,15 @@ rxversion="6.2">
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</testmodule>
+			<testcase
+			name="Catalogs_CheckItems_Data"
+			id="8592f1ef-d6ae-4ce0-99da-e91f642be4f3">
+				<parameters>
+					<param
+					name="LastSection"
+					value=""/>
+				</parameters>
+			</testcase>
 			<testmodule
 			name="Step3_Password_Invalid"
 			id="86db035a-399d-4e31-83ef-6da9a074f09d"
@@ -1536,6 +1717,9 @@ rxversion="6.2">
 			<teardown
 			name="teardown411111"
 			id="97a8d5c2-c0ab-4b72-84f2-e46587b1d730"/>
+			<testcase
+			name="Catalogs_CheckItems_ExpiredTime"
+			id="97eb21c5-6630-4dca-ac99-d1294172135d"/>
 			<testmodule
 			name="CloseApp"
 			id="9860566d-e27f-4d56-a0cb-ae3c021c62e4"
@@ -1573,9 +1757,37 @@ rxversion="6.2">
 			id="9a1b1114-d76b-42d2-abd5-3768889d6a14"
 			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
 			type="Recording"/>
+			<testmodule
+			name="CloseApp"
+			id="9afb8f11-48f0-4719-bbd1-dfc882824bbd"
+			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
+			type="Recording"/>
+			<testmodule
+			name="SkipBoardingToLanding"
+			id="9c9de374-0d33-4029-8063-d42975c2c4d8"
+			ref="cf205871-aa48-4224-9200-739b934831cd"
+			type="Recording"/>
 			<setup
 			name="setup1"
 			id="9cc1653c-c656-45ff-bb94-59b1e7efe98d"/>
+			<testmodule
+			name="ClearAppData"
+			id="9d0aa863-a2e0-4aaa-ad22-111652f6fc56"
+			ref="d75ab6fa-6314-46ab-8f27-4adcb17bbeb7"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="82366f14-af3e-4e79-a6a5-6b409168ddc5"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="82361544-8731-4a7d-b1cb-7420ac2fac02"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
 			<testcase
 			name="Location_Permission_Allowed"
 			id="9d88f22a-b9e4-4dd1-a2f7-0c9dea2f2845"/>
@@ -1659,6 +1871,19 @@ rxversion="6.2">
 			id="ac806f2e-d124-4883-85fc-3aed9d1eac65"
 			ref="19b7fe95-2458-47b8-9745-87a4cc6a9f5d"
 			type="Recording"/>
+			<testmodule
+			name="Catalog_ChangeSection_CheckIfChanged"
+			id="acf63746-81fb-4eb1-8b02-2786c442bf88"
+			ref="e7467d75-ba85-4bce-b76c-4eff1b7f2105"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="NewSection"
+					variableid="49d5805a-5211-4cd3-8536-45fab25a7d54"
+					dataname="NewSection"
+					datasourceid="70808a8f-51f9-432d-b5ea-409fc89c5340"/>
+				</databinding>
+			</testmodule>
 			<testmodule
 			name="ClearAppData"
 			id="af429b2c-4e5d-4ca7-a009-3841c2374a24"
@@ -1747,7 +1972,13 @@ rxversion="6.2">
 			</testmodule>
 			<testcase
 			name="Catalogs_ChangeCatalog"
-			id="b0899edc-03f4-4421-96e8-0537583ffe0c"/>
+			id="b0899edc-03f4-4421-96e8-0537583ffe0c">
+				<parameters>
+					<param
+					name="Catalog2Title"
+					value=""/>
+				</parameters>
+			</testcase>
 			<testmodule
 			name="RunApp"
 			id="b209f9d3-b0a0-48cd-9c4a-184cd763362e"
@@ -1766,6 +1997,11 @@ rxversion="6.2">
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</testmodule>
+			<testmodule
+			name="CloseApp"
+			id="b24864e9-06ec-4e1d-bfa3-3c857a965fca"
+			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
+			type="Recording"/>
 			<testmodule
 			name="Step1_MissingData"
 			id="b24c5172-1afc-4119-8dd4-a7d2744f9c11"
@@ -1797,6 +2033,18 @@ rxversion="6.2">
 			<setup
 			name="setup51111"
 			id="b24c5291-f39c-4c1d-9dd6-d508eb1d1180"/>
+			<modulegroup
+			name="AllowPermissions"
+			id="b260a4f6-d3a6-420e-b9f0-4528554c9a00"
+			ref="b6a763ab-152b-4bdf-8af2-430dfe4c10c9">
+				<databinding>
+					<var
+					variablename="PackageName"
+					variableid="f7d21799-6692-45f8-a1a2-8ee1e98b723d"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</modulegroup>
 			<testmodule
 			name="RunApp"
 			id="b2e8fa6a-f767-472f-8b27-89c31c852c53"
@@ -2059,6 +2307,24 @@ rxversion="6.2">
 			name="teardown4"
 			id="c9dda5aa-1e42-4939-b3f7-b7a30f01ce79"/>
 			<testmodule
+			name="RunApp"
+			id="cb0d4245-1d13-4300-a013-bab2bdcd322a"
+			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="7ba94856-ce36-433b-aa83-673fcd1b06d7"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="4de25083-df64-42d6-97dd-017c0a227675"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<testmodule
 			name="ClearAppData"
 			id="cba854ce-6da6-471f-810e-114f4d2887c1"
 			ref="d75ab6fa-6314-46ab-8f27-4adcb17bbeb7"
@@ -2099,6 +2365,18 @@ rxversion="6.2">
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</testmodule>
+			<modulegroup
+			name="AllowPermissions"
+			id="d01f350a-c8a9-4e6a-b540-7408d6d7ab79"
+			ref="b6a763ab-152b-4bdf-8af2-430dfe4c10c9">
+				<databinding>
+					<var
+					variablename="PackageName"
+					variableid="f7d21799-6692-45f8-a1a2-8ee1e98b723d"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</modulegroup>
 			<folder
 			name="Login"
 			id="d0659688-496d-40c2-b993-32f2cf860570"/>
@@ -2272,6 +2550,9 @@ rxversion="6.2">
 					value="12345678"/>
 				</parameters>
 			</testcase>
+			<teardown
+			name="teardown411114"
+			id="da926e42-add4-4eb4-bfb0-fb44c5a107e4"/>
 			<testmodule
 			name="CloseApp"
 			id="dc001e96-ea5e-476a-954c-aa77fe91c605"
@@ -2311,6 +2592,19 @@ rxversion="6.2">
 					variableid="82361544-8731-4a7d-b1cb-7420ac2fac02"
 					dataname="PackageName"
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<testmodule
+			name="Catalogs_ChangeCatalog"
+			id="e00ff356-8f13-4503-b196-082f632f38f0"
+			ref="d8b50200-7f3e-40a2-bfe7-c4dcb54827ad"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="Catalog2Title"
+					variableid="c74b0e37-6836-46fa-9ddb-67d199e3a542"
+					dataname="Catalog2Title"
+					datasourceid="b0899edc-03f4-4421-96e8-0537583ffe0c"/>
 				</databinding>
 			</testmodule>
 			<testmodule
@@ -2568,6 +2862,29 @@ rxversion="6.2">
 				</databinding>
 			</testmodule>
 			<testmodule
+			name="Catalogs_Default"
+			id="eba5244b-7730-4ca7-b563-0a52770c5ef0"
+			ref="1bee34a3-d4bb-4d1b-9592-1f6a7c28a49e"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="CatalogTitle"
+					variableid="d44a0151-b3f5-4344-8a74-96311ce76a76"
+					dataname="CatalogTitle"
+					datasourceid="20d129b3-fe37-4eaf-adff-837a59c785d8"/>
+					<var
+					variablename="CatalogTime"
+					variableid="503eec2f-05ee-4f07-aad6-05d74632162f"
+					dataname="CatalogTime"
+					datasourceid="20d129b3-fe37-4eaf-adff-837a59c785d8"/>
+					<var
+					variablename="FirstSection"
+					variableid="6b8f60d8-4114-49f8-b62a-ae81582f6f3b"
+					dataname="FirstSection"
+					datasourceid="20d129b3-fe37-4eaf-adff-837a59c785d8"/>
+				</databinding>
+			</testmodule>
+			<testmodule
 			name="CloseApp"
 			id="ebdb1285-05a5-457f-8119-7e673de0b9a4"
 			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
@@ -2586,6 +2903,24 @@ rxversion="6.2">
 					<var
 					variablename="PackageName"
 					variableid="82361544-8731-4a7d-b1cb-7420ac2fac02"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<testmodule
+			name="RunApp"
+			id="ef6e5483-39d7-4dea-adbf-c06b350b193f"
+			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="7ba94856-ce36-433b-aa83-673fcd1b06d7"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="4de25083-df64-42d6-97dd-017c0a227675"
 					dataname="PackageName"
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
@@ -3255,13 +3590,97 @@ rxversion="6.2">
 							id="025cd63d-2782-4fe0-8aaa-729514bc6faa">
 								<testcase
 								name="Catalogs_Default"
-								id="20d129b3-fe37-4eaf-adff-837a59c785d8"/>
-								<testcase
-								name="Catalogs_ChangeSection"
-								id="70808a8f-51f9-432d-b5ea-409fc89c5340"/>
+								id="20d129b3-fe37-4eaf-adff-837a59c785d8">
+									<setup
+									name="setup511112"
+									id="7e520112-0244-4bbe-909b-9c1fd25dd037">
+										<testmodule
+										name="ClearAppData"
+										id="5bef566d-c68d-4420-8c79-4e3b96eeb924"/>
+										<modulegroup
+										name="AllowPermissions"
+										id="d01f350a-c8a9-4e6a-b540-7408d6d7ab79"/>
+										<testmodule
+										name="RunApp"
+										id="5426457d-4198-464e-b2e1-c321625bc9ad"/>
+										<testmodule
+										name="SkipBoardingToLanding"
+										id="78d0b823-a404-4464-b3bd-9113c96f525f"/>
+									</setup>
+									<testmodule
+									name="Catalogs_Default"
+									id="eba5244b-7730-4ca7-b563-0a52770c5ef0"/>
+									<teardown
+									name="teardown411112"
+									id="5b170108-2f21-4e50-b8b4-27ac627508c4">
+										<testmodule
+										name="CloseApp"
+										id="b24864e9-06ec-4e1d-bfa3-3c857a965fca"/>
+									</teardown>
+								</testcase>
 								<testcase
 								name="Catalogs_ChangeCatalog"
-								id="b0899edc-03f4-4421-96e8-0537583ffe0c"/>
+								id="b0899edc-03f4-4421-96e8-0537583ffe0c">
+									<setup
+									name="setup511114"
+									id="508c41eb-b1f7-4391-99ef-94054aa70b4f">
+										<testmodule
+										name="ClearAppData"
+										id="4ec9323d-00ad-49be-9c0e-71e522ea6ece"/>
+										<modulegroup
+										name="AllowPermissions"
+										id="b260a4f6-d3a6-420e-b9f0-4528554c9a00"/>
+										<testmodule
+										name="RunApp"
+										id="ef6e5483-39d7-4dea-adbf-c06b350b193f"/>
+										<testmodule
+										name="SkipBoardingToLanding"
+										id="1134a5bb-40c3-4882-a02b-604a9f350fa2"/>
+									</setup>
+									<testmodule
+									name="Catalogs_ChangeCatalog"
+									id="e00ff356-8f13-4503-b196-082f632f38f0"/>
+									<teardown
+									name="teardown411114"
+									id="da926e42-add4-4eb4-bfb0-fb44c5a107e4">
+										<testmodule
+										name="CloseApp"
+										id="9afb8f11-48f0-4719-bbd1-dfc882824bbd"/>
+									</teardown>
+								</testcase>
+								<testcase
+								name="Catalogs_ChangeSection"
+								id="70808a8f-51f9-432d-b5ea-409fc89c5340">
+									<setup
+									name="setup511113"
+									id="4685d7a1-1333-47a3-a05b-5465470e3465">
+										<testmodule
+										name="ClearAppData"
+										id="9d0aa863-a2e0-4aaa-ad22-111652f6fc56"/>
+										<modulegroup
+										name="AllowPermissions"
+										id="63e82733-7f18-48d9-82fc-d57c73217ee2"/>
+										<testmodule
+										name="RunApp"
+										id="cb0d4245-1d13-4300-a013-bab2bdcd322a"/>
+										<testmodule
+										name="SkipBoardingToLanding"
+										id="9c9de374-0d33-4029-8063-d42975c2c4d8"/>
+									</setup>
+									<testmodule
+									name="Catalogs_ChangeSection"
+									id="2c99c1a1-75e8-4f32-8840-67b00c4bf065"/>
+									<testmodule
+									name="Catalog_ChangeSection_CheckIfChanged"
+									id="acf63746-81fb-4eb1-8b02-2786c442bf88"/>
+									<teardown
+									name="teardown411113"
+									id="6991bccf-d8c4-4dbd-ae09-6de7a36953f4">
+										<testmodule
+										name="CloseApp"
+										id="03cb1547-8003-412a-9ef3-5521f2d9de33"/>
+									</teardown>
+								</testcase>
 								<testcase
 								name="Catalogs_CheckItems"
 								id="99db626b-4107-4e62-98d3-0ec1be186135">
@@ -3300,6 +3719,26 @@ rxversion="6.2">
 										<testmodule
 										name="Catalogs_CheckItems_Sections"
 										id="95d8f7d3-7f20-4dd3-a634-7aa6956470b2"/>
+									</testcase>
+									<testcase
+									name="Catalogs_CheckItems_SectionItems"
+									id="04e5a433-e87f-4d35-b8f3-fb1f3635df97">
+										<testcase
+										name="Catalogs_CheckItems_ExpiredTime"
+										id="97eb21c5-6630-4dca-ac99-d1294172135d"/>
+										<testcase
+										name="Catalogs_CheckItems_Data"
+										id="8592f1ef-d6ae-4ce0-99da-e91f642be4f3">
+											<testmodule
+											name="GetAccessToken"
+											id="1a900540-4216-4f0d-ad16-9b139d9503d5"/>
+											<testmodule
+											name="RetrieveCatalogData"
+											id="53c833fc-dc88-4fd8-934d-9341b341ed91"/>
+										</testcase>
+										<testcase
+										name="Catalogs_CheckItems_Coupons"
+										id="67295ba3-8828-4d7c-9b82-8b8eaa9f2238"/>
 									</testcase>
 									<teardown
 									name="teardown41111"

@@ -437,7 +437,16 @@ rxversion="6.2">
 					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_title']
 				</item>
 				<item
-				name="CatalogTitle"
+				name="SectionTitle"
+				id="80753b5e-f5d7-41c6-ba53-5e925a8c06af"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="8da340a8-8d0c-406b-bce0-f384b9bf5bc8">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//androidelement[@rid='recycler_view']/container[@containertype='Linear']//text[@rid='tv_title']
+				</item>
+				<item
+				name="CatalogOrSectionTitle"
 				id="5e980a6c-9364-497e-a3d7-7c145d7fa330"
 				searchtimeout="30000ms"
 				capname="text"
@@ -471,6 +480,15 @@ rxversion="6.2">
 				addcaps="text,androidelement,mobileuielement"
 				refimgid="04bfa95a-d3e9-4ed7-9b3b-82b95e6568a2">
 					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//androidelement[@rid='toolbar']/container/text[1]
+				</item>
+				<item
+				name="RStringTabSubTitle"
+				id="1fe6a91b-ee4c-429b-8d07-b849081eff19"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="9cfa1f78-9e97-4f41-a124-b36ee290c9d8">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//androidelement[@rid='toolbar']/container/text[2]
 				</item>
 				<item
 				name="TvClosed"
@@ -657,6 +675,15 @@ rxversion="6.2">
 					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//androidelement[@rid='recycler_view']/container[2]
 				</item>
 				<item
+				name="Items"
+				id="1771eb30-2627-4a05-b885-b679fda3d17c"
+				searchtimeout="30000ms"
+				capname="androidelement"
+				addcaps="container,androidelement,mobileuielement"
+				refimgid="dfcac136-13af-47ae-b3ae-23dc2b186dd0">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//androidelement[@rid='recycler_view']
+				</item>
+				<item
 				name="Catalog"
 				id="27246ccd-d37f-4190-8651-54994b46bb86"
 				searchtimeout="30000ms"
@@ -673,6 +700,24 @@ rxversion="6.2">
 				addcaps="container,androidelement,mobileuielement"
 				refimgid="cbdae4b7-b5f3-4c56-be8c-7f5d594f80f3">
 					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//androidelement[@rid='recycler_view']/container[3]
+				</item>
+				<item
+				name="FourthCont"
+				id="c96504cb-3b5c-454e-a3d6-f3e8db2a7b88"
+				searchtimeout="30000ms"
+				capname="container"
+				addcaps="container,androidelement,mobileuielement"
+				refimgid="e46c0625-38e1-4648-a3a6-9f6984c0e077">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//androidelement[@rid='recycler_view']/container[4]
+				</item>
+				<item
+				name="FifthCont"
+				id="1cc71f4f-58e1-499e-af21-120f90089413"
+				searchtimeout="30000ms"
+				capname="container"
+				addcaps="container,androidelement,mobileuielement"
+				refimgid="88b7ab16-4f5e-4a70-890e-1decc1af7a96">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//androidelement[@rid='recycler_view']/container[5]
 				</item>
 				<item
 				name="Toolbar"
@@ -727,6 +772,323 @@ rxversion="6.2">
 				addcaps="unknown,androidelement,mobileuielement"
 				refimgid="5d2cd2e7-c95f-4d16-88d7-39db34793082">
 					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//androidelement[@rid='sliding_tab_layout']/container
+				</item>
+				<item
+				name="SlidingTabLayout_FirstButtonText"
+				id="a99aaa09-4349-40b8-94e9-f9c98ca8b18b"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="unknown,androidelement,mobileuielement"
+				refimgid="44449b50-6e4c-489e-a912-da573123d1ad">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//androidelement[@rid='sliding_tab_layout']/container/text[1]
+				</item>
+				<item
+				name="SlidingTabLayout_SecondButtonText"
+				id="d838752d-594e-4210-8566-9faaf80ea8f0"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="unknown,androidelement,mobileuielement"
+				refimgid="0aee6bbe-1810-4aeb-92dd-4ed8e953aa31">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//androidelement[@rid='sliding_tab_layout']/container/text[2]
+				</item>
+				<item
+				name="SlidingTabLayout_LastButtonText"
+				id="a7fcf1e8-00a9-4dce-9c02-8a446d3f699f"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="unknown,androidelement,mobileuielement"
+				refimgid="5f83cc5e-f3ba-40c2-806d-58cf3569b366">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//androidelement[@rid='sliding_tab_layout']/container/text[$LastSection]
+				</item>
+				<item
+				name="TvDate"
+				id="031e344b-04ce-4df8-ba8f-fc5dbb601977"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="cc9eb717-3b28-4158-aa23-729ad140d249">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_date']
+				</item>
+				<item
+				name="TvExpired"
+				id="34aa07ee-526a-484f-bae4-ebb6b4487bb2"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="43ce730f-b681-41dd-9af1-6643e8eff33d">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_expired']
+				</item>
+				<item
+				name="BtnAdd"
+				id="1ab69615-5964-4979-aae6-539e1622bea4"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="50c8f0f3-b951-4cc2-92c9-be10c1c22cf1">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='btn_add']
+				</item>
+				<item
+				name="ImgPromotion"
+				id="5499c403-a734-4eae-8d11-488080ddff4a"
+				searchtimeout="30000ms"
+				capname="picture"
+				addcaps="picture,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//picture[@rid='img_promotion']
+				</item>
+				<item
+				name="TvPriceMainRow2"
+				id="2d324ff9-f1b5-4cca-8b81-09ed83fb25d8"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_price_main_row_2']
+				</item>
+				<item
+				name="TvPricePrefix"
+				id="bced6382-0446-4b21-adb5-87bbafdaca56"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_price_prefix']
+				</item>
+				<item
+				name="TvPriceInteger"
+				id="d21c3dc3-b5e1-4ca3-812a-97ba03f22707"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_price_integer']
+				</item>
+				<item
+				name="TvPriceDecimal"
+				id="2c9da0d8-03ab-4cde-93da-177e4bc97374"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_price_decimal']
+				</item>
+				<item
+				name="TvPercentage"
+				id="62e9a655-b3eb-4748-be8c-2000f3440a1e"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_percentage']
+				</item>
+				<item
+				name="TvPercentage4"
+				id="42b1250b-8d36-4fca-8e51-fef482fdc063"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_percentage_4']
+				</item>
+				<item
+				name="TvPercentage4MainRow"
+				id="b93f9ee2-74dd-4267-8c0c-4b84eecd8b96"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_percentage_4_main_row']
+				</item>
+				<item
+				name="TvPriceMainRow3"
+				id="264382a8-6a60-4311-9367-1ece56d84e56"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_price_main_row_3']
+				</item>
+				<item
+				name="TvPriceInfoBottom1"
+				id="6c3d8187-bdc1-47c2-95c7-e8549b719b29"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_price_info_bottom_1']
+				</item>
+				<item
+				name="TvPercentage4WithPrice"
+				id="7e43273d-6821-4538-920e-d97fb5465b83"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_percentage_4_with_price']
+				</item>
+				<item
+				name="TvPercentage4WithPriceMainRow"
+				id="221bcb0a-2fda-4601-ba60-6afeb59b292c"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_percentage_4_with_price_main_row']
+				</item>
+				<item
+				name="PriceBottomInfoTop"
+				id="492638ed-bde6-4eea-974b-d0ad052274e4"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='price_bottom_info_top']
+				</item>
+				<item
+				name="PriceBottomInfoBottom"
+				id="2bf8fae3-ef80-44f3-afc1-211d301de5be"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='price_bottom_info_bottom']
+				</item>
+				<item
+				name="ImgPriceSparPlus"
+				id="eb1c17a2-e7e1-45d9-8992-94770c500530"
+				searchtimeout="30000ms"
+				capname="picture"
+				addcaps="picture,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//picture[@rid='img_price_spar_plus']
+				</item>
+				<item
+				name="TvHighlight"
+				id="e400ea77-14b7-4196-b345-a6887b861f84"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_highlight']
+				</item>
+				<item
+				name="TvPriceMainRow1"
+				id="a720ff10-56ea-449c-8ab5-9c9f92fedb78"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_price_main_row_1']
+				</item>
+				<item
+				name="TvPercentage4WithPrice1"
+				id="9b57469b-9dd3-4206-a85d-187e375fad37"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_percentage_4_with_price']
+				</item>
+				<item
+				name="TvPercentage4WithPriceMainRow1"
+				id="5fcee565-2d14-4a49-90e4-028d7abac1c6"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_percentage_4_with_price_main_row']
+				</item>
+				<item
+				name="TvFreeText1"
+				id="ec81c224-4f15-4d0d-8778-e07c18cb7257"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="253fa06e-ef40-44ef-8077-98e62c1f1a5e">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_free_text_1']
+				</item>
+				<item
+				name="TvFreeText2"
+				id="e03034b2-3f21-4b42-9632-83cbbf14a3f7"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="f38b62c2-e113-4751-a571-1b70d7e32103">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_free_text_2']
+				</item>
+				<item
+				name="TvFreeText3"
+				id="35dabec1-f481-4af8-85d0-b784f4f70835"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="85b1eee5-abe8-4c91-bf12-0ee7815ef5c3">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_free_text_3']
+				</item>
+				<item
+				name="TvTermConditions"
+				id="24e62529-9af2-47ca-95c0-b70d90af25e9"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement"
+				refimgid="3a3ac055-9477-4728-aaae-576e6da3fb2d">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@resourceid='R.string.catalog_item_details_term_conditions']
+				</item>
+				<item
+				name="BtnShare"
+				id="854074b7-74fa-46be-a878-dfa0f69fa899"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='btn_share']
+				</item>
+				<item
+				name="TvStoresType1"
+				id="292689dc-c217-4862-8e6f-c2ead3a46be6"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_stores_type_1']
+				</item>
+				<item
+				name="TvStoresType2"
+				id="0776e747-337e-4552-b71c-6fa6322247ca"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_stores_type_2']
+				</item>
+				<item
+				name="TvStoresType3"
+				id="3a709a8f-7aee-4f42-abe8-73928dafebf9"
+				searchtimeout="30000ms"
+				capname="text"
+				addcaps="text,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_stores_type_3']
+				</item>
+				<item
+				name="ImgBrandLogo1"
+				id="90560738-aa7e-4e33-b916-6e2f1f2c2b7e"
+				searchtimeout="30000ms"
+				capname="picture"
+				addcaps="picture,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//picture[@rid='img_brand_logo_1']
+				</item>
+				<item
+				name="ImgBrandLogo2"
+				id="1e585384-df41-406b-82bc-dca08eeb1593"
+				searchtimeout="30000ms"
+				capname="picture"
+				addcaps="picture,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//picture[@rid='img_brand_logo_2']
+				</item>
+				<item
+				name="ImgBrandLogo3"
+				id="9560c9bc-a635-45ad-8df1-7d14dc3790ef"
+				searchtimeout="30000ms"
+				capname="picture"
+				addcaps="picture,androidelement,mobileuielement">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//picture[@rid='img_brand_logo_3']
+				</item>
+				<item
+				name="ImgPicture"
+				id="a006130e-a47e-4aa0-81d7-d1533e65b02b"
+				searchtimeout="30000ms"
+				capname="picture"
+				refpath="/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']/androidelement[@rid='content']/container[@rid='main_container']/container[@rid='fragment_stack_container']/container[@rid='fragment_stack_landing']/androidelement/container[@rid='content_placeholder']/container[@rid='child_fragment_placeholder']/androidelement/container/androidelement/container/container/container/container/picture"
+				addcaps="picture,androidelement,mobileuielement"
+				refimgid="a6a9b040-6241-44d0-9cdd-9ea4c705e737">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']/androidelement[@rid='content']/container[@rid='main_container']/container[@rid='fragment_stack_container']/container[@rid='fragment_stack_landing']/?/?/container[@rid='content_placeholder']/container[@rid='child_fragment_placeholder']//picture
+				</item>
+				<item
+				name="MainItemData"
+				id="aaa89261-0e22-4900-8ccd-4c126aca2143"
+				searchtimeout="30000ms"
+				capname="container"
+				addcaps="unknown,androidelement,mobileuielement"
+				refimgid="490b69c7-98ad-4d40-ba0e-7e12597a3ff9">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//androidelement[@rid='spar_scrollview_default_id']/container
 				</item>
 				<basepath>
 					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']
@@ -1103,6 +1465,11 @@ E78sAQAAAABJRU5ErkJggg==
 		<var
 		name="ItemNext"
 		id="8992f9a3-7813-4126-a43b-3f32845bd00e">
+		</var>
+		<var
+		name="LastSection"
+		id="ebda0c33-dfe1-4e12-a3a9-dd6d83ba5720">
+			4
 		</var>
 	</variables>
 </repository>

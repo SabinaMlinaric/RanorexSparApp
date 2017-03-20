@@ -189,8 +189,8 @@ namespace Spar.Test_cases.Landing
             GetHightForSwipe();
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$CatalogTitle) on item 'PlusSparSi.MainActivity.CatalogTitle'.", repo.PlusSparSi.MainActivity.CatalogTitleInfo, new RecordItemIndex(2));
-            Validate.Attribute(repo.PlusSparSi.MainActivity.CatalogTitleInfo, "Text", CatalogTitle);
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$CatalogTitle) on item 'PlusSparSi.MainActivity.CatalogOrSectionTitle'.", repo.PlusSparSi.MainActivity.CatalogOrSectionTitleInfo, new RecordItemIndex(2));
+            Validate.Attribute(repo.PlusSparSi.MainActivity.CatalogOrSectionTitleInfo, "Text", CatalogTitle);
             Delay.Milliseconds(0);
             
             Swipe_Gesture_FragmentStackLanding(repo.PlusSparSi.MainActivity.FragmentStackLandingInfo);
