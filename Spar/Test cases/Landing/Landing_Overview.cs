@@ -192,10 +192,6 @@ namespace Spar.Test_cases.Landing
             
             Swipe_Gesture_FragmentStackLanding(repo.PlusSparSi.MainActivity.FragmentStackLandingInfo);
             
-            MergedUserCodeMethod(repo.PlusSparSi.MainActivity.News1_TitleInfo, repo.PlusSparSi.MainActivity.News2_TitleInfo, repo.PlusSparSi.MainActivity.News3_TitleInfo);
-            
-            MergedUserCodeMethod1(repo.PlusSparSi.MainActivity.TvJedelBiInfo, repo.PlusSparSi.MainActivity.TvSparPlusKlubInfo);
-            
         }
 
 #region Image Feature Data

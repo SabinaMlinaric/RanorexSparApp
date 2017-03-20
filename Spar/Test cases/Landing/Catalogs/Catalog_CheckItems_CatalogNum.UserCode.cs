@@ -42,16 +42,18 @@ namespace Spar.Test_cases.Landing.Catalogs
 
         public void CheckNumOfCatalogs()
         {
-            Task<HttpResponseInfo> response = HttpClientMethod.GetAsync("https://10.82.2.171:8000/mobileapp/aktualno.json",accessToken,"application/json");
+            Task<HttpResponseInfo> response = HttpClientMethod.GetAsync("http://10.82.2.171:8000/mobileapp/aktualno.json",accessToken,"application/json");
 			
 			HttpResponseInfo message = response.Result;
 			
 			if(message.StatusCode == 200){
 				
-				//TODO
+				Dashboard dashboard = HttpClientMethod.Deserialize<Dashboard>(message.Content);
 				
-				catalogNum = 3 + ""; 
-				
+				if(dashboard != null & dashboard.catalogs != null){
+						catalogNum = dashboard.catalogs.Count + ""; 
+				}
+
 				Report.Log(ReportLevel.Info, "Catalog num: ", catalogNum);
 			}else
 				Report.Log(ReportLevel.Warn, "Failed", "Status: " + message.StatusCode + ", message: " + message.Content.ToString());

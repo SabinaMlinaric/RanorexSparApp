@@ -8,9 +8,11 @@
       <string>60513a05-eab7-41e7-8c10-e51c735edc2e</string>
       <string>d89fb37e-a709-4e10-bf94-9be4b2a51ae8</string>
       <string>b7924370-6d8a-4e5d-9adb-eb15af9a241e</string>
+      <string>7bfa156c-fd6e-4c96-ac53-88ef6fbcb77b</string>
+      <string>5cad0eb1-663f-4ee3-ac29-97e49d71cbc4</string>
       <string>38ab03b4-6901-4829-a287-57bc91e7057a</string>
     </ArrayOfString>
   </SerializedValue>
-  <ProjectBrowserState value="[Solution Spar[Spar_Android[Test cases[Utility[C#[Classes[]]]]]]]&#xD;&#xA;Solution Spar\Spar_Android\Spar.rxtst&#xD;&#xA;Solution Spar\Spar_Android\Test cases\Utility\ClearAppData.rxrec" />
+  <ProjectBrowserState value="[Solution Spar[Spar_Android[References[]Test cases[Utility[C#[Classes[]]GetAccessToken.rxrec[]]]]]]&#xD;&#xA;Solution Spar\Spar_Android\Spar.rxtst&#xD;&#xA;Solution Spar\Spar_Android\Test cases\Utility\GetAccessToken.rxrec" />
   <StartupProject value="{7BF7678C-3E9F-47C9-88E0-5AA7677DA802}" />
 </Properties>

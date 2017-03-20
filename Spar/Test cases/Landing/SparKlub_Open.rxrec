@@ -40,9 +40,16 @@ mode="Global">
 			<arguments
 			id="8544d10c-6dca-438e-990e-bfe774f11929"/>
 		</userrecorditem>
-		<validationitem
+		<explicitdelayitem
 		enabled="True"
 		optional="False"
+		duration="1000ms">
+			<comment/>
+			<bindings/>
+		</explicitdelayitem>
+		<validationitem
+		enabled="True"
+		optional="True"
 		searchpropertyid="375d3c7c-236b-42b5-85e9-29c672baa604"
 		action="AttributeEqual">
 			<comment/>

@@ -82,19 +82,18 @@ namespace Spar.Test_cases.Landing
             OpenJedelBi();
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Jedel.bi') on item 'PlusSparSi.MainActivity.RStringTabTitle'.", repo.PlusSparSi.MainActivity.RStringTabTitleInfo, new RecordItemIndex(1));
-            Validate.Attribute(repo.PlusSparSi.MainActivity.RStringTabTitleInfo, "Text", "Jedel.bi");
-            Delay.Milliseconds(0);
-            
-            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.NavigateUp' at Center", repo.PlusSparSi.MainActivity.NavigateUpInfo, new RecordItemIndex(2));
-            repo.PlusSparSi.MainActivity.NavigateUp.Touch();
-            Delay.Milliseconds(500);
+            Report.Log(ReportLevel.Info, "Delay", "Waiting for 1s.", new RecordItemIndex(1));
+            Delay.Duration(1000, false);
             
             try {
-                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating Exists on item 'PlusSparSi.MainActivity.ImgJedelBi'.", repo.PlusSparSi.MainActivity.ImgJedelBiInfo, new RecordItemIndex(3));
-                Validate.Exists(repo.PlusSparSi.MainActivity.ImgJedelBiInfo, Validate.DefaultMessage, false);
+                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating AttributeEqual (Text='Jedel.bi') on item 'PlusSparSi.MainActivity.RStringTabTitle'.", repo.PlusSparSi.MainActivity.RStringTabTitleInfo, new RecordItemIndex(2));
+                Validate.Attribute(repo.PlusSparSi.MainActivity.RStringTabTitleInfo, "Text", "Jedel.bi", Validate.DefaultMessage, false);
                 Delay.Milliseconds(0);
-            } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(3)); }
+            } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(2)); }
+            
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.NavigateUp' at Center", repo.PlusSparSi.MainActivity.NavigateUpInfo, new RecordItemIndex(3));
+            repo.PlusSparSi.MainActivity.NavigateUp.Touch();
+            Delay.Milliseconds(500);
             
         }
 

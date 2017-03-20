@@ -125,6 +125,9 @@ namespace Spar.Test_cases.Landing.Catalogs
             repo.PlusSparSi.MainActivity.SlidingTabLayout_SecondButtonText.Touch();
             Delay.Milliseconds(500);
             
+            Report.Log(ReportLevel.Info, "Delay", "Waiting for 1s.", new RecordItemIndex(5));
+            Delay.Duration(1000, false);
+            
         }
 
 #region Image Feature Data

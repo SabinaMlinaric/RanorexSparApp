@@ -25,7 +25,20 @@ mode="Global">
 	<codegen
 	classname="News_Overview"
 	namespace="Spar.Test_cases.Landing"/>
-	<variables/>
+	<variables>
+		<var
+		name="News1Title"
+		id="1f272a5b-67b1-445e-a123-644c9e3f36e2">
+		</var>
+		<var
+		name="News2Title"
+		id="b7f0742d-9f61-4daa-a855-b24a9187b593">
+		</var>
+		<var
+		name="News3Title"
+		id="7948b1b4-4dd1-4f81-92a8-c4f04a9d568c">
+		</var>
+	</variables>
 	<recorditems>
 		<userrecorditem
 		enabled="True"
@@ -39,6 +52,65 @@ mode="Global">
 			<bindings/>
 			<arguments
 			id="8544d10c-6dca-438e-990e-bfe774f11929"/>
+		</userrecorditem>
+		<userrecorditem
+		enabled="True"
+		optional="False"
+		namespace="Spar.Test_cases.Landing"
+		classname="News_Overview"
+		methodname="MergedUserCodeMethod"
+		isexternaltestmethod="False"
+		varname="">
+			<comment/>
+			<bindings/>
+			<arguments
+			id="bcdea820-93d8-40e5-8a4e-472344a240ab">
+				<argument
+				argname="textInfo"
+				id="16f7974a-07f1-406e-a9f9-d60c61c89902">
+					<argvaluetype>
+						Ranorex.Core.Repository.RepoItemInfo, Ranorex.Core, Culture=neutral
+					</argvaluetype>
+					<argvalue/>
+					<info
+					sourcename="ItemRecorderEditor"
+					id="0202aef6-71d5-4236-a106-186661967963">
+						<path>
+							/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//androidelement[@rid='recycler_view']/androidelement[1]//text[@rid='tv_title']
+						</path>
+					</info>
+				</argument>
+				<argument
+				argname="textInfo1"
+				id="82828d1b-dc34-4f74-9e02-83375ecec47e">
+					<argvaluetype>
+						Ranorex.Core.Repository.RepoItemInfo, Ranorex.Core, Culture=neutral
+					</argvaluetype>
+					<argvalue/>
+					<info
+					sourcename="ItemRecorderEditor"
+					id="354f5f03-4d51-4aac-b302-ce73af598385">
+						<path>
+							/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//androidelement[@rid='recycler_view']/androidelement[2]//text[@rid='tv_title']
+						</path>
+					</info>
+				</argument>
+				<argument
+				argname="textInfo2"
+				id="f8ca02c1-268d-4a8d-82b2-ccd730708b25">
+					<argvaluetype>
+						Ranorex.Core.Repository.RepoItemInfo, Ranorex.Core, Culture=neutral
+					</argvaluetype>
+					<argvalue/>
+					<info
+					sourcename="ItemRecorderEditor"
+					id="fc50e70b-f3f3-4201-874a-380b18513d9d">
+						<path>
+							/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//androidelement[@rid='recycler_view']/androidelement[3]//text[@rid='tv_title']
+						</path>
+					</info>
+				</argument>
+			</arguments>
 		</userrecorditem>
 		<validationitem
 		enabled="True"

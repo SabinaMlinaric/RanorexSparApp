@@ -41,6 +41,9 @@ namespace Spar.Test_cases.Landing
         /// </summary>
         public News_Overview()
         {
+            News1Title = "";
+            News2Title = "";
+            News3Title = "";
         }
 
         /// <summary>
@@ -52,6 +55,42 @@ namespace Spar.Test_cases.Landing
         }
 
 #region Variables
+
+        string _News1Title;
+
+        /// <summary>
+        /// Gets or sets the value of variable News1Title.
+        /// </summary>
+        [TestVariable("1f272a5b-67b1-445e-a123-644c9e3f36e2")]
+        public string News1Title
+        {
+            get { return _News1Title; }
+            set { _News1Title = value; }
+        }
+
+        string _News2Title;
+
+        /// <summary>
+        /// Gets or sets the value of variable News2Title.
+        /// </summary>
+        [TestVariable("b7f0742d-9f61-4daa-a855-b24a9187b593")]
+        public string News2Title
+        {
+            get { return _News2Title; }
+            set { _News2Title = value; }
+        }
+
+        string _News3Title;
+
+        /// <summary>
+        /// Gets or sets the value of variable News3Title.
+        /// </summary>
+        [TestVariable("7948b1b4-4dd1-4f81-92a8-c4f04a9d568c")]
+        public string News3Title
+        {
+            get { return _News3Title; }
+            set { _News3Title = value; }
+        }
 
 #endregion
 
@@ -82,23 +121,26 @@ namespace Spar.Test_cases.Landing
             FindNews();
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Visible='True') on item 'PlusSparSi.MainActivity.ImgNews'.", repo.PlusSparSi.MainActivity.ImgNewsInfo, new RecordItemIndex(1));
+            MergedUserCodeMethod(repo.PlusSparSi.MainActivity.News1_TitleInfo, repo.PlusSparSi.MainActivity.News2_TitleInfo, repo.PlusSparSi.MainActivity.News3_TitleInfo);
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Visible='True') on item 'PlusSparSi.MainActivity.ImgNews'.", repo.PlusSparSi.MainActivity.ImgNewsInfo, new RecordItemIndex(2));
             Validate.Attribute(repo.PlusSparSi.MainActivity.ImgNewsInfo, "Visible", "True");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Visible='True') on item 'PlusSparSi.MainActivity.TvReadMore'.", repo.PlusSparSi.MainActivity.TvReadMoreInfo, new RecordItemIndex(2));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Visible='True') on item 'PlusSparSi.MainActivity.TvReadMore'.", repo.PlusSparSi.MainActivity.TvReadMoreInfo, new RecordItemIndex(3));
             Validate.Attribute(repo.PlusSparSi.MainActivity.TvReadMoreInfo, "Visible", "True");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Visible='True') on item 'PlusSparSi.MainActivity.TvTitle'.", repo.PlusSparSi.MainActivity.TvTitleInfo, new RecordItemIndex(3));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Visible='True') on item 'PlusSparSi.MainActivity.TvTitle'.", repo.PlusSparSi.MainActivity.TvTitleInfo, new RecordItemIndex(4));
             Validate.Attribute(repo.PlusSparSi.MainActivity.TvTitleInfo, "Visible", "True");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Visible='True') on item 'PlusSparSi.MainActivity.TvNote'.", repo.PlusSparSi.MainActivity.TvNoteInfo, new RecordItemIndex(4));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Visible='True') on item 'PlusSparSi.MainActivity.TvNote'.", repo.PlusSparSi.MainActivity.TvNoteInfo, new RecordItemIndex(5));
             Validate.Attribute(repo.PlusSparSi.MainActivity.TvNoteInfo, "Visible", "True");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Visible='True') on item 'PlusSparSi.MainActivity.TvDescription'.", repo.PlusSparSi.MainActivity.TvDescriptionInfo, new RecordItemIndex(5));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Visible='True') on item 'PlusSparSi.MainActivity.TvDescription'.", repo.PlusSparSi.MainActivity.TvDescriptionInfo, new RecordItemIndex(6));
             Validate.Attribute(repo.PlusSparSi.MainActivity.TvDescriptionInfo, "Visible", "True");
             Delay.Milliseconds(0);
             

@@ -49,7 +49,7 @@ rxversion="6.2">
 		30000ms
 	</repository.itemtimeout>
 	<repository.useappfoldercache>
-		False
+		True
 	</repository.useappfoldercache>
 	<repository.autogeneratefolders>
 		True

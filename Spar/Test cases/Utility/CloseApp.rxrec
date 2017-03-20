@@ -32,7 +32,7 @@ mode="Global">
 		optional="False"
 		searchpropertyid="4da7a352-a3b5-4fdf-8721-9159aeffbc66"
 		method="KillProcess"
-		graceperiod="0ms">
+		graceperiod="100ms">
 			<comment/>
 			<bindings/>
 			<info

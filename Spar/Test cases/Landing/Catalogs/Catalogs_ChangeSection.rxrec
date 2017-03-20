@@ -143,6 +143,13 @@ mode="Global">
 				</path>
 			</info>
 		</touchrecorditem>
+		<explicitdelayitem
+		enabled="True"
+		optional="False"
+		duration="1000ms">
+			<comment/>
+			<bindings/>
+		</explicitdelayitem>
 	</recorditems>
 	<repository
 	name="SparRepository"
