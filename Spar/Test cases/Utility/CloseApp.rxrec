@@ -31,7 +31,7 @@ mode="Global">
 		enabled="True"
 		optional="False"
 		searchpropertyid="4da7a352-a3b5-4fdf-8721-9159aeffbc66"
-		method="CloseWindow"
+		method="KillProcess"
 		graceperiod="0ms">
 			<comment/>
 			<bindings/>

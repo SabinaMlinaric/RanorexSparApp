@@ -41,11 +41,13 @@ namespace Spar.Test_cases.Utility
 			string appPackageName = PackageName;
 			string pathToAdb = "C:\\Program Files (x86)\\Ranorex 6.2\\Bin\\RxEnv\\Android\\tools\\adb.exe";
 			
+			/* 
 			var app = repo.PlusSparSi.Self.As<AndroidApp>();
 			var info = app.GetDeviceInfo();
 			String[] host = info.NetworkInterfaces[0].Split(':');
 			
 			Report.Log(ReportLevel.Info, "Host", host[1]);
+			
 			
 			Process adbClearProcess = new Process();
 			adbClearProcess.StartInfo.FileName  = pathToAdb;
@@ -53,6 +55,7 @@ namespace Spar.Test_cases.Utility
 			adbClearProcess.Start();
 			
 			adbClearProcess.WaitForExit();
+			*/
 			
 			Process adbClearProcess1 = new Process();
 			adbClearProcess1.StartInfo.FileName  = pathToAdb;

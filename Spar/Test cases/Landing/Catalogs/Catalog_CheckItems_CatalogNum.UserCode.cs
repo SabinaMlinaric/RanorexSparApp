@@ -42,7 +42,7 @@ namespace Spar.Test_cases.Landing.Catalogs
 
         public void CheckNumOfCatalogs()
         {
-            Task<HttpResponseInfo> response = HttpClientMethod.GetAsync("https://qa-sparplusapp.spar.si/api/Dashboard",accessToken,"application/json");
+            Task<HttpResponseInfo> response = HttpClientMethod.GetAsync("https://10.82.2.171:8000/mobileapp/aktualno.json",accessToken,"application/json");
 			
 			HttpResponseInfo message = response.Result;
 			

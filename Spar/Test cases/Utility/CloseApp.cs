@@ -79,8 +79,8 @@ namespace Spar.Test_cases.Utility
 
             Init();
 
-            Report.Log(ReportLevel.Info, "Application", "Closing application containing item 'PlusSparSi'.", repo.PlusSparSi.SelfInfo, new RecordItemIndex(0));
-            Host.Local.CloseApplication(repo.PlusSparSi.Self, new Duration(0));
+            Report.Log(ReportLevel.Info, "Application", "Killing application containing item 'PlusSparSi'.", repo.PlusSparSi.SelfInfo, new RecordItemIndex(0));
+            Host.Local.KillApplication(repo.PlusSparSi.Self);
             Delay.Milliseconds(0);
             
         }

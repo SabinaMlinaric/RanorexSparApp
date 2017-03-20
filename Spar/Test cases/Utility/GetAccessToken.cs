@@ -92,7 +92,7 @@ namespace Spar.Test_cases.Utility
 
             Init();
 
-            GetValidToken();
+            getValidToken();
             Delay.Milliseconds(0);
             
         }

@@ -48,7 +48,7 @@ namespace Spar.Test_cases.Landing.Catalogs
 
 		public void GetSectionsNum()
 		{
-			Task<HttpResponseInfo> response = HttpClientMethod.GetAsync("https://qa-sparplusapp.spar.si/api/Catalog",accessToken,"application/json");
+			Task<HttpResponseInfo> response = HttpClientMethod.GetAsync("https://10.82.2.171:8000/mobileapp/Catalog.json",accessToken,"application/json");
 			
 			HttpResponseInfo message = response.Result;
 						

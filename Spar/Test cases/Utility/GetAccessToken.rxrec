@@ -37,13 +37,13 @@ mode="Global">
 		optional="False"
 		namespace="Spar.Test_cases.Utility"
 		classname="GetAccessToken"
-		methodname="GetValidToken"
+		methodname="getValidToken"
 		isexternaltestmethod="False"
 		varname="">
 			<comment/>
 			<bindings/>
 			<arguments
-			id="d3b2889c-eee9-482a-977f-af1aadecb70e"/>
+			id="ca1c2671-ef6e-4e8d-9484-c15c51bf410e"/>
 		</userrecorditem>
 	</recorditems>
 	<repository

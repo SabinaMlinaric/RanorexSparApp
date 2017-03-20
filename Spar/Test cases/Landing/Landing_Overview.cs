@@ -177,30 +177,24 @@ namespace Spar.Test_cases.Landing
         [System.CodeDom.Compiler.GeneratedCode("Ranorex", "6.2")]
         void ITestModule.Run()
         {
-            Mouse.DefaultMoveTime = 300;
-            Keyboard.DefaultKeyPressTime = 100;
-            Delay.SpeedFactor = 1.00;
+            Mouse.DefaultMoveTime = 0;
+            Keyboard.DefaultKeyPressTime = 20;
+            Delay.SpeedFactor = 0.00;
 
             Init();
 
             GetDashboardInfo();
-            Delay.Milliseconds(0);
             
             GetHightForSwipe();
-            Delay.Milliseconds(0);
             
             Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$CatalogTitle) on item 'PlusSparSi.MainActivity.CatalogOrSectionTitle'.", repo.PlusSparSi.MainActivity.CatalogOrSectionTitleInfo, new RecordItemIndex(2));
             Validate.Attribute(repo.PlusSparSi.MainActivity.CatalogOrSectionTitleInfo, "Text", CatalogTitle);
-            Delay.Milliseconds(0);
             
             Swipe_Gesture_FragmentStackLanding(repo.PlusSparSi.MainActivity.FragmentStackLandingInfo);
-            Delay.Milliseconds(0);
             
             MergedUserCodeMethod(repo.PlusSparSi.MainActivity.News1_TitleInfo, repo.PlusSparSi.MainActivity.News2_TitleInfo, repo.PlusSparSi.MainActivity.News3_TitleInfo);
-            Delay.Milliseconds(0);
             
             MergedUserCodeMethod1(repo.PlusSparSi.MainActivity.TvJedelBiInfo, repo.PlusSparSi.MainActivity.TvSparPlusKlubInfo);
-            Delay.Milliseconds(0);
             
         }
 

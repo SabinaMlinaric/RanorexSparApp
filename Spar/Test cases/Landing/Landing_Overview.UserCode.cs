@@ -42,7 +42,7 @@ namespace Spar.Test_cases.Landing
 
 		public void GetValidToken()
 		{
-			Task<HttpResponseInfo> response = HttpClientMethod.GetAsync("https://qa-sparplusapp.spar.si/api/Catalog/token",null,"application/json");
+			Task<HttpResponseInfo> response = HttpClientMethod.GetAsync("http://10.82.2.171:8000/mobileapp/Catalog/token",null,"application/json");
 			
 			HttpResponseInfo message = response.Result;
 			
@@ -60,7 +60,7 @@ namespace Spar.Test_cases.Landing
 
 		public void GetDashboardInfo()
 		{
-			Task<HttpResponseInfo> response = HttpClientMethod.GetAsync("https://qa-sparplusapp.spar.si/api/Dashboard",null,"application/json");
+			Task<HttpResponseInfo> response = HttpClientMethod.GetAsync("http://10.82.2.171:8000/mobileapp/aktualno.json",null,"application/json");
 			
 			HttpResponseInfo message = response.Result;
 			

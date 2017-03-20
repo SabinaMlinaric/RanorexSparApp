@@ -282,7 +282,7 @@ rxversion="6.2">
 				<parameters>
 					<param
 					name="DeviceName"
-					value="HUAWEI VNS-L31"/>
+					value="USB-SM-G900F"/>
 					<param
 					name="PackageName"
 					value="plus.spar.si.staging"/>
@@ -4317,11 +4317,56 @@ rxversion="6.2">
 	<testconfigurations
 	default="TestRun">
 		<testconfiguration
-		name="TestRun"/>
+		name="TestRun">
+			<testcase
+			id="01cde481-c381-4e9a-8ef4-3dcb9994b3c5"/>
+			<testcase
+			id="025cd63d-2782-4fe0-8aaa-729514bc6faa"/>
+			<testcase
+			id="0d42c1eb-843b-43a2-863e-ff599d14e3f1"/>
+			<testcase
+			id="20d129b3-fe37-4eaf-adff-837a59c785d8"/>
+			<testcase
+			id="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+			<testcase
+			id="285c5c97-c0b3-43b1-abff-3f15f46a65c4"/>
+			<testcase
+			id="4592f5b7-0cff-4bc1-a79e-1a1890988d4d"/>
+			<testcase
+			id="4798d64f-f841-452d-8bea-63b512d91f96"/>
+			<testcase
+			id="52d07ec6-8d3d-4d62-8c9a-5b390058502c"/>
+			<testcase
+			id="6ce6c4df-bcac-4ac0-bf58-117ada5e908f"/>
+			<testcase
+			id="70808a8f-51f9-432d-b5ea-409fc89c5340"/>
+			<testcase
+			id="82a94970-d7f3-4c69-8ee9-5075506bd8c6"/>
+			<testcase
+			id="99db626b-4107-4e62-98d3-0ec1be186135"/>
+			<testcase
+			id="9d88f22a-b9e4-4dd1-a2f7-0c9dea2f2845"/>
+			<testcase
+			id="b0899edc-03f4-4421-96e8-0537583ffe0c"/>
+			<testcase
+			id="c326b772-1ca3-4c20-9ae9-b4bd6a34299b"/>
+			<testcase
+			id="c7e79d6a-cc6c-4587-937c-a5c53d0466ee"/>
+			<testcase
+			id="d6a174b9-f860-42b9-9890-569c2900ee01"/>
+			<testcase
+			id="dc4f4f4a-be81-4677-ad15-a61772eb7678"/>
+			<testcase
+			id="dd8090f3-7c05-4a64-8ec9-76c97845c871"/>
+			<testcase
+			id="e4ab2030-021e-4ece-baa5-aa63a22e2d77"/>
+			<testcase
+			id="f60c7a94-dfa5-40bc-9441-51d4364014e3"/>
+		</testconfiguration>
 	</testconfigurations>
 	<references>
 		<reference>
-			..\..\..\..\..\..\Desktop\system.net.http.dll
+			..\..\..\..\..\..\..\Windows\Microsoft.Net\assembly\GAC_MSIL\system.net.http\v4.0_4.0.0.0__b03f5f7f11d50a3a\system.net.http.dll
 		</reference>
 		<reference>
 			Newtonsoft.Json.dll

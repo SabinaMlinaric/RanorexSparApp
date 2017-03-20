@@ -1,14 +1,8 @@
 ﻿<Properties>
-  <Array name="active">
-    <Element value="Test cases\Landing\Catalogs\RetrieveCatalogData.UserCode.cs" />
-  </Array>
-  <Array name="bookmarks">
-    <Element value="Breakpoint|C:\Users\sabinam\Documents\Ranorex\RanorexSparApp\Spar\Test cases\Landing\JedelBi_Open.UserCode.cs|45|6|True|Break||" />
-  </Array>
+  <Array name="bookmarks" />
   <Array name="files">
     <Element value="Spar.rxtst" />
-    <Element value="Test cases\Landing\Catalogs\RetrieveCatalogData.rxrec" />
-    <Element value="Test cases\Landing\Catalogs\RetrieveCatalogData.UserCode.cs" />
+    <Element value="Test cases\Landing\Landing_Overview.rxrec" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">
