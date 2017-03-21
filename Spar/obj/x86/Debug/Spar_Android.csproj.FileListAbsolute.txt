@@ -63,3 +63,11 @@ C:\Users\sabinam\Documents\Ranorex\Spar\bin\Debug\Spar_Android.exe.config
 C:\Users\sabinam\Documents\Ranorex\Spar\bin\Debug\Spar_Android.exe
 C:\Users\sabinam\Documents\Ranorex\Spar\bin\Debug\Spar_Android.pdb
 C:\Users\sabinam\Documents\Ranorex\Spar\obj\x86\Debug\Spar_Android.pdb
+C:\Users\domen\Desktop\NewSpar\Spar\bin\Debug\Spar.rxtmg
+C:\Users\domen\Desktop\NewSpar\Spar\bin\Debug\Spar.rxtst
+C:\Users\domen\Desktop\NewSpar\Spar\bin\Debug\Spar_Android.exe.config
+C:\Users\domen\Desktop\NewSpar\Spar\bin\Debug\Spar_Android.exe
+C:\Users\domen\Desktop\NewSpar\Spar\bin\Debug\Spar_Android.pdb
+C:\Users\domen\Desktop\NewSpar\Spar\obj\x86\Debug\Spar_Android.csprojResolveAssemblyReference.cache
+C:\Users\domen\Desktop\NewSpar\Spar\obj\x86\Debug\Spar_Android.exe
+C:\Users\domen\Desktop\NewSpar\Spar\obj\x86\Debug\Spar_Android.pdb

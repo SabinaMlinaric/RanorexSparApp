@@ -350,6 +350,42 @@
       <UserCode>true</UserCode>
       <id>3dd7e3f2-3ac9-4734-99a8-123fb5e38cb8</id>
     </Compile>
+    <Compile Include="Test cases\MySpar\ChangeLanguage.cs">
+      <DependentUpon>ChangeLanguage.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>565a85e4-e252-4b89-87a5-dacf05f3f7a3</id>
+      <BoundTo>dc98a13b-1292-411d-b24c-28e2b315c5e5</BoundTo>
+    </Compile>
+    <Compile Include="Test cases\MySpar\ChangeLanguage.UserCode.cs">
+      <DependentUpon>ChangeLanguage.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>1cb3f520-1e66-465a-aa49-72b2d12b1828</id>
+      <BoundTo>dc98a13b-1292-411d-b24c-28e2b315c5e5</BoundTo>
+    </Compile>
+    <Compile Include="Test cases\MySpar\MySpar_Guest_Overview.cs">
+      <DependentUpon>MySpar_Guest_Overview.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>6ba4c6a0-87f0-45bf-bc75-d6c1205b4c23</id>
+      <BoundTo>ab7f84df-da70-4efd-bdef-fd56f30ed66d</BoundTo>
+    </Compile>
+    <Compile Include="Test cases\MySpar\MySpar_Guest_Overview.UserCode.cs">
+      <DependentUpon>MySpar_Guest_Overview.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>58cd2f24-032e-4e94-9f4c-a1ecd206cb61</id>
+      <BoundTo>ab7f84df-da70-4efd-bdef-fd56f30ed66d</BoundTo>
+    </Compile>
+    <Compile Include="Test cases\MySpar\MySpar_LoggedIn_Overview.cs">
+      <DependentUpon>MySpar_LoggedIn_Overview.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>34c2c1c8-3592-412c-b4e3-2e57866c5436</id>
+      <BoundTo>42e8ded0-9dcb-45df-85ba-ef31a1ab59c9</BoundTo>
+    </Compile>
+    <Compile Include="Test cases\MySpar\MySpar_LoggedIn_Overview.UserCode.cs">
+      <DependentUpon>MySpar_LoggedIn_Overview.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>2eca34f6-01cb-4fc0-9c6c-76271f321554</id>
+      <BoundTo>42e8ded0-9dcb-45df-85ba-ef31a1ab59c9</BoundTo>
+    </Compile>
     <Compile Include="Test cases\Registration\Registration_SkipStep1.cs">
       <BoundTo>5ea97cb8-084b-48bc-bdcf-182f66b22621</BoundTo>
       <DependentUpon>Registration_SkipStep1.rxrec</DependentUpon>
@@ -768,6 +804,21 @@
       <recordtableid>19b7fe95-2458-47b8-9745-87a4cc6a9f5d</recordtableid>
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
     </None>
+    <None Include="Test cases\MySpar\ChangeLanguage.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>dc98a13b-1292-411d-b24c-28e2b315c5e5</id>
+      <recordtableid>4bff16a2-15b5-459d-bca2-c553cfc20104</recordtableid>
+    </None>
+    <None Include="Test cases\MySpar\MySpar_Guest_Overview.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>ab7f84df-da70-4efd-bdef-fd56f30ed66d</id>
+      <recordtableid>aa4391ec-f76d-453d-b148-7c6b889aa29a</recordtableid>
+    </None>
+    <None Include="Test cases\MySpar\MySpar_LoggedIn_Overview.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>42e8ded0-9dcb-45df-85ba-ef31a1ab59c9</id>
+      <recordtableid>4e8a966e-2dcf-4803-a310-b89e98068650</recordtableid>
+    </None>
     <None Include="Test cases\Registration\Registration_SkipStep1.rxrec">
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
       <id>5ea97cb8-084b-48bc-bdcf-182f66b22621</id>
@@ -914,7 +965,7 @@
       <id>b7924370-6d8a-4e5d-9adb-eb15af9a241e</id>
     </Folder>
     <Folder Include="Test cases\MySpar">
-      <id>df99fcce-5ab0-4682-8e30-aa9e1fd3032b</id>
+      <id>f65d6fd4-4412-482d-8cb9-939ec6e99649</id>
     </Folder>
     <Folder Include="Test cases\Utility">
       <id>38ab03b4-6901-4829-a287-57bc91e7057a</id>

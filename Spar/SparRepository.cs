@@ -1373,6 +1373,7 @@ namespace Spar
         public partial class MainActivityFolder : RepoGenBaseFolder
         {
             SparRepositoryFolders.LocationsFolder _locations;
+            SparRepositoryFolders.MySparFolder _myspar;
             RepoItemInfo _btnbrowseInfo;
             RepoItemInfo _tvsparplusklubInfo;
             RepoItemInfo _navigateupInfo;
@@ -1447,6 +1448,7 @@ namespace Spar
                     base("MainActivity", "form[@title='MainActivity']", parentFolder, 30000, null, false, "04550d2f-0065-4f16-a9d6-1d6d447f1a0a", "")
             {
                 _locations = new SparRepositoryFolders.LocationsFolder(this);
+                _myspar = new SparRepositoryFolders.MySparFolder(this);
                 _btnbrowseInfo = new RepoItemInfo(this, "BtnBrowse", ".//text[@rid='btn_browse']", 30000, null, "5866c59c-3def-48ec-89ac-c451f7bedf8c");
                 _tvsparplusklubInfo = new RepoItemInfo(this, "TvSparPlusKlub", ".//text[@rid='tv_spar_plus_klub']", 30000, null, "8253f4a2-d685-4b34-9c74-87100f88a46f");
                 _navigateupInfo = new RepoItemInfo(this, "NavigateUp", ".//button[@contentdescription='Navigate up']", 30000, null, "4faab30c-ceb5-4de7-be98-3acaa0b88516");
@@ -3131,6 +3133,15 @@ namespace Spar
             {
                 get { return _locations; }
             }
+
+            /// <summary>
+            /// The MySpar folder.
+            /// </summary>
+            [RepositoryFolder("c41ddde5-9457-47e4-85ff-efd72f934c82")]
+            public virtual SparRepositoryFolders.MySparFolder MySpar
+            {
+                get { return _myspar; }
+            }
         }
 
         /// <summary>
@@ -3585,6 +3596,514 @@ namespace Spar
                 get
                 {
                     return _recyclerview_items_tvtitleInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The MySparFolder folder.
+        /// </summary>
+        [RepositoryFolder("c41ddde5-9457-47e4-85ff-efd72f934c82")]
+        public partial class MySparFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _mojasparpluskarticaInfo;
+            RepoItemInfo _sampleInfo;
+            RepoItemInfo _img25discountInfo;
+            RepoItemInfo _signupandgetyourcouponsInfo;
+            RepoItemInfo _signupInfo;
+            RepoItemInfo _imguserprofileInfo;
+            RepoItemInfo _myprofiletitleInfo;
+            RepoItemInfo _androidsupportv7widgetappcompatimageInfo;
+            RepoItemInfo _rstringscancardinfotitleInfo;
+            RepoItemInfo _btnmysparscanInfo;
+            RepoItemInfo _btnmysparnocardInfo;
+            RepoItemInfo _problemswithscanningtextInfo;
+            RepoItemInfo _btnmysparmanualinsertcardnrInfo;
+            RepoItemInfo _pushnotificationInfo;
+            RepoItemInfo _askusInfo;
+            RepoItemInfo _languageselectionsInfo;
+            RepoItemInfo _helpandadviceInfo;
+            RepoItemInfo _aboutInfo;
+
+            /// <summary>
+            /// Creates a new MySpar  folder.
+            /// </summary>
+            public MySparFolder(RepoGenBaseFolder parentFolder) :
+                    base("MySpar", "", parentFolder, 30000, null, false, "c41ddde5-9457-47e4-85ff-efd72f934c82", "")
+            {
+                _mojasparpluskarticaInfo = new RepoItemInfo(this, "MojaSPARPlusKartica", ".//text[@rid='tv_name']", 30000, null, "e43178df-187b-4566-871d-8656b42cb9d1");
+                _sampleInfo = new RepoItemInfo(this, "SAMPLE", ".//picture[@rid='img_bar_code']", 30000, null, "1875d9d4-71e9-4926-8dfa-00fd239c8a4b");
+                _img25discountInfo = new RepoItemInfo(this, "Img25Discount", "androidelement[@rid='content']/container/container[1]/container[2]/androidelement/container[@containertype='Frame']/container[@containertype='Frame']/androidelement/container[@containertype='Frame']/?/?/container[@containertype='Linear']/androidelement[3]/picture", 30000, null, "1b14d03f-5429-4c18-9b3a-4957861db49c");
+                _signupandgetyourcouponsInfo = new RepoItemInfo(this, "SignUpAndGetYourCoupons", ".//text[@resourceid='R.string.my_spar_guest_info_title']", 30000, null, "61db2e22-4145-44a5-8a66-99ea52bb2851");
+                _signupInfo = new RepoItemInfo(this, "SignUp", ".//text[@rid='btn_register']", 30000, null, "3bb8b3fd-20f0-45b4-a29e-36f19f55a53e");
+                _imguserprofileInfo = new RepoItemInfo(this, "ImgUserProfile", ".//container[@rid='action_my_profile']", 30000, null, "e3f08a1a-a20a-4422-b382-4f114bfc846a");
+                _myprofiletitleInfo = new RepoItemInfo(this, "MyProfileTitle", ".//text[@resourceid='R.string.my_profile_title']", 30000, null, "630c1575-47ed-4444-958a-c913c93e2242");
+                _androidsupportv7widgetappcompatimageInfo = new RepoItemInfo(this, "AndroidSupportV7WidgetAppCompatImage", ".//container[@rid='main_container']/container[@rid='fragment_stack_container']/container[@rid='fragment_stack_my_spar']//container[@rid='child_fragment_placeholder']/?/?/container[@rid='content_placeholder']/?/?/container[@rid='container_content']/?/?/picture", 30000, null, "990e7305-5941-456a-b8d5-a84bbd41c2be");
+                _rstringscancardinfotitleInfo = new RepoItemInfo(this, "RStringScancardInfoTitle", ".//text[@resourceid='R.string.scancard_info_title']", 30000, null, "8662aaf9-96a4-4757-85aa-c03979794afa");
+                _btnmysparscanInfo = new RepoItemInfo(this, "BtnMySparScan", ".//text[@rid='btn_scan']", 30000, null, "db165b6e-da8a-4e67-96f8-bd20d97fe9cf");
+                _btnmysparnocardInfo = new RepoItemInfo(this, "BtnMySparNoCard", ".//text[@rid='btn_no_card']", 30000, null, "79fd3386-3b58-4f08-ac02-8bf10e568cbf");
+                _problemswithscanningtextInfo = new RepoItemInfo(this, "ProblemsWithScanningText", ".//text[@resourceid='R.string.scancard_problems_with_scan']", 30000, null, "ff6b5a4d-e42c-44ac-81c4-f9bee08498a1");
+                _btnmysparmanualinsertcardnrInfo = new RepoItemInfo(this, "BtnMySparManualInsertCardNr", ".//text[@rid='btn_manual_insert_card_number']", 30000, null, "c97a17db-8520-4fc2-9b34-5bb1c06f173d");
+                _pushnotificationInfo = new RepoItemInfo(this, "PushNotification", ".//text[@rid='tv_item']", 30000, null, "1897f646-70a9-4f10-987c-f88aa2dc831c");
+                _askusInfo = new RepoItemInfo(this, "AskUs", ".//text[@resourceid='R.string.my_spar_profile_ask_us']", 30000, null, "bd415781-4a70-4fa3-97dc-9a7e61e5d561");
+                _languageselectionsInfo = new RepoItemInfo(this, "LanguageSelections", ".//text[@resourceid='R.string.my_spar_profile_select_language']", 30000, null, "85dc1400-4fae-4da4-a690-b64148364a09");
+                _helpandadviceInfo = new RepoItemInfo(this, "HelpAndAdvice", ".//text[@resourceid='R.string.my_spar_profile_help']", 30000, null, "35999ada-bc71-4c75-aa7d-a736dcc5e129");
+                _aboutInfo = new RepoItemInfo(this, "About", ".//text[@resourceid='R.string.my_spar_profile_about']", 30000, null, "b22b5d36-b4eb-4454-9edb-f7358e51c9cd");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("c41ddde5-9457-47e4-85ff-efd72f934c82")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("c41ddde5-9457-47e4-85ff-efd72f934c82")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MojaSPARPlusKartica item.
+            /// </summary>
+            [RepositoryItem("e43178df-187b-4566-871d-8656b42cb9d1")]
+            public virtual Ranorex.Text MojaSPARPlusKartica
+            {
+                get
+                {
+                    return _mojasparpluskarticaInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MojaSPARPlusKartica item info.
+            /// </summary>
+            [RepositoryItemInfo("e43178df-187b-4566-871d-8656b42cb9d1")]
+            public virtual RepoItemInfo MojaSPARPlusKarticaInfo
+            {
+                get
+                {
+                    return _mojasparpluskarticaInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SAMPLE item.
+            /// </summary>
+            [RepositoryItem("1875d9d4-71e9-4926-8dfa-00fd239c8a4b")]
+            public virtual Ranorex.Picture SAMPLE
+            {
+                get
+                {
+                    return _sampleInfo.CreateAdapter<Ranorex.Picture>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SAMPLE item info.
+            /// </summary>
+            [RepositoryItemInfo("1875d9d4-71e9-4926-8dfa-00fd239c8a4b")]
+            public virtual RepoItemInfo SAMPLEInfo
+            {
+                get
+                {
+                    return _sampleInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Img25Discount item.
+            /// </summary>
+            [RepositoryItem("1b14d03f-5429-4c18-9b3a-4957861db49c")]
+            public virtual Ranorex.Picture Img25Discount
+            {
+                get
+                {
+                    return _img25discountInfo.CreateAdapter<Ranorex.Picture>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Img25Discount item info.
+            /// </summary>
+            [RepositoryItemInfo("1b14d03f-5429-4c18-9b3a-4957861db49c")]
+            public virtual RepoItemInfo Img25DiscountInfo
+            {
+                get
+                {
+                    return _img25discountInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SignUpAndGetYourCoupons item.
+            /// </summary>
+            [RepositoryItem("61db2e22-4145-44a5-8a66-99ea52bb2851")]
+            public virtual Ranorex.Text SignUpAndGetYourCoupons
+            {
+                get
+                {
+                    return _signupandgetyourcouponsInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SignUpAndGetYourCoupons item info.
+            /// </summary>
+            [RepositoryItemInfo("61db2e22-4145-44a5-8a66-99ea52bb2851")]
+            public virtual RepoItemInfo SignUpAndGetYourCouponsInfo
+            {
+                get
+                {
+                    return _signupandgetyourcouponsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SignUp item.
+            /// </summary>
+            [RepositoryItem("3bb8b3fd-20f0-45b4-a29e-36f19f55a53e")]
+            public virtual Ranorex.Text SignUp
+            {
+                get
+                {
+                    return _signupInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SignUp item info.
+            /// </summary>
+            [RepositoryItemInfo("3bb8b3fd-20f0-45b4-a29e-36f19f55a53e")]
+            public virtual RepoItemInfo SignUpInfo
+            {
+                get
+                {
+                    return _signupInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ImgUserProfile item.
+            /// </summary>
+            [RepositoryItem("e3f08a1a-a20a-4422-b382-4f114bfc846a")]
+            public virtual Ranorex.Container ImgUserProfile
+            {
+                get
+                {
+                    return _imguserprofileInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ImgUserProfile item info.
+            /// </summary>
+            [RepositoryItemInfo("e3f08a1a-a20a-4422-b382-4f114bfc846a")]
+            public virtual RepoItemInfo ImgUserProfileInfo
+            {
+                get
+                {
+                    return _imguserprofileInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MyProfileTitle item.
+            /// </summary>
+            [RepositoryItem("630c1575-47ed-4444-958a-c913c93e2242")]
+            public virtual Ranorex.Text MyProfileTitle
+            {
+                get
+                {
+                    return _myprofiletitleInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MyProfileTitle item info.
+            /// </summary>
+            [RepositoryItemInfo("630c1575-47ed-4444-958a-c913c93e2242")]
+            public virtual RepoItemInfo MyProfileTitleInfo
+            {
+                get
+                {
+                    return _myprofiletitleInfo;
+                }
+            }
+
+            /// <summary>
+            /// The AndroidSupportV7WidgetAppCompatImage item.
+            /// </summary>
+            [RepositoryItem("990e7305-5941-456a-b8d5-a84bbd41c2be")]
+            public virtual Ranorex.Picture AndroidSupportV7WidgetAppCompatImage
+            {
+                get
+                {
+                    return _androidsupportv7widgetappcompatimageInfo.CreateAdapter<Ranorex.Picture>(true);
+                }
+            }
+
+            /// <summary>
+            /// The AndroidSupportV7WidgetAppCompatImage item info.
+            /// </summary>
+            [RepositoryItemInfo("990e7305-5941-456a-b8d5-a84bbd41c2be")]
+            public virtual RepoItemInfo AndroidSupportV7WidgetAppCompatImageInfo
+            {
+                get
+                {
+                    return _androidsupportv7widgetappcompatimageInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RStringScancardInfoTitle item.
+            /// </summary>
+            [RepositoryItem("8662aaf9-96a4-4757-85aa-c03979794afa")]
+            public virtual Ranorex.Text RStringScancardInfoTitle
+            {
+                get
+                {
+                    return _rstringscancardinfotitleInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RStringScancardInfoTitle item info.
+            /// </summary>
+            [RepositoryItemInfo("8662aaf9-96a4-4757-85aa-c03979794afa")]
+            public virtual RepoItemInfo RStringScancardInfoTitleInfo
+            {
+                get
+                {
+                    return _rstringscancardinfotitleInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnMySparScan item.
+            /// </summary>
+            [RepositoryItem("db165b6e-da8a-4e67-96f8-bd20d97fe9cf")]
+            public virtual Ranorex.Text BtnMySparScan
+            {
+                get
+                {
+                    return _btnmysparscanInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnMySparScan item info.
+            /// </summary>
+            [RepositoryItemInfo("db165b6e-da8a-4e67-96f8-bd20d97fe9cf")]
+            public virtual RepoItemInfo BtnMySparScanInfo
+            {
+                get
+                {
+                    return _btnmysparscanInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnMySparNoCard item.
+            /// </summary>
+            [RepositoryItem("79fd3386-3b58-4f08-ac02-8bf10e568cbf")]
+            public virtual Ranorex.Text BtnMySparNoCard
+            {
+                get
+                {
+                    return _btnmysparnocardInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnMySparNoCard item info.
+            /// </summary>
+            [RepositoryItemInfo("79fd3386-3b58-4f08-ac02-8bf10e568cbf")]
+            public virtual RepoItemInfo BtnMySparNoCardInfo
+            {
+                get
+                {
+                    return _btnmysparnocardInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ProblemsWithScanningText item.
+            /// </summary>
+            [RepositoryItem("ff6b5a4d-e42c-44ac-81c4-f9bee08498a1")]
+            public virtual Ranorex.Text ProblemsWithScanningText
+            {
+                get
+                {
+                    return _problemswithscanningtextInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ProblemsWithScanningText item info.
+            /// </summary>
+            [RepositoryItemInfo("ff6b5a4d-e42c-44ac-81c4-f9bee08498a1")]
+            public virtual RepoItemInfo ProblemsWithScanningTextInfo
+            {
+                get
+                {
+                    return _problemswithscanningtextInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnMySparManualInsertCardNr item.
+            /// </summary>
+            [RepositoryItem("c97a17db-8520-4fc2-9b34-5bb1c06f173d")]
+            public virtual Ranorex.Text BtnMySparManualInsertCardNr
+            {
+                get
+                {
+                    return _btnmysparmanualinsertcardnrInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnMySparManualInsertCardNr item info.
+            /// </summary>
+            [RepositoryItemInfo("c97a17db-8520-4fc2-9b34-5bb1c06f173d")]
+            public virtual RepoItemInfo BtnMySparManualInsertCardNrInfo
+            {
+                get
+                {
+                    return _btnmysparmanualinsertcardnrInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PushNotification item.
+            /// </summary>
+            [RepositoryItem("1897f646-70a9-4f10-987c-f88aa2dc831c")]
+            public virtual Ranorex.Text PushNotification
+            {
+                get
+                {
+                    return _pushnotificationInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PushNotification item info.
+            /// </summary>
+            [RepositoryItemInfo("1897f646-70a9-4f10-987c-f88aa2dc831c")]
+            public virtual RepoItemInfo PushNotificationInfo
+            {
+                get
+                {
+                    return _pushnotificationInfo;
+                }
+            }
+
+            /// <summary>
+            /// The AskUs item.
+            /// </summary>
+            [RepositoryItem("bd415781-4a70-4fa3-97dc-9a7e61e5d561")]
+            public virtual Ranorex.Text AskUs
+            {
+                get
+                {
+                    return _askusInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The AskUs item info.
+            /// </summary>
+            [RepositoryItemInfo("bd415781-4a70-4fa3-97dc-9a7e61e5d561")]
+            public virtual RepoItemInfo AskUsInfo
+            {
+                get
+                {
+                    return _askusInfo;
+                }
+            }
+
+            /// <summary>
+            /// The LanguageSelections item.
+            /// </summary>
+            [RepositoryItem("85dc1400-4fae-4da4-a690-b64148364a09")]
+            public virtual Ranorex.Text LanguageSelections
+            {
+                get
+                {
+                    return _languageselectionsInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The LanguageSelections item info.
+            /// </summary>
+            [RepositoryItemInfo("85dc1400-4fae-4da4-a690-b64148364a09")]
+            public virtual RepoItemInfo LanguageSelectionsInfo
+            {
+                get
+                {
+                    return _languageselectionsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The HelpAndAdvice item.
+            /// </summary>
+            [RepositoryItem("35999ada-bc71-4c75-aa7d-a736dcc5e129")]
+            public virtual Ranorex.Text HelpAndAdvice
+            {
+                get
+                {
+                    return _helpandadviceInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The HelpAndAdvice item info.
+            /// </summary>
+            [RepositoryItemInfo("35999ada-bc71-4c75-aa7d-a736dcc5e129")]
+            public virtual RepoItemInfo HelpAndAdviceInfo
+            {
+                get
+                {
+                    return _helpandadviceInfo;
+                }
+            }
+
+            /// <summary>
+            /// The About item.
+            /// </summary>
+            [RepositoryItem("b22b5d36-b4eb-4454-9edb-f7358e51c9cd")]
+            public virtual Ranorex.Text About
+            {
+                get
+                {
+                    return _aboutInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The About item info.
+            /// </summary>
+            [RepositoryItemInfo("b22b5d36-b4eb-4454-9edb-f7358e51c9cd")]
+            public virtual RepoItemInfo AboutInfo
+            {
+                get
+                {
+                    return _aboutInfo;
                 }
             }
         }

@@ -127,6 +127,9 @@ rxversion="6.2">
 			<testcase
 			name="TermsAndPolicy"
 			id="1544ff2c-6b68-46aa-90e3-29268352bcf2"/>
+			<setup
+			name="setup"
+			id="15f381d9-a2ef-499c-ac3d-4bab3b605a7b"/>
 			<testmodule
 			name="Registration_SkipStep1"
 			id="16116f86-7fa8-47a3-a3f4-bb7488b484f6"
@@ -457,12 +460,20 @@ rxversion="6.2">
 					value=""/>
 				</parameters>
 			</testcase>
+			<teardown
+			name="teardown"
+			id="45a48d32-b620-442a-8595-3dbff7807157"/>
 			<setup
 			name="setup511113"
 			id="4685d7a1-1333-47a3-a05b-5465470e3465"/>
 			<testcase
 			name="News_Overview"
 			id="4798d64f-f841-452d-8bea-63b512d91f96"/>
+			<testmodule
+			name="MySpar_Guest_Overview"
+			id="48c42e50-3e39-4e8f-8a62-78116f658f26"
+			ref="aa4391ec-f76d-453d-b148-7c6b889aa29a"
+			type="Recording"/>
 			<teardown
 			name="teardown31121"
 			id="4aaac07f-72cb-468d-b80a-62c77e32448e"/>
@@ -577,6 +588,11 @@ rxversion="6.2">
 			<setup
 			name="setup6"
 			id="4fcc84bf-b19c-48d4-b960-d78380f55d84"/>
+			<testmodule
+			name="CloseApp"
+			id="5028782e-aa64-4adf-8a24-be6c639495aa"
+			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
+			type="Recording"/>
 			<teardown
 			name="teardown"
 			id="505615e6-ec1f-461a-8062-cca78f4cfb01"/>
@@ -1130,6 +1146,11 @@ rxversion="6.2">
 					value=""/>
 				</parameters>
 			</testcase>
+			<testmodule
+			name="SkipBoardingToLanding"
+			id="714dd39f-4323-412f-ba84-99c10c19f41d"
+			ref="cf205871-aa48-4224-9200-739b934831cd"
+			type="Recording"/>
 			<testcase
 			name="Step4_OptionalFieldsAdded"
 			id="73af372a-6ba3-490e-bd09-f2988996b7c1"
@@ -1324,6 +1345,9 @@ rxversion="6.2">
 			<setup
 			name="setup511112"
 			id="7e520112-0244-4bbe-909b-9c1fd25dd037"/>
+			<testcase
+			name="GuestOverview"
+			id="81ebfdd8-acee-4672-8386-7972bc880aec"/>
 			<testcase
 			name="Scan_card"
 			id="82161bb2-5e13-4f6a-9c27-78b8a0d7abaa"/>
@@ -1613,6 +1637,24 @@ rxversion="6.2">
 			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
 			type="Recording"/>
 			<testmodule
+			name="RunApp"
+			id="92bf075d-e4bd-42b4-92c5-742371c57b96"
+			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="7ba94856-ce36-433b-aa83-673fcd1b06d7"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="4de25083-df64-42d6-97dd-017c0a227675"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<testmodule
 			name="CloseApp"
 			id="930bbee2-cdd3-4e36-8093-dd8b4b631457"
 			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
@@ -1792,6 +1834,18 @@ rxversion="6.2">
 			maxrange="0"
 			datarangeactive="True"
 			datasource="Registration"/>
+			<modulegroup
+			name="AllowPermissions"
+			id="a90e8fd2-ed03-492e-b555-598d6a92f29f"
+			ref="b6a763ab-152b-4bdf-8af2-430dfe4c10c9">
+				<databinding>
+					<var
+					variablename="PackageName"
+					variableid="f7d21799-6692-45f8-a1a2-8ee1e98b723d"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</modulegroup>
 			<teardown
 			name="teardown3113"
 			id="a97395dc-07b5-4fcf-a411-42cba25248a1"/>
@@ -2458,6 +2512,24 @@ rxversion="6.2">
 			<testmodule
 			name="ClearAppData"
 			id="ddbd7711-fbcd-49d9-954a-723ecd0bfb77"
+			ref="d75ab6fa-6314-46ab-8f27-4adcb17bbeb7"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="82366f14-af3e-4e79-a6a5-6b409168ddc5"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="82361544-8731-4a7d-b1cb-7420ac2fac02"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<testmodule
+			name="ClearAppData"
+			id="de52c41e-b9c6-451a-955e-2dec6311e63b"
 			ref="d75ab6fa-6314-46ab-8f27-4adcb17bbeb7"
 			type="Recording">
 				<databinding>
@@ -3681,7 +3753,38 @@ rxversion="6.2">
 						</folder>
 						<folder
 						name="MySpar"
-						id="0b09c187-fef2-4ae9-85f2-1812e73b5891"/>
+						id="0b09c187-fef2-4ae9-85f2-1812e73b5891">
+							<testcase
+							name="GuestOverview"
+							id="81ebfdd8-acee-4672-8386-7972bc880aec">
+								<setup
+								name="setup"
+								id="15f381d9-a2ef-499c-ac3d-4bab3b605a7b">
+									<testmodule
+									name="ClearAppData"
+									id="de52c41e-b9c6-451a-955e-2dec6311e63b"/>
+									<modulegroup
+									name="AllowPermissions"
+									id="a90e8fd2-ed03-492e-b555-598d6a92f29f"/>
+									<testmodule
+									name="RunApp"
+									id="92bf075d-e4bd-42b4-92c5-742371c57b96"/>
+									<testmodule
+									name="SkipBoardingToLanding"
+									id="714dd39f-4323-412f-ba84-99c10c19f41d"/>
+								</setup>
+								<testmodule
+								name="MySpar_Guest_Overview"
+								id="48c42e50-3e39-4e8f-8a62-78116f658f26"/>
+								<teardown
+								name="teardown"
+								id="45a48d32-b620-442a-8595-3dbff7807157">
+									<testmodule
+									name="CloseApp"
+									id="5028782e-aa64-4adf-8a24-be6c639495aa"/>
+								</teardown>
+							</testcase>
+						</folder>
 						<folder
 						name="ShoppingList"
 						id="f9db67e4-b2d1-43ae-883c-0a91c6c19b73"/>
@@ -4059,22 +4162,7 @@ rxversion="6.2">
 	<testconfigurations
 	default="TestRun">
 		<testconfiguration
-		name="TestRun">
-			<testcase
-			id="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
-			<testcase
-			id="285c5c97-c0b3-43b1-abff-3f15f46a65c4"/>
-			<testcase
-			id="4798d64f-f841-452d-8bea-63b512d91f96"/>
-			<testcase
-			id="5ee6bb56-33c7-488c-959b-09924f6ad4cf"/>
-			<testcase
-			id="6ce6c4df-bcac-4ac0-bf58-117ada5e908f"/>
-			<testcase
-			id="c7e79d6a-cc6c-4587-937c-a5c53d0466ee"/>
-			<testcase
-			id="d6a174b9-f860-42b9-9890-569c2900ee01"/>
-		</testconfiguration>
+		name="TestRun"/>
 	</testconfigurations>
 	<references>
 		<reference>

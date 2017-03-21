@@ -33,6 +33,12 @@ rxversion="6.2">
 			<testcase
 			name="Catalogs_CheckItems_SectionItems"
 			id="04e5a433-e87f-4d35-b8f3-fb1f3635df97"/>
+			<testcase
+			name="Change_Language"
+			id="05c047e0-fb01-4a4f-936e-f9ed673a2d5a"/>
+			<testcase
+			name="LoggedIn_LostCard"
+			id="061121e6-8a80-4cc0-afbb-3cba99bb22e1"/>
 			<testmodule
 			name="GetAccessToken"
 			id="06221bf6-d22a-41af-901d-26ced518fcc1"
@@ -78,10 +84,18 @@ rxversion="6.2">
 			<setup
 			name="setup"
 			id="0bb8463a-bfef-467c-959b-f7a43b5847d9"/>
+			<folder
+			name="Login_ThroughMySpar"
+			id="0bbe94b1-3c53-4fc7-a33c-9d08cbff60a3"/>
 			<testmodule
 			name="CloseApp"
 			id="0d620899-9875-4e77-bead-f8416b635a97"
 			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
+			type="Recording"/>
+			<testmodule
+			name="SkipBoardingToLanding"
+			id="0da95b36-52b8-4073-a366-f7df2d46e2af"
+			ref="cf205871-aa48-4224-9200-739b934831cd"
 			type="Recording"/>
 			<testmodule
 			name="NoCard_AllowAll"
@@ -95,6 +109,9 @@ rxversion="6.2">
 			maxrange="0"
 			datarangeactive="True"
 			datasource="Registration"/>
+			<folder
+			name="LoggedIn"
+			id="1016ebbd-6112-4798-b57e-0e70be31d91f"/>
 			<testmodule
 			name="SkipBoardingToLanding"
 			id="1134a5bb-40c3-4882-a02b-604a9f350fa2"
@@ -127,6 +144,14 @@ rxversion="6.2">
 			<testcase
 			name="TermsAndPolicy"
 			id="1544ff2c-6b68-46aa-90e3-29268352bcf2"/>
+			<testmodule
+			name="SkipBoardingToLanding"
+			id="1590b59a-fba1-40d9-8865-da9b83976b80"
+			ref="cf205871-aa48-4224-9200-739b934831cd"
+			type="Recording"/>
+			<setup
+			name="setup"
+			id="15f381d9-a2ef-499c-ac3d-4bab3b605a7b"/>
 			<testmodule
 			name="Registration_SkipStep1"
 			id="16116f86-7fa8-47a3-a3f4-bb7488b484f6"
@@ -192,6 +217,11 @@ rxversion="6.2">
 				</databinding>
 			</testmodule>
 			<testmodule
+			name="CloseApp"
+			id="1a2d8841-f0df-4ea8-81d9-8a0ddc5f5cdc"
+			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
+			type="Recording"/>
+			<testmodule
 			name="GetAccessToken"
 			id="1a900540-4216-4f0d-ad16-9b139d9503d5"
 			ref="2bce3e35-5051-477a-b59d-25e0192cc7f7"
@@ -252,6 +282,24 @@ rxversion="6.2">
 			</testcase>
 			<testmodule
 			name="RunApp"
+			id="25fa3bf1-b9b6-4b92-9e79-7a55fd258894"
+			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="7ba94856-ce36-433b-aa83-673fcd1b06d7"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="4de25083-df64-42d6-97dd-017c0a227675"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<testmodule
+			name="RunApp"
 			id="26f5884d-7e97-4467-a1b9-9ea5fdb9f1db"
 			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
 			type="Recording">
@@ -273,6 +321,24 @@ rxversion="6.2">
 			id="285c5c97-c0b3-43b1-abff-3f15f46a65c4"/>
 			<testmodule
 			name="RunApp"
+			id="28706ded-fd6f-4caf-be4e-2e6556d0027f"
+			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="7ba94856-ce36-433b-aa83-673fcd1b06d7"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="4de25083-df64-42d6-97dd-017c0a227675"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<testmodule
+			name="RunApp"
 			id="29041e40-fd94-4eb7-9146-a32c33e2fd78"
 			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
 			type="Recording">
@@ -290,12 +356,18 @@ rxversion="6.2">
 				</databinding>
 			</testmodule>
 			<testcase
+			name="Login_Incorrect_Password"
+			id="297b27e5-01fd-4c59-bc3d-2849fea8e3fd"/>
+			<testcase
 			name="Step3_Email_Invalid"
 			id="2b260f12-a061-42d3-b30f-9858caed42f1"
 			minrange="0"
 			maxrange="0"
 			datarangeactive="True"
 			datasource="Registration"/>
+			<testcase
+			name="LoggedIn_MyProfile_UserData_Validate"
+			id="2b7a5d41-7d65-4bd5-8eda-49eac127db0b"/>
 			<testmodule
 			name="CloseApp"
 			id="2bc9081c-ab4c-4445-acd6-3ebf0e31a756"
@@ -434,11 +506,17 @@ rxversion="6.2">
 			maxrange="0"
 			datarangeactive="True"
 			datasource="Registration"/>
+			<testcase
+			name="Login_Incorrect_Email"
+			id="3c3e04bc-81a5-45bb-9b76-da976e9a58c3"/>
 			<testmodule
 			name="NoCard_SkipAll"
 			id="3d01b244-907f-4ce6-afbe-b760374c81be"
 			ref="c39e8614-8d6b-4096-8572-acd96170c2aa"
 			type="Recording"/>
+			<testcase
+			name="Login_Success"
+			id="3e1240cd-45fe-4249-9743-146425cf0401"/>
 			<setup
 			name="setup224"
 			id="40c37e49-162c-4f56-a1fd-1e4fbe11b70b"/>
@@ -457,12 +535,20 @@ rxversion="6.2">
 					value=""/>
 				</parameters>
 			</testcase>
+			<teardown
+			name="teardown"
+			id="45a48d32-b620-442a-8595-3dbff7807157"/>
 			<setup
 			name="setup511113"
 			id="4685d7a1-1333-47a3-a05b-5465470e3465"/>
 			<testcase
 			name="News_Overview"
 			id="4798d64f-f841-452d-8bea-63b512d91f96"/>
+			<testmodule
+			name="MySpar_Guest_Overview"
+			id="48c42e50-3e39-4e8f-8a62-78116f658f26"
+			ref="aa4391ec-f76d-453d-b148-7c6b889aa29a"
+			type="Recording"/>
 			<teardown
 			name="teardown31121"
 			id="4aaac07f-72cb-468d-b80a-62c77e32448e"/>
@@ -577,6 +663,11 @@ rxversion="6.2">
 			<setup
 			name="setup6"
 			id="4fcc84bf-b19c-48d4-b960-d78380f55d84"/>
+			<testmodule
+			name="CloseApp"
+			id="5028782e-aa64-4adf-8a24-be6c639495aa"
+			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
+			type="Recording"/>
 			<teardown
 			name="teardown"
 			id="505615e6-ec1f-461a-8062-cca78f4cfb01"/>
@@ -725,6 +816,9 @@ rxversion="6.2">
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</modulegroup>
+			<setup
+			name="setup8"
+			id="573b8b85-fb53-4aeb-865c-369c82cade97"/>
 			<folder
 			name="Boarding"
 			id="5979a9fe-3310-4274-9a43-6e191e81eb64"/>
@@ -1046,6 +1140,9 @@ rxversion="6.2">
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</testmodule>
+			<testcase
+			name="LoggedIn_ForgottenPassword"
+			id="6a7533c4-74cc-4912-b9df-ba4bb92382cb"/>
 			<testmodule
 			name="ClearAppData"
 			id="6b6d1f26-c0d1-439e-ac7e-a099023cd232"
@@ -1064,6 +1161,11 @@ rxversion="6.2">
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</testmodule>
+			<testmodule
+			name="ChangeLanguage"
+			id="6b6eb1d6-ec5c-4c4c-826d-3bd20d58f15c"
+			ref="4bff16a2-15b5-459d-bca2-c553cfc20104"
+			type="Recording"/>
 			<teardown
 			name="teardown3111"
 			id="6bbcd69d-69d6-422a-b83a-391e458128c2"/>
@@ -1130,6 +1232,16 @@ rxversion="6.2">
 					value=""/>
 				</parameters>
 			</testcase>
+			<testmodule
+			name="SkipBoardingToLanding"
+			id="714dd39f-4323-412f-ba84-99c10c19f41d"
+			ref="cf205871-aa48-4224-9200-739b934831cd"
+			type="Recording"/>
+			<testmodule
+			name="CloseApp"
+			id="71d9ced6-59cc-4286-b0de-962881d807bd"
+			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
+			type="Recording"/>
 			<testcase
 			name="Step4_OptionalFieldsAdded"
 			id="73af372a-6ba3-490e-bd09-f2988996b7c1"
@@ -1159,6 +1271,24 @@ rxversion="6.2">
 				</databinding>
 			</testmodule>
 			<testmodule
+			name="ClearAppData"
+			id="75c17d8a-d166-4749-864c-307326b5f805"
+			ref="d75ab6fa-6314-46ab-8f27-4adcb17bbeb7"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="82366f14-af3e-4e79-a6a5-6b409168ddc5"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="82361544-8731-4a7d-b1cb-7420ac2fac02"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<testmodule
 			name="RunApp"
 			id="768a5b9c-5aea-477c-9017-bfb3fb58d15f"
 			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
@@ -1172,6 +1302,24 @@ rxversion="6.2">
 					<var
 					variablename="PackageName"
 					variableid="4de25083-df64-42d6-97dd-017c0a227675"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<testmodule
+			name="ClearAppData"
+			id="776c1094-d15e-4921-86e7-afa407e5994f"
+			ref="d75ab6fa-6314-46ab-8f27-4adcb17bbeb7"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="82366f14-af3e-4e79-a6a5-6b409168ddc5"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="82361544-8731-4a7d-b1cb-7420ac2fac02"
 					dataname="PackageName"
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
@@ -1325,6 +1473,9 @@ rxversion="6.2">
 			name="setup511112"
 			id="7e520112-0244-4bbe-909b-9c1fd25dd037"/>
 			<testcase
+			name="GuestOverview"
+			id="81ebfdd8-acee-4672-8386-7972bc880aec"/>
+			<testcase
 			name="Scan_card"
 			id="82161bb2-5e13-4f6a-9c27-78b8a0d7abaa"/>
 			<testcase
@@ -1369,6 +1520,9 @@ rxversion="6.2">
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</testmodule>
+			<setup
+			name="setup"
+			id="85065d16-2e77-409e-b81c-48b0220fbdd3"/>
 			<testmodule
 			name="ClearAppData"
 			id="8546a798-cc0d-4b17-8048-92307db85d11"
@@ -1481,6 +1635,24 @@ rxversion="6.2">
 			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
 			type="Recording"/>
 			<testmodule
+			name="RunApp"
+			id="8b75d5fe-4edd-4f66-a309-eb45c6339715"
+			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="7ba94856-ce36-433b-aa83-673fcd1b06d7"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="4de25083-df64-42d6-97dd-017c0a227675"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<testmodule
 			name="ClearAppData"
 			id="8cfccb6e-f984-4f28-be32-cbe438e4d7c1"
 			ref="d75ab6fa-6314-46ab-8f27-4adcb17bbeb7"
@@ -1521,6 +1693,18 @@ rxversion="6.2">
 			id="8e6c5b60-5138-4ad0-9148-a82fa463aa43"
 			ref="0f81ec01-5f5a-439a-93de-8bb75f3acc37"
 			type="Recording"/>
+			<modulegroup
+			name="AllowPermissions"
+			id="901d1d17-7f40-48d7-8484-0454ebf5a4a3"
+			ref="b6a763ab-152b-4bdf-8af2-430dfe4c10c9">
+				<databinding>
+					<var
+					variablename="PackageName"
+					variableid="f7d21799-6692-45f8-a1a2-8ee1e98b723d"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</modulegroup>
 			<testmodule
 			name="RunApp"
 			id="918f9cec-72b8-4150-bbb2-cb1f483fbff9"
@@ -1613,10 +1797,31 @@ rxversion="6.2">
 			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
 			type="Recording"/>
 			<testmodule
+			name="RunApp"
+			id="92bf075d-e4bd-42b4-92c5-742371c57b96"
+			ref="47c4d39f-0d71-4abc-bcb7-f146aaa7813a"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="7ba94856-ce36-433b-aa83-673fcd1b06d7"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="4de25083-df64-42d6-97dd-017c0a227675"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<testmodule
 			name="CloseApp"
 			id="930bbee2-cdd3-4e36-8093-dd8b4b631457"
 			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
 			type="Recording"/>
+			<testcase
+			name="PushNotifications_Enable_Disable"
+			id="93a0a31c-e7d9-4501-aed8-58aa16639dea"/>
 			<testmodule
 			name="RunApp"
 			id="942268f5-4737-4558-a8e9-8b6134108c38"
@@ -1736,9 +1941,26 @@ rxversion="6.2">
 			<setup
 			name="setup223"
 			id="9e179c25-4f19-41aa-ad41-9120de350f7e"/>
+			<folder
+			name="Guest"
+			id="9f4c4db5-acb3-4e84-ad66-e34af788c89c"/>
+			<testmodule
+			name="CloseApp"
+			id="a21e21a5-f120-48e8-93f0-f54aaba77834"
+			ref="cde5fee8-c303-485d-9686-e99e57ce5f12"
+			type="Recording"/>
+			<testcase
+			name="Login_Incorrect_SerialNumber"
+			id="a2999193-1327-4717-b755-18fe3f327b8b"/>
+			<testcase
+			name="LoggedIn_ChangeMail"
+			id="a30ea90e-70fc-4c45-b43e-1baa3cd2f612"/>
 			<teardown
 			name="teardown31127"
 			id="a459bf92-2d93-4b7b-a45b-40245ffd0c9f"/>
+			<testcase
+			name="Login_TooShort_SerialNumber"
+			id="a59eae12-512b-4e2e-afe0-20217c7edb14"/>
 			<testmodule
 			name="ClearAppData"
 			id="a6370a79-ffdf-43de-af98-aeaf72a63e64"
@@ -1792,6 +2014,18 @@ rxversion="6.2">
 			maxrange="0"
 			datarangeactive="True"
 			datasource="Registration"/>
+			<modulegroup
+			name="AllowPermissions"
+			id="a90e8fd2-ed03-492e-b555-598d6a92f29f"
+			ref="b6a763ab-152b-4bdf-8af2-430dfe4c10c9">
+				<databinding>
+					<var
+					variablename="PackageName"
+					variableid="f7d21799-6692-45f8-a1a2-8ee1e98b723d"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</modulegroup>
 			<teardown
 			name="teardown3113"
 			id="a97395dc-07b5-4fcf-a411-42cba25248a1"/>
@@ -1805,6 +2039,9 @@ rxversion="6.2">
 			maxrange="0"
 			datarangeactive="True"
 			datasource="Registration"/>
+			<testcase
+			name="Login_Invalid_Password"
+			id="abd94d2e-8874-4af1-b7f7-d83ac49529e4"/>
 			<testmodule
 			name="SparKlub_Open"
 			id="ac806f2e-d124-4883-85fc-3aed9d1eac65"
@@ -1823,6 +2060,9 @@ rxversion="6.2">
 					datasourceid="70808a8f-51f9-432d-b5ea-409fc89c5340"/>
 				</databinding>
 			</testmodule>
+			<teardown
+			name="teardown5"
+			id="ae41859b-77dc-488e-9e38-ead294b480df"/>
 			<testmodule
 			name="ClearAppData"
 			id="af429b2c-4e5d-4ca7-a009-3841c2374a24"
@@ -2054,6 +2294,18 @@ rxversion="6.2">
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</testmodule>
+			<modulegroup
+			name="AllowPermissions"
+			id="b8df37f0-ee41-4046-abeb-5ae9bbcc01fc"
+			ref="b6a763ab-152b-4bdf-8af2-430dfe4c10c9">
+				<databinding>
+					<var
+					variablename="PackageName"
+					variableid="f7d21799-6692-45f8-a1a2-8ee1e98b723d"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</modulegroup>
 			<testmodule
 			name="SkipBoardingToLanding"
 			id="bc36087b-cf98-4b45-9185-c267200925c6"
@@ -2064,6 +2316,24 @@ rxversion="6.2">
 			id="bcb69c6f-f2fd-47a3-ab58-429cb97f360e"
 			ref="f1695f7e-8691-46f1-9cd5-a74d6d5c1639"
 			type="Recording"/>
+			<testmodule
+			name="ClearAppData"
+			id="bfbb6887-62fd-48cb-a91e-6a1ee1d8ffe2"
+			ref="d75ab6fa-6314-46ab-8f27-4adcb17bbeb7"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="82366f14-af3e-4e79-a6a5-6b409168ddc5"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="82361544-8731-4a7d-b1cb-7420ac2fac02"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
 			<testmodule
 			name="Step2_HouseNumber_NoNumber"
 			id="c0c12c3f-76d7-4910-ab6e-b49301d21fe1"
@@ -2200,6 +2470,9 @@ rxversion="6.2">
 			<setup
 			name="setup12"
 			id="c99364c5-28ae-4d8f-aea7-7bd3ac804d54"/>
+			<setup
+			name="setup7"
+			id="c9968232-62cc-4f6e-973c-28d089b85235"/>
 			<teardown
 			name="teardown4"
 			id="c9dda5aa-1e42-4939-b3f7-b7a30f01ce79"/>
@@ -2221,6 +2494,9 @@ rxversion="6.2">
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</testmodule>
+			<teardown
+			name="teardown"
+			id="cb5ba39f-8c53-46b8-ac32-59d8d7a27249"/>
 			<testmodule
 			name="ClearAppData"
 			id="cba854ce-6da6-471f-810e-114f4d2887c1"
@@ -2239,6 +2515,9 @@ rxversion="6.2">
 					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 				</databinding>
 			</testmodule>
+			<testcase
+			name="LoggedIn_Overview"
+			id="cc3dd1e6-dd88-47e8-8907-8d7ffbd962b6"/>
 			<testmodule
 			name="Location_PermissionDenied_Overview"
 			id="cd23b185-bd20-4c81-ad90-6ec511ca788a"
@@ -2294,6 +2573,9 @@ rxversion="6.2">
 			maxrange="0"
 			datarangeactive="True"
 			datasource="Registration"/>
+			<teardown
+			name="teardown6"
+			id="d37c8530-4c99-42da-989a-e638634ac080"/>
 			<testmodule
 			name="RunApp"
 			id="d3994145-a8ca-478b-893f-64b4ffd63b83"
@@ -2474,6 +2756,24 @@ rxversion="6.2">
 				</databinding>
 			</testmodule>
 			<testmodule
+			name="ClearAppData"
+			id="de52c41e-b9c6-451a-955e-2dec6311e63b"
+			ref="d75ab6fa-6314-46ab-8f27-4adcb17bbeb7"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="DeviceName"
+					variableid="82366f14-af3e-4e79-a6a5-6b409168ddc5"
+					dataname="DeviceName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+					<var
+					variablename="PackageName"
+					variableid="82361544-8731-4a7d-b1cb-7420ac2fac02"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</testmodule>
+			<testmodule
 			name="Catalogs_ChangeCatalog"
 			id="e00ff356-8f13-4503-b196-082f632f38f0"
 			ref="d8b50200-7f3e-40a2-bfe7-c4dcb54827ad"
@@ -2486,6 +2786,9 @@ rxversion="6.2">
 					datasourceid="b0899edc-03f4-4421-96e8-0537583ffe0c"/>
 				</databinding>
 			</testmodule>
+			<folder
+			name="Register_ThroughMySpar"
+			id="e04b4897-0a3a-4f8f-a877-fd59973b78df"/>
 			<testmodule
 			name="CloseApp"
 			id="e219d154-ace6-4b02-97d2-f571a7bbb8fe"
@@ -2628,6 +2931,21 @@ rxversion="6.2">
 			<testcase
 			name="Jedel.bi_Open"
 			id="e4ab2030-021e-4ece-baa5-aa63a22e2d77"/>
+			<testcase
+			name="Login_Invalid_Email"
+			id="e6306d5e-826f-4652-b8c8-dec7d2796a2f"/>
+			<modulegroup
+			name="AllowPermissions"
+			id="e6727264-23eb-4c4d-bf8a-972c11db7661"
+			ref="b6a763ab-152b-4bdf-8af2-430dfe4c10c9">
+				<databinding>
+					<var
+					variablename="PackageName"
+					variableid="f7d21799-6692-45f8-a1a2-8ee1e98b723d"
+					dataname="PackageName"
+					datasourceid="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
+				</databinding>
+			</modulegroup>
 			<testmodule
 			name="Step2_PostalNumber_Invalid"
 			id="e718a791-9298-4cd6-afa7-d23b06f76e67"
@@ -2807,6 +3125,16 @@ rxversion="6.2">
 			<teardown
 			name="teardown41111"
 			id="f61946f4-0e12-4ca3-8584-916656473afc"/>
+			<testmodule
+			name="SkipBoardingToLanding"
+			id="f7171dcc-e638-44b3-8d41-a822dc4c8b8d"
+			ref="cf205871-aa48-4224-9200-739b934831cd"
+			type="Recording"/>
+			<testmodule
+			name="MySpar_LoggedIn_Overview"
+			id="f7900aa1-a2d6-4317-824a-83ff9c7a6fcc"
+			ref="4e8a966e-2dcf-4803-a310-b89e98068650"
+			type="Recording"/>
 			<teardown
 			name="teardown1"
 			id="f890f5c6-9328-486d-bffe-cbf160c603ec"/>
@@ -3681,7 +4009,173 @@ rxversion="6.2">
 						</folder>
 						<folder
 						name="MySpar"
-						id="0b09c187-fef2-4ae9-85f2-1812e73b5891"/>
+						id="0b09c187-fef2-4ae9-85f2-1812e73b5891">
+							<folder
+							name="Guest"
+							id="9f4c4db5-acb3-4e84-ad66-e34af788c89c">
+								<testcase
+								name="GuestOverview"
+								id="81ebfdd8-acee-4672-8386-7972bc880aec">
+									<setup
+									name="setup"
+									id="15f381d9-a2ef-499c-ac3d-4bab3b605a7b">
+										<testmodule
+										name="ClearAppData"
+										id="de52c41e-b9c6-451a-955e-2dec6311e63b"/>
+										<modulegroup
+										name="AllowPermissions"
+										id="a90e8fd2-ed03-492e-b555-598d6a92f29f"/>
+										<testmodule
+										name="RunApp"
+										id="92bf075d-e4bd-42b4-92c5-742371c57b96"/>
+										<testmodule
+										name="SkipBoardingToLanding"
+										id="714dd39f-4323-412f-ba84-99c10c19f41d"/>
+									</setup>
+									<testmodule
+									name="MySpar_Guest_Overview"
+									id="48c42e50-3e39-4e8f-8a62-78116f658f26"/>
+									<teardown
+									name="teardown"
+									id="45a48d32-b620-442a-8595-3dbff7807157">
+										<testmodule
+										name="CloseApp"
+										id="5028782e-aa64-4adf-8a24-be6c639495aa"/>
+									</teardown>
+								</testcase>
+							</folder>
+							<folder
+							name="LoggedIn"
+							id="1016ebbd-6112-4798-b57e-0e70be31d91f">
+								<testcase
+								name="LoggedIn_Overview"
+								id="cc3dd1e6-dd88-47e8-8907-8d7ffbd962b6">
+									<setup
+									name="setup"
+									id="85065d16-2e77-409e-b81c-48b0220fbdd3">
+										<testmodule
+										name="ClearAppData"
+										id="bfbb6887-62fd-48cb-a91e-6a1ee1d8ffe2"/>
+										<modulegroup
+										name="AllowPermissions"
+										id="901d1d17-7f40-48d7-8484-0454ebf5a4a3"/>
+										<testmodule
+										name="RunApp"
+										id="8b75d5fe-4edd-4f66-a309-eb45c6339715"/>
+										<testmodule
+										name="SkipBoardingToLanding"
+										id="f7171dcc-e638-44b3-8d41-a822dc4c8b8d"/>
+									</setup>
+									<testmodule
+									name="MySpar_LoggedIn_Overview"
+									id="f7900aa1-a2d6-4317-824a-83ff9c7a6fcc"/>
+									<teardown
+									name="teardown"
+									id="cb5ba39f-8c53-46b8-ac32-59d8d7a27249">
+										<testmodule
+										name="CloseApp"
+										id="1a2d8841-f0df-4ea8-81d9-8a0ddc5f5cdc"/>
+									</teardown>
+								</testcase>
+								<testcase
+								name="LoggedIn_MyProfile_UserData_Validate"
+								id="2b7a5d41-7d65-4bd5-8eda-49eac127db0b"/>
+								<testcase
+								name="LoggedIn_LostCard"
+								id="061121e6-8a80-4cc0-afbb-3cba99bb22e1"/>
+								<testcase
+								name="LoggedIn_ForgottenPassword"
+								id="6a7533c4-74cc-4912-b9df-ba4bb92382cb"/>
+								<testcase
+								name="LoggedIn_ChangeMail"
+								id="a30ea90e-70fc-4c45-b43e-1baa3cd2f612"/>
+							</folder>
+							<testcase
+							name="PushNotifications_Enable_Disable"
+							id="93a0a31c-e7d9-4501-aed8-58aa16639dea">
+								<setup
+								name="setup7"
+								id="c9968232-62cc-4f6e-973c-28d089b85235">
+									<testmodule
+									name="ClearAppData"
+									id="75c17d8a-d166-4749-864c-307326b5f805"/>
+									<modulegroup
+									name="AllowPermissions"
+									id="b8df37f0-ee41-4046-abeb-5ae9bbcc01fc"/>
+									<testmodule
+									name="RunApp"
+									id="25fa3bf1-b9b6-4b92-9e79-7a55fd258894"/>
+									<testmodule
+									name="SkipBoardingToLanding"
+									id="0da95b36-52b8-4073-a366-f7df2d46e2af"/>
+								</setup>
+								<teardown
+								name="teardown5"
+								id="ae41859b-77dc-488e-9e38-ead294b480df">
+									<testmodule
+									name="CloseApp"
+									id="71d9ced6-59cc-4286-b0de-962881d807bd"/>
+								</teardown>
+							</testcase>
+							<testcase
+							name="Change_Language"
+							id="05c047e0-fb01-4a4f-936e-f9ed673a2d5a">
+								<setup
+								name="setup8"
+								id="573b8b85-fb53-4aeb-865c-369c82cade97">
+									<testmodule
+									name="ClearAppData"
+									id="776c1094-d15e-4921-86e7-afa407e5994f"/>
+									<modulegroup
+									name="AllowPermissions"
+									id="e6727264-23eb-4c4d-bf8a-972c11db7661"/>
+									<testmodule
+									name="RunApp"
+									id="28706ded-fd6f-4caf-be4e-2e6556d0027f"/>
+									<testmodule
+									name="SkipBoardingToLanding"
+									id="1590b59a-fba1-40d9-8865-da9b83976b80"/>
+								</setup>
+								<testmodule
+								name="ChangeLanguage"
+								id="6b6eb1d6-ec5c-4c4c-826d-3bd20d58f15c"/>
+								<teardown
+								name="teardown6"
+								id="d37c8530-4c99-42da-989a-e638634ac080">
+									<testmodule
+									name="CloseApp"
+									id="a21e21a5-f120-48e8-93f0-f54aaba77834"/>
+								</teardown>
+							</testcase>
+							<folder
+							name="Login_ThroughMySpar"
+							id="0bbe94b1-3c53-4fc7-a33c-9d08cbff60a3">
+								<testcase
+								name="Login_Success"
+								id="3e1240cd-45fe-4249-9743-146425cf0401"/>
+								<testcase
+								name="Login_Incorrect_SerialNumber"
+								id="a2999193-1327-4717-b755-18fe3f327b8b"/>
+								<testcase
+								name="Login_TooShort_SerialNumber"
+								id="a59eae12-512b-4e2e-afe0-20217c7edb14"/>
+								<testcase
+								name="Login_Invalid_Email"
+								id="e6306d5e-826f-4652-b8c8-dec7d2796a2f"/>
+								<testcase
+								name="Login_Incorrect_Email"
+								id="3c3e04bc-81a5-45bb-9b76-da976e9a58c3"/>
+								<testcase
+								name="Login_Invalid_Password"
+								id="abd94d2e-8874-4af1-b7f7-d83ac49529e4"/>
+								<testcase
+								name="Login_Incorrect_Password"
+								id="297b27e5-01fd-4c59-bc3d-2849fea8e3fd"/>
+							</folder>
+							<folder
+							name="Register_ThroughMySpar"
+							id="e04b4897-0a3a-4f8f-a877-fd59973b78df"/>
+						</folder>
 						<folder
 						name="ShoppingList"
 						id="f9db67e4-b2d1-43ae-883c-0a91c6c19b73"/>
@@ -4059,22 +4553,7 @@ rxversion="6.2">
 	<testconfigurations
 	default="TestRun">
 		<testconfiguration
-		name="TestRun">
-			<testcase
-			id="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
-			<testcase
-			id="285c5c97-c0b3-43b1-abff-3f15f46a65c4"/>
-			<testcase
-			id="4798d64f-f841-452d-8bea-63b512d91f96"/>
-			<testcase
-			id="5ee6bb56-33c7-488c-959b-09924f6ad4cf"/>
-			<testcase
-			id="6ce6c4df-bcac-4ac0-bf58-117ada5e908f"/>
-			<testcase
-			id="c7e79d6a-cc6c-4587-937c-a5c53d0466ee"/>
-			<testcase
-			id="d6a174b9-f860-42b9-9890-569c2900ee01"/>
-		</testconfiguration>
+		name="TestRun"/>
 	</testconfigurations>
 	<references>
 		<reference>

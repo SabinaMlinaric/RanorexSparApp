@@ -456,4 +456,9 @@ rxversion="6.2">
 	<plugin.cef.processblacklist>
 		spotify;chrome;
 	</plugin.cef.processblacklist>
+	<plugin.cef.wpffulltypewhitelist>
+	</plugin.cef.wpffulltypewhitelist>
+	<plugin.cef.enabledebugcapability>
+		False
+	</plugin.cef.enabledebugcapability>
 </configuration>
