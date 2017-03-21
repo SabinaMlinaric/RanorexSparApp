@@ -79,76 +79,80 @@ namespace Spar.Test_cases.MySpar
 
             Init();
 
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='My SPAR plus card') on item 'PlusSparSi.MainActivity.MySpar.MojaSPARPlusKartica'.", repo.PlusSparSi.MainActivity.MySpar.MojaSPARPlusKarticaInfo, new RecordItemIndex(0));
-            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.MojaSPARPlusKarticaInfo, "Text", "My SPAR plus card");
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.MySpar.MenuBtnMySpar' at Center", repo.PlusSparSi.MainActivity.MySpar.MenuBtnMySparInfo, new RecordItemIndex(0));
+            repo.PlusSparSi.MainActivity.MySpar.MenuBtnMySpar.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='My SPAR plus card') on item 'PlusSparSi.MainActivity.MySpar.MySPARPlusCard'.", repo.PlusSparSi.MainActivity.MySpar.MySPARPlusCardInfo, new RecordItemIndex(1));
+            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.MySPARPlusCardInfo, "Text", "My SPAR plus card");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='SAMPLE') on item 'PlusSparSi.MainActivity.MySpar.SAMPLE'.", repo.PlusSparSi.MainActivity.MySpar.SAMPLEInfo, new RecordItemIndex(1));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='SAMPLE') on item 'PlusSparSi.MainActivity.MySpar.SAMPLE'.", repo.PlusSparSi.MainActivity.MySpar.SAMPLEInfo, new RecordItemIndex(2));
             Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.SAMPLEInfo, "Text", "SAMPLE");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'PlusSparSi.MainActivity.MySpar.Img25Discount'.", repo.PlusSparSi.MainActivity.MySpar.Img25DiscountInfo, new RecordItemIndex(2));
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'PlusSparSi.MainActivity.MySpar.Img25Discount'.", repo.PlusSparSi.MainActivity.MySpar.Img25DiscountInfo, new RecordItemIndex(3));
             Validate.Exists(repo.PlusSparSi.MainActivity.MySpar.Img25DiscountInfo);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Sign up and get your coupons in the mobile app.') on item 'PlusSparSi.MainActivity.MySpar.SignUpAndGetYourCoupons'.", repo.PlusSparSi.MainActivity.MySpar.SignUpAndGetYourCouponsInfo, new RecordItemIndex(3));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Sign up and get your coupons in the mobile app.') on item 'PlusSparSi.MainActivity.MySpar.SignUpAndGetYourCoupons'.", repo.PlusSparSi.MainActivity.MySpar.SignUpAndGetYourCouponsInfo, new RecordItemIndex(4));
             Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.SignUpAndGetYourCouponsInfo, "Text", "Sign up and get your coupons in the mobile app.");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Sign up') on item 'PlusSparSi.MainActivity.MySpar.SignUp'.", repo.PlusSparSi.MainActivity.MySpar.SignUpInfo, new RecordItemIndex(4));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Sign up') on item 'PlusSparSi.MainActivity.MySpar.SignUp'.", repo.PlusSparSi.MainActivity.MySpar.SignUpInfo, new RecordItemIndex(5));
             Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.SignUpInfo, "Text", "Sign up");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'PlusSparSi.MainActivity.MySpar.ImgUserProfile'.", repo.PlusSparSi.MainActivity.MySpar.ImgUserProfileInfo, new RecordItemIndex(5));
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'PlusSparSi.MainActivity.MySpar.ImgUserProfile'.", repo.PlusSparSi.MainActivity.MySpar.ImgUserProfileInfo, new RecordItemIndex(6));
             Validate.Exists(repo.PlusSparSi.MainActivity.MySpar.ImgUserProfileInfo);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.MySpar.ImgUserProfile' at Center", repo.PlusSparSi.MainActivity.MySpar.ImgUserProfileInfo, new RecordItemIndex(6));
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.MySpar.ImgUserProfile' at Center", repo.PlusSparSi.MainActivity.MySpar.ImgUserProfileInfo, new RecordItemIndex(7));
             repo.PlusSparSi.MainActivity.MySpar.ImgUserProfile.Touch();
             Delay.Milliseconds(500);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='My Profile') on item 'PlusSparSi.MainActivity.MySpar.MyProfileTitle'.", repo.PlusSparSi.MainActivity.MySpar.MyProfileTitleInfo, new RecordItemIndex(7));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='My Profile') on item 'PlusSparSi.MainActivity.MySpar.MyProfileTitle'.", repo.PlusSparSi.MainActivity.MySpar.MyProfileTitleInfo, new RecordItemIndex(8));
             Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.MyProfileTitleInfo, "Text", "My Profile");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'PlusSparSi.MainActivity.MySpar.AndroidSupportV7WidgetAppCompatImage'.", repo.PlusSparSi.MainActivity.MySpar.AndroidSupportV7WidgetAppCompatImageInfo, new RecordItemIndex(8));
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'PlusSparSi.MainActivity.MySpar.AndroidSupportV7WidgetAppCompatImage'.", repo.PlusSparSi.MainActivity.MySpar.AndroidSupportV7WidgetAppCompatImageInfo, new RecordItemIndex(9));
             Validate.Exists(repo.PlusSparSi.MainActivity.MySpar.AndroidSupportV7WidgetAppCompatImageInfo);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Scan') on item 'PlusSparSi.MainActivity.MySpar.BtnMySparScan'.", repo.PlusSparSi.MainActivity.MySpar.BtnMySparScanInfo, new RecordItemIndex(9));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Scan') on item 'PlusSparSi.MainActivity.MySpar.BtnMySparScan'.", repo.PlusSparSi.MainActivity.MySpar.BtnMySparScanInfo, new RecordItemIndex(10));
             Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.BtnMySparScanInfo, "Text", "Scan");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='I don't own a card') on item 'PlusSparSi.ScanCardActivity.BtnNoCard'.", repo.PlusSparSi.ScanCardActivity.BtnNoCardInfo, new RecordItemIndex(10));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='I don't own a card') on item 'PlusSparSi.ScanCardActivity.BtnNoCard'.", repo.PlusSparSi.ScanCardActivity.BtnNoCardInfo, new RecordItemIndex(11));
             Validate.Attribute(repo.PlusSparSi.ScanCardActivity.BtnNoCardInfo, "Text", "I don't own a card");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Problems with scanning your card?') on item 'PlusSparSi.MainActivity.MySpar.ProblemsWithScanningText'.", repo.PlusSparSi.MainActivity.MySpar.ProblemsWithScanningTextInfo, new RecordItemIndex(11));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Problems with scanning your card?') on item 'PlusSparSi.MainActivity.MySpar.ProblemsWithScanningText'.", repo.PlusSparSi.MainActivity.MySpar.ProblemsWithScanningTextInfo, new RecordItemIndex(12));
             Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.ProblemsWithScanningTextInfo, "Text", "Problems with scanning your card?");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Enter card serial number') on item 'PlusSparSi.ScanCardActivity.BtnManualInsertCardNumber'.", repo.PlusSparSi.ScanCardActivity.BtnManualInsertCardNumberInfo, new RecordItemIndex(12));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Enter card serial number') on item 'PlusSparSi.ScanCardActivity.BtnManualInsertCardNumber'.", repo.PlusSparSi.ScanCardActivity.BtnManualInsertCardNumberInfo, new RecordItemIndex(13));
             Validate.Attribute(repo.PlusSparSi.ScanCardActivity.BtnManualInsertCardNumberInfo, "Text", "Enter card serial number");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Push Notifications') on item 'PlusSparSi.MainActivity.MySpar.PushNotification'.", repo.PlusSparSi.MainActivity.MySpar.PushNotificationInfo, new RecordItemIndex(13));
-            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.PushNotificationInfo, "Text", "Push Notifications");
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Push Notifications') on item 'PlusSparSi.MainActivity.MySpar.MyProfile.PushNotification'.", repo.PlusSparSi.MainActivity.MySpar.MyProfile.PushNotificationInfo, new RecordItemIndex(14));
+            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.MyProfile.PushNotificationInfo, "Text", "Push Notifications");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Ask Us') on item 'PlusSparSi.MainActivity.MySpar.AskUs'.", repo.PlusSparSi.MainActivity.MySpar.AskUsInfo, new RecordItemIndex(14));
-            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.AskUsInfo, "Text", "Ask Us");
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Ask Us') on item 'PlusSparSi.MainActivity.MySpar.MyProfile.AskUs'.", repo.PlusSparSi.MainActivity.MySpar.MyProfile.AskUsInfo, new RecordItemIndex(15));
+            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.MyProfile.AskUsInfo, "Text", "Ask Us");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Language Selection') on item 'PlusSparSi.MainActivity.MySpar.LanguageSelections'.", repo.PlusSparSi.MainActivity.MySpar.LanguageSelectionsInfo, new RecordItemIndex(15));
-            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.LanguageSelectionsInfo, "Text", "Language Selection");
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Language Selection') on item 'PlusSparSi.MainActivity.MySpar.MyProfile.LanguageSelections'.", repo.PlusSparSi.MainActivity.MySpar.MyProfile.LanguageSelectionsInfo, new RecordItemIndex(16));
+            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.MyProfile.LanguageSelectionsInfo, "Text", "Language Selection");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Help and Advice') on item 'PlusSparSi.MainActivity.MySpar.HelpAndAdvice'.", repo.PlusSparSi.MainActivity.MySpar.HelpAndAdviceInfo, new RecordItemIndex(16));
-            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.HelpAndAdviceInfo, "Text", "Help and Advice");
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Help and Advice') on item 'PlusSparSi.MainActivity.MySpar.MyProfile.HelpAndAdvice'.", repo.PlusSparSi.MainActivity.MySpar.MyProfile.HelpAndAdviceInfo, new RecordItemIndex(17));
+            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.MyProfile.HelpAndAdviceInfo, "Text", "Help and Advice");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='About') on item 'PlusSparSi.MainActivity.MySpar.About'.", repo.PlusSparSi.MainActivity.MySpar.AboutInfo, new RecordItemIndex(17));
-            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.AboutInfo, "Text", "About");
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='About') on item 'PlusSparSi.MainActivity.MySpar.MyProfile.About'.", repo.PlusSparSi.MainActivity.MySpar.MyProfile.AboutInfo, new RecordItemIndex(18));
+            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.MyProfile.AboutInfo, "Text", "About");
             Delay.Milliseconds(0);
             
         }

@@ -2,8 +2,17 @@
   <ActiveConfiguration value="Debug" />
   <ActivePlatform value="x86" />
   <SerializedValue name="ModuleBrowserState">
-    <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+    <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <string>{7BF7678C-3E9F-47C9-88E0-5AA7677DA802}</string>
+      <string>6e12a760-6636-488c-b3e9-7d256aa61ae5</string>
+      <string>60513a05-eab7-41e7-8c10-e51c735edc2e</string>
+      <string>d89fb37e-a709-4e10-bf94-9be4b2a51ae8</string>
+      <string>680a8890-e105-4344-a655-c94e0d4a5e85</string>
+      <string>b7924370-6d8a-4e5d-9adb-eb15af9a241e</string>
+      <string>f65d6fd4-4412-482d-8cb9-939ec6e99649</string>
+      <string>38ab03b4-6901-4829-a287-57bc91e7057a</string>
+    </ArrayOfString>
   </SerializedValue>
-  <ProjectBrowserState value="[Solution Spar[Spar_Android[References[]Test cases[Utility[C#[Classes[]]GetAccessToken.rxrec[]]]]]]&#xD;&#xA;Solution Spar\Spar_Android\Spar.rxtst&#xD;&#xA;Solution Spar\Spar_Android\Test cases\Login" />
+  <ProjectBrowserState value="[Solution Spar[Spar_Android[Test cases[MySpar[]Utility[C#[Classes[]]ClearAppData.rxrec[]]]]]]&#xD;&#xA;Solution Spar&#xD;&#xA;Solution Spar" />
   <StartupProject value="{7BF7678C-3E9F-47C9-88E0-5AA7677DA802}" />
 </Properties>

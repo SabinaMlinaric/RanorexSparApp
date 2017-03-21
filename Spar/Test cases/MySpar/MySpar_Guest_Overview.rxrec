@@ -27,6 +27,65 @@ mode="Global">
 	namespace="Spar.Test_cases.MySpar"/>
 	<variables/>
 	<recorditems>
+		<touchrecorditem
+		enabled="True"
+		optional="False"
+		duration="500ms"
+		screenshotname=""
+		searchpropertyid="5e705bb8-85b4-448d-833b-bbd4f2ac4b50"
+		touchtype="Touch"
+		elementlocation="Center"
+		fingerid="0"
+		touchduration="100ms"
+		longtouchduration="1000ms"
+		moveduration="100ms"
+		isremote="False"
+		sx="0"
+		sy="0">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="e1d35baf-a8bc-4464-9fcd-0fe885a76799">
+				<element
+				role="container"
+				prefcap="container"
+				capabilities="androidelement, mobileuielement"
+				flavor="mobile"
+				visible="True"
+				valid="True"
+				enabled="True"
+				hasfocus="False"
+				dontcache="True"
+				index="1"
+				rect="180,889,180,71"
+				snapElem="">
+					<attribute
+					name="containertype"
+					type="System.String">
+						Linear
+					</attribute>
+					<attribute
+					name="rid"
+					type="System.String">
+						navbar_action_my_spar
+					</attribute>
+					<attribute
+					name="platformclass"
+					type="System.String">
+						android.widget.LinearLayout
+					</attribute>
+					<attribute
+					name="temporaryelementid"
+					type="System.Int32">
+						213718435
+					</attribute>
+				</element>
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//container[@rid='navbar_action_my_spar']
+				</path>
+			</info>
+		</touchrecorditem>
 		<validationitem
 		enabled="True"
 		optional="False"

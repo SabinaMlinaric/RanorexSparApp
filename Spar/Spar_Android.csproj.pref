@@ -1,6 +1,12 @@
 ﻿<Properties>
+  <Array name="active">
+    <Element value="Spar.rxtst" />
+  </Array>
   <Array name="bookmarks" />
-  <Array name="files" />
+  <Array name="files">
+    <Element value="Spar.rxtst" />
+    <Element value="Test cases\MySpar\MySpar_LoginSuccess.rxrec" />
+  </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">
       <fileNames value="" />

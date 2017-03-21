@@ -148,6 +148,9 @@ namespace Spar
             SparRepositoryFolders.RegisterStep4AdditionalDataActivityFolder _registerstep4additionaldataactivity;
             SparRepositoryFolders.LoginEmailSentActivityFolder _loginemailsentactivity;
             SparRepositoryFolders.RegisterEmailNotificationsActivityFolder _registeremailnotificationsactivity;
+            SparRepositoryFolders.LoginSignInActivityFolder _loginsigninactivity;
+            SparRepositoryFolders.InvalidCardOrScanErrorFolder _invalidcardorscanerror;
+            SparRepositoryFolders.LoginForgottenPasswordActivityFolder _loginforgottenpasswordactivity;
 
             /// <summary>
             /// Creates a new PlusSparSi  folder.
@@ -170,6 +173,9 @@ namespace Spar
                 _registerstep4additionaldataactivity = new SparRepositoryFolders.RegisterStep4AdditionalDataActivityFolder(this);
                 _loginemailsentactivity = new SparRepositoryFolders.LoginEmailSentActivityFolder(this);
                 _registeremailnotificationsactivity = new SparRepositoryFolders.RegisterEmailNotificationsActivityFolder(this);
+                _loginsigninactivity = new SparRepositoryFolders.LoginSignInActivityFolder(this);
+                _invalidcardorscanerror = new SparRepositoryFolders.InvalidCardOrScanErrorFolder(this);
+                _loginforgottenpasswordactivity = new SparRepositoryFolders.LoginForgottenPasswordActivityFolder(this);
             }
 
             /// <summary>
@@ -329,6 +335,33 @@ namespace Spar
             public virtual SparRepositoryFolders.RegisterEmailNotificationsActivityFolder RegisterEmailNotificationsActivity
             {
                 get { return _registeremailnotificationsactivity; }
+            }
+
+            /// <summary>
+            /// The LoginSignInActivity folder.
+            /// </summary>
+            [RepositoryFolder("fb078e99-db98-445a-a828-15f895f87bdb")]
+            public virtual SparRepositoryFolders.LoginSignInActivityFolder LoginSignInActivity
+            {
+                get { return _loginsigninactivity; }
+            }
+
+            /// <summary>
+            /// The InvalidCardOrScanError folder.
+            /// </summary>
+            [RepositoryFolder("f1d6a251-32fe-4eca-96fa-f9da71d64ff4")]
+            public virtual SparRepositoryFolders.InvalidCardOrScanErrorFolder InvalidCardOrScanError
+            {
+                get { return _invalidcardorscanerror; }
+            }
+
+            /// <summary>
+            /// The LoginForgottenPasswordActivity folder.
+            /// </summary>
+            [RepositoryFolder("22f43bc2-822c-47b7-948e-8bd55e33cfd3")]
+            public virtual SparRepositoryFolders.LoginForgottenPasswordActivityFolder LoginForgottenPasswordActivity
+            {
+                get { return _loginforgottenpasswordactivity; }
             }
         }
 
@@ -1377,6 +1410,7 @@ namespace Spar
             RepoItemInfo _btnbrowseInfo;
             RepoItemInfo _tvsparplusklubInfo;
             RepoItemInfo _navigateupInfo;
+            RepoItemInfo _krmarjenjenavzgorInfo;
             RepoItemInfo _imgjedelbiInfo;
             RepoItemInfo _imgnewsInfo;
             RepoItemInfo _tvreadmoreInfo;
@@ -1452,6 +1486,7 @@ namespace Spar
                 _btnbrowseInfo = new RepoItemInfo(this, "BtnBrowse", ".//text[@rid='btn_browse']", 30000, null, "5866c59c-3def-48ec-89ac-c451f7bedf8c");
                 _tvsparplusklubInfo = new RepoItemInfo(this, "TvSparPlusKlub", ".//text[@rid='tv_spar_plus_klub']", 30000, null, "8253f4a2-d685-4b34-9c74-87100f88a46f");
                 _navigateupInfo = new RepoItemInfo(this, "NavigateUp", ".//button[@contentdescription='Navigate up']", 30000, null, "4faab30c-ceb5-4de7-be98-3acaa0b88516");
+                _krmarjenjenavzgorInfo = new RepoItemInfo(this, "KrmarjenjeNavzgor", ".//button[@contentdescription='Krmarjenje navzgor']", 30000, null, "f6095799-29ed-4af1-b928-2b8e046a43d0");
                 _imgjedelbiInfo = new RepoItemInfo(this, "ImgJedelBi", ".//picture[@rid='img_jedel_bi']", 30000, null, "950dd791-9de6-4243-bbfe-96c4d9ee8110");
                 _imgnewsInfo = new RepoItemInfo(this, "ImgNews", ".//picture[@rid='img_news']", 30000, null, "2b2e1260-4fbe-41cd-830d-40e484002ca3");
                 _tvreadmoreInfo = new RepoItemInfo(this, "TvReadMore", ".//text[@rid='tv_read_more']", 30000, null, "1a7ebec4-d191-46ab-9bd5-3c2297e8fb13");
@@ -1610,6 +1645,30 @@ namespace Spar
                 get
                 {
                     return _navigateupInfo;
+                }
+            }
+
+            /// <summary>
+            /// The KrmarjenjeNavzgor item.
+            /// </summary>
+            [RepositoryItem("f6095799-29ed-4af1-b928-2b8e046a43d0")]
+            public virtual Ranorex.Button KrmarjenjeNavzgor
+            {
+                get
+                {
+                    return _krmarjenjenavzgorInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The KrmarjenjeNavzgor item info.
+            /// </summary>
+            [RepositoryItemInfo("f6095799-29ed-4af1-b928-2b8e046a43d0")]
+            public virtual RepoItemInfo KrmarjenjeNavzgorInfo
+            {
+                get
+                {
+                    return _krmarjenjenavzgorInfo;
                 }
             }
 
@@ -3606,7 +3665,10 @@ namespace Spar
         [RepositoryFolder("c41ddde5-9457-47e4-85ff-efd72f934c82")]
         public partial class MySparFolder : RepoGenBaseFolder
         {
-            RepoItemInfo _mojasparpluskarticaInfo;
+            SparRepositoryFolders.MyProfileFolder _myprofile;
+            SparRepositoryFolders.LoginFolder _login;
+            RepoItemInfo _menubtnmysparInfo;
+            RepoItemInfo _mysparpluscardInfo;
             RepoItemInfo _sampleInfo;
             RepoItemInfo _img25discountInfo;
             RepoItemInfo _signupandgetyourcouponsInfo;
@@ -3618,12 +3680,8 @@ namespace Spar
             RepoItemInfo _btnmysparscanInfo;
             RepoItemInfo _btnmysparnocardInfo;
             RepoItemInfo _problemswithscanningtextInfo;
-            RepoItemInfo _btnmysparmanualinsertcardnrInfo;
-            RepoItemInfo _pushnotificationInfo;
-            RepoItemInfo _askusInfo;
-            RepoItemInfo _languageselectionsInfo;
-            RepoItemInfo _helpandadviceInfo;
-            RepoItemInfo _aboutInfo;
+            RepoItemInfo _textmycouponsInfo;
+            RepoItemInfo _tvcardserialnumberInfo;
 
             /// <summary>
             /// Creates a new MySpar  folder.
@@ -3631,7 +3689,10 @@ namespace Spar
             public MySparFolder(RepoGenBaseFolder parentFolder) :
                     base("MySpar", "", parentFolder, 30000, null, false, "c41ddde5-9457-47e4-85ff-efd72f934c82", "")
             {
-                _mojasparpluskarticaInfo = new RepoItemInfo(this, "MojaSPARPlusKartica", ".//text[@rid='tv_name']", 30000, null, "e43178df-187b-4566-871d-8656b42cb9d1");
+                _myprofile = new SparRepositoryFolders.MyProfileFolder(this);
+                _login = new SparRepositoryFolders.LoginFolder(this);
+                _menubtnmysparInfo = new RepoItemInfo(this, "MenuBtnMySpar", ".//container[@rid='navbar_action_my_spar']", 30000, null, "e1d35baf-a8bc-4464-9fcd-0fe885a76799");
+                _mysparpluscardInfo = new RepoItemInfo(this, "MySPARPlusCard", ".//text[@rid='tv_name']", 30000, null, "e43178df-187b-4566-871d-8656b42cb9d1");
                 _sampleInfo = new RepoItemInfo(this, "SAMPLE", ".//picture[@rid='img_bar_code']", 30000, null, "1875d9d4-71e9-4926-8dfa-00fd239c8a4b");
                 _img25discountInfo = new RepoItemInfo(this, "Img25Discount", "androidelement[@rid='content']/container/container[1]/container[2]/androidelement/container[@containertype='Frame']/container[@containertype='Frame']/androidelement/container[@containertype='Frame']/?/?/container[@containertype='Linear']/androidelement[3]/picture", 30000, null, "1b14d03f-5429-4c18-9b3a-4957861db49c");
                 _signupandgetyourcouponsInfo = new RepoItemInfo(this, "SignUpAndGetYourCoupons", ".//text[@resourceid='R.string.my_spar_guest_info_title']", 30000, null, "61db2e22-4145-44a5-8a66-99ea52bb2851");
@@ -3643,12 +3704,8 @@ namespace Spar
                 _btnmysparscanInfo = new RepoItemInfo(this, "BtnMySparScan", ".//text[@rid='btn_scan']", 30000, null, "db165b6e-da8a-4e67-96f8-bd20d97fe9cf");
                 _btnmysparnocardInfo = new RepoItemInfo(this, "BtnMySparNoCard", ".//text[@rid='btn_no_card']", 30000, null, "79fd3386-3b58-4f08-ac02-8bf10e568cbf");
                 _problemswithscanningtextInfo = new RepoItemInfo(this, "ProblemsWithScanningText", ".//text[@resourceid='R.string.scancard_problems_with_scan']", 30000, null, "ff6b5a4d-e42c-44ac-81c4-f9bee08498a1");
-                _btnmysparmanualinsertcardnrInfo = new RepoItemInfo(this, "BtnMySparManualInsertCardNr", ".//text[@rid='btn_manual_insert_card_number']", 30000, null, "c97a17db-8520-4fc2-9b34-5bb1c06f173d");
-                _pushnotificationInfo = new RepoItemInfo(this, "PushNotification", ".//text[@rid='tv_item']", 30000, null, "1897f646-70a9-4f10-987c-f88aa2dc831c");
-                _askusInfo = new RepoItemInfo(this, "AskUs", ".//text[@resourceid='R.string.my_spar_profile_ask_us']", 30000, null, "bd415781-4a70-4fa3-97dc-9a7e61e5d561");
-                _languageselectionsInfo = new RepoItemInfo(this, "LanguageSelections", ".//text[@resourceid='R.string.my_spar_profile_select_language']", 30000, null, "85dc1400-4fae-4da4-a690-b64148364a09");
-                _helpandadviceInfo = new RepoItemInfo(this, "HelpAndAdvice", ".//text[@resourceid='R.string.my_spar_profile_help']", 30000, null, "35999ada-bc71-4c75-aa7d-a736dcc5e129");
-                _aboutInfo = new RepoItemInfo(this, "About", ".//text[@resourceid='R.string.my_spar_profile_about']", 30000, null, "b22b5d36-b4eb-4454-9edb-f7358e51c9cd");
+                _textmycouponsInfo = new RepoItemInfo(this, "TextMyCoupons", ".//text[@resourceid='R.string.my_spar_coupons']", 30000, null, "fd42df7f-04b6-4e1d-b327-237426ea1062");
+                _tvcardserialnumberInfo = new RepoItemInfo(this, "TvCardSerialNumber", ".//text[@rid='tv_card_serial_number']", 30000, null, "5a118c83-3e69-4817-8e93-df538fd9b82d");
             }
 
             /// <summary>
@@ -3676,26 +3733,50 @@ namespace Spar
             }
 
             /// <summary>
-            /// The MojaSPARPlusKartica item.
+            /// The MenuBtnMySpar item.
             /// </summary>
-            [RepositoryItem("e43178df-187b-4566-871d-8656b42cb9d1")]
-            public virtual Ranorex.Text MojaSPARPlusKartica
+            [RepositoryItem("e1d35baf-a8bc-4464-9fcd-0fe885a76799")]
+            public virtual Ranorex.Container MenuBtnMySpar
             {
                 get
                 {
-                    return _mojasparpluskarticaInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _menubtnmysparInfo.CreateAdapter<Ranorex.Container>(true);
                 }
             }
 
             /// <summary>
-            /// The MojaSPARPlusKartica item info.
+            /// The MenuBtnMySpar item info.
             /// </summary>
-            [RepositoryItemInfo("e43178df-187b-4566-871d-8656b42cb9d1")]
-            public virtual RepoItemInfo MojaSPARPlusKarticaInfo
+            [RepositoryItemInfo("e1d35baf-a8bc-4464-9fcd-0fe885a76799")]
+            public virtual RepoItemInfo MenuBtnMySparInfo
             {
                 get
                 {
-                    return _mojasparpluskarticaInfo;
+                    return _menubtnmysparInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MySPARPlusCard item.
+            /// </summary>
+            [RepositoryItem("e43178df-187b-4566-871d-8656b42cb9d1")]
+            public virtual Ranorex.Text MySPARPlusCard
+            {
+                get
+                {
+                    return _mysparpluscardInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MySPARPlusCard item info.
+            /// </summary>
+            [RepositoryItemInfo("e43178df-187b-4566-871d-8656b42cb9d1")]
+            public virtual RepoItemInfo MySPARPlusCardInfo
+            {
+                get
+                {
+                    return _mysparpluscardInfo;
                 }
             }
 
@@ -3964,26 +4045,136 @@ namespace Spar
             }
 
             /// <summary>
-            /// The BtnMySparManualInsertCardNr item.
+            /// The TextMyCoupons item.
             /// </summary>
-            [RepositoryItem("c97a17db-8520-4fc2-9b34-5bb1c06f173d")]
-            public virtual Ranorex.Text BtnMySparManualInsertCardNr
+            [RepositoryItem("fd42df7f-04b6-4e1d-b327-237426ea1062")]
+            public virtual Ranorex.Text TextMyCoupons
             {
                 get
                 {
-                    return _btnmysparmanualinsertcardnrInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _textmycouponsInfo.CreateAdapter<Ranorex.Text>(true);
                 }
             }
 
             /// <summary>
-            /// The BtnMySparManualInsertCardNr item info.
+            /// The TextMyCoupons item info.
             /// </summary>
-            [RepositoryItemInfo("c97a17db-8520-4fc2-9b34-5bb1c06f173d")]
-            public virtual RepoItemInfo BtnMySparManualInsertCardNrInfo
+            [RepositoryItemInfo("fd42df7f-04b6-4e1d-b327-237426ea1062")]
+            public virtual RepoItemInfo TextMyCouponsInfo
             {
                 get
                 {
-                    return _btnmysparmanualinsertcardnrInfo;
+                    return _textmycouponsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TvCardSerialNumber item.
+            /// </summary>
+            [RepositoryItem("5a118c83-3e69-4817-8e93-df538fd9b82d")]
+            public virtual Ranorex.Text TvCardSerialNumber
+            {
+                get
+                {
+                    return _tvcardserialnumberInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TvCardSerialNumber item info.
+            /// </summary>
+            [RepositoryItemInfo("5a118c83-3e69-4817-8e93-df538fd9b82d")]
+            public virtual RepoItemInfo TvCardSerialNumberInfo
+            {
+                get
+                {
+                    return _tvcardserialnumberInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MyProfile folder.
+            /// </summary>
+            [RepositoryFolder("eb6ce457-2fd4-4361-9fb4-01e3f0796a5a")]
+            public virtual SparRepositoryFolders.MyProfileFolder MyProfile
+            {
+                get { return _myprofile; }
+            }
+
+            /// <summary>
+            /// The Login folder.
+            /// </summary>
+            [RepositoryFolder("da5290ed-8eef-4444-beff-2ec4ac3c3209")]
+            public virtual SparRepositoryFolders.LoginFolder Login
+            {
+                get { return _login; }
+            }
+        }
+
+        /// <summary>
+        /// The MyProfileFolder folder.
+        /// </summary>
+        [RepositoryFolder("eb6ce457-2fd4-4361-9fb4-01e3f0796a5a")]
+        public partial class MyProfileFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _pushnotificationInfo;
+            RepoItemInfo _titlebarpushnotificationInfo;
+            RepoItemInfo _pushnotificationdescriptionInfo;
+            RepoItemInfo _btnpushnotificationInfo;
+            RepoItemInfo _askusInfo;
+            RepoItemInfo _titlebaraskusInfo;
+            RepoItemInfo _languageselectionsInfo;
+            RepoItemInfo _titlelanguageselectionInfo;
+            RepoItemInfo _slovenianInfo;
+            RepoItemInfo _englishInfo;
+            RepoItemInfo _izbirajezikaInfo;
+            RepoItemInfo _imgslolanguageInfo;
+            RepoItemInfo _imgenglanguageInfo;
+            RepoItemInfo _imgcheckmarksloInfo;
+            RepoItemInfo _imgcheckmarkengInfo;
+            RepoItemInfo _helpandadviceInfo;
+            RepoItemInfo _titlehelpandadviceInfo;
+            RepoItemInfo _aboutInfo;
+            RepoItemInfo _titleaboutInfo;
+            RepoItemInfo _btnmysparmanualinsertcardnrInfo;
+
+            /// <summary>
+            /// Creates a new MyProfile  folder.
+            /// </summary>
+            public MyProfileFolder(RepoGenBaseFolder parentFolder) :
+                    base("MyProfile", "", parentFolder, 0, null, false, "eb6ce457-2fd4-4361-9fb4-01e3f0796a5a", "")
+            {
+                _pushnotificationInfo = new RepoItemInfo(this, "PushNotification", ".//text[@rid='tv_item']", 30000, null, "1897f646-70a9-4f10-987c-f88aa2dc831c");
+                _titlebarpushnotificationInfo = new RepoItemInfo(this, "TitlebarPushNotification", ".//text[@resourceid='R.string.my_spar_push_notifications_actionbar_title']", 30000, null, "d85c9e92-799f-44b8-b315-fa922be89989");
+                _pushnotificationdescriptionInfo = new RepoItemInfo(this, "PushNotificationDescription", ".//text[@resourceid='R.string.my_spar_push_notifications_info_title']", 30000, null, "e94885ab-a198-4cab-b7ca-4edba8e11720");
+                _btnpushnotificationInfo = new RepoItemInfo(this, "BtnPushNotification", ".//button[@rid='sw_enable_notifications']", 30000, null, "8b272dcf-c2f7-4ed9-a806-acf8a4df3ad7");
+                _askusInfo = new RepoItemInfo(this, "AskUs", ".//text[@resourceid='R.string.my_spar_profile_ask_us']", 30000, null, "bd415781-4a70-4fa3-97dc-9a7e61e5d561");
+                _titlebaraskusInfo = new RepoItemInfo(this, "TitlebarAskUs", ".//text[@resourceid='R.string.my_spar_profile_ask_us']", 30000, null, "5a700a32-0c9f-45b6-9673-d17ac78fe62a");
+                _languageselectionsInfo = new RepoItemInfo(this, "LanguageSelections", ".//text[@resourceid='R.string.my_spar_profile_select_language']", 30000, null, "85dc1400-4fae-4da4-a690-b64148364a09");
+                _titlelanguageselectionInfo = new RepoItemInfo(this, "TitleLanguageSelection", ".//text[@resourceid='R.string.my_spar_profile_select_language']", 30000, null, "07fa392d-20a0-431e-8f73-98b47840e0b2");
+                _slovenianInfo = new RepoItemInfo(this, "Slovenian", ".//text[@resourceid='R.string.language_chooser_slo']", 30000, null, "6b257789-1b08-44b2-ba38-c931aecfe4ef");
+                _englishInfo = new RepoItemInfo(this, "English", ".//text[@resourceid='R.string.language_chooser_eng']", 30000, null, "676b27a5-32bb-4d5b-bd15-b59c1c2aa1e2");
+                _izbirajezikaInfo = new RepoItemInfo(this, "IzbiraJezika", ".//container[@rid='container_content']/androidelement[4]/androidelement[@rid='container_tv_item']/text[@rid='tv_item']", 30000, null, "4880a010-1863-4d7c-b26c-1751e7db6b73");
+                _imgslolanguageInfo = new RepoItemInfo(this, "ImgSloLanguage", ".//androidelement[@rid='item_slo_language']/picture[1]", 30000, null, "d9a9f292-fda7-4eb3-a9f1-a30765ea7900");
+                _imgenglanguageInfo = new RepoItemInfo(this, "ImgEngLanguage", ".//androidelement[@rid='item_eng_language']/picture[1]", 30000, null, "811924a0-9afa-4e67-a536-fceb1e3cad6e");
+                _imgcheckmarksloInfo = new RepoItemInfo(this, "ImgCheckmarkSlo", ".//picture[@rid='img_checkmark_slo']", 30000, null, "430fc3c5-67af-4149-b349-8793bfbb6ebd");
+                _imgcheckmarkengInfo = new RepoItemInfo(this, "ImgCheckmarkEng", ".//picture[@rid='img_checkmark_eng']", 30000, null, "a02f4a74-f3ef-42da-9242-e7b3aea3acf8");
+                _helpandadviceInfo = new RepoItemInfo(this, "HelpAndAdvice", ".//text[@resourceid='R.string.my_spar_profile_help']", 30000, null, "35999ada-bc71-4c75-aa7d-a736dcc5e129");
+                _titlehelpandadviceInfo = new RepoItemInfo(this, "TitleHelpAndAdvice", ".//text[@resourceid='R.string.my_spar_profile_help']", 30000, null, "92b7b3d1-fb47-47a8-8025-8d62f225f056");
+                _aboutInfo = new RepoItemInfo(this, "About", ".//text[@resourceid='R.string.my_spar_profile_about']", 30000, null, "b22b5d36-b4eb-4454-9edb-f7358e51c9cd");
+                _titleaboutInfo = new RepoItemInfo(this, "TitleAbout", ".//text[@resourceid='R.string.my_spar_profile_about']", 30000, null, "4be336f1-aaa8-425c-a2c0-92deceebd758");
+                _btnmysparmanualinsertcardnrInfo = new RepoItemInfo(this, "BtnMySparManualInsertCardNr", ".//text[@rid='btn_manual_insert_card_number']", 30000, null, "c97a17db-8520-4fc2-9b34-5bb1c06f173d");
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("eb6ce457-2fd4-4361-9fb4-01e3f0796a5a")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
                 }
             }
 
@@ -4012,6 +4203,78 @@ namespace Spar
             }
 
             /// <summary>
+            /// The TitlebarPushNotification item.
+            /// </summary>
+            [RepositoryItem("d85c9e92-799f-44b8-b315-fa922be89989")]
+            public virtual Ranorex.Text TitlebarPushNotification
+            {
+                get
+                {
+                    return _titlebarpushnotificationInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TitlebarPushNotification item info.
+            /// </summary>
+            [RepositoryItemInfo("d85c9e92-799f-44b8-b315-fa922be89989")]
+            public virtual RepoItemInfo TitlebarPushNotificationInfo
+            {
+                get
+                {
+                    return _titlebarpushnotificationInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PushNotificationDescription item.
+            /// </summary>
+            [RepositoryItem("e94885ab-a198-4cab-b7ca-4edba8e11720")]
+            public virtual Ranorex.Text PushNotificationDescription
+            {
+                get
+                {
+                    return _pushnotificationdescriptionInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PushNotificationDescription item info.
+            /// </summary>
+            [RepositoryItemInfo("e94885ab-a198-4cab-b7ca-4edba8e11720")]
+            public virtual RepoItemInfo PushNotificationDescriptionInfo
+            {
+                get
+                {
+                    return _pushnotificationdescriptionInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnPushNotification item.
+            /// </summary>
+            [RepositoryItem("8b272dcf-c2f7-4ed9-a806-acf8a4df3ad7")]
+            public virtual Ranorex.Button BtnPushNotification
+            {
+                get
+                {
+                    return _btnpushnotificationInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnPushNotification item info.
+            /// </summary>
+            [RepositoryItemInfo("8b272dcf-c2f7-4ed9-a806-acf8a4df3ad7")]
+            public virtual RepoItemInfo BtnPushNotificationInfo
+            {
+                get
+                {
+                    return _btnpushnotificationInfo;
+                }
+            }
+
+            /// <summary>
             /// The AskUs item.
             /// </summary>
             [RepositoryItem("bd415781-4a70-4fa3-97dc-9a7e61e5d561")]
@@ -4032,6 +4295,30 @@ namespace Spar
                 get
                 {
                     return _askusInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TitlebarAskUs item.
+            /// </summary>
+            [RepositoryItem("5a700a32-0c9f-45b6-9673-d17ac78fe62a")]
+            public virtual Ranorex.Text TitlebarAskUs
+            {
+                get
+                {
+                    return _titlebaraskusInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TitlebarAskUs item info.
+            /// </summary>
+            [RepositoryItemInfo("5a700a32-0c9f-45b6-9673-d17ac78fe62a")]
+            public virtual RepoItemInfo TitlebarAskUsInfo
+            {
+                get
+                {
+                    return _titlebaraskusInfo;
                 }
             }
 
@@ -4060,6 +4347,198 @@ namespace Spar
             }
 
             /// <summary>
+            /// The TitleLanguageSelection item.
+            /// </summary>
+            [RepositoryItem("07fa392d-20a0-431e-8f73-98b47840e0b2")]
+            public virtual Ranorex.Text TitleLanguageSelection
+            {
+                get
+                {
+                    return _titlelanguageselectionInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TitleLanguageSelection item info.
+            /// </summary>
+            [RepositoryItemInfo("07fa392d-20a0-431e-8f73-98b47840e0b2")]
+            public virtual RepoItemInfo TitleLanguageSelectionInfo
+            {
+                get
+                {
+                    return _titlelanguageselectionInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Slovenian item.
+            /// </summary>
+            [RepositoryItem("6b257789-1b08-44b2-ba38-c931aecfe4ef")]
+            public virtual Ranorex.Text Slovenian
+            {
+                get
+                {
+                    return _slovenianInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Slovenian item info.
+            /// </summary>
+            [RepositoryItemInfo("6b257789-1b08-44b2-ba38-c931aecfe4ef")]
+            public virtual RepoItemInfo SlovenianInfo
+            {
+                get
+                {
+                    return _slovenianInfo;
+                }
+            }
+
+            /// <summary>
+            /// The English item.
+            /// </summary>
+            [RepositoryItem("676b27a5-32bb-4d5b-bd15-b59c1c2aa1e2")]
+            public virtual Ranorex.Text English
+            {
+                get
+                {
+                    return _englishInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The English item info.
+            /// </summary>
+            [RepositoryItemInfo("676b27a5-32bb-4d5b-bd15-b59c1c2aa1e2")]
+            public virtual RepoItemInfo EnglishInfo
+            {
+                get
+                {
+                    return _englishInfo;
+                }
+            }
+
+            /// <summary>
+            /// The IzbiraJezika item.
+            /// </summary>
+            [RepositoryItem("4880a010-1863-4d7c-b26c-1751e7db6b73")]
+            public virtual Ranorex.Text IzbiraJezika
+            {
+                get
+                {
+                    return _izbirajezikaInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The IzbiraJezika item info.
+            /// </summary>
+            [RepositoryItemInfo("4880a010-1863-4d7c-b26c-1751e7db6b73")]
+            public virtual RepoItemInfo IzbiraJezikaInfo
+            {
+                get
+                {
+                    return _izbirajezikaInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ImgSloLanguage item.
+            /// </summary>
+            [RepositoryItem("d9a9f292-fda7-4eb3-a9f1-a30765ea7900")]
+            public virtual Ranorex.Picture ImgSloLanguage
+            {
+                get
+                {
+                    return _imgslolanguageInfo.CreateAdapter<Ranorex.Picture>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ImgSloLanguage item info.
+            /// </summary>
+            [RepositoryItemInfo("d9a9f292-fda7-4eb3-a9f1-a30765ea7900")]
+            public virtual RepoItemInfo ImgSloLanguageInfo
+            {
+                get
+                {
+                    return _imgslolanguageInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ImgEngLanguage item.
+            /// </summary>
+            [RepositoryItem("811924a0-9afa-4e67-a536-fceb1e3cad6e")]
+            public virtual Ranorex.Picture ImgEngLanguage
+            {
+                get
+                {
+                    return _imgenglanguageInfo.CreateAdapter<Ranorex.Picture>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ImgEngLanguage item info.
+            /// </summary>
+            [RepositoryItemInfo("811924a0-9afa-4e67-a536-fceb1e3cad6e")]
+            public virtual RepoItemInfo ImgEngLanguageInfo
+            {
+                get
+                {
+                    return _imgenglanguageInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ImgCheckmarkSlo item.
+            /// </summary>
+            [RepositoryItem("430fc3c5-67af-4149-b349-8793bfbb6ebd")]
+            public virtual Ranorex.Picture ImgCheckmarkSlo
+            {
+                get
+                {
+                    return _imgcheckmarksloInfo.CreateAdapter<Ranorex.Picture>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ImgCheckmarkSlo item info.
+            /// </summary>
+            [RepositoryItemInfo("430fc3c5-67af-4149-b349-8793bfbb6ebd")]
+            public virtual RepoItemInfo ImgCheckmarkSloInfo
+            {
+                get
+                {
+                    return _imgcheckmarksloInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ImgCheckmarkEng item.
+            /// </summary>
+            [RepositoryItem("a02f4a74-f3ef-42da-9242-e7b3aea3acf8")]
+            public virtual Ranorex.Picture ImgCheckmarkEng
+            {
+                get
+                {
+                    return _imgcheckmarkengInfo.CreateAdapter<Ranorex.Picture>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ImgCheckmarkEng item info.
+            /// </summary>
+            [RepositoryItemInfo("a02f4a74-f3ef-42da-9242-e7b3aea3acf8")]
+            public virtual RepoItemInfo ImgCheckmarkEngInfo
+            {
+                get
+                {
+                    return _imgcheckmarkengInfo;
+                }
+            }
+
+            /// <summary>
             /// The HelpAndAdvice item.
             /// </summary>
             [RepositoryItem("35999ada-bc71-4c75-aa7d-a736dcc5e129")]
@@ -4084,6 +4563,30 @@ namespace Spar
             }
 
             /// <summary>
+            /// The TitleHelpAndAdvice item.
+            /// </summary>
+            [RepositoryItem("92b7b3d1-fb47-47a8-8025-8d62f225f056")]
+            public virtual Ranorex.Text TitleHelpAndAdvice
+            {
+                get
+                {
+                    return _titlehelpandadviceInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TitleHelpAndAdvice item info.
+            /// </summary>
+            [RepositoryItemInfo("92b7b3d1-fb47-47a8-8025-8d62f225f056")]
+            public virtual RepoItemInfo TitleHelpAndAdviceInfo
+            {
+                get
+                {
+                    return _titlehelpandadviceInfo;
+                }
+            }
+
+            /// <summary>
             /// The About item.
             /// </summary>
             [RepositoryItem("b22b5d36-b4eb-4454-9edb-f7358e51c9cd")]
@@ -4104,6 +4607,82 @@ namespace Spar
                 get
                 {
                     return _aboutInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TitleAbout item.
+            /// </summary>
+            [RepositoryItem("4be336f1-aaa8-425c-a2c0-92deceebd758")]
+            public virtual Ranorex.Text TitleAbout
+            {
+                get
+                {
+                    return _titleaboutInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TitleAbout item info.
+            /// </summary>
+            [RepositoryItemInfo("4be336f1-aaa8-425c-a2c0-92deceebd758")]
+            public virtual RepoItemInfo TitleAboutInfo
+            {
+                get
+                {
+                    return _titleaboutInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnMySparManualInsertCardNr item.
+            /// </summary>
+            [RepositoryItem("c97a17db-8520-4fc2-9b34-5bb1c06f173d")]
+            public virtual Ranorex.Text BtnMySparManualInsertCardNr
+            {
+                get
+                {
+                    return _btnmysparmanualinsertcardnrInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnMySparManualInsertCardNr item info.
+            /// </summary>
+            [RepositoryItemInfo("c97a17db-8520-4fc2-9b34-5bb1c06f173d")]
+            public virtual RepoItemInfo BtnMySparManualInsertCardNrInfo
+            {
+                get
+                {
+                    return _btnmysparmanualinsertcardnrInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The LoginFolder folder.
+        /// </summary>
+        [RepositoryFolder("da5290ed-8eef-4444-beff-2ec4ac3c3209")]
+        public partial class LoginFolder : RepoGenBaseFolder
+        {
+
+            /// <summary>
+            /// Creates a new Login  folder.
+            /// </summary>
+            public LoginFolder(RepoGenBaseFolder parentFolder) :
+                    base("Login", "", parentFolder, 0, null, false, "da5290ed-8eef-4444-beff-2ec4ac3c3209", "")
+            {
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("da5290ed-8eef-4444-beff-2ec4ac3c3209")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
                 }
             }
         }
@@ -5138,6 +5717,464 @@ namespace Spar
                 get
                 {
                     return _navigateupInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The LoginSignInActivityFolder folder.
+        /// </summary>
+        [RepositoryFolder("fb078e99-db98-445a-a828-15f895f87bdb")]
+        public partial class LoginSignInActivityFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _imgtickInfo;
+            RepoItemInfo _textloginsignindescriptionInfo;
+            RepoItemInfo _inputenteremailInfo;
+            RepoItemInfo _inputpasswordInfo;
+            RepoItemInfo _btnforgottenpasswordInfo;
+            RepoItemInfo _btnsigninloginInfo;
+
+            /// <summary>
+            /// Creates a new LoginSignInActivity  folder.
+            /// </summary>
+            public LoginSignInActivityFolder(RepoGenBaseFolder parentFolder) :
+                    base("LoginSignInActivity", "form[@title='LoginSignInActivity']", parentFolder, 30000, null, false, "fb078e99-db98-445a-a828-15f895f87bdb", "")
+            {
+                _imgtickInfo = new RepoItemInfo(this, "ImgTick", ".//androidelement[@rid='spar_scrollview_default_id']//picture", 30000, null, "0813f142-cf4b-4cf7-889b-67d13f15a489");
+                _textloginsignindescriptionInfo = new RepoItemInfo(this, "TextLoginSignInDescription", ".//container[@rid='fragment_placeholder']/?/?/container[@rid='content_placeholder']/androidelement[@rid='spar_scrollview_default_id']//text[@resourceid='R.string.login_sign_in_description']", 30000, null, "16177ffc-7f6d-4102-80fe-3c253a1d7925");
+                _inputenteremailInfo = new RepoItemInfo(this, "InputEnterEmail", ".//text[@rid='et_sign_in_email']", 30000, null, "9b57ebe9-56f4-4ca4-8223-32c34a2834c8");
+                _inputpasswordInfo = new RepoItemInfo(this, "InputPassword", ".//text[@rid='et_sign_in_password']", 30000, null, "539df419-c436-4de3-a9db-449d88cbee0a");
+                _btnforgottenpasswordInfo = new RepoItemInfo(this, "BtnForgottenPassword", ".//text[@resourceid='R.string.login_sign_in_btn_forgotten_password']", 30000, null, "65d8fcbf-8a3d-4098-ba26-52ee4fa18fca");
+                _btnsigninloginInfo = new RepoItemInfo(this, "BtnSignInLogin", ".//text[@resourceid='R.string.my_spar_sign_in_actionbar_title']", 30000, null, "c338447e-fad9-4464-9a43-fedfc87abb65");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("fb078e99-db98-445a-a828-15f895f87bdb")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("fb078e99-db98-445a-a828-15f895f87bdb")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ImgTick item.
+            /// </summary>
+            [RepositoryItem("0813f142-cf4b-4cf7-889b-67d13f15a489")]
+            public virtual Ranorex.Picture ImgTick
+            {
+                get
+                {
+                    return _imgtickInfo.CreateAdapter<Ranorex.Picture>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ImgTick item info.
+            /// </summary>
+            [RepositoryItemInfo("0813f142-cf4b-4cf7-889b-67d13f15a489")]
+            public virtual RepoItemInfo ImgTickInfo
+            {
+                get
+                {
+                    return _imgtickInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TextLoginSignInDescription item.
+            /// </summary>
+            [RepositoryItem("16177ffc-7f6d-4102-80fe-3c253a1d7925")]
+            public virtual Ranorex.Text TextLoginSignInDescription
+            {
+                get
+                {
+                    return _textloginsignindescriptionInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TextLoginSignInDescription item info.
+            /// </summary>
+            [RepositoryItemInfo("16177ffc-7f6d-4102-80fe-3c253a1d7925")]
+            public virtual RepoItemInfo TextLoginSignInDescriptionInfo
+            {
+                get
+                {
+                    return _textloginsignindescriptionInfo;
+                }
+            }
+
+            /// <summary>
+            /// The InputEnterEmail item.
+            /// </summary>
+            [RepositoryItem("9b57ebe9-56f4-4ca4-8223-32c34a2834c8")]
+            public virtual Ranorex.Text InputEnterEmail
+            {
+                get
+                {
+                    return _inputenteremailInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The InputEnterEmail item info.
+            /// </summary>
+            [RepositoryItemInfo("9b57ebe9-56f4-4ca4-8223-32c34a2834c8")]
+            public virtual RepoItemInfo InputEnterEmailInfo
+            {
+                get
+                {
+                    return _inputenteremailInfo;
+                }
+            }
+
+            /// <summary>
+            /// The InputPassword item.
+            /// </summary>
+            [RepositoryItem("539df419-c436-4de3-a9db-449d88cbee0a")]
+            public virtual Ranorex.Text InputPassword
+            {
+                get
+                {
+                    return _inputpasswordInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The InputPassword item info.
+            /// </summary>
+            [RepositoryItemInfo("539df419-c436-4de3-a9db-449d88cbee0a")]
+            public virtual RepoItemInfo InputPasswordInfo
+            {
+                get
+                {
+                    return _inputpasswordInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnForgottenPassword item.
+            /// </summary>
+            [RepositoryItem("65d8fcbf-8a3d-4098-ba26-52ee4fa18fca")]
+            public virtual Ranorex.Text BtnForgottenPassword
+            {
+                get
+                {
+                    return _btnforgottenpasswordInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnForgottenPassword item info.
+            /// </summary>
+            [RepositoryItemInfo("65d8fcbf-8a3d-4098-ba26-52ee4fa18fca")]
+            public virtual RepoItemInfo BtnForgottenPasswordInfo
+            {
+                get
+                {
+                    return _btnforgottenpasswordInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnSignInLogin item.
+            /// </summary>
+            [RepositoryItem("c338447e-fad9-4464-9a43-fedfc87abb65")]
+            public virtual Ranorex.Text BtnSignInLogin
+            {
+                get
+                {
+                    return _btnsigninloginInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnSignInLogin item info.
+            /// </summary>
+            [RepositoryItemInfo("c338447e-fad9-4464-9a43-fedfc87abb65")]
+            public virtual RepoItemInfo BtnSignInLoginInfo
+            {
+                get
+                {
+                    return _btnsigninloginInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The InvalidCardOrScanErrorFolder folder.
+        /// </summary>
+        [RepositoryFolder("f1d6a251-32fe-4eca-96fa-f9da71d64ff4")]
+        public partial class InvalidCardOrScanErrorFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _androidsupportv7widgetappcompatimageInfo;
+            RepoItemInfo _rstringinvalidcardorscanerrorinfoInfo;
+            RepoItemInfo _rstringinvalidcardorscanerrordescInfo;
+            RepoItemInfo _btnretryInfo;
+
+            /// <summary>
+            /// Creates a new InvalidCardOrScanError  folder.
+            /// </summary>
+            public InvalidCardOrScanErrorFolder(RepoGenBaseFolder parentFolder) :
+                    base("InvalidCardOrScanError", "form[@title~'^InvalidCardOrScanErrorAct']", parentFolder, 30000, null, false, "f1d6a251-32fe-4eca-96fa-f9da71d64ff4", "")
+            {
+                _androidsupportv7widgetappcompatimageInfo = new RepoItemInfo(this, "AndroidSupportV7WidgetAppCompatImage", ".//androidelement[@rid='spar_scrollview_default_id']//picture", 30000, null, "734fd715-faae-4799-b095-5bf7cc814b89");
+                _rstringinvalidcardorscanerrorinfoInfo = new RepoItemInfo(this, "RStringInvalidCardOrScanErrorInfo", ".//text[@resourceid='R.string.invalid_card_or_scan_error_info_title']", 30000, null, "9a4e6895-3e14-4120-a929-9fbf8f744565");
+                _rstringinvalidcardorscanerrordescInfo = new RepoItemInfo(this, "RStringInvalidCardOrScanErrorDesc", ".//text[@resourceid='R.string.invalid_card_or_scan_error_description']", 30000, null, "0d2ad901-13cc-4e3b-8e7e-089ddb0293f0");
+                _btnretryInfo = new RepoItemInfo(this, "BtnRetry", ".//container[@rid='fragment_placeholder']/?/?/container[@rid='content_placeholder']/androidelement[@rid='spar_scrollview_default_id']//text[@resourceid='R.string.invalid_card_or_scan_error_btn_reenter']", 30000, null, "ee6c15ff-ae3c-433a-a6a0-4182472c04d7");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("f1d6a251-32fe-4eca-96fa-f9da71d64ff4")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("f1d6a251-32fe-4eca-96fa-f9da71d64ff4")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The AndroidSupportV7WidgetAppCompatImage item.
+            /// </summary>
+            [RepositoryItem("734fd715-faae-4799-b095-5bf7cc814b89")]
+            public virtual Ranorex.Picture AndroidSupportV7WidgetAppCompatImage
+            {
+                get
+                {
+                    return _androidsupportv7widgetappcompatimageInfo.CreateAdapter<Ranorex.Picture>(true);
+                }
+            }
+
+            /// <summary>
+            /// The AndroidSupportV7WidgetAppCompatImage item info.
+            /// </summary>
+            [RepositoryItemInfo("734fd715-faae-4799-b095-5bf7cc814b89")]
+            public virtual RepoItemInfo AndroidSupportV7WidgetAppCompatImageInfo
+            {
+                get
+                {
+                    return _androidsupportv7widgetappcompatimageInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RStringInvalidCardOrScanErrorInfo item.
+            /// </summary>
+            [RepositoryItem("9a4e6895-3e14-4120-a929-9fbf8f744565")]
+            public virtual Ranorex.Text RStringInvalidCardOrScanErrorInfo
+            {
+                get
+                {
+                    return _rstringinvalidcardorscanerrorinfoInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RStringInvalidCardOrScanErrorInfo item info.
+            /// </summary>
+            [RepositoryItemInfo("9a4e6895-3e14-4120-a929-9fbf8f744565")]
+            public virtual RepoItemInfo RStringInvalidCardOrScanErrorInfoInfo
+            {
+                get
+                {
+                    return _rstringinvalidcardorscanerrorinfoInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RStringInvalidCardOrScanErrorDesc item.
+            /// </summary>
+            [RepositoryItem("0d2ad901-13cc-4e3b-8e7e-089ddb0293f0")]
+            public virtual Ranorex.Text RStringInvalidCardOrScanErrorDesc
+            {
+                get
+                {
+                    return _rstringinvalidcardorscanerrordescInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RStringInvalidCardOrScanErrorDesc item info.
+            /// </summary>
+            [RepositoryItemInfo("0d2ad901-13cc-4e3b-8e7e-089ddb0293f0")]
+            public virtual RepoItemInfo RStringInvalidCardOrScanErrorDescInfo
+            {
+                get
+                {
+                    return _rstringinvalidcardorscanerrordescInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnRetry item.
+            /// </summary>
+            [RepositoryItem("ee6c15ff-ae3c-433a-a6a0-4182472c04d7")]
+            public virtual Ranorex.Text BtnRetry
+            {
+                get
+                {
+                    return _btnretryInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnRetry item info.
+            /// </summary>
+            [RepositoryItemInfo("ee6c15ff-ae3c-433a-a6a0-4182472c04d7")]
+            public virtual RepoItemInfo BtnRetryInfo
+            {
+                get
+                {
+                    return _btnretryInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The LoginForgottenPasswordActivityFolder folder.
+        /// </summary>
+        [RepositoryFolder("22f43bc2-822c-47b7-948e-8bd55e33cfd3")]
+        public partial class LoginForgottenPasswordActivityFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _titleloginforgottenpasswordInfo;
+            RepoItemInfo _forgottenpasswordemailInfo;
+            RepoItemInfo _btnforgottenpasswordsendInfo;
+
+            /// <summary>
+            /// Creates a new LoginForgottenPasswordActivity  folder.
+            /// </summary>
+            public LoginForgottenPasswordActivityFolder(RepoGenBaseFolder parentFolder) :
+                    base("LoginForgottenPasswordActivity", "form[@title~'^LoginForgottenPasswordAct']", parentFolder, 30000, null, false, "22f43bc2-822c-47b7-948e-8bd55e33cfd3", "")
+            {
+                _titleloginforgottenpasswordInfo = new RepoItemInfo(this, "TitleLoginForgottenPassword", ".//text[@resourceid='R.string.login_forgotten_password_title']", 30000, null, "b53a9a6e-fa90-4225-8ac5-d5ef5e47c2a6");
+                _forgottenpasswordemailInfo = new RepoItemInfo(this, "ForgottenPasswordEmail", ".//text[@rid='et_forgotten_password_email']", 30000, null, "ef57575b-9eec-4247-af23-a1cbdfc349ac");
+                _btnforgottenpasswordsendInfo = new RepoItemInfo(this, "BtnForgottenPasswordSend", ".//text[@resourceid='R.string.general_send']", 30000, null, "fa71dd38-a325-4553-ab11-7a665fa156d0");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("22f43bc2-822c-47b7-948e-8bd55e33cfd3")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("22f43bc2-822c-47b7-948e-8bd55e33cfd3")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TitleLoginForgottenPassword item.
+            /// </summary>
+            [RepositoryItem("b53a9a6e-fa90-4225-8ac5-d5ef5e47c2a6")]
+            public virtual Ranorex.Text TitleLoginForgottenPassword
+            {
+                get
+                {
+                    return _titleloginforgottenpasswordInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TitleLoginForgottenPassword item info.
+            /// </summary>
+            [RepositoryItemInfo("b53a9a6e-fa90-4225-8ac5-d5ef5e47c2a6")]
+            public virtual RepoItemInfo TitleLoginForgottenPasswordInfo
+            {
+                get
+                {
+                    return _titleloginforgottenpasswordInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ForgottenPasswordEmail item.
+            /// </summary>
+            [RepositoryItem("ef57575b-9eec-4247-af23-a1cbdfc349ac")]
+            public virtual Ranorex.Text ForgottenPasswordEmail
+            {
+                get
+                {
+                    return _forgottenpasswordemailInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ForgottenPasswordEmail item info.
+            /// </summary>
+            [RepositoryItemInfo("ef57575b-9eec-4247-af23-a1cbdfc349ac")]
+            public virtual RepoItemInfo ForgottenPasswordEmailInfo
+            {
+                get
+                {
+                    return _forgottenpasswordemailInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnForgottenPasswordSend item.
+            /// </summary>
+            [RepositoryItem("fa71dd38-a325-4553-ab11-7a665fa156d0")]
+            public virtual Ranorex.Text BtnForgottenPasswordSend
+            {
+                get
+                {
+                    return _btnforgottenpasswordsendInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnForgottenPasswordSend item info.
+            /// </summary>
+            [RepositoryItemInfo("fa71dd38-a325-4553-ab11-7a665fa156d0")]
+            public virtual RepoItemInfo BtnForgottenPasswordSendInfo
+            {
+                get
+                {
+                    return _btnforgottenpasswordsendInfo;
                 }
             }
         }

@@ -362,6 +362,18 @@
       <id>1cb3f520-1e66-465a-aa49-72b2d12b1828</id>
       <BoundTo>dc98a13b-1292-411d-b24c-28e2b315c5e5</BoundTo>
     </Compile>
+    <Compile Include="Test cases\MySpar\MyProfile_Overview.cs">
+      <BoundTo>c19e3d00-33b3-4b4b-bf1a-ef82d8d8efc9</BoundTo>
+      <DependentUpon>MyProfile_Overview.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>f381aeb8-eac1-4ea2-afaf-5cec75f99927</id>
+    </Compile>
+    <Compile Include="Test cases\MySpar\MyProfile_Overview.UserCode.cs">
+      <BoundTo>c19e3d00-33b3-4b4b-bf1a-ef82d8d8efc9</BoundTo>
+      <DependentUpon>MyProfile_Overview.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>436f1551-27a3-4dc0-9a41-419c17e9dd69</id>
+    </Compile>
     <Compile Include="Test cases\MySpar\MySpar_Guest_Overview.cs">
       <DependentUpon>MySpar_Guest_Overview.rxrec</DependentUpon>
       <RecorderCode>true</RecorderCode>
@@ -385,6 +397,90 @@
       <UserCode>true</UserCode>
       <id>2eca34f6-01cb-4fc0-9c6c-76271f321554</id>
       <BoundTo>42e8ded0-9dcb-45df-85ba-ef31a1ab59c9</BoundTo>
+    </Compile>
+    <Compile Include="Test cases\MySpar\MySpar_LoginSuccess.cs">
+      <BoundTo>0917c17e-9fd7-4b40-acde-2ff92ce65b62</BoundTo>
+      <DependentUpon>MySpar_LoginSuccess.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>8a82ecd4-a83e-4bca-b6c8-d6287392627e</id>
+    </Compile>
+    <Compile Include="Test cases\MySpar\MySpar_LoginSuccess.UserCode.cs">
+      <BoundTo>0917c17e-9fd7-4b40-acde-2ff92ce65b62</BoundTo>
+      <DependentUpon>MySpar_LoginSuccess.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>bb59f6fc-c623-48fb-b8ba-196a5c4faf85</id>
+    </Compile>
+    <Compile Include="Test cases\MySpar\MySpar_Login_ForgottenPassword.cs">
+      <BoundTo>eb2a9a76-d51f-4f26-aeb2-c40f3899da2d</BoundTo>
+      <DependentUpon>MySpar_Login_ForgottenPassword.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>fab4c519-0c61-4eb7-8a68-4068b130bf37</id>
+    </Compile>
+    <Compile Include="Test cases\MySpar\MySpar_Login_ForgottenPassword.UserCode.cs">
+      <BoundTo>eb2a9a76-d51f-4f26-aeb2-c40f3899da2d</BoundTo>
+      <DependentUpon>MySpar_Login_ForgottenPassword.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>06ad977d-e4c5-4be3-bdb4-069a23b0dcfb</id>
+    </Compile>
+    <Compile Include="Test cases\MySpar\MySpar_Login_IncorrectPassword.cs">
+      <BoundTo>3552f7ad-83d2-4d82-a7db-0ca80bc85489</BoundTo>
+      <DependentUpon>MySpar_Login_IncorrectPassword.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>01844391-819a-4b6b-b8bb-17d2e6da8e47</id>
+    </Compile>
+    <Compile Include="Test cases\MySpar\MySpar_Login_IncorrectPassword.UserCode.cs">
+      <BoundTo>3552f7ad-83d2-4d82-a7db-0ca80bc85489</BoundTo>
+      <DependentUpon>MySpar_Login_IncorrectPassword.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>6d89c154-0192-49d3-b611-65c28f12a7b2</id>
+    </Compile>
+    <Compile Include="Test cases\MySpar\MySpar_Login_IncorrectSN.cs">
+      <BoundTo>004c1fa7-dce6-43ff-8774-c742121798e7</BoundTo>
+      <DependentUpon>MySpar_Login_IncorrectSN.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>d6ebbf44-feb9-4b8e-9a4a-e335a00bdca7</id>
+    </Compile>
+    <Compile Include="Test cases\MySpar\MySpar_Login_IncorrectSN.UserCode.cs">
+      <BoundTo>004c1fa7-dce6-43ff-8774-c742121798e7</BoundTo>
+      <DependentUpon>MySpar_Login_IncorrectSN.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>dab7a62c-4f85-4ecd-b1ef-7b0cce42c3f4</id>
+    </Compile>
+    <Compile Include="Test cases\MySpar\MySpar_Login_Incorrect_Email.cs">
+      <BoundTo>17a4d6bb-d3da-4775-8ca8-34a08f2d271c</BoundTo>
+      <DependentUpon>MySpar_Login_Incorrect_Email.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>144c2530-7407-4bb9-b7fe-65d273ee8621</id>
+    </Compile>
+    <Compile Include="Test cases\MySpar\MySpar_Login_Incorrect_Email.UserCode.cs">
+      <BoundTo>17a4d6bb-d3da-4775-8ca8-34a08f2d271c</BoundTo>
+      <DependentUpon>MySpar_Login_Incorrect_Email.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>6ac9dc26-a546-4048-9c79-21d45bb9f80c</id>
+    </Compile>
+    <Compile Include="Test cases\MySpar\MySpar_Login_InvalidEmail.cs">
+      <BoundTo>44e06431-f872-4817-a16a-fa4ea33a1f38</BoundTo>
+      <DependentUpon>MySpar_Login_InvalidEmail.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>355ff84e-577f-4d85-9ec7-4ca9fd55f6ae</id>
+    </Compile>
+    <Compile Include="Test cases\MySpar\MySpar_Login_InvalidEmail.UserCode.cs">
+      <BoundTo>44e06431-f872-4817-a16a-fa4ea33a1f38</BoundTo>
+      <DependentUpon>MySpar_Login_InvalidEmail.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>fa3c0bc0-fb6c-43d8-bff6-7b40c6959798</id>
+    </Compile>
+    <Compile Include="Test cases\MySpar\MySpar_Login_TooShortSN.cs">
+      <BoundTo>d23a20e2-6661-46c3-b91b-74f151b02b8b</BoundTo>
+      <DependentUpon>MySpar_Login_TooShortSN.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>abc1c0f0-afcc-4f53-a812-8073dae3668e</id>
+    </Compile>
+    <Compile Include="Test cases\MySpar\MySpar_Login_TooShortSN.UserCode.cs">
+      <BoundTo>d23a20e2-6661-46c3-b91b-74f151b02b8b</BoundTo>
+      <DependentUpon>MySpar_Login_TooShortSN.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>061da3b9-0eba-4412-8169-cd9da1c807b8</id>
     </Compile>
     <Compile Include="Test cases\Registration\Registration_SkipStep1.cs">
       <BoundTo>5ea97cb8-084b-48bc-bdcf-182f66b22621</BoundTo>
@@ -809,6 +905,11 @@
       <id>dc98a13b-1292-411d-b24c-28e2b315c5e5</id>
       <recordtableid>4bff16a2-15b5-459d-bca2-c553cfc20104</recordtableid>
     </None>
+    <None Include="Test cases\MySpar\MyProfile_Overview.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>c19e3d00-33b3-4b4b-bf1a-ef82d8d8efc9</id>
+      <recordtableid>4d7ed7f0-5301-4409-95ba-439e2914a173</recordtableid>
+    </None>
     <None Include="Test cases\MySpar\MySpar_Guest_Overview.rxrec">
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
       <id>ab7f84df-da70-4efd-bdef-fd56f30ed66d</id>
@@ -818,6 +919,41 @@
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
       <id>42e8ded0-9dcb-45df-85ba-ef31a1ab59c9</id>
       <recordtableid>4e8a966e-2dcf-4803-a310-b89e98068650</recordtableid>
+    </None>
+    <None Include="Test cases\MySpar\MySpar_LoginSuccess.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>0917c17e-9fd7-4b40-acde-2ff92ce65b62</id>
+      <recordtableid>87db564f-80c7-48dd-96f6-7a77e9a8b2f6</recordtableid>
+    </None>
+    <None Include="Test cases\MySpar\MySpar_Login_ForgottenPassword.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>eb2a9a76-d51f-4f26-aeb2-c40f3899da2d</id>
+      <recordtableid>ae71271a-656d-49b0-94ba-e80805b33987</recordtableid>
+    </None>
+    <None Include="Test cases\MySpar\MySpar_Login_IncorrectPassword.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>3552f7ad-83d2-4d82-a7db-0ca80bc85489</id>
+      <recordtableid>47b1eb12-72e1-4690-b1e5-c1ee7f408d5c</recordtableid>
+    </None>
+    <None Include="Test cases\MySpar\MySpar_Login_IncorrectSN.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>004c1fa7-dce6-43ff-8774-c742121798e7</id>
+      <recordtableid>3f514427-a3f2-4d74-93ea-7706b9c33122</recordtableid>
+    </None>
+    <None Include="Test cases\MySpar\MySpar_Login_Incorrect_Email.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>17a4d6bb-d3da-4775-8ca8-34a08f2d271c</id>
+      <recordtableid>d979cbce-c85f-433c-b25e-8c722b4a9e35</recordtableid>
+    </None>
+    <None Include="Test cases\MySpar\MySpar_Login_InvalidEmail.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>44e06431-f872-4817-a16a-fa4ea33a1f38</id>
+      <recordtableid>c775a0bc-3c0f-4981-997f-0ad00db209a3</recordtableid>
+    </None>
+    <None Include="Test cases\MySpar\MySpar_Login_TooShortSN.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>d23a20e2-6661-46c3-b91b-74f151b02b8b</id>
+      <recordtableid>5d7e1ee9-7abb-493c-86ae-93fb8cc19c1b</recordtableid>
     </None>
     <None Include="Test cases\Registration\Registration_SkipStep1.rxrec">
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>

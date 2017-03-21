@@ -79,6 +79,58 @@ namespace Spar.Test_cases.MySpar
 
             Init();
 
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.MySpar.MenuBtnMySpar' at Center", repo.PlusSparSi.MainActivity.MySpar.MenuBtnMySparInfo, new RecordItemIndex(0));
+            repo.PlusSparSi.MainActivity.MySpar.MenuBtnMySpar.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.MySpar.ImgUserProfile' at Center", repo.PlusSparSi.MainActivity.MySpar.ImgUserProfileInfo, new RecordItemIndex(1));
+            repo.PlusSparSi.MainActivity.MySpar.ImgUserProfile.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.MySpar.MyProfile.LanguageSelections' at Center", repo.PlusSparSi.MainActivity.MySpar.MyProfile.LanguageSelectionsInfo, new RecordItemIndex(2));
+            repo.PlusSparSi.MainActivity.MySpar.MyProfile.LanguageSelections.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Slovenščina') on item 'PlusSparSi.MainActivity.MySpar.MyProfile.Slovenian'.", repo.PlusSparSi.MainActivity.MySpar.MyProfile.SlovenianInfo, new RecordItemIndex(3));
+            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.MyProfile.SlovenianInfo, "Text", "Slovenščina");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='English') on item 'PlusSparSi.MainActivity.MySpar.MyProfile.English'.", repo.PlusSparSi.MainActivity.MySpar.MyProfile.EnglishInfo, new RecordItemIndex(4));
+            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.MyProfile.EnglishInfo, "Text", "English");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.MySpar.MyProfile.Slovenian' at Center", repo.PlusSparSi.MainActivity.MySpar.MyProfile.SlovenianInfo, new RecordItemIndex(5));
+            repo.PlusSparSi.MainActivity.MySpar.MyProfile.Slovenian.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'PlusSparSi.MainActivity.MySpar.MyProfile.ImgCheckmarkSlo'.", repo.PlusSparSi.MainActivity.MySpar.MyProfile.ImgCheckmarkSloInfo, new RecordItemIndex(6));
+            Validate.Exists(repo.PlusSparSi.MainActivity.MySpar.MyProfile.ImgCheckmarkSloInfo);
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.KrmarjenjeNavzgor' at Center", repo.PlusSparSi.MainActivity.KrmarjenjeNavzgorInfo, new RecordItemIndex(7));
+            repo.PlusSparSi.MainActivity.KrmarjenjeNavzgor.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Izbira jezika') on item 'PlusSparSi.MainActivity.MySpar.MyProfile.IzbiraJezika'.", repo.PlusSparSi.MainActivity.MySpar.MyProfile.IzbiraJezikaInfo, new RecordItemIndex(8));
+            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.MyProfile.IzbiraJezikaInfo, "Text", "Izbira jezika");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.MySpar.MyProfile.IzbiraJezika' at Center", repo.PlusSparSi.MainActivity.MySpar.MyProfile.IzbiraJezikaInfo, new RecordItemIndex(9));
+            repo.PlusSparSi.MainActivity.MySpar.MyProfile.IzbiraJezika.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.MySpar.MyProfile.English' at Center", repo.PlusSparSi.MainActivity.MySpar.MyProfile.EnglishInfo, new RecordItemIndex(10));
+            repo.PlusSparSi.MainActivity.MySpar.MyProfile.English.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'PlusSparSi.MainActivity.MySpar.MyProfile.ImgCheckmarkEng'.", repo.PlusSparSi.MainActivity.MySpar.MyProfile.ImgCheckmarkEngInfo, new RecordItemIndex(11));
+            Validate.Exists(repo.PlusSparSi.MainActivity.MySpar.MyProfile.ImgCheckmarkEngInfo);
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Language Selection') on item 'PlusSparSi.MainActivity.MySpar.MyProfile.LanguageSelections'.", repo.PlusSparSi.MainActivity.MySpar.MyProfile.LanguageSelectionsInfo, new RecordItemIndex(12));
+            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.MyProfile.LanguageSelectionsInfo, "Text", "Language Selection");
+            Delay.Milliseconds(0);
+            
         }
 
 #region Image Feature Data
