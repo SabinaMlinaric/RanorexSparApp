@@ -223,6 +223,31 @@ mode="Global">
 				False
 			</matchvalue>
 		</validationitem>
+		<touchrecorditem
+		enabled="True"
+		optional="False"
+		duration="500ms"
+		screenshotname=""
+		searchpropertyid="4d96c737-cf54-472b-8d37-915661d46c66"
+		touchtype="Touch"
+		elementlocation="Center"
+		fingerid="0"
+		touchduration="100ms"
+		longtouchduration="1000ms"
+		moveduration="100ms"
+		isremote="False"
+		sx="0"
+		sy="0">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="e9b953ec-d204-457f-b968-5a4108da11c0">
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='EnterNumberActivity']//button[@contentdescription='Navigate up']
+				</path>
+			</info>
+		</touchrecorditem>
 	</recorditems>
 	<repository
 	name="SparRepository"

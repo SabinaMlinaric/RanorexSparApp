@@ -123,6 +123,10 @@ namespace Spar.Test_cases.MySpar
             Validate.Attribute(repo.PlusSparSi.EnterNumberActivity.RStringScancardEnterCardNumberInfo, "Text", "Enter card serial number");
             Delay.Milliseconds(0);
             
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.EnterNumberActivity.NavigateUp' at Center", repo.PlusSparSi.EnterNumberActivity.NavigateUpInfo, new RecordItemIndex(11));
+            repo.PlusSparSi.EnterNumberActivity.NavigateUp.Touch();
+            Delay.Milliseconds(500);
+            
         }
 
 #region Image Feature Data

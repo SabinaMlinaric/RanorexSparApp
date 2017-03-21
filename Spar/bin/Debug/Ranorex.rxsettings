@@ -448,7 +448,7 @@ rxversion="6.2">
 		50
 	</plugin.mobile.ios.maxcollectionviewvcellcount>
 	<plugin.mobile.android.UseAndroidOS>
-		False
+		True
 	</plugin.mobile.android.UseAndroidOS>
 	<plugin.mobile.android.FetchAndroidOSScreenshots>
 		False

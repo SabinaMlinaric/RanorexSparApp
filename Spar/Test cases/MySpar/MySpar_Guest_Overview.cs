@@ -87,8 +87,8 @@ namespace Spar.Test_cases.MySpar
             Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.MySPARPlusCardInfo, "Text", "My SPAR plus card");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='SAMPLE') on item 'PlusSparSi.MainActivity.MySpar.SAMPLE'.", repo.PlusSparSi.MainActivity.MySpar.SAMPLEInfo, new RecordItemIndex(2));
-            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.SAMPLEInfo, "Text", "SAMPLE");
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'PlusSparSi.MainActivity.MySpar.SAMPLE'.", repo.PlusSparSi.MainActivity.MySpar.SAMPLEInfo, new RecordItemIndex(2));
+            Validate.Exists(repo.PlusSparSi.MainActivity.MySpar.SAMPLEInfo);
             Delay.Milliseconds(0);
             
             Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'PlusSparSi.MainActivity.MySpar.Img25Discount'.", repo.PlusSparSi.MainActivity.MySpar.Img25DiscountInfo, new RecordItemIndex(3));

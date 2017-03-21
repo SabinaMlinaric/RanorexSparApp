@@ -119,6 +119,10 @@ namespace Spar.Test_cases.MySpar
             repo.PlusSparSi.LoginSignInActivity.BtnSignInLogin.Touch();
             Delay.Milliseconds(500);
             
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.LoginSignInActivity.NavigateUp' at Center", repo.PlusSparSi.LoginSignInActivity.NavigateUpInfo, new RecordItemIndex(10));
+            repo.PlusSparSi.LoginSignInActivity.NavigateUp.Touch();
+            Delay.Milliseconds(500);
+            
         }
 
 #region Image Feature Data

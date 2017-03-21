@@ -365,6 +365,60 @@ mode="Global">
 				</path>
 			</info>
 		</touchrecorditem>
+		<touchrecorditem
+		enabled="True"
+		optional="False"
+		duration="500ms"
+		screenshotname=""
+		searchpropertyid="4d96c737-cf54-472b-8d37-915661d46c66"
+		touchtype="Touch"
+		elementlocation="Center"
+		fingerid="0"
+		touchduration="100ms"
+		longtouchduration="1000ms"
+		moveduration="100ms"
+		isremote="False"
+		sx="0"
+		sy="0">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="17a13bba-ea1e-4eae-841d-6b123283dcda">
+				<element
+				role="button"
+				prefcap="button"
+				capabilities="androidelement, mobileuielement"
+				flavor="mobile"
+				visible="True"
+				valid="True"
+				enabled="True"
+				hasfocus="False"
+				dontcache="True"
+				index="3"
+				rect="0,36,84,84"
+				snapElem="">
+					<attribute
+					name="contentdescription"
+					type="System.String">
+						Navigate up
+					</attribute>
+					<attribute
+					name="platformclass"
+					type="System.String">
+						android.support.v7.widget.AppCompatImageButton
+					</attribute>
+					<attribute
+					name="temporaryelementid"
+					type="System.Int32">
+						99907092
+					</attribute>
+				</element>
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='LoginSignInActivity']//button[@contentdescription='Navigate up']
+				</path>
+			</info>
+		</touchrecorditem>
 	</recorditems>
 	<repository
 	name="SparRepository"

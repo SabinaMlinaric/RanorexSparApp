@@ -123,6 +123,14 @@ namespace Spar.Test_cases.MySpar
             repo.PlusSparSi.LoginForgottenPasswordActivity.BtnForgottenPasswordSend.Touch();
             Delay.Milliseconds(500);
             
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.LoginSignInActivity.NavigateUp' at Center", repo.PlusSparSi.LoginSignInActivity.NavigateUpInfo, new RecordItemIndex(11));
+            repo.PlusSparSi.LoginSignInActivity.NavigateUp.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.LoginSignInActivity.NavigateUp' at Center", repo.PlusSparSi.LoginSignInActivity.NavigateUpInfo, new RecordItemIndex(12));
+            repo.PlusSparSi.LoginSignInActivity.NavigateUp.Touch();
+            Delay.Milliseconds(500);
+            
         }
 
 #region Image Feature Data

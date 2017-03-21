@@ -140,7 +140,7 @@ mode="Global">
 		enabled="True"
 		optional="False"
 		searchpropertyid="0a1e1d55-516f-4193-93c1-74c6dbd3372b"
-		action="AttributeEqual">
+		action="Exists">
 			<comment/>
 			<bindings/>
 			<info

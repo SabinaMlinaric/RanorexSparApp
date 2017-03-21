@@ -79,6 +79,46 @@ namespace Spar.Test_cases.MySpar
 
             Init();
 
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'PlusSparSi.MainActivity.MySpar.ImgUserProfile'.", repo.PlusSparSi.MainActivity.MySpar.ImgUserProfileInfo, new RecordItemIndex(0));
+            Validate.Exists(repo.PlusSparSi.MainActivity.MySpar.ImgUserProfileInfo);
+            Delay.Milliseconds(0);
+            
+            try {
+                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating AttributeEqual (Text='My coupons') on item 'PlusSparSi.MainActivity.MySpar.TextMyCoupons'.", repo.PlusSparSi.MainActivity.MySpar.TextMyCouponsInfo, new RecordItemIndex(1));
+                Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.TextMyCouponsInfo, "Text", "My coupons", Validate.DefaultMessage, false);
+                Delay.Milliseconds(0);
+            } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(1)); }
+            
+            try {
+                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating AttributeEqual (Text='Saved coupons') on item 'PlusSparSi.MainActivity.MySpar.TextSavedCoupons'.", repo.PlusSparSi.MainActivity.MySpar.TextSavedCouponsInfo, new RecordItemIndex(2));
+                Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.TextSavedCouponsInfo, "Text", "Saved coupons", Validate.DefaultMessage, false);
+                Delay.Milliseconds(0);
+            } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(2)); }
+            
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.MainActivity.MySpar.ImgUserProfile' at Center", repo.PlusSparSi.MainActivity.MySpar.ImgUserProfileInfo, new RecordItemIndex(3));
+            repo.PlusSparSi.MainActivity.MySpar.ImgUserProfile.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='My Profile') on item 'PlusSparSi.MainActivity.MySpar.MyProfileTitle'.", repo.PlusSparSi.MainActivity.MySpar.MyProfileTitleInfo, new RecordItemIndex(4));
+            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.MyProfileTitleInfo, "Text", "My Profile");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'PlusSparSi.MainActivity.MySpar.MyProfile.TextCurrentBalanceValue'.", repo.PlusSparSi.MainActivity.MySpar.MyProfile.TextCurrentBalanceValueInfo, new RecordItemIndex(5));
+            Validate.Exists(repo.PlusSparSi.MainActivity.MySpar.MyProfile.TextCurrentBalanceValueInfo);
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Current balance on card') on item 'PlusSparSi.MainActivity.MySpar.MyProfile.TextCurrentBalanceDescription'.", repo.PlusSparSi.MainActivity.MySpar.MyProfile.TextCurrentBalanceDescriptionInfo, new RecordItemIndex(6));
+            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.MyProfile.TextCurrentBalanceDescriptionInfo, "Text", "Current balance on card");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='yourValue') on item 'PlusSparSi.MainActivity.MySpar.MyProfile.TextBalanceThisYearReceived'.", repo.PlusSparSi.MainActivity.MySpar.MyProfile.TextBalanceThisYearReceivedInfo, new RecordItemIndex(7));
+            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.MyProfile.TextBalanceThisYearReceivedInfo, "Text", "yourValue");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='yourValue') on item 'PlusSparSi.MainActivity.MySpar.MyProfile.TextDiscountsReceived'.", repo.PlusSparSi.MainActivity.MySpar.MyProfile.TextDiscountsReceivedInfo, new RecordItemIndex(8));
+            Validate.Attribute(repo.PlusSparSi.MainActivity.MySpar.MyProfile.TextDiscountsReceivedInfo, "Text", "yourValue");
+            Delay.Milliseconds(0);
+            
         }
 
 #region Image Feature Data

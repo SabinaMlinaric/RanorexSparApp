@@ -1363,13 +1363,49 @@ rxversion="6.2">
 						capname="text">
 							/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='btn_manual_insert_card_number']
 						</item>
+						<item
+						name="TextCurrentBalanceValue"
+						id="ebeb2b89-31f1-48b9-922d-b1b4336cb0a2"
+						searchtimeout="30000ms"
+						capname="text">
+							/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_balance']
+						</item>
+						<item
+						name="TextCurrentBalanceDescription"
+						id="2ad62867-4018-4614-9161-e6f7dbb8e83f"
+						searchtimeout="30000ms"
+						capname="text">
+							/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@resourceid='R.string.my_spar_profile_balance_value']
+						</item>
+						<item
+						name="TextBalanceThisYearValue"
+						id="4268b9d7-0d1a-42e0-ab86-a98959be9a69"
+						searchtimeout="30000ms"
+						capname="text">
+							/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_balance']
+						</item>
+						<item
+						name="TextBalanceThisYearReceived"
+						id="b54b1602-85d4-44f9-92b5-47a1222475ae"
+						searchtimeout="30000ms"
+						capname="text">
+							/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@resourceid='R.string.my_spar_profile_obtained_balance']
+						</item>
+						<item
+						name="TextDiscountsValue"
+						id="84ea2422-b69a-492b-a5b9-80ed4deb2966"
+						searchtimeout="30000ms"
+						capname="text">
+							/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_balance']
+						</item>
+						<item
+						name="TextDiscountsReceived"
+						id="1413a53e-9cb7-4e80-b48d-2ad80d651b54"
+						searchtimeout="30000ms"
+						capname="text">
+							/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@resourceid='R.string.my_spar_profile_obtained_discounts']
+						</item>
 					</folder>
-					<folder
-					name="Login"
-					id="da5290ed-8eef-4444-beff-2ec4ac3c3209"
-					searchtimeout="0ms"
-					capname="unknown"
-					isrooted="False"/>
 					<item
 					name="TextMyCoupons"
 					id="fd42df7f-04b6-4e1d-b327-237426ea1062"
@@ -1385,6 +1421,13 @@ rxversion="6.2">
 					addcaps="text,androidelement,mobileuielement"
 					refimgid="20b88601-52bb-4399-bdb8-d25fdb39210e">
 						/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@rid='tv_card_serial_number']
+					</item>
+					<item
+					name="TextSavedCoupons"
+					id="3c5f76e5-931b-4d00-8bfd-92afef437c68"
+					searchtimeout="30000ms"
+					capname="text">
+						/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']//text[@resourceid='R.string.my_spar_added_coupons']
 					</item>
 					<basepath>
 						/mobileapp[@title='plus.spar.si.staging']/form[@title='MainActivity']
@@ -1402,6 +1445,15 @@ rxversion="6.2">
 			refimgid="b5bb62fe-2307-43b2-ba63-621891566125"
 			isrooted="True"
 			usecache="False">
+				<item
+				name="NavigateUp"
+				id="e9b953ec-d204-457f-b968-5a4108da11c0"
+				searchtimeout="30000ms"
+				capname="button"
+				addcaps="button,androidelement,mobileuielement"
+				refimgid="344ec105-e8ba-41f8-9519-8d8888754124">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='EnterNumberActivity']//button[@contentdescription='Navigate up']
+				</item>
 				<item
 				name="RStringScancardEnterCardNumber"
 				id="72f751ed-d080-41be-a84d-fca25201c383"
@@ -1746,6 +1798,15 @@ rxversion="6.2">
 			capname="form"
 			isrooted="True"
 			usecache="False">
+				<item
+				name="NavigateUp"
+				id="17a13bba-ea1e-4eae-841d-6b123283dcda"
+				searchtimeout="30000ms"
+				capname="button"
+				addcaps="button,androidelement,mobileuielement"
+				refimgid="a80778c5-152f-4119-8b69-aad69acfddbf">
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='LoginSignInActivity']//button[@contentdescription='Navigate up']
+				</item>
 				<item
 				name="ImgTick"
 				id="0813f142-cf4b-4cf7-889b-67d13f15a489"

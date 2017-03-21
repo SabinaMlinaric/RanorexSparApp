@@ -99,6 +99,10 @@ namespace Spar.Test_cases.MySpar
             Validate.Attribute(repo.PlusSparSi.EnterNumberActivity.BtnNextInfo, "Enabled", "False");
             Delay.Milliseconds(0);
             
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.EnterNumberActivity.NavigateUp' at Center", repo.PlusSparSi.EnterNumberActivity.NavigateUpInfo, new RecordItemIndex(5));
+            repo.PlusSparSi.EnterNumberActivity.NavigateUp.Touch();
+            Delay.Milliseconds(500);
+            
         }
 
 #region Image Feature Data

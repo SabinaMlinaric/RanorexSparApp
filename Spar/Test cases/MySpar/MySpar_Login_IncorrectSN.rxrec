@@ -493,6 +493,60 @@ mode="Global">
 				Enter card serial number
 			</matchvalue>
 		</validationitem>
+		<touchrecorditem
+		enabled="True"
+		optional="False"
+		duration="500ms"
+		screenshotname=""
+		searchpropertyid="b4346659-d93a-46de-8bac-ea06ff0c5c4e"
+		touchtype="Touch"
+		elementlocation="Center"
+		fingerid="0"
+		touchduration="100ms"
+		longtouchduration="1000ms"
+		moveduration="100ms"
+		isremote="False"
+		sx="0"
+		sy="0">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="e9b953ec-d204-457f-b968-5a4108da11c0">
+				<element
+				role="button"
+				prefcap="button"
+				capabilities="androidelement, mobileuielement"
+				flavor="mobile"
+				visible="True"
+				valid="True"
+				enabled="True"
+				hasfocus="False"
+				dontcache="True"
+				index="3"
+				rect="0,36,84,84"
+				snapElem="">
+					<attribute
+					name="contentdescription"
+					type="System.String">
+						Navigate up
+					</attribute>
+					<attribute
+					name="platformclass"
+					type="System.String">
+						android.support.v7.widget.AppCompatImageButton
+					</attribute>
+					<attribute
+					name="temporaryelementid"
+					type="System.Int32">
+						10697253
+					</attribute>
+				</element>
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title='EnterNumberActivity']//button[@contentdescription='Navigate up']
+				</path>
+			</info>
+		</touchrecorditem>
 	</recorditems>
 	<repository
 	name="SparRepository"

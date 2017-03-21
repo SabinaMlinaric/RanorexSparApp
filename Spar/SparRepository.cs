@@ -3666,7 +3666,6 @@ namespace Spar
         public partial class MySparFolder : RepoGenBaseFolder
         {
             SparRepositoryFolders.MyProfileFolder _myprofile;
-            SparRepositoryFolders.LoginFolder _login;
             RepoItemInfo _menubtnmysparInfo;
             RepoItemInfo _mysparpluscardInfo;
             RepoItemInfo _sampleInfo;
@@ -3682,6 +3681,7 @@ namespace Spar
             RepoItemInfo _problemswithscanningtextInfo;
             RepoItemInfo _textmycouponsInfo;
             RepoItemInfo _tvcardserialnumberInfo;
+            RepoItemInfo _textsavedcouponsInfo;
 
             /// <summary>
             /// Creates a new MySpar  folder.
@@ -3690,7 +3690,6 @@ namespace Spar
                     base("MySpar", "", parentFolder, 30000, null, false, "c41ddde5-9457-47e4-85ff-efd72f934c82", "")
             {
                 _myprofile = new SparRepositoryFolders.MyProfileFolder(this);
-                _login = new SparRepositoryFolders.LoginFolder(this);
                 _menubtnmysparInfo = new RepoItemInfo(this, "MenuBtnMySpar", ".//container[@rid='navbar_action_my_spar']", 30000, null, "e1d35baf-a8bc-4464-9fcd-0fe885a76799");
                 _mysparpluscardInfo = new RepoItemInfo(this, "MySPARPlusCard", ".//text[@rid='tv_name']", 30000, null, "e43178df-187b-4566-871d-8656b42cb9d1");
                 _sampleInfo = new RepoItemInfo(this, "SAMPLE", ".//picture[@rid='img_bar_code']", 30000, null, "1875d9d4-71e9-4926-8dfa-00fd239c8a4b");
@@ -3706,6 +3705,7 @@ namespace Spar
                 _problemswithscanningtextInfo = new RepoItemInfo(this, "ProblemsWithScanningText", ".//text[@resourceid='R.string.scancard_problems_with_scan']", 30000, null, "ff6b5a4d-e42c-44ac-81c4-f9bee08498a1");
                 _textmycouponsInfo = new RepoItemInfo(this, "TextMyCoupons", ".//text[@resourceid='R.string.my_spar_coupons']", 30000, null, "fd42df7f-04b6-4e1d-b327-237426ea1062");
                 _tvcardserialnumberInfo = new RepoItemInfo(this, "TvCardSerialNumber", ".//text[@rid='tv_card_serial_number']", 30000, null, "5a118c83-3e69-4817-8e93-df538fd9b82d");
+                _textsavedcouponsInfo = new RepoItemInfo(this, "TextSavedCoupons", ".//text[@resourceid='R.string.my_spar_added_coupons']", 30000, null, "3c5f76e5-931b-4d00-8bfd-92afef437c68");
             }
 
             /// <summary>
@@ -4093,21 +4093,36 @@ namespace Spar
             }
 
             /// <summary>
+            /// The TextSavedCoupons item.
+            /// </summary>
+            [RepositoryItem("3c5f76e5-931b-4d00-8bfd-92afef437c68")]
+            public virtual Ranorex.Text TextSavedCoupons
+            {
+                get
+                {
+                    return _textsavedcouponsInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TextSavedCoupons item info.
+            /// </summary>
+            [RepositoryItemInfo("3c5f76e5-931b-4d00-8bfd-92afef437c68")]
+            public virtual RepoItemInfo TextSavedCouponsInfo
+            {
+                get
+                {
+                    return _textsavedcouponsInfo;
+                }
+            }
+
+            /// <summary>
             /// The MyProfile folder.
             /// </summary>
             [RepositoryFolder("eb6ce457-2fd4-4361-9fb4-01e3f0796a5a")]
             public virtual SparRepositoryFolders.MyProfileFolder MyProfile
             {
                 get { return _myprofile; }
-            }
-
-            /// <summary>
-            /// The Login folder.
-            /// </summary>
-            [RepositoryFolder("da5290ed-8eef-4444-beff-2ec4ac3c3209")]
-            public virtual SparRepositoryFolders.LoginFolder Login
-            {
-                get { return _login; }
             }
         }
 
@@ -4137,6 +4152,12 @@ namespace Spar
             RepoItemInfo _aboutInfo;
             RepoItemInfo _titleaboutInfo;
             RepoItemInfo _btnmysparmanualinsertcardnrInfo;
+            RepoItemInfo _textcurrentbalancevalueInfo;
+            RepoItemInfo _textcurrentbalancedescriptionInfo;
+            RepoItemInfo _textbalancethisyearvalueInfo;
+            RepoItemInfo _textbalancethisyearreceivedInfo;
+            RepoItemInfo _textdiscountsvalueInfo;
+            RepoItemInfo _textdiscountsreceivedInfo;
 
             /// <summary>
             /// Creates a new MyProfile  folder.
@@ -4164,6 +4185,12 @@ namespace Spar
                 _aboutInfo = new RepoItemInfo(this, "About", ".//text[@resourceid='R.string.my_spar_profile_about']", 30000, null, "b22b5d36-b4eb-4454-9edb-f7358e51c9cd");
                 _titleaboutInfo = new RepoItemInfo(this, "TitleAbout", ".//text[@resourceid='R.string.my_spar_profile_about']", 30000, null, "4be336f1-aaa8-425c-a2c0-92deceebd758");
                 _btnmysparmanualinsertcardnrInfo = new RepoItemInfo(this, "BtnMySparManualInsertCardNr", ".//text[@rid='btn_manual_insert_card_number']", 30000, null, "c97a17db-8520-4fc2-9b34-5bb1c06f173d");
+                _textcurrentbalancevalueInfo = new RepoItemInfo(this, "TextCurrentBalanceValue", ".//text[@rid='tv_balance']", 30000, null, "ebeb2b89-31f1-48b9-922d-b1b4336cb0a2");
+                _textcurrentbalancedescriptionInfo = new RepoItemInfo(this, "TextCurrentBalanceDescription", ".//text[@resourceid='R.string.my_spar_profile_balance_value']", 30000, null, "2ad62867-4018-4614-9161-e6f7dbb8e83f");
+                _textbalancethisyearvalueInfo = new RepoItemInfo(this, "TextBalanceThisYearValue", ".//text[@rid='tv_balance']", 30000, null, "4268b9d7-0d1a-42e0-ab86-a98959be9a69");
+                _textbalancethisyearreceivedInfo = new RepoItemInfo(this, "TextBalanceThisYearReceived", ".//text[@resourceid='R.string.my_spar_profile_obtained_balance']", 30000, null, "b54b1602-85d4-44f9-92b5-47a1222475ae");
+                _textdiscountsvalueInfo = new RepoItemInfo(this, "TextDiscountsValue", ".//text[@rid='tv_balance']", 30000, null, "84ea2422-b69a-492b-a5b9-80ed4deb2966");
+                _textdiscountsreceivedInfo = new RepoItemInfo(this, "TextDiscountsReceived", ".//text[@resourceid='R.string.my_spar_profile_obtained_discounts']", 30000, null, "1413a53e-9cb7-4e80-b48d-2ad80d651b54");
             }
 
             /// <summary>
@@ -4657,32 +4684,148 @@ namespace Spar
                     return _btnmysparmanualinsertcardnrInfo;
                 }
             }
-        }
-
-        /// <summary>
-        /// The LoginFolder folder.
-        /// </summary>
-        [RepositoryFolder("da5290ed-8eef-4444-beff-2ec4ac3c3209")]
-        public partial class LoginFolder : RepoGenBaseFolder
-        {
 
             /// <summary>
-            /// Creates a new Login  folder.
+            /// The TextCurrentBalanceValue item.
             /// </summary>
-            public LoginFolder(RepoGenBaseFolder parentFolder) :
-                    base("Login", "", parentFolder, 0, null, false, "da5290ed-8eef-4444-beff-2ec4ac3c3209", "")
-            {
-            }
-
-            /// <summary>
-            /// The Self item info.
-            /// </summary>
-            [RepositoryItemInfo("da5290ed-8eef-4444-beff-2ec4ac3c3209")]
-            public virtual RepoItemInfo SelfInfo
+            [RepositoryItem("ebeb2b89-31f1-48b9-922d-b1b4336cb0a2")]
+            public virtual Ranorex.Text TextCurrentBalanceValue
             {
                 get
                 {
-                    return _selfInfo;
+                    return _textcurrentbalancevalueInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TextCurrentBalanceValue item info.
+            /// </summary>
+            [RepositoryItemInfo("ebeb2b89-31f1-48b9-922d-b1b4336cb0a2")]
+            public virtual RepoItemInfo TextCurrentBalanceValueInfo
+            {
+                get
+                {
+                    return _textcurrentbalancevalueInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TextCurrentBalanceDescription item.
+            /// </summary>
+            [RepositoryItem("2ad62867-4018-4614-9161-e6f7dbb8e83f")]
+            public virtual Ranorex.Text TextCurrentBalanceDescription
+            {
+                get
+                {
+                    return _textcurrentbalancedescriptionInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TextCurrentBalanceDescription item info.
+            /// </summary>
+            [RepositoryItemInfo("2ad62867-4018-4614-9161-e6f7dbb8e83f")]
+            public virtual RepoItemInfo TextCurrentBalanceDescriptionInfo
+            {
+                get
+                {
+                    return _textcurrentbalancedescriptionInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TextBalanceThisYearValue item.
+            /// </summary>
+            [RepositoryItem("4268b9d7-0d1a-42e0-ab86-a98959be9a69")]
+            public virtual Ranorex.Text TextBalanceThisYearValue
+            {
+                get
+                {
+                    return _textbalancethisyearvalueInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TextBalanceThisYearValue item info.
+            /// </summary>
+            [RepositoryItemInfo("4268b9d7-0d1a-42e0-ab86-a98959be9a69")]
+            public virtual RepoItemInfo TextBalanceThisYearValueInfo
+            {
+                get
+                {
+                    return _textbalancethisyearvalueInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TextBalanceThisYearReceived item.
+            /// </summary>
+            [RepositoryItem("b54b1602-85d4-44f9-92b5-47a1222475ae")]
+            public virtual Ranorex.Text TextBalanceThisYearReceived
+            {
+                get
+                {
+                    return _textbalancethisyearreceivedInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TextBalanceThisYearReceived item info.
+            /// </summary>
+            [RepositoryItemInfo("b54b1602-85d4-44f9-92b5-47a1222475ae")]
+            public virtual RepoItemInfo TextBalanceThisYearReceivedInfo
+            {
+                get
+                {
+                    return _textbalancethisyearreceivedInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TextDiscountsValue item.
+            /// </summary>
+            [RepositoryItem("84ea2422-b69a-492b-a5b9-80ed4deb2966")]
+            public virtual Ranorex.Text TextDiscountsValue
+            {
+                get
+                {
+                    return _textdiscountsvalueInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TextDiscountsValue item info.
+            /// </summary>
+            [RepositoryItemInfo("84ea2422-b69a-492b-a5b9-80ed4deb2966")]
+            public virtual RepoItemInfo TextDiscountsValueInfo
+            {
+                get
+                {
+                    return _textdiscountsvalueInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TextDiscountsReceived item.
+            /// </summary>
+            [RepositoryItem("1413a53e-9cb7-4e80-b48d-2ad80d651b54")]
+            public virtual Ranorex.Text TextDiscountsReceived
+            {
+                get
+                {
+                    return _textdiscountsreceivedInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TextDiscountsReceived item info.
+            /// </summary>
+            [RepositoryItemInfo("1413a53e-9cb7-4e80-b48d-2ad80d651b54")]
+            public virtual RepoItemInfo TextDiscountsReceivedInfo
+            {
+                get
+                {
+                    return _textdiscountsreceivedInfo;
                 }
             }
         }
@@ -4693,6 +4836,7 @@ namespace Spar
         [RepositoryFolder("42a91c57-ca33-40f3-9bc1-078ca11dc89e")]
         public partial class EnterNumberActivityFolder : RepoGenBaseFolder
         {
+            RepoItemInfo _navigateupInfo;
             RepoItemInfo _rstringscancardentercardnumberInfo;
             RepoItemInfo _etcardnumberInfo;
             RepoItemInfo _btnnextInfo;
@@ -4703,6 +4847,7 @@ namespace Spar
             public EnterNumberActivityFolder(RepoGenBaseFolder parentFolder) :
                     base("EnterNumberActivity", "form[@title='EnterNumberActivity']", parentFolder, 30000, null, false, "42a91c57-ca33-40f3-9bc1-078ca11dc89e", "")
             {
+                _navigateupInfo = new RepoItemInfo(this, "NavigateUp", ".//button[@contentdescription='Navigate up']", 30000, null, "e9b953ec-d204-457f-b968-5a4108da11c0");
                 _rstringscancardentercardnumberInfo = new RepoItemInfo(this, "RStringScancardEnterCardNumber", ".//text[@resourceid='R.string.scancard_enter_card_number']", 30000, null, "72f751ed-d080-41be-a84d-fca25201c383");
                 _etcardnumberInfo = new RepoItemInfo(this, "EtCardNumber", ".//text[@rid='et_card_number']", 30000, null, "05343f2e-b690-406e-9510-d7681f98c5f4");
                 _btnnextInfo = new RepoItemInfo(this, "BtnNext", ".//text[@rid='btn_next']", 30000, null, "3536ecfb-e601-4c14-9964-af178c76df9b");
@@ -4729,6 +4874,30 @@ namespace Spar
                 get
                 {
                     return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The NavigateUp item.
+            /// </summary>
+            [RepositoryItem("e9b953ec-d204-457f-b968-5a4108da11c0")]
+            public virtual Ranorex.Button NavigateUp
+            {
+                get
+                {
+                    return _navigateupInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The NavigateUp item info.
+            /// </summary>
+            [RepositoryItemInfo("e9b953ec-d204-457f-b968-5a4108da11c0")]
+            public virtual RepoItemInfo NavigateUpInfo
+            {
+                get
+                {
+                    return _navigateupInfo;
                 }
             }
 
@@ -5727,6 +5896,7 @@ namespace Spar
         [RepositoryFolder("fb078e99-db98-445a-a828-15f895f87bdb")]
         public partial class LoginSignInActivityFolder : RepoGenBaseFolder
         {
+            RepoItemInfo _navigateupInfo;
             RepoItemInfo _imgtickInfo;
             RepoItemInfo _textloginsignindescriptionInfo;
             RepoItemInfo _inputenteremailInfo;
@@ -5740,6 +5910,7 @@ namespace Spar
             public LoginSignInActivityFolder(RepoGenBaseFolder parentFolder) :
                     base("LoginSignInActivity", "form[@title='LoginSignInActivity']", parentFolder, 30000, null, false, "fb078e99-db98-445a-a828-15f895f87bdb", "")
             {
+                _navigateupInfo = new RepoItemInfo(this, "NavigateUp", ".//button[@contentdescription='Navigate up']", 30000, null, "17a13bba-ea1e-4eae-841d-6b123283dcda");
                 _imgtickInfo = new RepoItemInfo(this, "ImgTick", ".//androidelement[@rid='spar_scrollview_default_id']//picture", 30000, null, "0813f142-cf4b-4cf7-889b-67d13f15a489");
                 _textloginsignindescriptionInfo = new RepoItemInfo(this, "TextLoginSignInDescription", ".//container[@rid='fragment_placeholder']/?/?/container[@rid='content_placeholder']/androidelement[@rid='spar_scrollview_default_id']//text[@resourceid='R.string.login_sign_in_description']", 30000, null, "16177ffc-7f6d-4102-80fe-3c253a1d7925");
                 _inputenteremailInfo = new RepoItemInfo(this, "InputEnterEmail", ".//text[@rid='et_sign_in_email']", 30000, null, "9b57ebe9-56f4-4ca4-8223-32c34a2834c8");
@@ -5769,6 +5940,30 @@ namespace Spar
                 get
                 {
                     return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The NavigateUp item.
+            /// </summary>
+            [RepositoryItem("17a13bba-ea1e-4eae-841d-6b123283dcda")]
+            public virtual Ranorex.Button NavigateUp
+            {
+                get
+                {
+                    return _navigateupInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The NavigateUp item info.
+            /// </summary>
+            [RepositoryItemInfo("17a13bba-ea1e-4eae-841d-6b123283dcda")]
+            public virtual RepoItemInfo NavigateUpInfo
+            {
+                get
+                {
+                    return _navigateupInfo;
                 }
             }
 
