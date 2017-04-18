@@ -281,7 +281,7 @@ rxversion="6.2">
 				<parameters>
 					<param
 					name="DeviceName"
-					value="USB-266ac6a4"/>
+					value="SM-G920F"/>
 					<param
 					name="PackageName"
 					value="plus.spar.si.staging"/>
@@ -4409,16 +4409,16 @@ rxversion="6.2">
 				</tr>
 				<tr>
 					<td>
-						Janez
+						Janez1
 					</td>
 					<td>
-						Novak
+						Novak1
 					</td>
 					<td>
 						12.5.1987
 					</td>
 					<td>
-						Male
+						R.string.register_gender_male
 					</td>
 					<td>
 						Slovenia
@@ -4427,7 +4427,7 @@ rxversion="6.2">
 						Gregor&#269;i&#269;eva
 					</td>
 					<td>
-						16
+						nn
 					</td>
 					<td>
 						2000
@@ -4457,10 +4457,10 @@ rxversion="6.2">
 						22.11.1933
 					</td>
 					<td>
-						Female
+						R.string.register_gender_female
 					</td>
 					<td>
-						Slovenija
+						Slovenia
 					</td>
 					<td>
 						Troji&#353;ki trg
@@ -4475,7 +4475,7 @@ rxversion="6.2">
 						Sveta Trojica v Slovenskih goricah
 					</td>
 					<td>
-						+38625849634
+						+38640896157
 					</td>
 					<td>
 						test@mailinator.com
@@ -4496,7 +4496,7 @@ rxversion="6.2">
 						13.6.1988
 					</td>
 					<td>
-						Male
+						R.string.register_gender_male
 					</td>
 					<td>
 						Slovenia
@@ -4535,10 +4535,10 @@ rxversion="6.2">
 						29.2.1980
 					</td>
 					<td>
-						Female
+						R.string.register_gender_female
 					</td>
 					<td>
-						Slovenija
+						Slovenia
 					</td>
 					<td>
 						Cankarjeva ulica
@@ -4553,7 +4553,7 @@ rxversion="6.2">
 						Ljubljana
 					</td>
 					<td>
-						+38625849634
+						+38640896157
 					</td>
 					<td>
 						test@mailinator.com
@@ -4574,10 +4574,10 @@ rxversion="6.2">
 						30.3.1981
 					</td>
 					<td>
-						Male
+						R.string.register_gender_male
 					</td>
 					<td>
-						Slovenia
+						Austria
 					</td>
 					<td>
 						Ljubljanska
@@ -4613,7 +4613,7 @@ rxversion="6.2">
 						31.5.1982
 					</td>
 					<td>
-						Female
+						R.string.register_gender_female
 					</td>
 					<td>
 						Slovenia
@@ -4631,7 +4631,7 @@ rxversion="6.2">
 						Maribor
 					</td>
 					<td>
-						+38625849634
+						+38640896157
 					</td>
 					<td>
 						test@mailinator.com
@@ -4652,10 +4652,10 @@ rxversion="6.2">
 						1.6.1983
 					</td>
 					<td>
-						Male
+						R.string.register_gender_male
 					</td>
 					<td>
-						Hrva&#353;ka
+						Austria
 					</td>
 					<td>
 						Vra&#382;dinska cesta
@@ -4688,27 +4688,13 @@ rxversion="6.2">
 		<testconfiguration
 		name="TestRun">
 			<testcase
-			id="0b09c187-fef2-4ae9-85f2-1812e73b5891"/>
-			<testcase
-			id="0bbe94b1-3c53-4fc7-a33c-9d08cbff60a3"/>
-			<testcase
-			id="0c16f7d5-7c88-4521-9a6a-7f10f4582f3b"/>
-			<testcase
 			id="24e51ce2-a1fc-4ea1-b9e3-9569ddd49642"/>
 			<testcase
-			id="297b27e5-01fd-4c59-bc3d-2849fea8e3fd"/>
+			id="6511acd4-9390-4189-8cdb-3559623b8f1b"/>
 			<testcase
-			id="3c3e04bc-81a5-45bb-9b76-da976e9a58c3"/>
-			<testcase
-			id="3e1240cd-45fe-4249-9743-146425cf0401"/>
-			<testcase
-			id="a2999193-1327-4717-b755-18fe3f327b8b"/>
-			<testcase
-			id="a59eae12-512b-4e2e-afe0-20217c7edb14"/>
+			id="d254f475-2cfd-490a-8865-14306964695e"/>
 			<testcase
 			id="d6a174b9-f860-42b9-9890-569c2900ee01"/>
-			<testcase
-			id="e6306d5e-826f-4652-b8c8-dec7d2796a2f"/>
 		</testconfiguration>
 	</testconfigurations>
 	<references>

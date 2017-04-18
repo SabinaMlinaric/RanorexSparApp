@@ -1,14 +1,14 @@
 id,name,surname,dateOfBirth,country,address,houseNumber,postalNumber,city,phoneNumber,email,password,status
 0,Sabina,Mlinari�,29.11.1991,Slovenia,Gornji Ivanjci,8a,9245,Spodnji Ivanjci,040432997,sparapp1@mailinator.com,Adgjadgj1,success
-1,John,Smith,12.5.1987,Slovenia,Gregorčičeva,16,2000,Maribor,+38640896157,john.smith1@mailinator.com,Adgjadgj1,Success
-2,John,Smith,12.5.1987,Slovenia,Gregorčičeva,16,2000,Maribor,+38640896157,john.smith2@mailinator.com,Adgjadgj1,Success
-3,Janez,Novak,12.5.1987,Slovenia,Gregorčičeva,16,2000,Maribor,+38640896157,test3@mailinator.com,Adgjadgj1,Success
-4,Marija,Kovačič,22.11.1933,Slovenija,Trojiški trg,48b,2235,Sveta Trojica v Slovenskih goricah,+38625849634,test4@mailinator.com,Adgjadgj1,Success
-5,Branko,Benedejčič,13.6.1988,Slovenia,Ulica škofa Maksimilijana Držečnika,136c,2000,Maribor,+38640896157,test5@mailinator.com,Adgjadgj1,Success
-6,Martina,Bogataj,29.2.1980,Slovenija,Cankarjeva ulica,99,1000,Ljubljana,+38625849634,test6@mailinator.com,Adgjadgj1,Success
-7,Rok,Robežnik Savnik Grom,30.3.1981,Slovenia,Ljubljanska,15ž,2000,Maribor,+38640896157,test7@mailinator.com,Adgjadgj1,Success
-8,Špela M. Anita,Grošelj,31.5.1982,Slovenia,Gosposvetska,1,2000,Maribor,+38625849634,test8@mailinator.com,Adgjadgj1,Success
-9,Anej Gal,Habjan,1.6.1983,Hrvaška,Vraždinska cesta,16c,42000,Varaždin,+38640896157,test9@mailinator.com,Adgjadgj1,Success
-10,Janez,Novak,12.5.1987,Slovenia,Gregorčičeva,16,2000,Maribor,+38640896157,test10@mailinator.com,Adgjadgj1,Success
-11,Marija,Kovačič,22.11.1933,Slovenija,Trojiški trg,48b,2235,Sveta Trojica v Slovenskih goricah,+38625849634,test11@mailinator.com,Adgjadgj1,Success
-12,Branko,Benedejčič,13.6.1988,Slovenia,Ulica škofa Maksimilijana Držečnika,136c,2000,Maribor,+38640896157,test12@mailinator.com,Adgjadgj1,Success
+1,Janez,Novak,12.5.1987,Slovenia,Gregorčičeva,16,2000,Maribor,+38640896157,test1@mailinator.com,Adgjadgj1,Success,64537243
+2,Marija,Kovačič,22.11.1933,Slovenia,Trojiški trg,48b,2235,Sveta Trojica v Slovenskih goricah,+38640927366,test2@mailinator.com,Adgjadgj1,Success,46874087
+3,Branko,Benedejčič,13.6.1988,Slovenia,Ulica škofa Maksimilijana Držečnika,136c,2000,Maribor,+38640051021,test3@mailinator.com,Adgjadgj1,Success,86301777
+4,Martina,Bogataj�,29.2.1980,Slovenia,Cankarjeva ulica,99,1000,Ljubljana,+38640245741,test4@mailinator.com,Adgjadgj1,Success,710647364
+5,Rok,Robežnik Savnik Grom,30.3.1981,Austria,Ljubljanska,15ž,2000,Maribor,+38640814814,test5@mailinator.com,Adgjadgj3,Success,71174485 
+6,Špela M. Anita,Grošelj,31.5.1982,Slovenia,Gosposvetska,1,2000,Maribor,+38640588023,test6@mailinator.com,Adgjadgj1,Success,92833452
+7,Anej Gal,Habjan,1.6.1983,Austria,Vraždinska cesta,16c,42000,Varaždin,+38640543849,test7@mailinator.com,Adgjadgj1,Success,26209354
+8,Janez,Novak,12.5.1987,Slovenia,Gregorčičeva,16,2000,Maribor,+38640826712,test8@mailinator.com,Adgjadgj1,Success,86222985
+9,Marija,Kovačič,22.11.1933,Slovenia,Trojiški trg,48b,2235,Sveta Trojica v Slovenskih goricah,+38640850033,test9@mailinator.com,Adgjadgj1,Success,15423177
+10,Branko,Benedejčič,13.6.1988,Slovenia,Ulica škofa Maksimilijana Držečnika,136c,2000,Maribor,+38640950809,test10@mailinator.com,Adgjadgj1,Success,
+14,Martina,Bogataj,29.2.1980,Slovenia,Cankarjeva ulica,99,1000,Ljubljana,+38640313280,test11@mailinator.com,Adgjadgj1,Success
+15,Janez1,Novak1,12.5.1987,Slovenia,Gregorčičeva,nn,2000,Maribor,+38640775955,test15@mailinator.com,Adgjadgj1,Success,11155743

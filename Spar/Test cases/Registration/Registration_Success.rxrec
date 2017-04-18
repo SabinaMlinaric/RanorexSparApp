@@ -170,6 +170,56 @@ mode="Mobile">
 				Fras
 			</AttributeValue>
 		</setvaluerecorditem>
+		<touchrecorditem
+		enabled="True"
+		optional="False"
+		duration="500ms"
+		screenshotname=""
+		searchpropertyid="5f14b24a-6fcb-49f6-bdda-c2e32f710239"
+		touchtype="Touch"
+		elementlocation="Center"
+		fingerid="0"
+		touchduration="100ms"
+		longtouchduration="1000ms"
+		moveduration="100ms"
+		isremote="False"
+		sx="0"
+		sy="0">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="117ddf31-b790-479f-a752-77c4ab4867ce">
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_date_birth']
+				</path>
+			</info>
+		</touchrecorditem>
+		<touchrecorditem
+		enabled="True"
+		optional="False"
+		duration="500ms"
+		screenshotname=""
+		searchpropertyid="00370f2d-06bd-4d60-99c1-6574a391cd2c"
+		touchtype="Touch"
+		elementlocation="Center"
+		fingerid="0"
+		touchduration="100ms"
+		longtouchduration="1000ms"
+		moveduration="100ms"
+		isremote="False"
+		sx="0"
+		sy="0">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="6cc2f9ad-8400-4d58-94d9-d1ff13197ee5">
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']//button[@resourceid='R.string.general_ok']
+				</path>
+			</info>
+		</touchrecorditem>
 		<setvaluerecorditem
 		enabled="True"
 		optional="False"
@@ -192,28 +242,56 @@ mode="Mobile">
 				10.10.2000
 			</AttributeValue>
 		</setvaluerecorditem>
-		<setvaluerecorditem
+		<touchrecorditem
 		enabled="True"
 		optional="False"
-		searchpropertyid="07c10d2b-7887-4b73-b936-e16bad4efffd"
-		attrname="Text">
+		duration="500ms"
+		screenshotname=""
+		searchpropertyid="095b1a7c-c80d-4624-8f25-79fa44a88604"
+		touchtype="Touch"
+		elementlocation="Center"
+		fingerid="0"
+		touchduration="100ms"
+		longtouchduration="1000ms"
+		moveduration="100ms"
+		isremote="False"
+		sx="0"
+		sy="0">
 			<comment/>
-			<bindings>
-				<binding
-				target="AttributeValue"
-				variable="Gender"/>
-			</bindings>
+			<bindings/>
 			<info
-			sourcename="ItemRecorderEditor"
+			sourcename="RepositoryEditor"
 			id="68d14a1e-ded3-40e6-83b1-bbda76c9da82">
 				<path>
-					/mobileapp[@title='plus.spar.si']/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_gender']
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep1PersonalData']//text[@rid='et_gender']
 				</path>
 			</info>
-			<AttributeValue>
-				Male
-			</AttributeValue>
-		</setvaluerecorditem>
+		</touchrecorditem>
+		<touchrecorditem
+		enabled="True"
+		optional="False"
+		duration="500ms"
+		screenshotname=""
+		searchpropertyid="c436b226-f8d9-401f-807f-bd95ed061658"
+		touchtype="Touch"
+		elementlocation="Center"
+		fingerid="0"
+		touchduration="100ms"
+		longtouchduration="1000ms"
+		moveduration="100ms"
+		isremote="False"
+		sx="0"
+		sy="0">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="3ea530a4-4745-488d-9e0b-252d8ac41fe4">
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']//text[@resourceid=$Gender]
+				</path>
+			</info>
+		</touchrecorditem>
 		<touchrecorditem
 		enabled="True"
 		optional="False"
@@ -239,6 +317,31 @@ mode="Mobile">
 				</path>
 			</info>
 		</touchrecorditem>
+		<touchrecorditem
+		enabled="True"
+		optional="False"
+		duration="500ms"
+		screenshotname=""
+		searchpropertyid="c4117b8d-942b-4b0e-adfc-4b4787d3aa5b"
+		touchtype="Touch"
+		elementlocation="Center"
+		fingerid="0"
+		touchduration="100ms"
+		longtouchduration="1000ms"
+		moveduration="100ms"
+		isremote="False"
+		sx="0"
+		sy="0">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="d8f78a37-b6c4-4909-82c3-ec9ab16d07d8">
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep2ResidentData']//text[@rid='et_country']
+				</path>
+			</info>
+		</touchrecorditem>
 		<setvaluerecorditem
 		enabled="True"
 		optional="False"
@@ -261,6 +364,31 @@ mode="Mobile">
 				yourValue
 			</AttributeValue>
 		</setvaluerecorditem>
+		<touchrecorditem
+		enabled="True"
+		optional="False"
+		duration="500ms"
+		screenshotname=""
+		searchpropertyid="7780fac8-7a75-400f-90b4-11df8009211b"
+		touchtype="Touch"
+		elementlocation="Center"
+		fingerid="0"
+		touchduration="100ms"
+		longtouchduration="1000ms"
+		moveduration="100ms"
+		isremote="False"
+		sx="0"
+		sy="0">
+			<comment/>
+			<bindings/>
+			<info
+			sourcename="RepositoryEditor"
+			id="2702edb2-9d0e-487f-8673-5c4a55c11971">
+				<path>
+					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep2ResidentData']//text[@rid='et_street']
+				</path>
+			</info>
+		</touchrecorditem>
 		<setvaluerecorditem
 		enabled="True"
 		optional="False"
@@ -374,28 +502,35 @@ mode="Mobile">
 				</path>
 			</info>
 		</touchrecorditem>
-		<setvaluerecorditem
+		<userrecorditem
 		enabled="True"
 		optional="False"
-		searchpropertyid="8e372560-a8d9-4a3e-b08e-eb5c1227653c"
-		attrname="Text">
+		namespace="Spar.Test_cases.Registration"
+		classname="Registration_Success"
+		methodname="Set_Value_EtPhoneNumber"
+		isexternaltestmethod="False"
+		varname="">
 			<comment/>
-			<bindings>
-				<binding
-				target="AttributeValue"
-				variable="PhoneNumber"/>
-			</bindings>
-			<info
-			sourcename="RepositoryEditor"
-			id="86087f93-e41d-4a52-9ff2-a6c741535ff6">
-				<path>
-					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep3AccountDataA']//text[@rid='et_phone_number']
-				</path>
-			</info>
-			<AttributeValue>
-				yourValue
-			</AttributeValue>
-		</setvaluerecorditem>
+			<bindings/>
+			<arguments
+			id="59912f55-be3f-4fb3-83f3-2b579543859f">
+				<argument
+				argname="textInfo"
+				id="3b69dc85-6844-4144-b343-a5a986528d6e">
+					<argvaluetype>
+						Ranorex.Core.Repository.RepoItemInfo, Ranorex.Core, Culture=neutral
+					</argvaluetype>
+					<argvalue/>
+					<info
+					sourcename="ItemRecorderEditor"
+					id="86087f93-e41d-4a52-9ff2-a6c741535ff6">
+						<path>
+							/mobileapp[@title='plus.spar.si.staging']/form[@title~'^RegisterStep3AccountDataA']//text[@rid='et_phone_number']
+						</path>
+					</info>
+				</argument>
+			</arguments>
+		</userrecorditem>
 		<userrecorditem
 		enabled="True"
 		optional="False"

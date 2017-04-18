@@ -692,6 +692,18 @@
       <UserCode>true</UserCode>
       <id>45f1cced-44c8-4089-9b8a-b6e399a76039</id>
     </Compile>
+    <Compile Include="Test cases\Utility\ConfirmMail.cs">
+      <BoundTo>3eca8a1e-6ee0-42ef-8d85-d4f51a9c0e80</BoundTo>
+      <DependentUpon>ConfirmMail.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>38c88501-ca5e-45fc-900c-37a3d7296a70</id>
+    </Compile>
+    <Compile Include="Test cases\Utility\ConfirmMail.UserCode.cs">
+      <BoundTo>3eca8a1e-6ee0-42ef-8d85-d4f51a9c0e80</BoundTo>
+      <DependentUpon>ConfirmMail.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>1a3f3b96-48b6-4bf9-98ab-db1dfbfa14b4</id>
+    </Compile>
     <Compile Include="Test cases\Utility\GetAccessToken.cs">
       <BoundTo>c6978092-5535-4b0d-a877-ca1763c5ff0c</BoundTo>
       <DependentUpon>GetAccessToken.rxrec</DependentUpon>
@@ -1034,6 +1046,11 @@
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
       <id>d6945c95-b7c4-44f5-9cd8-c32abe7a58d2</id>
       <recordtableid>cde5fee8-c303-485d-9686-e99e57ce5f12</recordtableid>
+    </None>
+    <None Include="Test cases\Utility\ConfirmMail.rxrec">
+      <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>
+      <id>3eca8a1e-6ee0-42ef-8d85-d4f51a9c0e80</id>
+      <recordtableid>e467ee5d-195b-4063-8079-540c1df61515</recordtableid>
     </None>
     <None Include="Test cases\Utility\GetAccessToken.rxrec">
       <BoundTo>591f6c44-d7a2-44b1-bef9-825c23af42c7</BoundTo>

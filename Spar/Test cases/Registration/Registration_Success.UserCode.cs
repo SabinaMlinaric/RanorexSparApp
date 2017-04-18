@@ -97,5 +97,18 @@ namespace Spar.Test_cases.Registration
 
 		}
 
+        public void Set_Value_EtPhoneNumber(RepoItemInfo textInfo)
+        {
+        	Random r = new Random();
+        	int num = r.Next(0,1000000);
+        	
+        	PhoneNumber = "+38640" + num.ToString("000000");
+        	
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$PhoneNumber' on item 'textInfo'.", textInfo);
+            textInfo.FindAdapter<Text>().Element.SetAttributeValue("Text", PhoneNumber);
+            
+            
+        }
+
 	}
 }

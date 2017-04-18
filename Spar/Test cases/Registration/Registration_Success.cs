@@ -185,18 +185,6 @@ namespace Spar.Test_cases.Registration
             set { _Password = value; }
         }
 
-        string _Gender;
-
-        /// <summary>
-        /// Gets or sets the value of variable Gender.
-        /// </summary>
-        [TestVariable("599c5c46-e674-4ec7-8e7a-97ff7fd23c59")]
-        public string Gender
-        {
-            get { return _Gender; }
-            set { _Gender = value; }
-        }
-
         string _HouseNumber;
 
         /// <summary>
@@ -207,6 +195,16 @@ namespace Spar.Test_cases.Registration
         {
             get { return _HouseNumber; }
             set { _HouseNumber = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets the value of variable Gender.
+        /// </summary>
+        [TestVariable("599c5c46-e674-4ec7-8e7a-97ff7fd23c59")]
+        public string Gender
+        {
+            get { return repo.Gender; }
+            set { repo.Gender = value; }
         }
 
 #endregion
@@ -251,85 +249,104 @@ namespace Spar.Test_cases.Registration
             repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtSurname.Element.SetAttributeValue("Text", Surname);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$DateOfBirth' on item 'PlusSparSi.RegisterStep1PersonalDataActivity.EtDateBirth'.", repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtDateBirthInfo, new RecordItemIndex(4));
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.RegisterStep1PersonalDataActivity.EtDateBirth' at Center", repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtDateBirthInfo, new RecordItemIndex(4));
+            repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtDateBirth.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.Button1' at Center", repo.PlusSparSi.Button1Info, new RecordItemIndex(5));
+            repo.PlusSparSi.Button1.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$DateOfBirth' on item 'PlusSparSi.RegisterStep1PersonalDataActivity.EtDateBirth'.", repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtDateBirthInfo, new RecordItemIndex(6));
             repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtDateBirth.Element.SetAttributeValue("Text", DateOfBirth);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$Gender' on item 'PlusSparSi.RegisterStep1PersonalDataActivity.EtGender'.", repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtGenderInfo, new RecordItemIndex(5));
-            repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtGender.Element.SetAttributeValue("Text", Gender);
-            Delay.Milliseconds(0);
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.RegisterStep1PersonalDataActivity.EtGender' at Center", repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtGenderInfo, new RecordItemIndex(7));
+            repo.PlusSparSi.RegisterStep1PersonalDataActivity.EtGender.Touch();
+            Delay.Milliseconds(500);
             
-            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.RegisterStep1PersonalDataActivity.BtnNext' at Center", repo.PlusSparSi.RegisterStep1PersonalDataActivity.BtnNextInfo, new RecordItemIndex(6));
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.PopUp' at Center", repo.PlusSparSi.PopUpInfo, new RecordItemIndex(8));
+            repo.PlusSparSi.PopUp.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.RegisterStep1PersonalDataActivity.BtnNext' at Center", repo.PlusSparSi.RegisterStep1PersonalDataActivity.BtnNextInfo, new RecordItemIndex(9));
             repo.PlusSparSi.RegisterStep1PersonalDataActivity.BtnNext.Touch();
             Delay.Milliseconds(500);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$Country' on item 'PlusSparSi.RegisterStep2ResidentDataActivity.EtCountry'.", repo.PlusSparSi.RegisterStep2ResidentDataActivity.EtCountryInfo, new RecordItemIndex(7));
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.RegisterStep2ResidentDataActivity.EtCountry' at Center", repo.PlusSparSi.RegisterStep2ResidentDataActivity.EtCountryInfo, new RecordItemIndex(10));
+            repo.PlusSparSi.RegisterStep2ResidentDataActivity.EtCountry.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$Country' on item 'PlusSparSi.RegisterStep2ResidentDataActivity.EtCountry'.", repo.PlusSparSi.RegisterStep2ResidentDataActivity.EtCountryInfo, new RecordItemIndex(11));
             repo.PlusSparSi.RegisterStep2ResidentDataActivity.EtCountry.Element.SetAttributeValue("Text", Country);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$Address' on item 'PlusSparSi.RegisterStep2ResidentDataActivity.EtStreet'.", repo.PlusSparSi.RegisterStep2ResidentDataActivity.EtStreetInfo, new RecordItemIndex(8));
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.RegisterStep2ResidentDataActivity.EtStreet' at Center", repo.PlusSparSi.RegisterStep2ResidentDataActivity.EtStreetInfo, new RecordItemIndex(12));
+            repo.PlusSparSi.RegisterStep2ResidentDataActivity.EtStreet.Touch();
+            Delay.Milliseconds(500);
+            
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$Address' on item 'PlusSparSi.RegisterStep2ResidentDataActivity.EtStreet'.", repo.PlusSparSi.RegisterStep2ResidentDataActivity.EtStreetInfo, new RecordItemIndex(13));
             repo.PlusSparSi.RegisterStep2ResidentDataActivity.EtStreet.Element.SetAttributeValue("Text", Address);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$HouseNumber' on item 'PlusSparSi.RegisterStep2ResidentDataActivity.EtHouseNumber'.", repo.PlusSparSi.RegisterStep2ResidentDataActivity.EtHouseNumberInfo, new RecordItemIndex(9));
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$HouseNumber' on item 'PlusSparSi.RegisterStep2ResidentDataActivity.EtHouseNumber'.", repo.PlusSparSi.RegisterStep2ResidentDataActivity.EtHouseNumberInfo, new RecordItemIndex(14));
             repo.PlusSparSi.RegisterStep2ResidentDataActivity.EtHouseNumber.Element.SetAttributeValue("Text", HouseNumber);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$PostalNumber' on item 'PlusSparSi.RegisterStep2ResidentDataActivity.EtPostal'.", repo.PlusSparSi.RegisterStep2ResidentDataActivity.EtPostalInfo, new RecordItemIndex(10));
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$PostalNumber' on item 'PlusSparSi.RegisterStep2ResidentDataActivity.EtPostal'.", repo.PlusSparSi.RegisterStep2ResidentDataActivity.EtPostalInfo, new RecordItemIndex(15));
             repo.PlusSparSi.RegisterStep2ResidentDataActivity.EtPostal.Element.SetAttributeValue("Text", PostalNumber);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$City' on item 'PlusSparSi.RegisterStep2ResidentDataActivity.EtCity'.", repo.PlusSparSi.RegisterStep2ResidentDataActivity.EtCityInfo, new RecordItemIndex(11));
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$City' on item 'PlusSparSi.RegisterStep2ResidentDataActivity.EtCity'.", repo.PlusSparSi.RegisterStep2ResidentDataActivity.EtCityInfo, new RecordItemIndex(16));
             repo.PlusSparSi.RegisterStep2ResidentDataActivity.EtCity.Element.SetAttributeValue("Text", City);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.RegisterStep2ResidentDataActivity.BtnNext' at Center", repo.PlusSparSi.RegisterStep2ResidentDataActivity.BtnNextInfo, new RecordItemIndex(12));
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.RegisterStep2ResidentDataActivity.BtnNext' at Center", repo.PlusSparSi.RegisterStep2ResidentDataActivity.BtnNextInfo, new RecordItemIndex(17));
             repo.PlusSparSi.RegisterStep2ResidentDataActivity.BtnNext.Touch();
             Delay.Milliseconds(500);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$PhoneNumber' on item 'PlusSparSi.RegisterStep3AccountDataActivity.EtPhoneNumber'.", repo.PlusSparSi.RegisterStep3AccountDataActivity.EtPhoneNumberInfo, new RecordItemIndex(13));
-            repo.PlusSparSi.RegisterStep3AccountDataActivity.EtPhoneNumber.Element.SetAttributeValue("Text", PhoneNumber);
+            Set_Value_EtPhoneNumber(repo.PlusSparSi.RegisterStep3AccountDataActivity.EtPhoneNumberInfo);
             Delay.Milliseconds(0);
             
             Set_Value_EtEmail(repo.PlusSparSi.RegisterStep3AccountDataActivity.EtEmailInfo);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Enabled='False') on item 'PlusSparSi.RegisterStep3AccountDataActivity.BtnNext'.", repo.PlusSparSi.RegisterStep3AccountDataActivity.BtnNextInfo, new RecordItemIndex(15));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Enabled='False') on item 'PlusSparSi.RegisterStep3AccountDataActivity.BtnNext'.", repo.PlusSparSi.RegisterStep3AccountDataActivity.BtnNextInfo, new RecordItemIndex(20));
             Validate.Attribute(repo.PlusSparSi.RegisterStep3AccountDataActivity.BtnNextInfo, "Enabled", "False");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$Password' on item 'PlusSparSi.RegisterStep3AccountDataActivity.EtPassword'.", repo.PlusSparSi.RegisterStep3AccountDataActivity.EtPasswordInfo, new RecordItemIndex(16));
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$Password' on item 'PlusSparSi.RegisterStep3AccountDataActivity.EtPassword'.", repo.PlusSparSi.RegisterStep3AccountDataActivity.EtPasswordInfo, new RecordItemIndex(21));
             repo.PlusSparSi.RegisterStep3AccountDataActivity.EtPassword.Element.SetAttributeValue("Text", Password);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$Password' on item 'PlusSparSi.RegisterStep3AccountDataActivity.EtPasswordRepeat'.", repo.PlusSparSi.RegisterStep3AccountDataActivity.EtPasswordRepeatInfo, new RecordItemIndex(17));
+            Report.Log(ReportLevel.Info, "Set Value", "Setting attribute Text to '$Password' on item 'PlusSparSi.RegisterStep3AccountDataActivity.EtPasswordRepeat'.", repo.PlusSparSi.RegisterStep3AccountDataActivity.EtPasswordRepeatInfo, new RecordItemIndex(22));
             repo.PlusSparSi.RegisterStep3AccountDataActivity.EtPasswordRepeat.Element.SetAttributeValue("Text", Password);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Enabled='True') on item 'PlusSparSi.RegisterStep3AccountDataActivity.BtnNext'.", repo.PlusSparSi.RegisterStep3AccountDataActivity.BtnNextInfo, new RecordItemIndex(18));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Enabled='True') on item 'PlusSparSi.RegisterStep3AccountDataActivity.BtnNext'.", repo.PlusSparSi.RegisterStep3AccountDataActivity.BtnNextInfo, new RecordItemIndex(23));
             Validate.Attribute(repo.PlusSparSi.RegisterStep3AccountDataActivity.BtnNextInfo, "Enabled", "True");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.RegisterStep3AccountDataActivity.BtnNext' at Center", repo.PlusSparSi.RegisterStep3AccountDataActivity.BtnNextInfo, new RecordItemIndex(19));
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.RegisterStep3AccountDataActivity.BtnNext' at Center", repo.PlusSparSi.RegisterStep3AccountDataActivity.BtnNextInfo, new RecordItemIndex(24));
             repo.PlusSparSi.RegisterStep3AccountDataActivity.BtnNext.Touch();
             Delay.Milliseconds(500);
             
-            Report.Log(ReportLevel.Info, "Touch Gestures", "Swipe gesture with direction 'Up (270°)' starting from 'Center' with distance '1.0' with swipe duration'500ms' and step count '0' on item 'PlusSparSi.RegisterStep4AdditionalDataActivity'.", repo.PlusSparSi.RegisterStep4AdditionalDataActivity.SelfInfo, new RecordItemIndex(20));
+            Report.Log(ReportLevel.Info, "Touch Gestures", "Swipe gesture with direction 'Up (270°)' starting from 'Center' with distance '1.0' with swipe duration'500ms' and step count '0' on item 'PlusSparSi.RegisterStep4AdditionalDataActivity'.", repo.PlusSparSi.RegisterStep4AdditionalDataActivity.SelfInfo, new RecordItemIndex(25));
             repo.PlusSparSi.RegisterStep4AdditionalDataActivity.Self.Swipe(Location.Center, ValueConverter.ArgumentFromString<Ranorex.Core.Recorder.Touch.GestureDirection>("SwipeDirection", "Up (270°)"), ValueConverter.ArgumentFromString<Ranorex.Core.Distance>("Distance", "1.0"), ValueConverter.ArgumentFromString<Ranorex.Duration>("SwipeDuration", "500ms"), 0);
             Delay.Milliseconds(500);
             
-            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.RegisterStep4AdditionalDataActivity.BtnNext' at Center", repo.PlusSparSi.RegisterStep4AdditionalDataActivity.BtnNextInfo, new RecordItemIndex(21));
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.RegisterStep4AdditionalDataActivity.BtnNext' at Center", repo.PlusSparSi.RegisterStep4AdditionalDataActivity.BtnNextInfo, new RecordItemIndex(26));
             repo.PlusSparSi.RegisterStep4AdditionalDataActivity.BtnNext.Touch();
             Delay.Milliseconds(500);
             
             Validate_LoginEmailSentActivity(repo.PlusSparSi.LoginEmailSentActivity.SelfInfo);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.LoginEmailSentActivity.BtnEmailSentSkip' at Center", repo.PlusSparSi.LoginEmailSentActivity.BtnEmailSentSkipInfo, new RecordItemIndex(23));
+            Report.Log(ReportLevel.Info, "Touch", "Touch item 'PlusSparSi.LoginEmailSentActivity.BtnEmailSentSkip' at Center", repo.PlusSparSi.LoginEmailSentActivity.BtnEmailSentSkipInfo, new RecordItemIndex(28));
             repo.PlusSparSi.LoginEmailSentActivity.BtnEmailSentSkip.Touch();
             Delay.Milliseconds(500);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Visible='True') on item 'PlusSparSi.OnBoardingStepOneActivity'.", repo.PlusSparSi.OnBoardingStepOneActivity.SelfInfo, new RecordItemIndex(24));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Visible='True') on item 'PlusSparSi.OnBoardingStepOneActivity'.", repo.PlusSparSi.OnBoardingStepOneActivity.SelfInfo, new RecordItemIndex(29));
             Validate.Attribute(repo.PlusSparSi.OnBoardingStepOneActivity.SelfInfo, "Visible", "True");
             Delay.Milliseconds(0);
             

@@ -10,9 +10,10 @@
       <string>680a8890-e105-4344-a655-c94e0d4a5e85</string>
       <string>b7924370-6d8a-4e5d-9adb-eb15af9a241e</string>
       <string>f65d6fd4-4412-482d-8cb9-939ec6e99649</string>
+      <string>c27e7a85-fe5e-40f7-9a77-bffc5dac17f5</string>
       <string>38ab03b4-6901-4829-a287-57bc91e7057a</string>
     </ArrayOfString>
   </SerializedValue>
-  <ProjectBrowserState value="[Solution Spar[Spar_Android[Test cases[MySpar[]Utility[C#[Classes[]]ClearAppData.rxrec[]]]]]]&#xD;&#xA;Solution Spar&#xD;&#xA;Solution Spar" />
+  <ProjectBrowserState value="[Solution Spar[Spar_Android[Test cases[MySpar[]Utility[C#[Classes[]]ClearAppData.rxrec[]]]]]]&#xD;&#xA;Solution Spar\Spar_Android\Spar.rxtst&#xD;&#xA;Solution Spar\Spar_Android\Reports" />
   <StartupProject value="{7BF7678C-3E9F-47C9-88E0-5AA7677DA802}" />
 </Properties>

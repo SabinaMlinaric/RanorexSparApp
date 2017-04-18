@@ -97,6 +97,18 @@ namespace Spar
             set { _LastSection = value; }
         }
 
+        string _Gender = "";
+
+        /// <summary>
+        /// Gets or sets the value of variable Gender.
+        /// </summary>
+        [TestVariable("9e9e23ca-6243-4e0b-b922-c54d44b7be63")]
+        public string Gender
+        {
+            get { return _Gender; }
+            set { _Gender = value; }
+        }
+
 #endregion
 
         /// <summary>
@@ -151,6 +163,8 @@ namespace Spar
             SparRepositoryFolders.LoginSignInActivityFolder _loginsigninactivity;
             SparRepositoryFolders.InvalidCardOrScanErrorFolder _invalidcardorscanerror;
             SparRepositoryFolders.LoginForgottenPasswordActivityFolder _loginforgottenpasswordactivity;
+            RepoItemInfo _button1Info;
+            RepoItemInfo _popupInfo;
 
             /// <summary>
             /// Creates a new PlusSparSi  folder.
@@ -176,6 +190,8 @@ namespace Spar
                 _loginsigninactivity = new SparRepositoryFolders.LoginSignInActivityFolder(this);
                 _invalidcardorscanerror = new SparRepositoryFolders.InvalidCardOrScanErrorFolder(this);
                 _loginforgottenpasswordactivity = new SparRepositoryFolders.LoginForgottenPasswordActivityFolder(this);
+                _button1Info = new RepoItemInfo(this, "Button1", ".//button[@rid='button1']", 30000, null, "6cc2f9ad-8400-4d58-94d9-d1ff13197ee5");
+                _popupInfo = new RepoItemInfo(this, "PopUp", ".//text[@resourceid=$Gender]", 30000, null, "3ea530a4-4745-488d-9e0b-252d8ac41fe4");
             }
 
             /// <summary>
@@ -199,6 +215,54 @@ namespace Spar
                 get
                 {
                     return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Button1 item.
+            /// </summary>
+            [RepositoryItem("6cc2f9ad-8400-4d58-94d9-d1ff13197ee5")]
+            public virtual Ranorex.Button Button1
+            {
+                get
+                {
+                    return _button1Info.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Button1 item info.
+            /// </summary>
+            [RepositoryItemInfo("6cc2f9ad-8400-4d58-94d9-d1ff13197ee5")]
+            public virtual RepoItemInfo Button1Info
+            {
+                get
+                {
+                    return _button1Info;
+                }
+            }
+
+            /// <summary>
+            /// The PopUp item.
+            /// </summary>
+            [RepositoryItem("3ea530a4-4745-488d-9e0b-252d8ac41fe4")]
+            public virtual Ranorex.Text PopUp
+            {
+                get
+                {
+                    return _popupInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PopUp item info.
+            /// </summary>
+            [RepositoryItemInfo("3ea530a4-4745-488d-9e0b-252d8ac41fe4")]
+            public virtual RepoItemInfo PopUpInfo
+            {
+                get
+                {
+                    return _popupInfo;
                 }
             }
 

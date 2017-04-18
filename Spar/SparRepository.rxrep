@@ -1951,6 +1951,24 @@ rxversion="6.2">
 					/mobileapp[@title='plus.spar.si.staging']/form[@title~'^LoginForgottenPasswordAct']
 				</basepath>
 			</folder>
+			<item
+			name="Button1"
+			id="6cc2f9ad-8400-4d58-94d9-d1ff13197ee5"
+			searchtimeout="30000ms"
+			capname="button"
+			addcaps="button,androidelement,mobileuielement"
+			refimgid="f2c7d6e5-2751-43fb-aac9-aaa9a0b0379e">
+				/mobileapp[@title='plus.spar.si.staging']//button[@rid='button1']
+			</item>
+			<item
+			name="PopUp"
+			id="3ea530a4-4745-488d-9e0b-252d8ac41fe4"
+			searchtimeout="30000ms"
+			capname="text"
+			addcaps="text,androidelement,mobileuielement"
+			refimgid="f9156a2c-60cb-4c57-85a9-e7a15a7ea437">
+				/mobileapp[@title='plus.spar.si.staging']//text[@resourceid=$Gender]
+			</item>
 			<basepath>
 				/mobileapp[@title='plus.spar.si.staging']
 			</basepath>
@@ -1982,6 +2000,10 @@ E78sAQAAAABJRU5ErkJggg==
 		name="LastSection"
 		id="ebda0c33-dfe1-4e12-a3a9-dd6d83ba5720">
 			4
+		</var>
+		<var
+		name="Gender"
+		id="9e9e23ca-6243-4e0b-b922-c54d44b7be63">
 		</var>
 	</variables>
 </repository>

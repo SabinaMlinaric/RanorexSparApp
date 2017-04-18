@@ -41,7 +41,6 @@ namespace Spar.Test_cases.Utility
 			string appPackageName = PackageName;
 			string pathToAdb = "C:\\Program Files (x86)\\Ranorex 6.2\\Bin\\RxEnv\\Android\\tools\\adb.exe";
 			
-			/* 
 			var app = repo.PlusSparSi.Self.As<AndroidApp>();
 			var info = app.GetDeviceInfo();
 			String[] host = info.NetworkInterfaces[0].Split(':');
@@ -55,8 +54,7 @@ namespace Spar.Test_cases.Utility
 			adbClearProcess.Start();
 			
 			adbClearProcess.WaitForExit();
-			*/
-			
+
 			Process adbClearProcess1 = new Process();
 			adbClearProcess1.StartInfo.FileName  = pathToAdb;
 			adbClearProcess1.StartInfo.Arguments = string.Format("shell pm clear {0}", PackageName);

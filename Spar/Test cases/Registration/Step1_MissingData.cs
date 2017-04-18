@@ -93,16 +93,14 @@ namespace Spar.Test_cases.Registration
             set { _DateOfBirth = value; }
         }
 
-        string _Gender;
-
         /// <summary>
         /// Gets or sets the value of variable Gender.
         /// </summary>
         [TestVariable("1b7e4906-2f4a-47d5-a31f-cd19a4f042c3")]
         public string Gender
         {
-            get { return _Gender; }
-            set { _Gender = value; }
+            get { return repo.Gender; }
+            set { repo.Gender = value; }
         }
 
 #endregion

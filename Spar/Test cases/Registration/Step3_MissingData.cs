@@ -101,18 +101,6 @@ namespace Spar.Test_cases.Registration
             set { _DateOfBirth = value; }
         }
 
-        string _Gender;
-
-        /// <summary>
-        /// Gets or sets the value of variable Gender.
-        /// </summary>
-        [TestVariable("a7b16b69-4a75-481d-8a2d-d3464cdeffab")]
-        public string Gender
-        {
-            get { return _Gender; }
-            set { _Gender = value; }
-        }
-
         string _Country;
 
         /// <summary>
@@ -207,6 +195,16 @@ namespace Spar.Test_cases.Registration
         {
             get { return _Email; }
             set { _Email = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets the value of variable Gender.
+        /// </summary>
+        [TestVariable("a7b16b69-4a75-481d-8a2d-d3464cdeffab")]
+        public string Gender
+        {
+            get { return repo.Gender; }
+            set { repo.Gender = value; }
         }
 
 #endregion
